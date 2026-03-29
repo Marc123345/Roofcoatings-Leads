@@ -328,7 +328,7 @@ export default function HowItWorksContent() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.35 }}
-                className="grid lg:grid-cols-2 gap-8">
+                className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
 
                 {/* Left — Info */}
                 <div className="bg-navy-light rounded-3xl border border-white/10 p-5 sm:p-8 lg:p-10 flex flex-col">

@@ -46,7 +46,7 @@ export default function ROI() {
             </h2>
           </AnimateIn>
 
-          <div className="mt-14 grid md:grid-cols-2 gap-8">
+          <div className="mt-14 grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             <AnimateIn direction="left" delay={0.2}>
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <div className="bg-gradient-to-r from-red-700 to-red-600 text-white font-bold text-center py-5 text-lg">

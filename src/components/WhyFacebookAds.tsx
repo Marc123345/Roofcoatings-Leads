@@ -276,12 +276,12 @@ export default function WhyFacebookAds() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.35 }}
-              className="grid lg:grid-cols-2 gap-8 items-center"
+              className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center"
             >
               {/* Left: stat + info */}
               <div className="bg-navy-light rounded-2xl p-5 sm:p-8 lg:p-10 border border-white/5">
                 <motion.p
-                  className="text-gold text-5xl sm:text-7xl lg:text-8xl font-bold"
+                  className="text-gold text-4xl sm:text-6xl lg:text-8xl font-bold"
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, type: "spring" }}

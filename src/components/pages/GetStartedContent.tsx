@@ -80,7 +80,7 @@ export default function GetStartedContent() {
         <div className="absolute inset-0 grid-pattern" />
         <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-5 gap-8">
+            <div className="grid lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
 
               {/* Left — Context */}
               <div className="lg:col-span-2">

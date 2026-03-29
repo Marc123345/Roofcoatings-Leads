@@ -202,7 +202,7 @@ export default function WhatsIncluded() {
 
                   <div className="flex-1">
                     <p className="text-white/40 text-xs uppercase tracking-wider mb-4">What this includes</p>
-                    <div className="grid sm:grid-cols-2 gap-3">
+                    <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-3">
                       {feature.details.map((detail, i) => (
                         <motion.div
                           key={detail}
@@ -252,7 +252,7 @@ export default function WhatsIncluded() {
                 </div>
                 <p className="text-white/60 text-sm mb-2">Core Lead System</p>
                 <div className="flex items-baseline justify-center gap-1 mb-6">
-                  <span className="text-white text-5xl font-bold">$1k</span>
+                  <span className="text-white text-3xl sm:text-5xl font-bold">$1k</span>
                   <span className="text-white/40 text-sm">/mo</span>
                 </div>
                 <div className="space-y-3 text-left flex-1">
@@ -284,7 +284,7 @@ export default function WhatsIncluded() {
                   <p className="text-navy/60 text-sm mb-2">Add-On</p>
                   <h4 className="text-navy font-bold text-lg mb-1">{addon.title}</h4>
                   <div className="flex items-baseline justify-center gap-1 mb-4">
-                    <span className="text-navy text-4xl font-bold">+{addon.price}</span>
+                    <span className="text-navy text-2xl sm:text-4xl font-bold">+{addon.price}</span>
                     <span className="text-navy/40 text-sm">/mo</span>
                   </div>
                   <p className="text-navy/60 text-sm leading-relaxed mb-6">{addon.description}</p>

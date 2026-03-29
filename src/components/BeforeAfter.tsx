@@ -58,7 +58,7 @@ export default function BeforeAfter() {
             <div className="inline-flex bg-navy-light rounded-full p-1 border border-white/10">
               <button
                 onClick={() => setShowAfter(false)}
-                className={`relative px-8 py-3 rounded-full text-sm font-bold transition-colors duration-300 ${!showAfter ? "text-white" : "text-white/70"}`}
+                className={`relative px-6 py-2.5 sm:px-8 sm:py-3 rounded-full text-sm font-bold transition-colors duration-300 ${!showAfter ? "text-white" : "text-white/70"}`}
               >
                 {!showAfter && (
                   <motion.div
@@ -71,7 +71,7 @@ export default function BeforeAfter() {
               </button>
               <button
                 onClick={() => setShowAfter(true)}
-                className={`relative px-8 py-3 rounded-full text-sm font-bold transition-colors duration-300 ${showAfter ? "text-white" : "text-white/70"}`}
+                className={`relative px-6 py-2.5 sm:px-8 sm:py-3 rounded-full text-sm font-bold transition-colors duration-300 ${showAfter ? "text-white" : "text-white/70"}`}
               >
                 {showAfter && (
                   <motion.div
@@ -99,7 +99,7 @@ export default function BeforeAfter() {
               >
                 <div className="grid lg:grid-cols-5 gap-6">
                   {/* List */}
-                  <div className="lg:col-span-3 bg-navy-light rounded-2xl border border-red-500/20 p-8">
+                  <div className="lg:col-span-3 bg-navy-light rounded-2xl border border-red-500/20 p-4 sm:p-6 lg:p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
                         <svg className="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,7 +155,7 @@ export default function BeforeAfter() {
               >
                 <div className="grid lg:grid-cols-5 gap-6">
                   {/* List */}
-                  <div className="lg:col-span-3 bg-navy-light rounded-2xl border border-green-500/20 p-8">
+                  <div className="lg:col-span-3 bg-navy-light rounded-2xl border border-green-500/20 p-4 sm:p-6 lg:p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center">
                         <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -251,8 +251,8 @@ export default function ResultsContent() {
                 </div>
 
                 {/* Quote + result */}
-                <div className="bg-navy-light rounded-2xl border border-white/10 p-8">
-                  <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="bg-navy-light rounded-2xl border border-white/10 p-4 sm:p-6 lg:p-8">
+                  <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
                     <blockquote className="flex-1 text-white/70 italic text-lg leading-relaxed border-l-4 border-gold pl-6">
                       &ldquo;{log.quote}&rdquo;
                     </blockquote>

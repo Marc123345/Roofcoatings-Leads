@@ -73,7 +73,7 @@ export default function HowItWorks() {
             />
           </div>
 
-          <StaggerContainer className="grid md:grid-cols-4 gap-8" staggerDelay={0.15}>
+          <StaggerContainer className="grid md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8" staggerDelay={0.15}>
             {steps.map((step) => (
               <StaggerItem key={step.number}>
                 <div className="relative text-center group">

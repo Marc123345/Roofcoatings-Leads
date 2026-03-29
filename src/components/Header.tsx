@@ -45,7 +45,7 @@ export default function Header() {
             </span>
           </motion.a>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-4 sm:gap-6 lg:gap-8">
             {navLinks.map((link, i) => (
               <motion.a
                 key={link.href}

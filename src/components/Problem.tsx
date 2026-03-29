@@ -232,7 +232,7 @@ export default function Problem() {
             <motion.div key={problem.id}
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.3 }}
-              className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 lg:gap-12 items-center">
 
               {/* Left — text */}
               <div className="order-2 lg:order-1">

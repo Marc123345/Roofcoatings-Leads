@@ -256,7 +256,7 @@ export default function NicheExpertiseContent() {
                   </div>
 
                   {/* Campaign Breakdown */}
-                  <div className="lg:col-span-2 bg-navy-light rounded-2xl border border-white/10 p-8">
+                  <div className="lg:col-span-2 bg-navy-light rounded-2xl border border-white/10 p-4 sm:p-6 lg:p-8">
                     <h3 className="text-white font-bold text-xl mb-5">Campaign Breakdown</h3>
                     <CampaignBreakdown niche={niche} />
 

@@ -158,7 +158,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
                 <div className="flex flex-col sm:flex-row items-center gap-6">
                   <div className="bg-navy rounded-2xl px-8 py-5 text-center">
-                    <p className="text-gold text-4xl font-bold">{area.caseStudy.stat}</p>
+                    <p className="text-gold text-2xl sm:text-4xl font-bold">{area.caseStudy.stat}</p>
                     <p className="text-white/70 text-sm mt-1">{area.caseStudy.statLabel}</p>
                   </div>
                   <motion.a href="/get-started"
