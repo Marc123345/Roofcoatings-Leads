@@ -1,5 +1,5 @@
 "use client";
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ClipboardCheck, Target, Rocket, Zap } from "lucide-react";
 import AnimateIn, { StaggerContainer, StaggerItem } from "./AnimateIn";

@@ -1,8 +1,8 @@
 "use client";
-import { useState, useRef, type ReactNode } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent, useTransform } from "framer-motion";
-import { ClipboardCheck, Rocket, ShieldCheck, Zap, Target, Star, Bell, Phone, BarChart3, Handshake, Users, Brain, TrendingDown, Filter } from "lucide-react";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { ClipboardCheck, Rocket, ShieldCheck, Zap, Target, Star, Bell, Phone, BarChart3, Handshake } from "lucide-react";
 import AnimateIn, { StaggerContainer, StaggerItem } from "../AnimateIn";
 import ParticleField from "../visuals/ParticleField";
 
