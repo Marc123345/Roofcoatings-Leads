@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
-import Loader from "@/components/Loader";
 import "./globals.css";
 
 const inter = Inter({
@@ -147,10 +146,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen">
-        <Loader />
-        {children}
-      </body>
+      <body className="min-h-screen">{children}</body>
     </html>
   );
 }
