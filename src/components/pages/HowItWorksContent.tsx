@@ -68,7 +68,7 @@ const included = [
   { icon: <Star className="w-5 h-5 text-gold" />, title: "100% Exclusive Leads", description: "Every lead goes only to you. Zero competition. No arguing for refunds on bad leads." },
   { icon: <Bell className="w-5 h-5 text-gold" />, title: "Real-Time Notifications", description: "Instant alerts via email, SMS, or CRM. Call within 60 seconds and your close rate doubles." },
   { icon: <Phone className="w-5 h-5 text-gold" />, title: "Follow-Up Script Support", description: "Proven scripts built for roof coating. Partners using them see 15%+ conversion rate increase." },
-  { icon: <BarChart3 className="w-5 h-5 text-gold" />, title: "Performance Dashboard", description: "Track leads, call outcomes, conversions, and ROI in real time." },
+  { icon: <BarChart3 className="w-5 h-5 text-gold" />, title: "AI Appointment Setter + Live Secretaries", description: "Optional add-ons: AI books appointments automatically ($500/mo) or our live team calls your leads ($500/mo)." },
   { icon: <Handshake className="w-5 h-5 text-gold" />, title: "Dedicated Campaign Manager", description: "One point of contact who knows your business. No account shuffling." },
 ];
 

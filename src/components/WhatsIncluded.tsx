@@ -65,7 +65,7 @@ const inclusions = [
       </svg>
     ),
     iconBg: "from-blue to-blue-light",
-    title: "Performance Dashboard",
+    title: "AI Appointment Setting System",
     description: "Track leads, conversions, and ROI in real time",
     size: "large",
   },
@@ -162,7 +162,7 @@ export default function WhatsIncluded() {
             </StaggerItem>
           ))}
 
-          {/* Dashboard — full width */}
+          {/* Pricing + Add-ons — full width */}
           <StaggerItem className="md:col-span-12">
             <motion.article
               className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group relative overflow-hidden"
@@ -178,33 +178,29 @@ export default function WhatsIncluded() {
                   <p className="text-navy/70 leading-relaxed">{inclusions[5].description}</p>
                 </div>
                 <div className="md:w-2/3 bg-gray-light rounded-xl p-5">
-                  {/* Mini dashboard preview */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-                    {[
-                      { label: "Total Leads", value: "847", trend: "+12%" },
-                      { label: "Booked", value: "294", trend: "+8%" },
-                      { label: "Avg CPA", value: "$42", trend: "-15%" },
-                      { label: "ROI", value: "7.2x", trend: "+22%" },
-                    ].map((stat) => (
-                      <div key={stat.label} className="bg-white rounded-lg p-3 text-center">
-                        <p className="text-navy font-bold text-lg">{stat.value}</p>
-                        <p className="text-slate-600 text-[11px]">{stat.label}</p>
-                        <p className={`text-[11px] font-medium ${stat.trend.startsWith("+") ? "text-green-500" : "text-blue"}`}>{stat.trend}</p>
-                      </div>
-                    ))}
+                  {/* Pricing cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+                    <div className="bg-white rounded-lg p-4 text-center border-2 border-gold/20">
+                      <p className="text-navy font-bold text-2xl">$1,000</p>
+                      <p className="text-slate-600 text-[11px]">per month</p>
+                      <p className="text-gold text-[11px] font-bold mt-1">Core Lead System</p>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 text-center">
+                      <p className="text-navy font-bold text-2xl">+$500</p>
+                      <p className="text-slate-600 text-[11px]">per month</p>
+                      <p className="text-blue text-[11px] font-bold mt-1">AI Appointment Setter</p>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 text-center">
+                      <p className="text-navy font-bold text-2xl">+$500</p>
+                      <p className="text-slate-600 text-[11px]">per month</p>
+                      <p className="text-blue text-[11px] font-bold mt-1">Live Secretary Calls</p>
+                    </div>
                   </div>
-                  {/* Chart bars */}
-                  <div className="flex items-end gap-1 h-16">
-                    {[40, 55, 35, 65, 50, 70, 60, 80, 75, 90, 85, 95].map((h, i) => (
-                      <motion.div
-                        key={i}
-                        className="flex-1 bg-gradient-to-t from-blue to-blue-light rounded-t"
-                        initial={{ height: 0 }}
-                        whileInView={{ height: `${h}%` }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.5 + i * 0.05, duration: 0.4 }}
-                      />
-                    ))}
+                  <div className="flex items-center gap-3 bg-green-50 rounded-lg p-3">
+                    <svg className="w-5 h-5 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p className="text-green-700 text-sm font-medium">Cancel anytime. No commitment. No contracts.</p>
                   </div>
                 </div>
               </div>
