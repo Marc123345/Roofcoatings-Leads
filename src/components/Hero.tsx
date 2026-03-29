@@ -66,8 +66,8 @@ export default function Hero() {
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
                 We&apos;ve already cracked the code for 100+ roof coating contractors. Our
-                Facebook Ad system delivers exclusive, pre-qualified leads from day one —
-                because the system is already proven in your niche.
+                Facebook Ad system delivers exclusive, pre-qualified leads from day one.
+                Sign up and get a free custom 5-page website built for your business.
               </motion.p>
 
               <motion.div
@@ -82,7 +82,7 @@ export default function Hero() {
                   whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.4)" }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <span className="relative z-10">Get My Free Lead Strategy Audit &rarr;</span>
+                  <span className="relative z-10">Claim Your Free Website + Leads Audit &rarr;</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.a>
                 <motion.a
@@ -104,7 +104,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.9 }}
               >
-                No charge. No pitch. Just an honest look at your market.
+                Free 5-page website + lead strategy audit. No charge. No contracts.
               </motion.p>
 
               {/* Stat strip */}
@@ -115,8 +115,8 @@ export default function Hero() {
                 transition={{ delay: 1 }}
               >
                 {[
+                  { value: "Free", label: "5-page custom website" },
                   { value: "100+", label: "contractors on the system" },
-                  { value: "3+", label: "jobs closed month one" },
                   { value: "<48h", label: "to first lead" },
                   { value: "5-10x", label: "ROI in 90 days" },
                 ].map((stat) => (

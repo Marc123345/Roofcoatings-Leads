@@ -39,26 +39,27 @@ export default function GetStartedContent() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-              <span className="text-gold text-xs font-bold uppercase tracking-widest">Free Strategy Audit</span>
+              <span className="text-gold text-xs font-bold uppercase tracking-widest">Free Website + Lead Audit</span>
             </motion.div>
 
             <motion.h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight"
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}>
-              Let&apos;s Build{" "}
+              Free 5-Page Website{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent animate-gradient">
-                Your Pipeline.
+                + Lead Pipeline.
               </span>
             </motion.h1>
 
             <motion.p className="mt-6 text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-              In 30 minutes, we&apos;ll map out your market, your ideal lead profile, and exactly
-              how many exclusive leads we can realistically deliver each month.
+              Sign up for our lead system and we&apos;ll build you a custom 5-page website for
+              your roof coating business — completely free. Plus a full strategy audit to map
+              out your market and lead potential.
             </motion.p>
 
             <motion.p className="mt-4 text-white/80 text-sm"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
-              No charge. No contract. No pitch. If we&apos;re not the right fit, we&apos;ll tell you — and we&apos;ll tell you why.
+              No charge for the website. No charge for the audit. No contracts. If we&apos;re not the right fit, we&apos;ll tell you.
             </motion.p>
 
             <motion.a href="#book"
@@ -85,23 +86,23 @@ export default function GetStartedContent() {
               <div className="lg:col-span-2">
                 <AnimateIn>
                   <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4">
-                    Book Your Free Strategy Audit
+                    Claim Your Free Website + Audit
                   </h2>
                   <p className="text-white/70 leading-relaxed mb-8">
-                    Pick a time that works for you. The call takes 30 minutes. You&apos;ll walk away with
-                    a clear picture of your local market opportunity — whether you work with us or not.
+                    Pick a time that works for you. In 30 minutes we&apos;ll map out your lead strategy
+                    and kick off your free 5-page custom website build.
                   </p>
                 </AnimateIn>
 
                 <AnimateIn delay={0.1}>
                   <div className="space-y-4 mb-8">
-                    <h3 className="text-white font-bold text-sm uppercase tracking-wider">What we&apos;ll cover:</h3>
+                    <h3 className="text-white font-bold text-sm uppercase tracking-wider">What you get:</h3>
                     {[
-                      "Your local market & competition",
+                      "Free custom 5-page website for your business",
+                      "Your local market & competition analysis",
                       "Ideal customer profile for your niche",
                       "Estimated lead volume & cost per lead",
-                      "Custom campaign blueprint",
-                      "Honest assessment — if we can't help, we'll say so",
+                      "Custom campaign blueprint — ready to launch",
                     ].map((item, i) => (
                       <motion.div key={item} className="flex items-start gap-3"
                         initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 + i * 0.08 }}>
@@ -142,7 +143,7 @@ export default function GetStartedContent() {
                         <svg className="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span className="text-navy font-bold">Schedule Your Free Audit</span>
+                        <span className="text-navy font-bold">Claim Your Free Website + Audit</span>
                       </div>
                     </div>
                     <div className="p-2">
@@ -227,7 +228,7 @@ export default function GetStartedContent() {
             <motion.a href="#book"
               className="mt-8 inline-flex items-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              Book My Free Audit &rarr;
+              Claim My Free Website + Audit &rarr;
             </motion.a>
             <p className="mt-3 text-gray/50 text-sm">No charge. No contracts. Just clarity.</p>
           </AnimateIn>

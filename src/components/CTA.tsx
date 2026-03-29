@@ -38,8 +38,8 @@ export default function CTA() {
 
           <AnimateIn delay={0.2}>
             <p className="mt-6 text-white/80 text-lg max-w-2xl mx-auto">
-              Stop competing for shared leads. Get exclusive roof coating projects delivered
-              directly to your business.
+              Get exclusive roof coating leads delivered directly to your business —
+              plus a free custom 5-page website built specifically for your company.
             </p>
           </AnimateIn>
 
@@ -50,14 +50,14 @@ export default function CTA() {
               whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(234,179,8,0.5)" }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">Get My Free Lead Strategy Audit &rarr;</span>
+              <span className="relative z-10">Claim Your Free Website + Audit &rarr;</span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.a>
           </AnimateIn>
 
           <AnimateIn delay={0.5}>
             <p className="mt-4 text-white/80 text-sm">
-              No charge. No pitch. Just an honest look at your market.
+              Free 5-page website. Free lead audit. No contracts.
             </p>
           </AnimateIn>
 
