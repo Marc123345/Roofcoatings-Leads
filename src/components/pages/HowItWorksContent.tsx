@@ -331,7 +331,7 @@ export default function HowItWorksContent() {
                 className="grid lg:grid-cols-2 gap-8">
 
                 {/* Left — Info */}
-                <div className="bg-navy-light rounded-3xl border border-white/10 p-8 lg:p-10 flex flex-col">
+                <div className="bg-navy-light rounded-3xl border border-white/10 p-5 sm:p-8 lg:p-10 flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center text-2xl shadow-lg`}>
                       {step.icon}
@@ -380,7 +380,7 @@ export default function HowItWorksContent() {
                 </div>
 
                 {/* Right — Visual */}
-                <div className="bg-navy-light rounded-3xl border border-white/10 p-8 lg:p-10 flex items-center justify-center min-h-[300px] lg:min-h-[420px]">
+                <div className="bg-navy-light rounded-3xl border border-white/10 p-5 sm:p-8 lg:p-10 flex items-center justify-center min-h-[300px] lg:min-h-[420px]">
                   <div className="w-full max-w-md">
                     <Visual />
                   </div>
@@ -414,7 +414,7 @@ export default function HowItWorksContent() {
             {advantages.map((adv) => (
               <StaggerItem key={adv.title}>
                 <motion.div
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group"
+                  className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group"
                   whileHover={{ y: -4 }}>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="bg-navy rounded-xl px-4 py-2 text-center">

@@ -33,7 +33,7 @@ export default function Solution() {
           {/* Large feature card — targeting graphic */}
           <StaggerItem className="md:col-span-7 md:row-span-2">
             <motion.div
-              className="glass rounded-2xl p-8 h-full flex flex-col justify-between group"
+              className="glass rounded-2xl p-5 sm:p-8 h-full flex flex-col justify-between group"
               whileHover={{ borderColor: "rgba(37,99,235,0.3)" }}
             >
               <div>

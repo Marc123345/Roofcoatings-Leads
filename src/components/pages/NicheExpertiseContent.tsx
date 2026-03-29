@@ -185,7 +185,7 @@ export default function NicheExpertiseContent() {
 
             {/* Tab selector */}
             <div className="flex justify-center mb-14">
-              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1 flex-wrap justify-center">
+              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full">
                 {niches.map((n, i) => (
                   <button key={n.id} onClick={() => setActiveIdx(i)}
                     className={`relative px-5 sm:px-7 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
@@ -215,7 +215,7 @@ export default function NicheExpertiseContent() {
                     <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
                     <div className="absolute inset-0 bg-gradient-to-r from-navy/50 to-transparent" />
 
-                    <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-10">
+                    <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 lg:p-10">
                       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                         <div>
                           <motion.div className={`inline-flex items-center justify-center w-14 h-14 bg-white/10 rounded-2xl mb-3 text-white`}
@@ -244,7 +244,7 @@ export default function NicheExpertiseContent() {
                 <div className="grid lg:grid-cols-3 gap-6">
 
                   {/* Description + Job Value */}
-                  <div className="bg-navy-light rounded-2xl border border-white/10 p-8 flex flex-col">
+                  <div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 flex flex-col">
                     <h3 className="text-white font-bold text-xl mb-4">Why This Niche</h3>
                     <p className="text-white/80 leading-relaxed flex-1">{niche.description}</p>
 
@@ -301,7 +301,7 @@ export default function NicheExpertiseContent() {
               { icon: <Zap className="w-5 h-5 text-blue" />, title: "Same Speed, Any Niche", desc: "Whether silicone or TPO, first lead in under 48 hours. The system is already built." },
             ].map((item) => (
               <StaggerItem key={item.title}>
-                <motion.div className="bg-white rounded-2xl p-8 shadow-sm border border-transparent hover:border-blue/10 h-full"
+                <motion.div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full"
                   whileHover={{ y: -4 }}>
                   <div className="w-10 h-10 bg-blue/10 rounded-lg flex items-center justify-center">{item.icon}</div>
                   <h3 className="text-navy font-bold text-lg mt-4">{item.title}</h3>

@@ -255,7 +255,7 @@ export default function Testimonials() {
 
                     {/* Stat highlight */}
                     <div className="flex items-center gap-3 bg-gold/10 border border-gold/20 rounded-xl px-5 py-3 self-start">
-                      <span className="text-gold text-2xl font-bold">{partner.stat}</span>
+                      <span className="text-gold text-xl sm:text-2xl font-bold">{partner.stat}</span>
                       <span className="text-white/70 text-sm">{partner.statLabel}</span>
                     </div>
 

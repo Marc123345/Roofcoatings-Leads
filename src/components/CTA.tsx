@@ -46,7 +46,7 @@ export default function CTA() {
           <AnimateIn delay={0.4}>
             <motion.a
               href="/get-started"
-              className="mt-12 inline-flex items-center gap-3 bg-gradient-to-r from-gold to-yellow-400 text-navy px-12 py-6 rounded-full font-bold text-xl relative overflow-hidden group shadow-2xl shadow-gold/30"
+              className="mt-12 inline-flex items-center gap-3 bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-5 sm:px-12 sm:py-6 rounded-full font-bold text-lg sm:text-xl relative overflow-hidden group shadow-2xl shadow-gold/30"
               whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(234,179,8,0.5)" }}
               whileTap={{ scale: 0.95 }}
             >

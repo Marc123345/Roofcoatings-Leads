@@ -180,7 +180,7 @@ function TimelineVisual() {
         transition={{ duration: 2, delay: 0.5, ease: "easeInOut" }}
       />
 
-      <div className="grid grid-cols-4 gap-2 relative">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 relative">
         {steps.map((step, i) => (
           <motion.div
             key={step.label}
@@ -279,9 +279,9 @@ export default function WhyFacebookAds() {
               className="grid lg:grid-cols-2 gap-8 items-center"
             >
               {/* Left: stat + info */}
-              <div className="bg-navy-light rounded-2xl p-8 lg:p-10 border border-white/5">
+              <div className="bg-navy-light rounded-2xl p-5 sm:p-8 lg:p-10 border border-white/5">
                 <motion.p
-                  className="text-gold text-7xl lg:text-8xl font-bold"
+                  className="text-gold text-5xl sm:text-7xl lg:text-8xl font-bold"
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, type: "spring" }}
@@ -315,7 +315,7 @@ export default function WhyFacebookAds() {
               </div>
 
               {/* Right: interactive visual */}
-              <div className="bg-navy-light rounded-2xl p-8 lg:p-10 border border-white/5 min-h-[280px] lg:min-h-[360px] flex flex-col justify-center">
+              <div className="bg-navy-light rounded-2xl p-5 sm:p-8 lg:p-10 border border-white/5 min-h-[280px] lg:min-h-[360px] flex flex-col justify-center">
                 {active.visual === "funnel" && <FunnelVisual />}
                 {active.visual === "targeting" && <TargetingVisual />}
                 {active.visual === "cost" && <CostVisual />}

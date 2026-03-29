@@ -29,7 +29,7 @@ export default function Results() {
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ duration: 0.2 }}
             >
-              <p className="text-gold text-5xl font-bold">
+              <p className="text-gold text-3xl sm:text-5xl font-bold">
                 <CountUp end={40} suffix="%" />
               </p>
               <p className="text-white font-bold mt-3">Lower Cost Per Acquisition</p>
@@ -54,7 +54,7 @@ export default function Results() {
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ duration: 0.2 }}
             >
-              <p className="text-gold text-5xl font-bold">
+              <p className="text-gold text-3xl sm:text-5xl font-bold">
                 <CountUp end={3} suffix="+" />
               </p>
               <p className="text-white font-bold mt-3">Commercial Jobs First Month</p>
@@ -69,7 +69,7 @@ export default function Results() {
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ duration: 0.2 }}
             >
-              <p className="text-gold text-5xl font-bold">
+              <p className="text-gold text-3xl sm:text-5xl font-bold">
                 <CountUp end={15} suffix="%" />
               </p>
               <p className="text-white font-bold mt-3">Conversion Rate Increase</p>
@@ -84,7 +84,7 @@ export default function Results() {
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ duration: 0.2 }}
             >
-              <p className="text-gold text-5xl font-bold">
+              <p className="text-gold text-3xl sm:text-5xl font-bold">
                 <CountUp end={48} prefix="<" suffix="h" />
               </p>
               <p className="text-white font-bold mt-3">Setup to First Lead</p>

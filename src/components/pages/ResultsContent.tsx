@@ -162,7 +162,7 @@ export default function ResultsContent() {
 
             {/* Partner selector */}
             <div className="flex justify-center mb-12">
-              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1 flex-wrap justify-center">
+              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full">
                 {winLogs.map((wl, i) => (
                   <button key={wl.id} onClick={() => setActiveLog(i)}
                     className={`relative px-4 sm:px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${activeLog === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
@@ -189,7 +189,7 @@ export default function ResultsContent() {
 
                 {/* Header card */}
                 <div className="bg-navy-light rounded-3xl border border-white/10 overflow-hidden mb-6">
-                  <div className="p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6">
+                  <div className="p-5 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6">
                     <div className="flex items-center gap-5 flex-1 min-w-0">
                       <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-gold/30 shrink-0">
                         <Image src={log.image} alt={log.name} width={64} height={64} className="object-cover w-full h-full" />

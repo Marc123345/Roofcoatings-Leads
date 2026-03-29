@@ -209,7 +209,7 @@ export default function Problem() {
           {/* Tab selectors */}
           <AnimateIn delay={0.2}>
             <div className="flex justify-center mb-10 lg:mb-14">
-              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1">
+              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full">
                 {PROBLEMS.map((p, i) => (
                   <button key={p.id} onClick={() => setActive(i)}
                     className={`relative px-5 sm:px-8 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${active === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
@@ -236,7 +236,7 @@ export default function Problem() {
 
               {/* Left — text */}
               <div className="order-2 lg:order-1">
-                <div className="bg-navy-light rounded-2xl border border-white/5 p-8 lg:p-10">
+                <div className="bg-navy-light rounded-2xl border border-white/5 p-5 sm:p-8 lg:p-10">
                   <motion.span
                     className={`text-6xl lg:text-7xl font-bold ${textColorMap[problem.color]}`}
                     initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}

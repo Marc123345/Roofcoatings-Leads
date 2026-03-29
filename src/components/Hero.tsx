@@ -9,7 +9,7 @@ import Marquee from "./visuals/Marquee";
 export default function Hero() {
   return (
     <>
-      <section className="bg-navy relative overflow-hidden min-h-[92vh] flex items-center">
+      <section className="bg-navy relative overflow-hidden min-h-[85dvh] sm:min-h-[92vh] flex items-center">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1920&q=80"
@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="absolute bottom-[-200px] left-[-100px] w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-gold/5 rounded-full blur-[80px]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10 w-full">
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
             <div className="lg:col-span-7">
               {/* Trust bar */}
               <motion.div

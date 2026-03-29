@@ -94,7 +94,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
             <div className="grid md:grid-cols-12 gap-4 lg:gap-6">
               {/* Climate — wide */}
               <AnimateIn className="md:col-span-7" delay={0.1}>
-                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <CloudSun className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Climate &amp; Conditions</h3>
@@ -105,7 +105,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Building stock — narrow */}
               <AnimateIn className="md:col-span-5" delay={0.15}>
-                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <Building2 className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Building Stock</h3>
@@ -116,7 +116,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Seasonal — narrow */}
               <AnimateIn className="md:col-span-5" delay={0.2}>
-                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <CalendarDays className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Seasonal Patterns</h3>
@@ -127,7 +127,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Local insight — wide */}
               <AnimateIn className="md:col-span-7" delay={0.25}>
-                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <Lightbulb className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Local Insight</h3>
@@ -151,7 +151,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                 <p className="text-navy/70">{area.caseStudy.company}</p>
               </div>
 
-              <div className="p-8 lg:p-10">
+              <div className="p-5 sm:p-8 lg:p-10">
                 <blockquote className="text-navy/70 italic text-xl leading-relaxed border-l-4 border-gold pl-6 mb-8">
                   &ldquo;{area.caseStudy.quote}&rdquo;
                 </blockquote>

@@ -37,7 +37,7 @@ export default function Footer() {
     <footer className="bg-navy-light border-t border-white/5">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
           {/* Brand column */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3 mb-5">
@@ -59,7 +59,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <span className="text-sm">marcfriedmancm@roofcoatleads.com</span>
+                <span className="text-sm break-all">marcfriedmancm@roofcoatleads.com</span>
               </a>
               <a href="/get-started" className="flex items-center gap-3 text-white/70 hover:text-gold transition-colors group">
                 <div className="w-9 h-9 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-gold/10 transition-colors shrink-0">

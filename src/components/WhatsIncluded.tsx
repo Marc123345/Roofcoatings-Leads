@@ -91,7 +91,7 @@ export default function WhatsIncluded() {
           {/* Custom Facebook Campaigns — wide */}
           <StaggerItem className="md:col-span-7">
             <motion.article
-              className="bg-white rounded-2xl p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group relative overflow-hidden"
+              className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group relative overflow-hidden"
               whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               transition={{ duration: 0.25 }}
             >
@@ -102,7 +102,7 @@ export default function WhatsIncluded() {
               <h3 className="text-xl font-bold text-navy mb-2">{inclusions[0].title}</h3>
               <p className="text-navy/70 leading-relaxed">{inclusions[0].description}</p>
               {/* Mini ad preview thumbnails */}
-              <div className="mt-6 flex gap-3">
+              <div className="mt-6 flex gap-3 overflow-x-auto">
                 {["Residential", "Commercial", "Flat Roof"].map((type) => (
                   <div key={type} className="flex-1 bg-gray-light rounded-lg p-3 text-center">
                     <div className="w-8 h-8 bg-blue/10 rounded-lg mx-auto mb-1 flex items-center justify-center">
@@ -120,7 +120,7 @@ export default function WhatsIncluded() {
           {/* Lead Pre-Qual */}
           <StaggerItem className="md:col-span-5">
             <motion.article
-              className="bg-white rounded-2xl p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group"
+              className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group"
               whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               transition={{ duration: 0.25 }}
             >
@@ -149,7 +149,7 @@ export default function WhatsIncluded() {
           {inclusions.slice(2, 5).map((item) => (
             <StaggerItem key={item.title} className="md:col-span-4">
               <motion.article
-                className="bg-white rounded-2xl p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group"
+                className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group"
                 whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
                 transition={{ duration: 0.25 }}
               >
@@ -165,7 +165,7 @@ export default function WhatsIncluded() {
           {/* Dashboard — full width */}
           <StaggerItem className="md:col-span-12">
             <motion.article
-              className="bg-white rounded-2xl p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group relative overflow-hidden"
+              className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group relative overflow-hidden"
               whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               transition={{ duration: 0.25 }}
             >
@@ -179,7 +179,7 @@ export default function WhatsIncluded() {
                 </div>
                 <div className="md:w-2/3 bg-gray-light rounded-xl p-5">
                   {/* Mini dashboard preview */}
-                  <div className="grid grid-cols-4 gap-3 mb-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                     {[
                       { label: "Total Leads", value: "847", trend: "+12%" },
                       { label: "Booked", value: "294", trend: "+8%" },

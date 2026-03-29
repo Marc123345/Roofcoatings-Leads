@@ -15,7 +15,7 @@ export default function DashboardMockup() {
 
         <div className="p-5 space-y-4">
           {/* Top stats row */}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-2">
             {[
               { label: "Leads Today", value: "12", color: "text-blue-light" },
               { label: "Close Rate", value: "32%", color: "text-green-400" },

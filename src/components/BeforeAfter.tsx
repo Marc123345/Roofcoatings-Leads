@@ -138,7 +138,7 @@ export default function BeforeAfter() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + i * 0.1 }}
                       >
-                        <p className="text-red-400 text-3xl lg:text-4xl font-bold">{stat.value}</p>
+                        <p className="text-red-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{stat.value}</p>
                         <p className="text-white/80 text-sm mt-1">{stat.label}</p>
                       </motion.div>
                     ))}
@@ -194,7 +194,7 @@ export default function BeforeAfter() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + i * 0.1 }}
                       >
-                        <p className="text-green-400 text-3xl lg:text-4xl font-bold">{stat.value}</p>
+                        <p className="text-green-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{stat.value}</p>
                         <p className="text-white/80 text-sm mt-1">{stat.label}</p>
                       </motion.div>
                     ))}
