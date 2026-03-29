@@ -36,7 +36,7 @@ const steps = [
   {
     number: "04",
     title: "Exclusive Delivery",
-    description: "Leads sent directly to you in real time. No sharing. You call first.",
+    description: "Leads sent directly to you in real time. Pre-qualified and delivered in real time.",
     icon: (
       <svg className="w-7 h-7 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />

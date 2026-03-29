@@ -243,7 +243,7 @@ export default function ServiceAreasHub() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12">
             <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-white">We Cover All 50 States</h2></AnimateIn>
-            <AnimateIn delay={0.1}><p className="mt-3 text-white/80 text-lg">Select your state to get started with exclusive leads in your territory.</p></AnimateIn>
+            <AnimateIn delay={0.1}><p className="mt-3 text-white/80 text-lg">Select your state to get started with pre-qualified leads in your territory.</p></AnimateIn>
           </div>
 
           <AnimateIn delay={0.2}>
@@ -292,7 +292,7 @@ export default function ServiceAreasHub() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
               Your Territory.{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent">
-                Your Leads. Only Yours.
+                Your Leads. Your Territory.
               </span>
             </h2>
             <p className="mt-4 text-navy/80 text-lg">We&apos;ll build a campaign blueprint specific to your market. Free.</p>

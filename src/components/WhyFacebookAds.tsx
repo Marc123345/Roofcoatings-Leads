@@ -9,9 +9,9 @@ const tabs = [
   {
     id: "exclusive",
     label: "Exclusive",
-    stat: "100%",
-    title: "Exclusive Leads",
-    description: "No shared leads. No competition. Just you and the customer. Every lead is sent to one contractor only — you.",
+    stat: "Proven",
+    title: "Done-For-You System",
+    description: "A battle-tested Facebook Ad system already proven across 100+ roof coating contractors. We handle everything — you just close the jobs.",
     visual: "funnel",
   },
   {
@@ -46,7 +46,7 @@ function FunnelVisual() {
       {[
         { label: "Shared Lead Platforms", users: "5+ contractors see it", w: "100%", bg: "bg-red-500/80", text: "text-red-100" },
         { label: "Google Ads", users: "3-4 competitors bidding", w: "75%", bg: "bg-orange-500/80", text: "text-orange-100" },
-        { label: "RoofCoat Leads", users: "Only YOU receive it", w: "40%", bg: "bg-gradient-to-r from-gold to-yellow-400", text: "text-navy" },
+        { label: "RoofCoat Leads", users: "Pre-qualified for you", w: "40%", bg: "bg-gradient-to-r from-gold to-yellow-400", text: "text-navy" },
       ].map((step, i) => (
         <motion.div
           key={step.label}
@@ -66,7 +66,7 @@ function FunnelVisual() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
       >
-        <span className="text-green-400 font-bold text-sm">Your lead. Your customer. Zero competition.</span>
+        <span className="text-green-400 font-bold text-sm">Pre-qualified leads. Proven system. You just close.</span>
       </motion.div>
     </div>
   );

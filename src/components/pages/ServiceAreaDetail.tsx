@@ -42,7 +42,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
             <motion.p className="mt-6 text-white/70 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-              Exclusive, pre-qualified leads for {area.state} roof coating contractors.
+              Pre-qualified, high-intent leads for {area.state} roof coating contractors.
               Custom campaigns targeting {area.cities.slice(0, 3).join(", ")} and beyond.
             </motion.p>
 

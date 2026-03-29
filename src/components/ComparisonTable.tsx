@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import AnimateIn from "./AnimateIn";
 
 const features = [
-  { name: "Exclusive Leads", roofcoat: true, google: false, home: false },
+  { name: "Pre-Qualified Leads", roofcoat: true, google: false, home: false },
   { name: "Pre-Qualified Prospects", roofcoat: true, google: "Partial", home: false },
-  { name: "No Competition Per Lead", roofcoat: true, google: false, home: false },
+  { name: "Done-For-You Campaigns", roofcoat: true, google: false, home: false },
   { name: "Facebook Precision Targeting", roofcoat: true, google: false, home: false },
   { name: "Real-Time Lead Delivery", roofcoat: true, google: true, home: "Delayed" },
   { name: "Dedicated Campaign Manager", roofcoat: true, google: false, home: false },

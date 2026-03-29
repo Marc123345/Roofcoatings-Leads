@@ -110,7 +110,7 @@ export default function ROI() {
                     className="object-cover opacity-30"
                   />
                   <div className="absolute inset-0 bg-green-900/50 flex items-center justify-center">
-                    <span className="text-green-200 font-bold text-sm">Exclusive leads. Maximum ROI.</span>
+                    <span className="text-green-200 font-bold text-sm">Pre-qualified leads. Maximum ROI.</span>
                   </div>
                 </div>
               </div>

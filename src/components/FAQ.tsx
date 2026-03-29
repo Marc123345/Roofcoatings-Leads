@@ -5,7 +5,7 @@ import AnimateIn, { StaggerContainer, StaggerItem } from "./AnimateIn";
 
 const faqs = [
   {
-    question: "How much do exclusive roof coating leads cost?",
+    question: "How much do pre-qualified roof coating leads cost?",
     answer:
       "Our leads typically cost $30\u2013$60 each, compared to $80\u2013$150 for shared leads on platforms like HomeAdvisor. Because you\u2019re the only contractor receiving each lead, your close rate climbs to 20\u201335%, making your actual cost per closed job $150\u2013$300.",
   },
@@ -15,9 +15,9 @@ const faqs = [
       "Most partners receive their first lead within 48 hours of campaign launch. We build and launch your campaign within 24 hours of your strategy audit.",
   },
   {
-    question: "Are these leads really exclusive?",
+    question: "How are the leads pre-qualified?",
     answer:
-      "Yes. Every lead generated through your campaign goes only to you. We never sell the same lead to multiple contractors \u2014 that\u2019s the foundation of everything we do.",
+      "Every lead goes through our proprietary qualification funnel before reaching you. We screen for property type, roof age, urgency, and budget. Price shoppers and tire kickers are filtered out \u2014 you only talk to prospects who are genuinely ready to move forward.",
   },
   {
     question: "Do I need to sign a long-term contract?",

@@ -62,7 +62,7 @@ const winLogs = [
 ];
 
 const testimonials = [
-  { quote: "The exclusive promise is real. When I call, they haven't been bombarded by 10 other roofers.", name: "Linda Hall", company: "Hall Systems Inc.", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" },
+  { quote: "The lead quality is incredible. When I call, they're already pre-qualified and ready to talk. Close rates went through the roof.", name: "Linda Hall", company: "Hall Systems Inc.", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" },
   { quote: "I was skeptical at first, but the booking rate speaks for itself. We closed 3 large commercial projects.", name: "Mark Thompson", company: "Thompson Commercial Coatings", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" },
   { quote: "The pre-qualification process saves my sales team hours every week. Finally a lead source that gets it.", name: "David Chen", company: "Citywide Restorations", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80" },
   { quote: "We used to rely on referrals, but that wasn't scalable. Now we plan growth quarter to quarter.", name: "James Wilson", company: "Wilson & Sons Coatings", image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&q=80" },

@@ -20,7 +20,7 @@ const beforeData = {
 
 const afterData = {
   items: [
-    "100% exclusive leads — only you",
+    "Pre-qualified, high-intent leads from day one",
     "Predictable, scalable pipeline on demand",
     "40% lower cost per acquisition",
     "Pre-qualified, ready-to-book prospects",

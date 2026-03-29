@@ -38,7 +38,7 @@ export default function CTA() {
 
           <AnimateIn delay={0.2}>
             <p className="mt-6 text-white/80 text-lg max-w-2xl mx-auto">
-              Get exclusive roof coating leads delivered directly to your business —
+              Get pre-qualified roof coating leads delivered directly to your business —
               plus a free custom 5-page website built specifically for your company.
             </p>
           </AnimateIn>
@@ -63,7 +63,7 @@ export default function CTA() {
 
           <AnimateIn delay={0.55}>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
-              {["No Shared Leads", "No Contracts", "Just Results"].map((item) => (
+              {["Proven System", "No Contracts", "Just Results"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

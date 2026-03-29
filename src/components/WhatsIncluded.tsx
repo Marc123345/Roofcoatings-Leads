@@ -32,8 +32,8 @@ const inclusions = [
       </svg>
     ),
     iconBg: "from-gold to-yellow-500",
-    title: "100% Exclusive Leads",
-    description: "Every lead goes only to you. Zero competition, higher close rates",
+    title: "Pre-Qualified, High-Intent Leads",
+    description: "Every lead is pre-screened for property type, urgency, and budget before it reaches you",
     size: "normal",
   },
   {

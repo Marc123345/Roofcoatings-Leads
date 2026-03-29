@@ -66,7 +66,7 @@ export default function Hero() {
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
                 We&apos;ve already cracked the code for 100+ roof coating contractors. Our
-                Facebook Ad system delivers exclusive, pre-qualified leads from day one.
+                Facebook Ad system delivers pre-qualified, high-intent leads from day one.
                 Sign up and get a free custom 5-page website built for your business.
               </motion.p>
 
