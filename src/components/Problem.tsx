@@ -169,7 +169,12 @@ export default function Problem() {
   const [active, setActive] = useState(0);
   const problem = PROBLEMS[active];
 
-  const textColorMap: Record<string, string> = { red: "text-navy", orange: "text-navy", blue: "text-blue" };
+  const colorMap: Record<string, { accent: string; bg: string; border: string; tab: string }> = {
+    red: { accent: "text-red-500", bg: "bg-red-500/5", border: "border-red-500/20", tab: "bg-red-500" },
+    orange: { accent: "text-orange-500", bg: "bg-orange-500/5", border: "border-orange-500/20", tab: "bg-orange-500" },
+    blue: { accent: "text-blue", bg: "bg-blue/5", border: "border-blue/20", tab: "bg-blue" },
+  };
+  const c = colorMap[problem.color];
 
   return (
     <section className="bg-white relative overflow-hidden">
@@ -178,8 +183,8 @@ export default function Problem() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <AnimateIn>
-            <div className="inline-flex items-center gap-2 bg-navy/5 border border-navy/10 rounded-none px-4 py-1.5 mb-6">
-              <span className="text-navy text-xs font-bold uppercase tracking-widest">The Problem</span>
+            <div className="inline-flex items-center gap-2 bg-red-500/5 border border-red-500/15 rounded-none px-4 py-1.5 mb-6">
+              <span className="text-red-500 text-xs font-bold uppercase tracking-widest">The Problem</span>
             </div>
           </AnimateIn>
           <AnimateIn delay={0.1}>
@@ -197,20 +202,23 @@ export default function Problem() {
         {/* Tab selectors */}
         <AnimateIn delay={0.2}>
           <div className="flex justify-center mb-8 sm:mb-12">
-            <div className="inline-flex bg-navy/5 rounded-none p-1 border border-navy/10 gap-1 overflow-x-auto max-w-full" style={{scrollbarWidth:"none"}}>
-              {PROBLEMS.map((p, i) => (
-                <button key={p.id} onClick={() => setActive(i)}
-                  className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-none text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-white" : "text-navy/50 hover:text-navy/80"}`}>
-                  {active === i && (
-                    <motion.div className="absolute inset-0 bg-navy rounded-none"
-                      layoutId="problemTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
-                  )}
-                  <span className="relative z-10 flex items-center gap-2">
-                    <span className="hidden sm:inline">{p.tag}</span>
-                    {p.label}
-                  </span>
-                </button>
-              ))}
+            <div className="inline-flex rounded-none p-1 border border-navy/10 gap-1 overflow-x-auto max-w-full" style={{scrollbarWidth:"none"}}>
+              {PROBLEMS.map((p, i) => {
+                const tabColor = colorMap[p.color].tab;
+                return (
+                  <button key={p.id} onClick={() => setActive(i)}
+                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-none text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-white" : "text-navy/40 hover:text-navy/70"}`}>
+                    {active === i && (
+                      <motion.div className={`absolute inset-0 ${tabColor} rounded-none`}
+                        layoutId="problemTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
+                    )}
+                    <span className="relative z-10 flex items-center gap-2">
+                      <span className="hidden sm:inline">{p.tag}</span>
+                      {p.label}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </AnimateIn>
@@ -220,24 +228,24 @@ export default function Problem() {
           <motion.div key={problem.id}
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.3 }}
-            className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center">
+            className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-0 items-stretch">
 
             {/* Left — text */}
             <div className="order-2 lg:order-1">
-              <div className="border border-navy/10 p-5 sm:p-8 lg:p-10">
+              <div className={`h-full border-2 ${c.border} p-5 sm:p-8 lg:p-10 flex flex-col`}>
                 <motion.span
-                  className={`text-5xl lg:text-7xl font-bold text-navy/10`}
-                  initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
+                  className={`text-5xl lg:text-7xl font-bold ${c.accent} opacity-20`}
+                  initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 0.2 }}
                   transition={{ duration: 0.3, type: "spring" }}>
                   {problem.tag}
                 </motion.span>
 
-                <h3 className="text-navy font-bold text-xl sm:text-2xl lg:text-3xl mt-4">{problem.title}</h3>
+                <h3 className="text-navy font-bold text-xl sm:text-2xl lg:text-3xl mt-3">{problem.title}</h3>
                 <p className="text-navy/70 mt-3 text-base leading-relaxed">{problem.description}</p>
-                <p className="text-navy/50 mt-4 text-sm leading-relaxed">{problem.detail}</p>
+                <p className="text-navy/50 mt-4 text-sm leading-relaxed flex-1">{problem.detail}</p>
 
-                <div className="mt-8 inline-flex items-center gap-3 border border-navy/10 px-5 py-3">
-                  <span className="text-2xl font-bold text-navy">{problem.statValue}</span>
+                <div className={`mt-8 inline-flex items-center gap-3 ${c.bg} ${c.border} border px-5 py-3`}>
+                  <span className={`text-2xl font-bold ${c.accent}`}>{problem.statValue}</span>
                   <span className="text-navy/60 text-sm">{problem.statLabel}</span>
                 </div>
               </div>
@@ -245,7 +253,7 @@ export default function Problem() {
 
             {/* Right — visual */}
             <div className="order-1 lg:order-2">
-              <div className="bg-navy p-6 lg:p-8 min-h-[260px] lg:min-h-[340px] flex items-center justify-center">
+              <div className="bg-navy h-full p-6 lg:p-8 min-h-[260px] lg:min-h-[340px] flex items-center justify-center">
                 {problem.id === "wasted-spend" && <WastedSpendVisual />}
                 {problem.id === "slow-results" && <SlowResultsVisual />}
                 {problem.id === "no-system" && <ConsistencyVisual />}
