@@ -141,7 +141,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
       </section>
 
       {/* ── Local Win-Log ── */}
-      <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
+      <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -198,7 +198,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gray-light py-16 sm:py-20 lg:py-28 text-center">
+      <section className="bg-white py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">

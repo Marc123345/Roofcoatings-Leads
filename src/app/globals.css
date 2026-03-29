@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0f1e;
-  --foreground: #ffffff;
-  --navy: #0a0f1e;
-  --navy-light: #131b2e;
+  --background: #09090b;
+  --foreground: #fafafa;
+  --navy: #09090b;
+  --navy-light: #18181b;
   --blue: #2563eb;
   --blue-light: #3b82f6;
   --gold: #eab308;
-  --gray-light: #f1f5f9;
-  --gray: #64748b;
+  --gray-light: #f4f4f5;
+  --gray: #52525b;
 }
 
 @theme inline {
@@ -33,24 +33,16 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-env: safe-area-inset-top safe-area-inset-right safe-area-inset-bottom safe-area-inset-left;
 }
 
-/* Fix for iOS rubber banding */
 @supports (-webkit-touch-callout: none) {
-  body {
-    min-height: -webkit-fill-available;
-  }
-  html {
-    height: -webkit-fill-available;
-  }
+  body { min-height: -webkit-fill-available; }
+  html { height: -webkit-fill-available; }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-/* Respect reduced motion preference */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -60,17 +52,25 @@ html {
   }
 }
 
-/* Optimize mobile performance */
+/* Mobile perf */
 @media (max-width: 768px) {
-  .grid-pattern {
-    display: none;
-  }
-  .noise::before {
-    display: none;
-  }
+  .grid-pattern, .noise::before { display: none; }
 }
 
-/* Animated gradient background */
+/* ── SaaS gradient meshes ── */
+.mesh-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37,99,235,0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(234,179,8,0.08), transparent);
+}
+
+.mesh-gradient-subtle {
+  background:
+    radial-gradient(ellipse 50% 50% at 20% 50%, rgba(37,99,235,0.06), transparent),
+    radial-gradient(ellipse 50% 50% at 80% 50%, rgba(234,179,8,0.04), transparent);
+}
+
+/* ── Animated gradient text ── */
 @keyframes gradientShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -81,97 +81,86 @@ html {
   animation: gradientShift 8s ease infinite;
 }
 
-/* Glow effects */
+/* ── Glow effects (SaaS style) ── */
 .glow-blue {
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3), 0 0 60px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.2), 0 0 80px rgba(37, 99, 235, 0.06);
 }
-
 .glow-gold {
-  box-shadow: 0 0 20px rgba(234, 179, 8, 0.3), 0 0 60px rgba(234, 179, 8, 0.1);
+  box-shadow: 0 0 40px rgba(234, 179, 8, 0.2), 0 0 80px rgba(234, 179, 8, 0.06);
 }
 
-/* Glass effect */
+/* ── Glass (frosted) ── */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-dark {
-  background: rgba(10, 15, 30, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
+.glass-dark {
+  background: rgba(9, 9, 11, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-/* Pulse animation for lead signal */
+/* ── SaaS card hover ── */
+.saas-card {
+  background: var(--navy-light);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.saas-card:hover {
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+}
+
+/* ── Dot grid (SaaS pattern) ── */
+.grid-pattern {
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Pulse ring ── */
 @keyframes pulse-ring {
   0% { transform: scale(1); opacity: 0.6; }
   100% { transform: scale(1.8); opacity: 0; }
 }
+.animate-pulse-ring { animation: pulse-ring 2s ease-out infinite; }
 
-.animate-pulse-ring {
-  animation: pulse-ring 2s ease-out infinite;
-}
-
-.animate-pulse-ring-delayed {
-  animation: pulse-ring 2s ease-out 0.5s infinite;
-}
-
-/* Shimmer effect */
+/* ── Shimmer ── */
 @keyframes shimmer {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
 }
-
-.shimmer {
-  position: relative;
-  overflow: hidden;
-}
-
+.shimmer { position: relative; overflow: hidden; }
 .shimmer::after {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
   animation: shimmer 3s infinite;
 }
 
-/* Floating animation */
+/* ── Float ── */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-10px); }
 }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float 6s ease-in-out 2s infinite; }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float 6s ease-in-out 2s infinite;
-}
-
-/* Grid pattern overlay */
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* Noise texture */
-.noise {
-  position: relative;
-}
+/* ── Noise ── */
+.noise { position: relative; }
 .noise::before {
   content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+/* ── Section divider ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
 }

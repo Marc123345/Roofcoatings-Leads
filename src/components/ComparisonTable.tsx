@@ -37,7 +37,7 @@ function CellValue({ value }: { value: boolean | string }) {
 
 export default function ComparisonTable() {
   return (
-    <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
+    <section className="bg-white py-16 sm:py-20 lg:py-32">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy text-center">

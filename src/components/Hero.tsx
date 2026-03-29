@@ -9,23 +9,20 @@ import Marquee from "./visuals/Marquee";
 export default function Hero() {
   return (
     <>
-      <section className="bg-navy relative overflow-hidden min-h-[85dvh] sm:min-h-[92vh] flex items-center">
+      <section className="bg-navy relative overflow-hidden min-h-[85dvh] sm:min-h-[92vh] flex items-center mesh-gradient">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1920&q=80"
             alt="Commercial roof aerial view"
             fill
-            className="object-cover opacity-15" sizes="100vw"
+            className="object-cover opacity-[0.08]" sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-transparent to-navy" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/95 to-navy" />
         </div>
 
         <ParticleField />
-
-        <div className="absolute top-[-200px] right-[-100px] hidden sm:block w-[300px] h-[300px] lg:w-[700px] lg:h-[700px] bg-blue/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-[-200px] left-[-100px] hidden sm:block w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-gold/5 rounded-full blur-[80px]" />
+        <div className="absolute inset-0 grid-pattern" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10 w-full">
           <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">

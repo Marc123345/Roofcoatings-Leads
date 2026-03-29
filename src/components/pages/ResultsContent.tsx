@@ -270,7 +270,7 @@ export default function ResultsContent() {
       </section>
 
       {/* ── More Voices ── */}
-      <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
+      <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
             <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">More Partner Voices</h2></AnimateIn>

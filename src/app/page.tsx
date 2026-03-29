@@ -21,18 +21,28 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <div className="section-divider" />
         <Problem />
+        <div className="section-divider" />
         <Solution />
+        <div className="section-divider" />
         <WhyFacebookAds />
         <HowItWorks />
+        <div className="section-divider" />
         <Results />
+        <div className="section-divider" />
         <BeforeAfter />
         <Testimonials />
+        <div className="section-divider" />
         <ComparisonTable />
         <ROI />
+        <div className="section-divider" />
         <Scalability />
+        <div className="section-divider" />
         <WhatsIncluded />
+        <div className="section-divider" />
         <FAQ />
+        <div className="section-divider" />
         <CTA />
       </main>
       <Footer />

@@ -392,7 +392,7 @@ export default function HowItWorksContent() {
       </section>
 
       {/* ── Why Facebook — Not Google? ── */}
-      <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
+      <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
             <AnimateIn>
@@ -457,7 +457,7 @@ export default function HowItWorksContent() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gray-light py-16 sm:py-20 lg:py-28 text-center">
+      <section className="bg-white py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">Ready to See Your Custom Blueprint?</h2>

@@ -275,7 +275,7 @@ export default function NicheExpertiseContent() {
       </section>
 
       {/* ── Why We're Different ── */}
-      <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
+      <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
             <AnimateIn>

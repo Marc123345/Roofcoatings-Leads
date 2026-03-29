@@ -73,7 +73,7 @@ const inclusions = [
 
 export default function WhatsIncluded() {
   return (
-    <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
+    <section className="bg-white py-16 sm:py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <p className="text-blue font-semibold text-sm uppercase tracking-wider mb-3">
