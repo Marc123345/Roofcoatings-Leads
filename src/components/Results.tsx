@@ -6,7 +6,7 @@ import DashboardMockup from "./visuals/DashboardMockup";
 
 export default function Results() {
   return (
-    <section id="results" className="bg-navy py-24 lg:py-32 relative overflow-hidden noise">
+    <section id="results" className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden noise">
       <div className="absolute inset-0 grid-pattern" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block w-[250px] h-[250px] lg:w-[600px] lg:h-[600px] bg-gold/5 rounded-full blur-3xl" />
 
@@ -97,7 +97,7 @@ export default function Results() {
           <div className="mt-12 text-center">
             <motion.a
               href="#cta"
-              className="inline-block bg-gradient-to-r from-blue to-blue-light text-white px-8 py-4 rounded-full font-semibold text-lg overflow-hidden relative group"
+              className="inline-block bg-gradient-to-r from-blue to-blue-light text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg w-full sm:w-auto text-center overflow-hidden relative group"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(37,99,235,0.4)" }}
               whileTap={{ scale: 0.95 }}
             >

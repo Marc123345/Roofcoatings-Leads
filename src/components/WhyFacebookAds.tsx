@@ -216,7 +216,7 @@ export default function WhyFacebookAds() {
   const active = tabs.find((t) => t.id === activeTab)!;
 
   return (
-    <section className="bg-navy py-24 lg:py-32 relative overflow-hidden">
+    <section className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern" />
       <div className="absolute top-0 right-0 hidden sm:block w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-blue/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-0 left-0 hidden sm:block w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-gold/3 rounded-full blur-[80px]" />
@@ -247,7 +247,7 @@ export default function WhyFacebookAds() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative px-5 sm:px-8 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
+                  className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${
                     activeTab === tab.id
                       ? "text-navy"
                       : "text-white/70 hover:text-white/80"

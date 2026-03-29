@@ -71,14 +71,14 @@ export default function Hero() {
               </motion.p>
 
               <motion.div
-                className="mt-10 flex flex-col sm:flex-row gap-4"
+                className="mt-8 flex flex-col sm:flex-row gap-3"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <motion.a
                   href="/get-started"
-                  className="relative inline-flex items-center justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 rounded-full font-bold text-lg overflow-hidden group shadow-lg shadow-gold/20"
+                  className="relative inline-flex items-center justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg w-full sm:w-auto text-center overflow-hidden group shadow-lg shadow-gold/20"
                   whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.4)" }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -87,7 +87,7 @@ export default function Hero() {
                 </motion.a>
                 <motion.a
                   href="/how-it-works"
-                  className="inline-flex items-center justify-center gap-2 text-white/80 hover:text-white border border-white/10 hover:border-white/20 hover:bg-white/5 px-8 py-4 rounded-full font-semibold text-lg transition-all backdrop-blur-sm"
+                  className="inline-flex items-center justify-center gap-2 text-white/80 hover:text-white border border-white/10 hover:border-white/20 hover:bg-white/5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg w-full sm:w-auto text-center transition-all backdrop-blur-sm"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                 >

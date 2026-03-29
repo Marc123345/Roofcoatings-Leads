@@ -36,10 +36,10 @@ export default function Footer() {
   return (
     <footer className="bg-navy-light border-t border-white/5">
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Brand column */}
-          <div className="lg:col-span-4">
+          <div className="col-span-2 lg:col-span-4">
             <div className="flex items-center gap-3 mb-5">
               <Logo size={36} />
               <span className="text-white font-bold text-lg">

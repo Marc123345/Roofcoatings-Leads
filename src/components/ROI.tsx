@@ -33,7 +33,7 @@ export default function ROI() {
       </div>
       <div className="absolute inset-0 grid-pattern" />
 
-      <div className="relative z-10 py-24 lg:py-32">
+      <div className="relative z-10 py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
             <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">

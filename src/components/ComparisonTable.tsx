@@ -37,7 +37,7 @@ function CellValue({ value }: { value: boolean | string }) {
 
 export default function ComparisonTable() {
   return (
-    <section className="bg-gray-light py-24 lg:py-32">
+    <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy text-center">
@@ -55,10 +55,10 @@ export default function ComparisonTable() {
             >
               <thead>
                 <tr className="bg-navy text-white">
-                  <th className="text-left py-5 px-6 font-semibold">Feature</th>
-                  <th className="py-5 px-6 font-semibold bg-gradient-to-b from-blue to-blue-light">RoofCoat Leads</th>
-                  <th className="py-5 px-6 font-semibold">Google Ads</th>
-                  <th className="py-5 px-6 font-semibold">HomeAdvisor</th>
+                  <th className="text-left py-3 px-2 sm:px-6 font-semibold text-xs sm:text-sm">Feature</th>
+                  <th className="py-3 px-2 sm:px-6 font-semibold text-xs sm:text-sm bg-gradient-to-b from-blue to-blue-light">RoofCoat Leads</th>
+                  <th className="py-3 px-2 sm:px-6 font-semibold text-xs sm:text-sm">Google Ads</th>
+                  <th className="py-3 px-2 sm:px-6 font-semibold text-xs sm:text-sm">HomeAdvisor</th>
                 </tr>
               </thead>
               <tbody>
@@ -71,14 +71,14 @@ export default function ComparisonTable() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.05 * i }}
                   >
-                    <td className="py-4 px-6 font-medium text-navy">{feature.name}</td>
-                    <td className="py-4 px-6 text-center bg-blue/5 border-x border-blue/10">
+                    <td className="py-3 px-3 sm:px-6 font-medium text-navy text-xs sm:text-sm">{feature.name}</td>
+                    <td className="py-3 px-2 sm:px-6 text-center bg-blue/5 border-x border-blue/10">
                       <CellValue value={feature.roofcoat} />
                     </td>
-                    <td className="py-4 px-6 text-center">
+                    <td className="py-3 px-2 sm:px-6 text-center">
                       <CellValue value={feature.google} />
                     </td>
-                    <td className="py-4 px-6 text-center">
+                    <td className="py-3 px-2 sm:px-6 text-center">
                       <CellValue value={feature.home} />
                     </td>
                   </motion.tr>

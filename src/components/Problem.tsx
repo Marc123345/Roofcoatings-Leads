@@ -208,11 +208,11 @@ export default function Problem() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-14 lg:py-20">
           {/* Tab selectors */}
           <AnimateIn delay={0.2}>
-            <div className="flex justify-center mb-10 lg:mb-14">
-              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full">
+            <div className="flex justify-center mb-10 lg:mb-8 sm:mb-14">
+              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {PROBLEMS.map((p, i) => (
                   <button key={p.id} onClick={() => setActive(i)}
-                    className={`relative px-5 sm:px-8 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${active === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
+                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
                     {active === i && (
                       <motion.div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-400 rounded-xl"
                         layoutId="problemTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
@@ -248,7 +248,7 @@ export default function Problem() {
                   <p className="text-white/80 mt-3 text-lg leading-relaxed">{problem.description}</p>
                   <p className="text-white/80 mt-4 text-sm leading-relaxed">{problem.detail}</p>
 
-                  <div className={`mt-8 inline-flex items-center gap-3 rounded-xl border px-5 py-3 ${colorMap[problem.color]}`}>
+                  <div className={`mt-8 inline-flex items-center w-full sm:w-auto justify-center gap-3 rounded-xl border px-5 py-3 ${colorMap[problem.color]}`}>
                     <span className={`text-2xl font-bold ${textColorMap[problem.color]}`}>{problem.statValue}</span>
                     <span className="text-white/80 text-sm">{problem.statLabel}</span>
                   </div>

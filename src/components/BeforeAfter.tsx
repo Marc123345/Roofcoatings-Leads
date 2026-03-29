@@ -37,7 +37,7 @@ export default function BeforeAfter() {
   const [showAfter, setShowAfter] = useState(false);
 
   return (
-    <section className="bg-navy py-24 lg:py-32 relative overflow-hidden">
+    <section className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -138,7 +138,7 @@ export default function BeforeAfter() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + i * 0.1 }}
                       >
-                        <p className="text-red-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{stat.value}</p>
+                        <p className="text-red-400 text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold">{stat.value}</p>
                         <p className="text-white/80 text-sm mt-1">{stat.label}</p>
                       </motion.div>
                     ))}
@@ -194,7 +194,7 @@ export default function BeforeAfter() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + i * 0.1 }}
                       >
-                        <p className="text-green-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{stat.value}</p>
+                        <p className="text-green-400 text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold">{stat.value}</p>
                         <p className="text-white/80 text-sm mt-1">{stat.label}</p>
                       </motion.div>
                     ))}

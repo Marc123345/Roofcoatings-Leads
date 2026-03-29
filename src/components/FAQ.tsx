@@ -35,7 +35,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="bg-gray-light py-24 lg:py-32">
+    <section id="faq" className="bg-gray-light py-16 sm:py-20 lg:py-32">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <p className="text-blue font-semibold text-sm uppercase tracking-wider mb-3 text-center">
@@ -43,7 +43,7 @@ export default function FAQ() {
           </p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy text-center">
+          <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-navy text-center">
             Got Questions? We&apos;ve Got Answers.
           </h2>
         </AnimateIn>

@@ -242,7 +242,7 @@ export default function HowItWorksContent() {
         </motion.div>
         <ParticleField />
 
-        <motion.div className="relative z-10 py-32 lg:py-44 text-center" style={{ opacity: heroOpacity }}>
+        <motion.div className="relative z-10 py-20 sm:py-28 lg:py-44 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
@@ -268,7 +268,7 @@ export default function HowItWorksContent() {
             </motion.p>
 
             <motion.a href="#process"
-              className="mt-10 inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center gap-2 text-white/70 hover:text-white transition-colors"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
               <span className="text-sm">Scroll to explore</span>
               <motion.svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -284,7 +284,7 @@ export default function HowItWorksContent() {
       <section id="process" className="bg-navy relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern" />
 
-        <div className="relative z-10 py-24 lg:py-32">
+        <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Timeline nav — horizontal */}
@@ -392,9 +392,9 @@ export default function HowItWorksContent() {
       </section>
 
       {/* ── Why Facebook — Not Google? ── */}
-      <section className="bg-gray-light py-24 lg:py-32">
+      <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8 sm:mb-14">
             <AnimateIn>
               <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">Platform Advantage</p>
             </AnimateIn>
@@ -432,10 +432,10 @@ export default function HowItWorksContent() {
       </section>
 
       {/* ── Everything Included — Bento ── */}
-      <section className="bg-navy py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8 sm:mb-14">
             <AnimateIn><h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Everything You Need to Grow</h2></AnimateIn>
             <AnimateIn delay={0.1}><p className="mt-4 text-white/70 text-lg">All included. No add-ons. No hidden fees.</p></AnimateIn>
           </div>
@@ -457,13 +457,13 @@ export default function HowItWorksContent() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gray-light py-24 lg:py-28 text-center">
+      <section className="bg-gray-light py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">Ready to See Your Custom Blueprint?</h2>
             <p className="mt-4 text-navy/80 text-lg">The strategy audit is free. No pitch. No obligation. If we can&apos;t help, we&apos;ll tell you.</p>
             <motion.a href="/get-started"
-              className="mt-10 inline-flex items-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-10 py-5 rounded-full font-bold text-lg shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Book Your Free Strategy Audit &rarr;

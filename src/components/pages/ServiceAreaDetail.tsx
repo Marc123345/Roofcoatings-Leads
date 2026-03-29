@@ -24,7 +24,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
         </motion.div>
         <ParticleField />
 
-        <motion.div className="relative z-10 py-32 lg:py-44 text-center" style={{ opacity: heroOpacity }}>
+        <motion.div className="relative z-10 py-20 sm:py-28 lg:py-44 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 rounded-full px-5 py-2 mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
@@ -46,15 +46,15 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
               Custom campaigns targeting {area.cities.slice(0, 3).join(", ")} and beyond.
             </motion.p>
 
-            <motion.div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+            <motion.div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
               <motion.a href="/get-started"
-                className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-gold/20"
+                className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
                 whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 Get {area.state} Leads &rarr;
               </motion.a>
               <motion.a href="/results"
-                className="border border-white/20 text-white/80 hover:text-white hover:border-white/30 px-8 py-4 rounded-full font-semibold text-lg transition-all"
+                className="border border-white/20 text-white/80 hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg w-full sm:w-auto text-center transition-all"
                 whileHover={{ scale: 1.03 }}>
                 See Win-Logs
               </motion.a>
@@ -83,10 +83,10 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
       {/* ── Market Intel Bento ── */}
       <section className="bg-navy relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern" />
-        <div className="relative z-10 py-24 lg:py-32">
+        <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimateIn>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12">
+              <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8 sm:mb-12">
                 The {area.state} Roof Coating Market
               </h2>
             </AnimateIn>
@@ -141,7 +141,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
       </section>
 
       {/* ── Local Win-Log ── */}
-      <section className="bg-gray-light py-24 lg:py-32">
+      <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -174,7 +174,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
       </section>
 
       {/* ── Cities Grid ── */}
-      <section className="bg-navy relative overflow-hidden py-24 lg:py-32">
+      <section className="bg-navy relative overflow-hidden py-16 sm:py-20 lg:py-32">
         <div className="absolute inset-0 grid-pattern" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimateIn>
@@ -198,7 +198,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gray-light py-24 lg:py-28 text-center">
+      <section className="bg-gray-light py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
@@ -208,7 +208,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
               Get a custom campaign blueprint for your {area.state} territory. Free. No obligation.
             </p>
             <motion.a href="/get-started"
-              className="mt-10 inline-flex items-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-10 py-5 rounded-full font-bold text-lg shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Talk to Marc &rarr;
             </motion.a>

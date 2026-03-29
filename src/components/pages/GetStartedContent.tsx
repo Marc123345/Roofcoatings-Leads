@@ -35,7 +35,7 @@ export default function GetStartedContent() {
         </motion.div>
         <ParticleField />
 
-        <motion.div className="relative z-10 py-32 lg:py-40 text-center" style={{ opacity: heroOpacity }}>
+        <motion.div className="relative z-10 py-20 sm:py-28 lg:py-40 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
@@ -62,7 +62,7 @@ export default function GetStartedContent() {
             </motion.p>
 
             <motion.a href="#book"
-              className="mt-8 inline-flex items-center gap-2 text-gold hover:text-yellow-300 transition-colors"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center gap-2 text-gold hover:text-yellow-300 transition-colors"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
               <span className="text-sm font-medium">Book your call below</span>
               <motion.svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -77,14 +77,14 @@ export default function GetStartedContent() {
       {/* ── Booking Calendar ── */}
       <section id="book" className="bg-navy relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern" />
-        <div className="relative z-10 py-24 lg:py-32">
+        <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-5 gap-8">
 
               {/* Left — Context */}
               <div className="lg:col-span-2">
                 <AnimateIn>
-                  <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4">
                     Book Your Free Strategy Audit
                   </h2>
                   <p className="text-white/70 leading-relaxed mb-8">
@@ -161,10 +161,10 @@ export default function GetStartedContent() {
       </section>
 
       {/* ── Trust Section ── */}
-      <section className="bg-gray-light py-24 lg:py-32">
+      <section className="bg-gray-light py-16 sm:py-20 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <AnimateIn><h2 className="text-3xl sm:text-4xl font-bold text-navy">Why Contractors Trust the Audit</h2></AnimateIn>
+          <div className="text-center mb-8 sm:mb-14">
+            <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Why Contractors Trust the Audit</h2></AnimateIn>
           </div>
 
           <StaggerContainer className="grid sm:grid-cols-2 gap-6" staggerDelay={0.08}>
@@ -187,11 +187,11 @@ export default function GetStartedContent() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="bg-navy py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 grid-pattern" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimateIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Questions About the Audit</h2>
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12">Questions About the Audit</h2>
           </AnimateIn>
 
           <StaggerContainer className="space-y-4" staggerDelay={0.08}>
@@ -219,13 +219,13 @@ export default function GetStartedContent() {
       <section className="bg-gray-light py-20 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Still Thinking About It?</h2>
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Still Thinking About It?</h2>
             <p className="mt-4 text-navy/80 text-lg">
               The audit is free, takes 30 minutes, and you keep the blueprint whether you work with us or not.
               The only risk is not knowing what your market looks like.
             </p>
             <motion.a href="#book"
-              className="mt-8 inline-flex items-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-10 py-5 rounded-full font-bold text-lg shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Book My Free Audit &rarr;
             </motion.a>

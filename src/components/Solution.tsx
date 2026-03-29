@@ -6,7 +6,7 @@ import AdCreativeMockup from "./visuals/AdCreativeMockup";
 
 export default function Solution() {
   return (
-    <section className="bg-navy py-24 lg:py-32 relative overflow-hidden noise">
+    <section className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden noise">
       <div className="absolute inset-0 grid-pattern" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">

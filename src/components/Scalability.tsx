@@ -28,13 +28,13 @@ export default function Scalability() {
   };
 
   return (
-    <section className="bg-navy py-24 lg:py-32 relative overflow-hidden">
+    <section className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern" />
       <div className="absolute top-0 right-0 hidden sm:block w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-gold/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-0 left-0 hidden sm:block w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-blue/5 rounded-full blur-[80px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 sm:mb-14">
           <AnimateIn>
             <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">ROI Calculator</p>
           </AnimateIn>
@@ -124,7 +124,7 @@ export default function Scalability() {
                   className="bg-navy-light rounded-2xl border border-white/10 p-6"
                 >
                   <p className="text-white/80 text-xs mb-1">Monthly Ad Spend</p>
-                  <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">{formatCurrency(calc.adSpend)}</p>
+                  <p className="text-white text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold">{formatCurrency(calc.adSpend)}</p>
                 </motion.div>
 
                 <motion.div
@@ -133,7 +133,7 @@ export default function Scalability() {
                   className="bg-navy-light rounded-2xl border border-white/10 p-6"
                 >
                   <p className="text-white/80 text-xs mb-1">Jobs Closed</p>
-                  <p className="text-green-400 text-3xl lg:text-4xl font-bold">{calc.jobsClosed}</p>
+                  <p className="text-green-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{calc.jobsClosed}</p>
                   <p className="text-white/80 text-xs mt-1">per month</p>
                 </motion.div>
               </div>

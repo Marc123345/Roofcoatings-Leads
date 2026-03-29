@@ -47,7 +47,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-gray-light py-24 lg:py-32 relative overflow-hidden">
+    <section id="how-it-works" className="bg-gray-light py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <p className="text-blue font-semibold text-sm uppercase tracking-wider mb-3">
