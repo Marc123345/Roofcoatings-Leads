@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { BarChart3, Wallet, MapPin, CloudSun } from "lucide-react";
 import AnimateIn, { StaggerContainer, StaggerItem } from "./AnimateIn";
 
+const sliderClass = "w-full h-2 appearance-none cursor-pointer rounded-full bg-white/10 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing [&::-moz-range-thumb]:w-8 [&::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab";
+
 export default function Scalability() {
   const [leads, setLeads] = useState(25);
   const [costPerLead, setCostPerLead] = useState(45);
@@ -63,9 +65,7 @@ export default function Scalability() {
                 </div>
                 <input type="range" min={5} max={100} step={5} value={leads}
                   onChange={(e) => setLeads(Number(e.target.value))}
-                  className="w-full h-2 appearance-none cursor-pointer rounded-full bg-white/10
-                    [&::-webkit-slider-thumb]:appearance-none [[&::-webkit-slider-thumb]:w-6::-webkit-slider-thumb]:w-8 [[&::-webkit-slider-thumb]:h-6::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing
-                    [[&::-moz-range-thumb]:w-6::-moz-range-thumb]:w-8 [[&::-moz-range-thumb]:h-6::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab"
+                  className={sliderClass}
                   style={{ background: `linear-gradient(to right, #eab308 ${((leads - 5) / 95) * 100}%, rgba(255,255,255,0.1) ${((leads - 5) / 95) * 100}%)` }}
                 />
                 <div className="flex justify-between text-white/70 text-[11px] mt-1"><span>5</span><span>100</span></div>
@@ -79,9 +79,7 @@ export default function Scalability() {
                 </div>
                 <input type="range" min={25} max={80} step={5} value={costPerLead}
                   onChange={(e) => setCostPerLead(Number(e.target.value))}
-                  className="w-full h-2 appearance-none cursor-pointer rounded-full bg-white/10
-                    [&::-webkit-slider-thumb]:appearance-none [[&::-webkit-slider-thumb]:w-6::-webkit-slider-thumb]:w-8 [[&::-webkit-slider-thumb]:h-6::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing
-                    [[&::-moz-range-thumb]:w-6::-moz-range-thumb]:w-8 [[&::-moz-range-thumb]:h-6::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab"
+                  className={sliderClass}
                   style={{ background: `linear-gradient(to right, #eab308 ${((costPerLead - 25) / 55) * 100}%, rgba(255,255,255,0.1) ${((costPerLead - 25) / 55) * 100}%)` }}
                 />
                 <div className="flex justify-between text-white/70 text-[11px] mt-1"><span>$25</span><span>$80</span></div>
@@ -95,9 +93,7 @@ export default function Scalability() {
                 </div>
                 <input type="range" min={10} max={45} step={5} value={closeRate}
                   onChange={(e) => setCloseRate(Number(e.target.value))}
-                  className="w-full h-2 appearance-none cursor-pointer rounded-full bg-white/10
-                    [&::-webkit-slider-thumb]:appearance-none [[&::-webkit-slider-thumb]:w-6::-webkit-slider-thumb]:w-8 [[&::-webkit-slider-thumb]:h-6::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing
-                    [[&::-moz-range-thumb]:w-6::-moz-range-thumb]:w-8 [[&::-moz-range-thumb]:h-6::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab"
+                  className={sliderClass}
                   style={{ background: `linear-gradient(to right, #eab308 ${((closeRate - 10) / 35) * 100}%, rgba(255,255,255,0.1) ${((closeRate - 10) / 35) * 100}%)` }}
                 />
                 <div className="flex justify-between text-white/70 text-[11px] mt-1"><span>10%</span><span>45%</span></div>
@@ -111,9 +107,7 @@ export default function Scalability() {
                 </div>
                 <input type="range" min={2000} max={50000} step={1000} value={avgJobValue}
                   onChange={(e) => setAvgJobValue(Number(e.target.value))}
-                  className="w-full h-2 appearance-none cursor-pointer rounded-full bg-white/10
-                    [&::-webkit-slider-thumb]:appearance-none [[&::-webkit-slider-thumb]:w-6::-webkit-slider-thumb]:w-8 [[&::-webkit-slider-thumb]:h-6::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing
-                    [[&::-moz-range-thumb]:w-6::-moz-range-thumb]:w-8 [[&::-moz-range-thumb]:h-6::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab"
+                  className={sliderClass}
                   style={{ background: `linear-gradient(to right, #eab308 ${((avgJobValue - 2000) / 48000) * 100}%, rgba(255,255,255,0.1) ${((avgJobValue - 2000) / 48000) * 100}%)` }}
                 />
                 <div className="flex justify-between text-white/70 text-[11px] mt-1"><span>$2k</span><span>$50k</span></div>
