@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import Loader from "@/components/Loader";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -132,7 +138,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#0a0f1e" />
