@@ -169,107 +169,91 @@ export default function Problem() {
   const [active, setActive] = useState(0);
   const problem = PROBLEMS[active];
 
-  const colorMap: Record<string, string> = {
-    red: "border-red-500/30 bg-red-500/8",
-    orange: "border-orange-500/30 bg-orange-500/8",
-    blue: "border-blue/30 bg-blue/8",
-  };
-  const textColorMap: Record<string, string> = { red: "text-red-400", orange: "text-orange-400", blue: "text-blue-light" };
+  const textColorMap: Record<string, string> = { red: "text-navy", orange: "text-navy", blue: "text-blue" };
 
   return (
-    <section className="relative overflow-hidden">
-      {/* Top accent */}
-      <div className="h-1 bg-gradient-to-r from-red-500 via-orange-500 to-blue" />
+    <section className="bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
 
-      {/* Header on light bg */}
-      <div className="bg-gray-light pt-20 lg:pt-28 pb-10 lg:pb-14 text-center px-4">
-        <AnimateIn>
-          <span className="text-blue font-semibold text-sm uppercase tracking-wider">The Problem</span>
-        </AnimateIn>
-        <AnimateIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mt-3 max-w-3xl mx-auto leading-tight">
-            Spent Thousands on Agencies That Don&apos;t Get Roof Coating?
-          </h2>
-        </AnimateIn>
-        <AnimateIn delay={0.15}>
-          <p className="mt-4 text-navy/80 text-lg max-w-xl mx-auto">
-            Generic agencies burn your budget learning your niche. We already have a proven system built specifically for roof coating contractors.
-          </p>
-        </AnimateIn>
-      </div>
-
-      {/* Interactive area on dark bg */}
-      <div className="bg-navy relative">
-        <div className="absolute inset-0">
-          <Image src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="" fill className="object-cover opacity-[0.03]" sizes="100vw" />
-        </div>
-        <div className="absolute inset-0 grid-pattern" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-14 lg:py-20">
-          {/* Tab selectors */}
-          <AnimateIn delay={0.2}>
-            <div className="flex justify-center mb-10 lg:mb-8 sm:mb-14">
-              <div className="inline-flex bg-navy-light rounded-none p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
-                {PROBLEMS.map((p, i) => (
-                  <button key={p.id} onClick={() => setActive(i)}
-                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-none text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
-                    {active === i && (
-                      <motion.div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-400 rounded-none"
-                        layoutId="problemTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
-                    )}
-                    <span className="relative z-10 flex items-center gap-2">
-                      <span className="hidden sm:inline">{p.tag}</span>
-                      {p.label}
-                    </span>
-                  </button>
-                ))}
-              </div>
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16">
+          <AnimateIn>
+            <div className="inline-flex items-center gap-2 bg-navy/5 border border-navy/10 rounded-none px-4 py-1.5 mb-6">
+              <span className="text-navy text-xs font-bold uppercase tracking-widest">The Problem</span>
             </div>
           </AnimateIn>
-
-          {/* Content */}
-          <AnimatePresence mode="wait">
-            <motion.div key={problem.id}
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.3 }}
-              className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 lg:gap-12 items-center">
-
-              {/* Left — text */}
-              <div className="order-2 lg:order-1">
-                <div className="bg-navy-light rounded-none border border-white/5 p-5 sm:p-8 lg:p-10">
-                  <motion.span
-                    className={`text-6xl lg:text-7xl font-bold ${textColorMap[problem.color]}`}
-                    initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.3, type: "spring" }}>
-                    {problem.tag}
-                  </motion.span>
-
-                  <h3 className="text-white font-bold text-2xl lg:text-3xl mt-4">{problem.title}</h3>
-                  <p className="text-white/80 mt-3 text-lg leading-relaxed">{problem.description}</p>
-                  <p className="text-white/80 mt-4 text-sm leading-relaxed">{problem.detail}</p>
-
-                  <div className={`mt-8 inline-flex items-center w-full sm:w-auto justify-center gap-3 rounded-none border px-5 py-3 ${colorMap[problem.color]}`}>
-                    <span className={`text-2xl font-bold ${textColorMap[problem.color]}`}>{problem.statValue}</span>
-                    <span className="text-white/80 text-sm">{problem.statLabel}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right — visual */}
-              <div className="order-1 lg:order-2">
-                <div className="bg-navy-light rounded-none border border-white/5 p-6 lg:p-8 min-h-[260px] lg:min-h-[340px] flex items-center justify-center">
-                  {problem.id === "wasted-spend" && <WastedSpendVisual />}
-                  {problem.id === "slow-results" && <SlowResultsVisual />}
-                  {problem.id === "no-system" && <ConsistencyVisual />}
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+          <AnimateIn delay={0.1}>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy max-w-3xl mx-auto leading-tight">
+              Spent Thousands on Agencies That Don&apos;t Get Roof Coating?
+            </h2>
+          </AnimateIn>
+          <AnimateIn delay={0.15}>
+            <p className="mt-4 text-navy/60 text-base sm:text-lg max-w-xl mx-auto">
+              Generic agencies burn your budget learning your niche. We already have a proven system built specifically for roof coating contractors.
+            </p>
+          </AnimateIn>
         </div>
-      </div>
 
-      {/* Bottom transition to next section */}
-      <div className="h-1 bg-gradient-to-r from-blue via-gold to-green-500" />
+        {/* Tab selectors */}
+        <AnimateIn delay={0.2}>
+          <div className="flex justify-center mb-8 sm:mb-12">
+            <div className="inline-flex bg-navy/5 rounded-none p-1 border border-navy/10 gap-1 overflow-x-auto max-w-full" style={{scrollbarWidth:"none"}}>
+              {PROBLEMS.map((p, i) => (
+                <button key={p.id} onClick={() => setActive(i)}
+                  className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-none text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-white" : "text-navy/50 hover:text-navy/80"}`}>
+                  {active === i && (
+                    <motion.div className="absolute inset-0 bg-navy rounded-none"
+                      layoutId="problemTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
+                  )}
+                  <span className="relative z-10 flex items-center gap-2">
+                    <span className="hidden sm:inline">{p.tag}</span>
+                    {p.label}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </AnimateIn>
+
+        {/* Content */}
+        <AnimatePresence mode="wait">
+          <motion.div key={problem.id}
+            initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.3 }}
+            className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center">
+
+            {/* Left — text */}
+            <div className="order-2 lg:order-1">
+              <div className="border border-navy/10 p-5 sm:p-8 lg:p-10">
+                <motion.span
+                  className={`text-5xl lg:text-7xl font-bold text-navy/10`}
+                  initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.3, type: "spring" }}>
+                  {problem.tag}
+                </motion.span>
+
+                <h3 className="text-navy font-bold text-xl sm:text-2xl lg:text-3xl mt-4">{problem.title}</h3>
+                <p className="text-navy/70 mt-3 text-base leading-relaxed">{problem.description}</p>
+                <p className="text-navy/50 mt-4 text-sm leading-relaxed">{problem.detail}</p>
+
+                <div className="mt-8 inline-flex items-center gap-3 border border-navy/10 px-5 py-3">
+                  <span className="text-2xl font-bold text-navy">{problem.statValue}</span>
+                  <span className="text-navy/60 text-sm">{problem.statLabel}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right — visual */}
+            <div className="order-1 lg:order-2">
+              <div className="bg-navy p-6 lg:p-8 min-h-[260px] lg:min-h-[340px] flex items-center justify-center">
+                {problem.id === "wasted-spend" && <WastedSpendVisual />}
+                {problem.id === "slow-results" && <SlowResultsVisual />}
+                {problem.id === "no-system" && <ConsistencyVisual />}
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </section>
   );
 }
