@@ -218,8 +218,8 @@ export default function WhyFacebookAds() {
   return (
     <section className="bg-navy py-24 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern" />
-      <div className="absolute top-0 right-0 w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-blue/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 left-0 w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-gold/3 rounded-full blur-[80px]" />
+      <div className="absolute top-0 right-0 hidden sm:block w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-blue/5 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 left-0 hidden sm:block w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-gold/3 rounded-full blur-[80px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateIn>

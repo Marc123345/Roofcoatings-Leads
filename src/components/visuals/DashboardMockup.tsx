@@ -30,7 +30,7 @@ export default function DashboardMockup() {
                 transition={{ delay: 0.5 + i * 0.15 }}
               >
                 <p className={`text-lg font-bold ${stat.color}`}>{stat.value}</p>
-                <p className="text-white/70 text-[10px] mt-0.5">{stat.label}</p>
+                <p className="text-white/70 text-[11px] mt-0.5">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -90,8 +90,8 @@ export default function DashboardMockup() {
                   <span className="text-white/70 text-xs">{lead.name}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-white/80 text-[10px]">{lead.time}</span>
-                  <span className={`text-[10px] px-2 py-0.5 rounded-full ${
+                  <span className="text-white/80 text-[11px]">{lead.time}</span>
+                  <span className={`text-[11px] px-2 py-0.5 rounded-full ${
                     lead.status === "New" ? "bg-blue/20 text-blue-light" :
                     lead.status === "Contacted" ? "bg-gold/20 text-gold" :
                     "bg-green-500/20 text-green-400"

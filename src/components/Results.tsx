@@ -8,7 +8,7 @@ export default function Results() {
   return (
     <section id="results" className="bg-navy py-24 lg:py-32 relative overflow-hidden noise">
       <div className="absolute inset-0 grid-pattern" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] lg:w-[600px] lg:h-[600px] bg-gold/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block w-[250px] h-[250px] lg:w-[600px] lg:h-[600px] bg-gold/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateIn>

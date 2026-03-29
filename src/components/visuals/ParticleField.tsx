@@ -27,7 +27,7 @@ const particles = [
 
 export default function ParticleField() {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
       {particles.map((p) => (
         <motion.div
           key={p.id}

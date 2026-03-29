@@ -30,7 +30,7 @@ export default function GetStartedContent() {
       {/* ── Immersive Hero ── */}
       <div ref={heroRef} className="relative overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <Image src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" alt="Office" fill className="object-cover opacity-15 scale-110" />
+          <Image src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" alt="Office" fill className="object-cover opacity-15 scale-110" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
         </motion.div>
         <ParticleField />
@@ -148,7 +148,7 @@ export default function GetStartedContent() {
                     <div className="p-2">
                       <iframe
                         src="https://api.leadconnectorhq.com/widget/bookings/roofcoatingleads"
-                        style={{ width: "100%", height: "1000px", border: "none", borderRadius: "12px" }}
+                        style={{ width: "100%", height: "700px", border: "none", borderRadius: "12px" }}
                         title="Book a Free Strategy Audit with RoofCoat Leads"
                       />
                     </div>

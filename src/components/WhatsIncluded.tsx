@@ -110,7 +110,7 @@ export default function WhatsIncluded() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <p className="text-navy text-[10px] font-medium">{type}</p>
+                    <p className="text-navy text-[11px] font-medium">{type}</p>
                   </div>
                 ))}
               </div>
@@ -188,8 +188,8 @@ export default function WhatsIncluded() {
                     ].map((stat) => (
                       <div key={stat.label} className="bg-white rounded-lg p-3 text-center">
                         <p className="text-navy font-bold text-lg">{stat.value}</p>
-                        <p className="text-slate-600 text-[10px]">{stat.label}</p>
-                        <p className={`text-[10px] font-medium ${stat.trend.startsWith("+") ? "text-green-500" : "text-blue"}`}>{stat.trend}</p>
+                        <p className="text-slate-600 text-[11px]">{stat.label}</p>
+                        <p className={`text-[11px] font-medium ${stat.trend.startsWith("+") ? "text-green-500" : "text-blue"}`}>{stat.trend}</p>
                       </div>
                     ))}
                   </div>

@@ -15,7 +15,7 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
             <div className="flex flex-col items-center"><span>R</span><span>C</span></div>
           </div>
           <div>
-            <p className="text-navy text-[10px] font-bold">RoofCoat Leads</p>
+            <p className="text-navy text-[11px] font-bold">RoofCoat Leads</p>
             <p className="text-slate-600 text-[8px]">Sponsored</p>
           </div>
         </div>
@@ -31,14 +31,14 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
           </div>
           <div className="text-center relative z-10 p-4">
             <p className="text-gold font-bold text-sm">Is Your Roof Leaking?</p>
-            <p className="text-white text-[10px] mt-1 opacity-80">Get a free roof coating estimate today</p>
-            <div className="mt-3 bg-gold text-navy text-[10px] font-bold px-4 py-1.5 rounded-full inline-block">
+            <p className="text-white text-[11px] mt-1 opacity-80">Get a free roof coating estimate today</p>
+            <div className="mt-3 bg-gold text-navy text-[11px] font-bold px-4 py-1.5 rounded-full inline-block">
               Get Free Quote
             </div>
           </div>
         </div>
         {/* Engagement */}
-        <div className="px-3 py-2 flex items-center justify-between text-slate-600 text-[9px]">
+        <div className="px-3 py-2 flex items-center justify-between text-slate-600 text-[11px]">
           <span>147 leads generated</span>
           <span>4.2% CTR</span>
         </div>
@@ -57,7 +57,7 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
           <div className="flex flex-col items-center"><span>R</span><span>C</span></div>
         </div>
         <div>
-          <p className="text-navy text-[10px] font-bold">RoofCoat Leads</p>
+          <p className="text-navy text-[11px] font-bold">RoofCoat Leads</p>
           <p className="text-slate-600 text-[8px]">Sponsored</p>
         </div>
       </div>
@@ -65,14 +65,14 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
         <div className="absolute top-4 right-4 w-16 h-16 bg-gold/20 rounded-full blur-xl" />
         <div className="text-center relative z-10 p-4">
           <p className="text-white font-bold text-sm">Commercial Roof Coating</p>
-          <p className="text-gold text-[10px] mt-1 font-semibold">Save up to 70% vs. Replacement</p>
-          <p className="text-white/80 text-[9px] mt-1">Extend your roof life by 15+ years</p>
-          <div className="mt-3 bg-blue text-white text-[10px] font-bold px-4 py-1.5 rounded-full inline-block">
+          <p className="text-gold text-[11px] mt-1 font-semibold">Save up to 70% vs. Replacement</p>
+          <p className="text-white/80 text-[11px] mt-1">Extend your roof life by 15+ years</p>
+          <div className="mt-3 bg-blue text-white text-[11px] font-bold px-4 py-1.5 rounded-full inline-block">
             Learn More
           </div>
         </div>
       </div>
-      <div className="px-3 py-2 flex items-center justify-between text-slate-600 text-[9px]">
+      <div className="px-3 py-2 flex items-center justify-between text-slate-600 text-[11px]">
         <span>203 leads generated</span>
         <span>5.1% CTR</span>
       </div>

@@ -111,7 +111,7 @@ function CampaignBreakdown({ niche }: { niche: typeof niches[0] }) {
           <div className="flex items-start gap-3">
             <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center shrink-0">{row.icon}</div>
             <div className="min-w-0">
-              <p className="text-white/70 text-[10px] uppercase tracking-wider mb-0.5">{row.label}</p>
+              <p className="text-white/70 text-[11px] uppercase tracking-wider mb-0.5">{row.label}</p>
               <p className="text-white/80 text-sm leading-relaxed">{row.value}</p>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function NicheExpertiseContent() {
       {/* ── Immersive Hero ── */}
       <div ref={heroRef} className="relative overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="Commercial buildings" fill className="object-cover opacity-15 scale-110" />
+          <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="Commercial buildings" fill className="object-cover opacity-15 scale-110" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
         </motion.div>
         <ParticleField />
@@ -231,7 +231,7 @@ export default function NicheExpertiseContent() {
                           {niche.stats.map((stat) => (
                             <div key={stat.label} className="bg-navy/80 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 text-center min-w-[80px]">
                               <p className="text-gold text-xl font-bold">{stat.value}</p>
-                              <p className="text-white/70 text-[10px]">{stat.label}</p>
+                              <p className="text-white/70 text-[11px]">{stat.label}</p>
                             </div>
                           ))}
                         </div>

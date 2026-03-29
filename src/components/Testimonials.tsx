@@ -95,23 +95,20 @@ const PARTNERS = [
 const cardVariants = {
   enter: (dir: number) => ({
     opacity: 0,
-    y: dir > 0 ? 60 : -60,
-    rotateX: dir > 0 ? -15 : 15,
-    scale: 0.95,
+    y: dir > 0 ? 40 : -40,
+    scale: 0.97,
   }),
   center: {
     opacity: 1,
     y: 0,
-    rotateX: 0,
     scale: 1,
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const },
   },
   exit: (dir: number) => ({
     opacity: 0,
-    y: dir > 0 ? -60 : 60,
-    rotateX: dir > 0 ? 15 : -15,
-    scale: 0.95,
-    transition: { duration: 0.3, ease: [0.55, 0, 1, 0.45] as const },
+    y: dir > 0 ? -40 : 40,
+    scale: 0.97,
+    transition: { duration: 0.25, ease: [0.55, 0, 1, 0.45] as const },
   }),
 };
 
@@ -155,7 +152,7 @@ export default function Testimonials() {
   const partner = PARTNERS[activeIndex];
 
   return (
-    <div ref={containerRef} id="testimonials" className="relative h-[180vh] sm:h-[220vh] lg:h-[300vh] bg-navy">
+    <div ref={containerRef} id="testimonials" className="relative h-[150vh] sm:h-[200vh] lg:h-[300vh] bg-navy">
       <div className="sticky top-0 h-[100dvh] flex flex-col justify-center overflow-hidden border-t border-white/5 pt-14 pb-2 sm:pt-16 sm:pb-4 lg:pt-20 lg:pb-0">
 
         {/* Header */}
@@ -218,7 +215,7 @@ export default function Testimonials() {
           >
             <div
               className="relative w-full flex-1 flex items-center justify-center min-h-0 overflow-hidden"
-              style={{ perspective: "1000px" }}
+              style={{ perspective: undefined }}
             >
               <AnimatePresence custom={directionRef.current} mode="popLayout">
                 <motion.div
@@ -240,10 +237,10 @@ export default function Testimonials() {
                   <div className="flex flex-col gap-5">
                     {/* Service tag */}
                     <div className="flex items-center gap-3">
-                      <span className="text-[10px] tracking-[0.2em] uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-full text-white/80">
+                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-full text-white/80">
                         {partner.service}
                       </span>
-                      <span className="text-[10px] tracking-[0.2em] uppercase px-3 py-1 bg-gold/10 border border-gold/20 rounded-full text-gold">
+                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-gold/10 border border-gold/20 rounded-full text-gold">
                         {partner.state}
                       </span>
                     </div>
@@ -266,7 +263,7 @@ export default function Testimonials() {
                       </div>
                       <div>
                         <p className="text-white font-bold">{partner.name}</p>
-                        <span className="inline-block bg-gold text-navy text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 mt-1">
+                        <span className="inline-block bg-gold text-navy text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 mt-1">
                           {partner.company} · {partner.city}, {partner.abbr}
                         </span>
                       </div>

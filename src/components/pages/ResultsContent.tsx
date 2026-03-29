@@ -102,7 +102,7 @@ export default function ResultsContent() {
       {/* ── Immersive Hero ── */}
       <div ref={heroRef} className="relative overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="Commercial building" fill className="object-cover opacity-15 scale-110" />
+          <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="Commercial building" fill className="object-cover opacity-15 scale-110" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
         </motion.div>
         <ParticleField />

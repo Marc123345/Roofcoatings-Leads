@@ -23,7 +23,7 @@ export default function ServiceAreasHub() {
       {/* ── Immersive Hero ── */}
       <div ref={heroRef} className="relative overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <Image src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80" alt="US city skyline" fill className="object-cover opacity-15 scale-110" />
+          <Image src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80" alt="US city skyline" fill className="object-cover opacity-15 scale-110" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
         </motion.div>
         <ParticleField />
@@ -129,7 +129,7 @@ export default function ServiceAreasHub() {
                           </div>
                           <div className="bg-gold/20 border border-gold/30 rounded-xl px-4 py-2 text-center shrink-0 hidden sm:block">
                             <p className="text-gold text-xl font-bold">{area.caseStudy.stat}</p>
-                            <p className="text-gold/60 text-[10px]">{area.caseStudy.statLabel}</p>
+                            <p className="text-gold/60 text-[11px]">{area.caseStudy.statLabel}</p>
                           </div>
                         </div>
                       </div>
@@ -262,7 +262,7 @@ export default function ServiceAreasHub() {
                       whileHover={{ y: -2 }}
                     >
                       <p className={`font-bold text-sm ${isFeatured ? "text-gold" : "text-white/80"}`}>{st.abbr}</p>
-                      <p className={`text-[9px] mt-0.5 ${isFeatured ? "text-gold/60" : "text-white/70"}`}>{st.state}</p>
+                      <p className={`text-[11px] mt-0.5 ${isFeatured ? "text-gold/60" : "text-white/70"}`}>{st.state}</p>
                     </motion.a>
                   </StaggerItem>
                 );

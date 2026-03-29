@@ -51,7 +51,7 @@ function WastedSpendVisual() {
   ];
   return (
     <div className="space-y-2.5">
-      <p className="text-white/70 text-[10px] uppercase tracking-wider mb-3 text-center">Typical generic agency timeline</p>
+      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-3 text-center">Typical generic agency timeline</p>
       {months.map((m, i) => (
         <motion.div key={m.month}
           className="flex items-center justify-between rounded-lg px-4 py-3 bg-red-500/5 border border-red-500/15"
@@ -62,7 +62,7 @@ function WastedSpendVisual() {
           </div>
           <div className="flex items-center gap-3">
             <span className="text-white/80 text-xs">{m.leads}</span>
-            <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400">{m.status}</span>
+            <span className="text-[11px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400">{m.status}</span>
           </div>
         </motion.div>
       ))}
@@ -82,7 +82,7 @@ function WastedSpendVisual() {
 function SlowResultsVisual() {
   return (
     <div className="space-y-4">
-      <p className="text-white/70 text-[10px] uppercase tracking-wider mb-3 text-center">Generic agency vs. RoofCoat Leads</p>
+      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-3 text-center">Generic agency vs. RoofCoat Leads</p>
       {/* Generic agency timeline */}
       <div className="space-y-1">
         <p className="text-red-400 text-xs font-bold mb-2">Generic Agency</p>
@@ -91,9 +91,9 @@ function SlowResultsVisual() {
             <motion.div key={label} className="flex-1 text-center"
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.1 }}>
               <div className="h-8 bg-red-500/10 border border-red-500/15 rounded-lg flex items-center justify-center mb-1">
-                <span className="text-red-400/50 text-[10px]">{i < 3 ? "Testing..." : "Maybe?"}</span>
+                <span className="text-red-400/50 text-[11px]">{i < 3 ? "Testing..." : "Maybe?"}</span>
               </div>
-              <span className="text-white/70 text-[9px]">{label}</span>
+              <span className="text-white/70 text-[11px]">{label}</span>
             </motion.div>
           ))}
         </div>
@@ -111,9 +111,9 @@ function SlowResultsVisual() {
             <motion.div key={step.label} className="flex-1 text-center"
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.15 }}>
               <div className="h-8 bg-green-500/10 border border-green-500/25 rounded-lg flex items-center justify-center mb-1">
-                <span className="text-green-400 text-[10px] font-medium">{step.text}</span>
+                <span className="text-green-400 text-[11px] font-medium">{step.text}</span>
               </div>
-              <span className="text-white/80 text-[9px]">{step.label}</span>
+              <span className="text-white/80 text-[11px]">{step.label}</span>
             </motion.div>
           ))}
         </div>
@@ -139,7 +139,7 @@ function ConsistencyVisual() {
 
   return (
     <div>
-      <p className="text-white/70 text-[10px] uppercase tracking-wider mb-3 text-center">Your revenue this year</p>
+      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-3 text-center">Your revenue this year</p>
       <svg viewBox={`-10 -5 ${W + 20} ${H + 30}`} className="w-full">
         {[0, .25, .5, .75, 1].map(p => <line key={p} x1={0} y1={H*(1-p)} x2={W} y2={H*(1-p)} stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>)}
         <motion.path d={`${d} L${W},${H} L0,${H} Z`} fill="url(#rcFill)" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} />
@@ -201,7 +201,7 @@ export default function Problem() {
       {/* Interactive area on dark bg */}
       <div className="bg-navy relative">
         <div className="absolute inset-0">
-          <Image src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="" fill className="object-cover opacity-[0.03]" />
+          <Image src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="" fill className="object-cover opacity-[0.03]" sizes="100vw" />
         </div>
         <div className="absolute inset-0 grid-pattern" />
 

@@ -20,7 +20,7 @@ export default function CTA() {
       <ParticleField />
 
       <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] lg:w-[900px] lg:h-[900px] bg-blue/8 rounded-full -translate-y-1/2"
+        className="absolute top-0 left-1/2 -translate-x-1/2 hidden sm:block w-[300px] h-[300px] lg:w-[900px] lg:h-[900px] bg-blue/8 rounded-full -translate-y-1/2"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />

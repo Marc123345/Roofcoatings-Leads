@@ -65,15 +65,15 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">{area.caseStudy.stat}</p>
-                <p className="text-white/70 text-[10px]">{area.caseStudy.statLabel}</p>
+                <p className="text-white/70 text-[11px]">{area.caseStudy.statLabel}</p>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">{area.cities.length}+</p>
-                <p className="text-white/70 text-[10px]">cities covered</p>
+                <p className="text-white/70 text-[11px]">cities covered</p>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">&lt;48h</p>
-                <p className="text-white/70 text-[10px]">to first lead</p>
+                <p className="text-white/70 text-[11px]">to first lead</p>
               </div>
             </motion.div>
           </div>

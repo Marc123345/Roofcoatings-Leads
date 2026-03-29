@@ -74,7 +74,7 @@ export default function Header() {
           </nav>
 
           <motion.button
-            className="lg:hidden text-white w-10 h-10 flex items-center justify-center"
+            className="lg:hidden text-white w-11 h-11 flex items-center justify-center"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
             whileTap={{ scale: 0.9 }}

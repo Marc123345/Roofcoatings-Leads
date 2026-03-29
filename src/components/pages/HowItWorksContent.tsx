@@ -120,7 +120,7 @@ function BuildVisual() {
   ];
   return (
     <div className="space-y-3">
-      <p className="text-white/70 text-[10px] uppercase tracking-wider mb-2">Campaign components</p>
+      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-2">Campaign components</p>
       {layers.map((layer) => (
         <div key={layer.label}>
           <div className="flex justify-between mb-1">
@@ -158,7 +158,7 @@ function QualifyVisual() {
   ];
   return (
     <div className="flex flex-col items-center gap-2">
-      <p className="text-white/70 text-[10px] uppercase tracking-wider mb-2">Qualification funnel</p>
+      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-2">Qualification funnel</p>
       {funnel.map((stage) => (
         <motion.div key={stage.label}
           className={`${stage.bg} rounded-lg py-2.5 px-4 flex items-center justify-between border border-white/5`}
@@ -185,7 +185,7 @@ function DeliverVisual() {
   ];
   return (
     <div className="space-y-3">
-      <p className="text-white/70 text-[10px] uppercase tracking-wider mb-2">Live feed</p>
+      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-2">Live feed</p>
       {notifications.map((n, i) => (
         <motion.div key={n.title}
           className="bg-white/5 border border-white/10 rounded-xl p-4"
@@ -197,14 +197,14 @@ function DeliverVisual() {
               <div className={`w-2 h-2 rounded-full ${n.status === "new" ? "bg-blue animate-pulse" : n.status === "contacted" ? "bg-gold" : "bg-green-400"}`} />
               <span className="text-white font-bold text-sm">{n.title}</span>
             </div>
-            <span className="text-white/80 text-[10px]">{n.time}</span>
+            <span className="text-white/80 text-[11px]">{n.time}</span>
           </div>
           <p className="text-white/70 text-xs">{n.detail}</p>
           {n.status === "new" && (
             <motion.div className="mt-2 flex gap-2"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 + i * 0.25 + 0.3 }}>
-              <span className="bg-blue text-white text-[10px] font-bold px-3 py-1 rounded-full">Call Now</span>
-              <span className="bg-white/10 text-white/80 text-[10px] px-3 py-1 rounded-full">View Details</span>
+              <span className="bg-blue text-white text-[11px] font-bold px-3 py-1 rounded-full">Call Now</span>
+              <span className="bg-white/10 text-white/80 text-[11px] px-3 py-1 rounded-full">View Details</span>
             </motion.div>
           )}
         </motion.div>
@@ -237,7 +237,7 @@ export default function HowItWorksContent() {
       {/* ── Immersive Hero ── */}
       <div ref={heroRef} className="relative overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <Image src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80" alt="Analytics" fill className="object-cover opacity-15 scale-110" />
+          <Image src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80" alt="Analytics" fill className="object-cover opacity-15 scale-110" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
         </motion.div>
         <ParticleField />
@@ -313,7 +313,7 @@ export default function HowItWorksContent() {
                     </motion.div>
                     <div className="text-center">
                       <p className={`text-xs font-bold transition-colors ${i === activeStep ? "text-gold" : "text-white/80"}`}>{s.time}</p>
-                      <p className={`text-[10px] transition-colors hidden sm:block ${i === activeStep ? "text-white/70" : "text-white/70"}`}>{s.title}</p>
+                      <p className={`text-[11px] transition-colors hidden sm:block ${i === activeStep ? "text-white/70" : "text-white/70"}`}>{s.title}</p>
                     </div>
                   </button>
                 ))}
@@ -419,7 +419,7 @@ export default function HowItWorksContent() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="bg-navy rounded-xl px-4 py-2 text-center">
                       <p className="text-gold text-xl font-bold leading-none">{adv.stat}</p>
-                      <p className="text-white/70 text-[10px] mt-0.5">{adv.statLabel}</p>
+                      <p className="text-white/70 text-[11px] mt-0.5">{adv.statLabel}</p>
                     </div>
                     <h3 className="text-navy font-bold text-xl">{adv.title}</h3>
                   </div>

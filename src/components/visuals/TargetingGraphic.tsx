@@ -58,7 +58,7 @@ export default function TargetingGraphic() {
           <div className="relative">
             <div className="w-3 h-3 bg-gold rounded-full" />
             <div className="absolute inset-0 w-3 h-3 bg-gold rounded-full animate-ping opacity-30" />
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 text-[10px] whitespace-nowrap">{point.label}</span>
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 text-[11px] whitespace-nowrap">{point.label}</span>
           </div>
         </motion.div>
       ))}

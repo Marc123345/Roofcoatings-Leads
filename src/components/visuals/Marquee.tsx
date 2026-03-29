@@ -20,7 +20,7 @@ export default function Marquee() {
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-navy to-transparent z-10" />
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-navy to-transparent z-10" />
       <motion.div
-        className="flex gap-12 whitespace-nowrap"
+        className="flex gap-12 whitespace-nowrap will-change-transform"
         animate={{ x: ["0%", "-50%"] }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       >
