@@ -26,7 +26,7 @@ export default function Marquee() {
       >
         {[...partners, ...partners].map((name, i) => (
           <span key={i} className="text-white/70 text-sm font-medium flex items-center gap-3">
-            <span className="w-1.5 h-1.5 bg-gold/40 rounded-full" />
+            <span className="w-1.5 h-1.5 bg-gold/40 rounded-none" />
             {name}
           </span>
         ))}

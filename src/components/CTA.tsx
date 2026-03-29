@@ -20,7 +20,7 @@ export default function CTA() {
       <ParticleField />
 
       <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 hidden sm:block w-[300px] h-[300px] lg:w-[900px] lg:h-[900px] bg-blue/8 rounded-full -translate-y-1/2"
+        className="absolute top-0 left-1/2 -translate-x-1/2 hidden sm:block w-[300px] h-[300px] lg:w-[900px] lg:h-[900px] bg-blue/8 rounded-none -translate-y-1/2"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -46,7 +46,7 @@ export default function CTA() {
           <AnimateIn delay={0.4}>
             <motion.a
               href="/get-started"
-              className="mt-10 inline-flex items-center w-full sm:w-auto justify-center gap-3 bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-5 sm:px-12 sm:py-6 rounded-full font-bold text-lg sm:text-xl relative overflow-hidden group shadow-2xl shadow-gold/30"
+              className="mt-10 inline-flex items-center w-full sm:w-auto justify-center gap-3 bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-5 sm:px-12 sm:py-6 rounded-none font-bold text-lg sm:text-xl relative overflow-hidden group shadow-2xl shadow-gold/30"
               whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(234,179,8,0.5)" }}
               whileTap={{ scale: 0.95 }}
             >

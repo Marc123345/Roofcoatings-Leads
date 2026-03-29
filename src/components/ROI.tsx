@@ -48,7 +48,7 @@ export default function ROI() {
 
           <div className="mt-14 grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             <AnimateIn direction="left" delay={0.2}>
-              <div className="rounded-2xl overflow-hidden shadow-xl">
+              <div className="rounded-none overflow-hidden shadow-xl">
                 <div className="bg-gradient-to-r from-red-700 to-red-600 text-white font-bold text-center py-5 text-lg">
                   The Old Way (Shared Leads)
                 </div>
@@ -83,7 +83,7 @@ export default function ROI() {
             </AnimateIn>
 
             <AnimateIn direction="right" delay={0.2}>
-              <div className="rounded-2xl overflow-hidden shadow-xl">
+              <div className="rounded-none overflow-hidden shadow-xl">
                 <div className="bg-gradient-to-r from-green-600 to-green-500 text-white font-bold text-center py-5 text-lg">
                   The RoofCoat Way (Exclusive)
                 </div>
@@ -119,7 +119,7 @@ export default function ROI() {
 
           <AnimateIn delay={0.5}>
             <motion.div
-              className="mt-12 bg-gradient-to-r from-gold via-yellow-400 to-gold text-navy font-bold text-center py-5 px-6 rounded-2xl text-lg shadow-xl"
+              className="mt-12 bg-gradient-to-r from-gold via-yellow-400 to-gold text-navy font-bold text-center py-5 px-6 rounded-none text-lg shadow-xl"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >

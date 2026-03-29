@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { BarChart3, Wallet, MapPin, CloudSun } from "lucide-react";
 import AnimateIn, { StaggerContainer, StaggerItem } from "./AnimateIn";
 
-const sliderClass = "w-full h-2 appearance-none cursor-pointer rounded-full bg-white/10 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing [&::-moz-range-thumb]:w-8 [&::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab";
+const sliderClass = "w-full h-2 appearance-none cursor-pointer rounded-none bg-white/10 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:rounded-none [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing [&::-moz-range-thumb]:w-8 [&::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:rounded-none [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab";
 
 export default function Scalability() {
   const [leads, setLeads] = useState(25);
@@ -30,8 +30,8 @@ export default function Scalability() {
   return (
     <section className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern" />
-      <div className="absolute top-0 right-0 hidden sm:block w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-gold/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 left-0 hidden sm:block w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-blue/5 rounded-full blur-[80px]" />
+      <div className="absolute top-0 right-0 hidden sm:block w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-gold/5 rounded-none blur-[100px]" />
+      <div className="absolute bottom-0 left-0 hidden sm:block w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-blue/5 rounded-none blur-[80px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-14">
@@ -54,7 +54,7 @@ export default function Scalability() {
           <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-6">
 
             {/* LEFT — Inputs */}
-            <div className="lg:col-span-2 bg-navy-light rounded-3xl border border-white/10 p-5 sm:p-8 space-y-8">
+            <div className="lg:col-span-2 bg-navy-light rounded-none border border-white/10 p-5 sm:p-8 space-y-8">
               <h3 className="text-white font-bold text-lg">Your Inputs</h3>
 
               {/* Leads per month */}
@@ -121,7 +121,7 @@ export default function Scalability() {
                 <motion.div
                   key={`spend-${calc.adSpend}`}
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                  className="bg-navy-light rounded-2xl border border-white/10 p-6"
+                  className="bg-navy-light rounded-none border border-white/10 p-6"
                 >
                   <p className="text-white/80 text-xs mb-1">Monthly Ad Spend</p>
                   <p className="text-white text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold">{formatCurrency(calc.adSpend)}</p>
@@ -130,7 +130,7 @@ export default function Scalability() {
                 <motion.div
                   key={`jobs-${calc.jobsClosed}`}
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                  className="bg-navy-light rounded-2xl border border-white/10 p-6"
+                  className="bg-navy-light rounded-none border border-white/10 p-6"
                 >
                   <p className="text-white/80 text-xs mb-1">Jobs Closed</p>
                   <p className="text-green-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{calc.jobsClosed}</p>
@@ -142,14 +142,14 @@ export default function Scalability() {
               <motion.div
                 key={`rev-${calc.revenue}`}
                 initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                className="bg-navy-light rounded-2xl border border-green-500/20 p-6 lg:p-8"
+                className="bg-navy-light rounded-none border border-green-500/20 p-6 lg:p-8"
               >
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="text-white/80 text-xs mb-1">Estimated Monthly Revenue</p>
                     <p className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold">{formatCurrency(calc.revenue)}</p>
                   </div>
-                  <div className="hidden sm:flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 shrink-0">
+                  <div className="hidden sm:flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-none px-4 py-2 shrink-0">
                     <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
@@ -164,9 +164,9 @@ export default function Scalability() {
                       <span className="text-white/70">Ad spend</span>
                       <span className="text-white/80 font-medium">{formatCurrency(calc.adSpend)}</span>
                     </div>
-                    <div className="h-3 bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-3 bg-white/5 rounded-none overflow-hidden">
                       <motion.div
-                        className="h-full bg-white/20 rounded-full"
+                        className="h-full bg-white/20 rounded-none"
                         animate={{ width: `${Math.min((calc.adSpend / calc.revenue) * 100, 100)}%` }}
                         transition={{ duration: 0.4 }}
                       />
@@ -177,9 +177,9 @@ export default function Scalability() {
                       <span className="text-white/70">Revenue</span>
                       <span className="text-green-400 font-medium">{formatCurrency(calc.revenue)}</span>
                     </div>
-                    <div className="h-3 bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-3 bg-white/5 rounded-none overflow-hidden">
                       <motion.div
-                        className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full"
+                        className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-none"
                         animate={{ width: "100%" }}
                         transition={{ duration: 0.4 }}
                       />
@@ -193,7 +193,7 @@ export default function Scalability() {
                 <motion.div
                   key={`roi-${calc.roi.toFixed(1)}`}
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                  className="bg-gold/10 rounded-2xl border border-gold/20 p-6 text-center"
+                  className="bg-gold/10 rounded-none border border-gold/20 p-6 text-center"
                 >
                   <p className="text-gold/60 text-xs mb-1">Return on Ad Spend</p>
                   <p className="text-gold text-3xl sm:text-4xl lg:text-5xl font-bold">{calc.roi.toFixed(1)}x</p>
@@ -202,7 +202,7 @@ export default function Scalability() {
                 <motion.div
                   key={`profit-${calc.profit}`}
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                  className="bg-navy-light rounded-2xl border border-white/10 p-6 text-center"
+                  className="bg-navy-light rounded-none border border-white/10 p-6 text-center"
                 >
                   <p className="text-white/80 text-xs mb-1">Net Profit</p>
                   <p className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold">{formatCurrency(calc.profit)}</p>
@@ -222,7 +222,7 @@ export default function Scalability() {
           ].map((f) => (
             <StaggerItem key={f.title}>
               <motion.div
-                className="bg-navy-light rounded-2xl border border-white/5 p-5 text-center group hover:border-gold/20 transition-colors"
+                className="bg-navy-light rounded-none border border-white/5 p-5 text-center group hover:border-gold/20 transition-colors"
                 whileHover={{ y: -4 }}
               >
                 <div className="flex justify-center">{f.icon}</div>

@@ -75,7 +75,7 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
   if (info.value === true) {
     return (
       <div className="flex flex-col items-center gap-1">
-        <div className="w-8 h-8 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center">
+        <div className="w-8 h-8 rounded-none bg-green-500/10 border border-green-500/20 flex items-center justify-center">
           <Check className="w-4 h-4 text-green-400" />
         </div>
         <span className="text-green-400 text-[11px] font-medium hidden sm:block">{info.detail}</span>
@@ -85,7 +85,7 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
   if (info.value === false) {
     return (
       <div className="flex flex-col items-center gap-1">
-        <div className="w-8 h-8 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+        <div className="w-8 h-8 rounded-none bg-red-500/10 border border-red-500/20 flex items-center justify-center">
           <X className="w-4 h-4 text-red-400" />
         </div>
         <span className="text-white/30 text-[11px] hidden sm:block">{info.detail}</span>
@@ -95,7 +95,7 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
   if (info.value === "partial") {
     return (
       <div className="flex flex-col items-center gap-1">
-        <div className="w-8 h-8 rounded-full bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center">
+        <div className="w-8 h-8 rounded-none bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center">
           <Minus className="w-4 h-4 text-yellow-400" />
         </div>
         <span className="text-yellow-400/70 text-[11px] hidden sm:block">{info.detail}</span>
@@ -110,7 +110,7 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
   };
   return (
     <div className="flex flex-col items-center gap-1">
-      <span className={`px-3 py-1 rounded-full text-xs font-bold border ${colorMap[info.value as string] || ""}`}>
+      <span className={`px-3 py-1 rounded-none text-xs font-bold border ${colorMap[info.value as string] || ""}`}>
         {info.detail}
       </span>
     </div>
@@ -126,7 +126,7 @@ export default function ComparisonTable() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-14">
           <AnimateIn>
-            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-none px-4 py-1.5 mb-6">
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Comparison</span>
             </div>
           </AnimateIn>
@@ -144,19 +144,19 @@ export default function ComparisonTable() {
           <div className="grid grid-cols-4 gap-1.5 sm:gap-3 mb-3 px-1 sm:px-2">
             <div />
             <div className="text-center">
-              <div className="bg-gradient-to-b from-gold/20 to-gold/5 border border-gold/20 rounded-xl py-3 px-2">
+              <div className="bg-gradient-to-b from-gold/20 to-gold/5 border border-gold/20 rounded-none py-3 px-2">
                 <p className="text-gold font-bold text-[11px] sm:text-sm">RoofCoat</p>
                 <p className="text-gold/60 text-[11px]">$1,000/mo</p>
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl py-3 px-2">
+              <div className="bg-white/[0.03] border border-white/[0.06] rounded-none py-3 px-2">
                 <p className="text-white/50 font-bold text-[11px] sm:text-sm">Google</p>
                 <p className="text-white/30 text-[11px]">Self-serve</p>
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl py-3 px-2">
+              <div className="bg-white/[0.03] border border-white/[0.06] rounded-none py-3 px-2">
                 <p className="text-white/50 font-bold text-[11px] sm:text-sm">HomeAdv.</p>
                 <p className="text-white/30 text-[11px]">Per-lead</p>
               </div>
@@ -169,7 +169,7 @@ export default function ComparisonTable() {
           {features.map((feature, i) => (
             <StaggerItem key={feature.name}>
               <motion.div
-                className={`rounded-xl border transition-all duration-300 cursor-pointer ${
+                className={`rounded-none border transition-all duration-300 cursor-pointer ${
                   expanded === i
                     ? "bg-white/[0.04] border-white/10"
                     : "bg-white/[0.02] border-white/[0.04] hover:bg-white/[0.04] hover:border-white/[0.08]"
@@ -180,7 +180,7 @@ export default function ComparisonTable() {
                 <div className="grid grid-cols-4 gap-1.5 sm:gap-3 items-center p-2.5 sm:p-4">
                   {/* Feature name */}
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="w-9 h-9 rounded-lg bg-white/[0.06] flex items-center justify-center text-white/50 shrink-0 hidden sm:flex">
+                    <div className="w-9 h-9 rounded-none bg-white/[0.06] flex items-center justify-center text-white/50 shrink-0 hidden sm:flex">
                       {feature.icon}
                     </div>
                     <div className="min-w-0">
@@ -231,7 +231,7 @@ export default function ComparisonTable() {
           <div className="mt-10 text-center">
             <motion.a
               href="/get-started"
-              className="inline-flex items-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-lg shadow-gold/20"
+              className="inline-flex items-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-none font-bold text-base sm:text-lg shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
             >

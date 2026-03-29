@@ -55,14 +55,14 @@ export default function BeforeAfter() {
         {/* Toggle */}
         <AnimateIn delay={0.2}>
           <div className="flex justify-center mt-10">
-            <div className="inline-flex bg-navy-light rounded-full p-1 border border-white/10">
+            <div className="inline-flex bg-navy-light rounded-none p-1 border border-white/10">
               <button
                 onClick={() => setShowAfter(false)}
-                className={`relative px-6 py-2.5 sm:px-8 sm:py-3 rounded-full text-sm font-bold transition-colors duration-300 ${!showAfter ? "text-white" : "text-white/70"}`}
+                className={`relative px-6 py-2.5 sm:px-8 sm:py-3 rounded-none text-sm font-bold transition-colors duration-300 ${!showAfter ? "text-white" : "text-white/70"}`}
               >
                 {!showAfter && (
                   <motion.div
-                    className="absolute inset-0 bg-red-500 rounded-full"
+                    className="absolute inset-0 bg-red-500 rounded-none"
                     layoutId="baToggle"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
                   />
@@ -71,11 +71,11 @@ export default function BeforeAfter() {
               </button>
               <button
                 onClick={() => setShowAfter(true)}
-                className={`relative px-6 py-2.5 sm:px-8 sm:py-3 rounded-full text-sm font-bold transition-colors duration-300 ${showAfter ? "text-white" : "text-white/70"}`}
+                className={`relative px-6 py-2.5 sm:px-8 sm:py-3 rounded-none text-sm font-bold transition-colors duration-300 ${showAfter ? "text-white" : "text-white/70"}`}
               >
                 {showAfter && (
                   <motion.div
-                    className="absolute inset-0 bg-green-500 rounded-full"
+                    className="absolute inset-0 bg-green-500 rounded-none"
                     layoutId="baToggle"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
                   />
@@ -99,9 +99,9 @@ export default function BeforeAfter() {
               >
                 <div className="grid lg:grid-cols-5 gap-6">
                   {/* List */}
-                  <div className="lg:col-span-3 bg-navy-light rounded-2xl border border-red-500/20 p-4 sm:p-6 lg:p-8">
+                  <div className="lg:col-span-3 bg-navy-light rounded-none border border-red-500/20 p-4 sm:p-6 lg:p-8">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center">
+                      <div className="w-10 h-10 bg-red-500/20 rounded-none flex items-center justify-center">
                         <svg className="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -117,7 +117,7 @@ export default function BeforeAfter() {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.1 + i * 0.08 }}
                         >
-                          <div className="w-6 h-6 bg-red-500/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-6 h-6 bg-red-500/10 rounded-none flex items-center justify-center shrink-0 mt-0.5">
                             <svg className="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                             </svg>
@@ -133,7 +133,7 @@ export default function BeforeAfter() {
                     {beforeData.stats.map((stat, i) => (
                       <motion.div
                         key={stat.label}
-                        className="bg-navy-light rounded-2xl border border-red-500/15 p-6 flex-1 flex flex-col justify-center text-center"
+                        className="bg-navy-light rounded-none border border-red-500/15 p-6 flex-1 flex flex-col justify-center text-center"
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + i * 0.1 }}
@@ -155,9 +155,9 @@ export default function BeforeAfter() {
               >
                 <div className="grid lg:grid-cols-5 gap-6">
                   {/* List */}
-                  <div className="lg:col-span-3 bg-navy-light rounded-2xl border border-green-500/20 p-4 sm:p-6 lg:p-8">
+                  <div className="lg:col-span-3 bg-navy-light rounded-none border border-green-500/20 p-4 sm:p-6 lg:p-8">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center">
+                      <div className="w-10 h-10 bg-green-500/20 rounded-none flex items-center justify-center">
                         <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
@@ -173,7 +173,7 @@ export default function BeforeAfter() {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.1 + i * 0.08 }}
                         >
-                          <div className="w-6 h-6 bg-green-500/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-6 h-6 bg-green-500/10 rounded-none flex items-center justify-center shrink-0 mt-0.5">
                             <svg className="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                             </svg>
@@ -189,7 +189,7 @@ export default function BeforeAfter() {
                     {afterData.stats.map((stat, i) => (
                       <motion.div
                         key={stat.label}
-                        className="bg-navy-light rounded-2xl border border-green-500/15 p-6 flex-1 flex flex-col justify-center text-center"
+                        className="bg-navy-light rounded-none border border-green-500/15 p-6 flex-1 flex flex-col justify-center text-center"
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + i * 0.1 }}
@@ -208,7 +208,7 @@ export default function BeforeAfter() {
         {/* Bottom callout */}
         <AnimateIn delay={0.4}>
           <motion.div
-            className="mt-12 bg-gradient-to-r from-gold via-yellow-400 to-gold text-navy font-bold text-center py-4 px-6 rounded-2xl text-lg"
+            className="mt-12 bg-gradient-to-r from-gold via-yellow-400 to-gold text-navy font-bold text-center py-4 px-6 rounded-none text-lg"
             whileHover={{ scale: 1.01 }}
           >
             Average partner sees 5-10x return on ad spend in the first 90 days

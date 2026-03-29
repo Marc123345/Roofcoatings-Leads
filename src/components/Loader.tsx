@@ -57,9 +57,9 @@ export default function Loader() {
           </motion.p>
 
           <div className="mt-6 w-40">
-            <div className="h-[3px] bg-white/10 rounded-full overflow-hidden">
+            <div className="h-[3px] bg-white/10 rounded-none overflow-hidden">
               <motion.div
-                className="h-full bg-gradient-to-r from-gold to-yellow-400 rounded-full"
+                className="h-full bg-gradient-to-r from-gold to-yellow-400 rounded-none"
                 style={{ width: `${progress}%` }}
               />
             </div>

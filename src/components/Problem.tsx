@@ -54,7 +54,7 @@ function WastedSpendVisual() {
       <p className="text-white/70 text-[11px] uppercase tracking-wider mb-3 text-center">Typical generic agency timeline</p>
       {months.map((m, i) => (
         <motion.div key={m.month}
-          className="flex items-center justify-between rounded-lg px-4 py-3 bg-red-500/5 border border-red-500/15"
+          className="flex items-center justify-between rounded-none px-4 py-3 bg-red-500/5 border border-red-500/15"
           initial={{ opacity: 0, x: -15 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 + i * 0.12 }}>
           <div className="flex items-center gap-3">
             <span className="text-white/80 text-xs font-mono w-16">{m.month}</span>
@@ -62,11 +62,11 @@ function WastedSpendVisual() {
           </div>
           <div className="flex items-center gap-3">
             <span className="text-white/80 text-xs">{m.leads}</span>
-            <span className="text-[11px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400">{m.status}</span>
+            <span className="text-[11px] px-2 py-0.5 rounded-none bg-red-500/10 text-red-400">{m.status}</span>
           </div>
         </motion.div>
       ))}
-      <motion.div className="flex items-center justify-between rounded-lg px-4 py-3 bg-white/5 border border-white/10 mt-1"
+      <motion.div className="flex items-center justify-between rounded-none px-4 py-3 bg-white/5 border border-white/10 mt-1"
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
         <span className="text-white/70 text-xs font-medium">Total spent</span>
         <span className="text-red-400 font-bold text-lg">$12,800</span>
@@ -90,7 +90,7 @@ function SlowResultsVisual() {
           {["Week 1-2", "Week 3-4", "Month 2", "Month 3"].map((label, i) => (
             <motion.div key={label} className="flex-1 text-center"
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.1 }}>
-              <div className="h-8 bg-red-500/10 border border-red-500/15 rounded-lg flex items-center justify-center mb-1">
+              <div className="h-8 bg-red-500/10 border border-red-500/15 rounded-none flex items-center justify-center mb-1">
                 <span className="text-red-400/50 text-[11px]">{i < 3 ? "Testing..." : "Maybe?"}</span>
               </div>
               <span className="text-white/70 text-[11px]">{label}</span>
@@ -110,7 +110,7 @@ function SlowResultsVisual() {
           ].map((step, i) => (
             <motion.div key={step.label} className="flex-1 text-center"
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.15 }}>
-              <div className="h-8 bg-green-500/10 border border-green-500/25 rounded-lg flex items-center justify-center mb-1">
+              <div className="h-8 bg-green-500/10 border border-green-500/25 rounded-none flex items-center justify-center mb-1">
                 <span className="text-green-400 text-[11px] font-medium">{step.text}</span>
               </div>
               <span className="text-white/80 text-[11px]">{step.label}</span>
@@ -209,12 +209,12 @@ export default function Problem() {
           {/* Tab selectors */}
           <AnimateIn delay={0.2}>
             <div className="flex justify-center mb-10 lg:mb-8 sm:mb-14">
-              <div className="inline-flex bg-navy-light rounded-2xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
+              <div className="inline-flex bg-navy-light rounded-none p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {PROBLEMS.map((p, i) => (
                   <button key={p.id} onClick={() => setActive(i)}
-                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
+                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-none text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
                     {active === i && (
-                      <motion.div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-400 rounded-xl"
+                      <motion.div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-400 rounded-none"
                         layoutId="problemTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
                     )}
                     <span className="relative z-10 flex items-center gap-2">
@@ -236,7 +236,7 @@ export default function Problem() {
 
               {/* Left — text */}
               <div className="order-2 lg:order-1">
-                <div className="bg-navy-light rounded-2xl border border-white/5 p-5 sm:p-8 lg:p-10">
+                <div className="bg-navy-light rounded-none border border-white/5 p-5 sm:p-8 lg:p-10">
                   <motion.span
                     className={`text-6xl lg:text-7xl font-bold ${textColorMap[problem.color]}`}
                     initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
@@ -248,7 +248,7 @@ export default function Problem() {
                   <p className="text-white/80 mt-3 text-lg leading-relaxed">{problem.description}</p>
                   <p className="text-white/80 mt-4 text-sm leading-relaxed">{problem.detail}</p>
 
-                  <div className={`mt-8 inline-flex items-center w-full sm:w-auto justify-center gap-3 rounded-xl border px-5 py-3 ${colorMap[problem.color]}`}>
+                  <div className={`mt-8 inline-flex items-center w-full sm:w-auto justify-center gap-3 rounded-none border px-5 py-3 ${colorMap[problem.color]}`}>
                     <span className={`text-2xl font-bold ${textColorMap[problem.color]}`}>{problem.statValue}</span>
                     <span className="text-white/80 text-sm">{problem.statLabel}</span>
                   </div>
@@ -257,7 +257,7 @@ export default function Problem() {
 
               {/* Right — visual */}
               <div className="order-1 lg:order-2">
-                <div className="bg-navy-light rounded-2xl border border-white/5 p-6 lg:p-8 min-h-[260px] lg:min-h-[340px] flex items-center justify-center">
+                <div className="bg-navy-light rounded-none border border-white/5 p-6 lg:p-8 min-h-[260px] lg:min-h-[340px] flex items-center justify-center">
                   {problem.id === "wasted-spend" && <WastedSpendVisual />}
                   {problem.id === "slow-results" && <SlowResultsVisual />}
                   {problem.id === "no-system" && <ConsistencyVisual />}

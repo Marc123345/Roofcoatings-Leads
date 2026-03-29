@@ -61,7 +61,7 @@ export default function Header() {
             ))}
             <motion.a
               href="/get-started"
-              className="relative bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-2.5 rounded-full font-bold text-sm overflow-hidden group shadow-lg shadow-gold/20"
+              className="relative bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-2.5 rounded-none font-bold text-sm overflow-hidden group shadow-lg shadow-gold/20"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.7 }}
@@ -114,7 +114,7 @@ export default function Header() {
                 ))}
                 <a
                   href="/get-started"
-                  className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-5 py-2.5 rounded-full font-bold text-sm text-center"
+                  className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-5 py-2.5 rounded-none font-bold text-sm text-center"
                   onClick={() => setMobileOpen(false)}
                 >
                   Talk to Marc &rarr;

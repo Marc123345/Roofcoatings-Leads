@@ -5,13 +5,13 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
   if (variant === 1) {
     return (
       <motion.div
-        className="bg-white rounded-xl overflow-hidden shadow-lg w-full max-w-[280px]"
+        className="bg-white rounded-none overflow-hidden shadow-lg w-full max-w-[280px]"
         whileHover={{ y: -4, scale: 1.02 }}
         transition={{ duration: 0.25 }}
       >
         {/* Ad header */}
         <div className="flex items-center gap-2 px-3 py-2">
-          <div className="w-8 h-8 bg-blue rounded-full flex items-center justify-center text-white text-[8px] font-bold leading-none">
+          <div className="w-8 h-8 bg-blue rounded-none flex items-center justify-center text-white text-[8px] font-bold leading-none">
             <div className="flex flex-col items-center"><span>R</span><span>C</span></div>
           </div>
           <div>
@@ -32,7 +32,7 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
           <div className="text-center relative z-10 p-4">
             <p className="text-gold font-bold text-sm">Is Your Roof Leaking?</p>
             <p className="text-white text-[11px] mt-1 opacity-80">Get a free roof coating estimate today</p>
-            <div className="mt-3 bg-gold text-navy text-[11px] font-bold px-4 py-1.5 rounded-full inline-block">
+            <div className="mt-3 bg-gold text-navy text-[11px] font-bold px-4 py-1.5 rounded-none inline-block">
               Get Free Quote
             </div>
           </div>
@@ -48,12 +48,12 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
 
   return (
     <motion.div
-      className="bg-white rounded-xl overflow-hidden shadow-lg w-full max-w-[280px]"
+      className="bg-white rounded-none overflow-hidden shadow-lg w-full max-w-[280px]"
       whileHover={{ y: -4, scale: 1.02 }}
       transition={{ duration: 0.25 }}
     >
       <div className="flex items-center gap-2 px-3 py-2">
-        <div className="w-8 h-8 bg-blue rounded-full flex items-center justify-center text-white text-[8px] font-bold leading-none">
+        <div className="w-8 h-8 bg-blue rounded-none flex items-center justify-center text-white text-[8px] font-bold leading-none">
           <div className="flex flex-col items-center"><span>R</span><span>C</span></div>
         </div>
         <div>
@@ -62,12 +62,12 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
         </div>
       </div>
       <div className="bg-gradient-to-br from-navy to-navy-light aspect-[4/3] flex items-center justify-center relative overflow-hidden">
-        <div className="absolute top-4 right-4 w-16 h-16 bg-gold/20 rounded-full blur-xl" />
+        <div className="absolute top-4 right-4 w-16 h-16 bg-gold/20 rounded-none blur-xl" />
         <div className="text-center relative z-10 p-4">
           <p className="text-white font-bold text-sm">Commercial Roof Coating</p>
           <p className="text-gold text-[11px] mt-1 font-semibold">Save up to 70% vs. Replacement</p>
           <p className="text-white/80 text-[11px] mt-1">Extend your roof life by 15+ years</p>
-          <div className="mt-3 bg-blue text-white text-[11px] font-bold px-4 py-1.5 rounded-full inline-block">
+          <div className="mt-3 bg-blue text-white text-[11px] font-bold px-4 py-1.5 rounded-none inline-block">
             Learn More
           </div>
         </div>

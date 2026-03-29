@@ -26,7 +26,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
         <motion.div className="relative z-10 py-20 sm:py-28 lg:py-44 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 rounded-full px-5 py-2 mb-8"
+            <motion.div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 rounded-none px-5 py-2 mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <span className="text-gold font-bold">{area.abbr}</span>
               <span className="text-gold/60 text-sm">Service Area</span>
@@ -49,12 +49,12 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
             <motion.div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
               <motion.a href="/get-started"
-                className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+                className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-none font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
                 whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 Get {area.state} Leads &rarr;
               </motion.a>
               <motion.a href="/results"
-                className="border border-white/20 text-white/80 hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg w-full sm:w-auto text-center transition-all"
+                className="border border-white/20 text-white/80 hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-none font-semibold text-base sm:text-lg w-full sm:w-auto text-center transition-all"
                 whileHover={{ scale: 1.03 }}>
                 See Win-Logs
               </motion.a>
@@ -63,15 +63,15 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
             {/* Quick stat strip */}
             <motion.div className="mt-12 flex justify-center gap-4 flex-wrap"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-none px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">{area.caseStudy.stat}</p>
                 <p className="text-white/70 text-[11px]">{area.caseStudy.statLabel}</p>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-none px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">{area.cities.length}+</p>
                 <p className="text-white/70 text-[11px]">cities covered</p>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-none px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">&lt;48h</p>
                 <p className="text-white/70 text-[11px]">to first lead</p>
               </div>
@@ -94,7 +94,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
             <div className="grid md:grid-cols-12 gap-4 lg:gap-6">
               {/* Climate — wide */}
               <AnimateIn className="md:col-span-7" delay={0.1}>
-                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-none border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <CloudSun className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Climate &amp; Conditions</h3>
@@ -105,7 +105,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Building stock — narrow */}
               <AnimateIn className="md:col-span-5" delay={0.15}>
-                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-none border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <Building2 className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Building Stock</h3>
@@ -116,7 +116,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Seasonal — narrow */}
               <AnimateIn className="md:col-span-5" delay={0.2}>
-                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-none border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <CalendarDays className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Seasonal Patterns</h3>
@@ -127,7 +127,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Local insight — wide */}
               <AnimateIn className="md:col-span-7" delay={0.25}>
-                <motion.div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-none border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <Lightbulb className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Local Insight</h3>
@@ -144,7 +144,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
       <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div className="bg-white rounded-none shadow-xl overflow-hidden">
               <div className="bg-gradient-to-r from-gold to-yellow-400 p-6 lg:p-8">
                 <p className="text-navy/80 text-sm uppercase tracking-wider font-bold mb-1">{area.state} Partner Win-Log</p>
                 <h3 className="text-navy font-bold text-2xl">{area.caseStudy.name}</h3>
@@ -157,12 +157,12 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                 </blockquote>
 
                 <div className="flex flex-col sm:flex-row items-center gap-6">
-                  <div className="bg-navy rounded-2xl px-8 py-5 text-center">
+                  <div className="bg-navy rounded-none px-8 py-5 text-center">
                     <p className="text-gold text-2xl sm:text-4xl font-bold">{area.caseStudy.stat}</p>
                     <p className="text-white/70 text-sm mt-1">{area.caseStudy.statLabel}</p>
                   </div>
                   <motion.a href="/get-started"
-                    className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-gold/20"
+                    className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 rounded-none font-bold text-lg shadow-lg shadow-gold/20"
                     whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     Get Results Like This &rarr;
                   </motion.a>
@@ -186,7 +186,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
             {area.cities.map((city) => (
               <StaggerItem key={city}>
                 <motion.div
-                  className="bg-navy-light rounded-xl p-4 text-center border border-white/5 hover:border-gold/20 transition-colors"
+                  className="bg-navy-light rounded-none p-4 text-center border border-white/5 hover:border-gold/20 transition-colors"
                   whileHover={{ y: -3 }}>
                   <p className="text-white font-semibold">{city}</p>
                   <p className="text-white/80 text-xs mt-0.5">{area.abbr}</p>
@@ -208,7 +208,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
               Get a custom campaign blueprint for your {area.state} territory. Free. No obligation.
             </p>
             <motion.a href="/get-started"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-none font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Talk to Marc &rarr;
             </motion.a>

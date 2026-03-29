@@ -42,7 +42,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-flex items-center gap-2.5 bg-white/[0.04] border border-white/[0.08] rounded-full px-4 py-2 backdrop-blur-sm mb-8"
+                className="inline-flex items-center gap-2.5 bg-white/[0.04] border border-white/[0.08] rounded-none px-4 py-2 backdrop-blur-sm mb-8"
               >
                 <span className="text-gold text-sm">★★★★★</span>
                 <span className="text-white/70 text-sm">Trusted by 100+ contractors</span>
@@ -82,7 +82,7 @@ export default function Hero() {
               >
                 <motion.a
                   href="/get-started"
-                  className="relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg overflow-hidden group shadow-lg shadow-gold/20"
+                  className="relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-none font-bold text-base sm:text-lg overflow-hidden group shadow-lg shadow-gold/20"
                   whileHover={{ scale: 1.03, boxShadow: "0 0 40px rgba(234,179,8,0.35)" }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -92,7 +92,7 @@ export default function Hero() {
                 </motion.a>
                 <motion.a
                   href="/how-it-works"
-                  className="inline-flex items-center justify-center gap-2 text-white/70 hover:text-white border border-white/[0.08] hover:border-white/20 hover:bg-white/[0.04] px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all"
+                  className="inline-flex items-center justify-center gap-2 text-white/70 hover:text-white border border-white/[0.08] hover:border-white/20 hover:bg-white/[0.04] px-6 py-3.5 sm:px-8 sm:py-4 rounded-none font-semibold text-base sm:text-lg transition-all"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -135,7 +135,7 @@ export default function Hero() {
             >
               <div className="relative">
                 {/* Glow behind */}
-                <div className="absolute inset-0 bg-blue/10 rounded-full blur-[80px] scale-75" />
+                <div className="absolute inset-0 bg-blue/10 rounded-none blur-[80px] scale-75" />
 
                 <div className="relative grid grid-cols-2 gap-5 items-center">
                   {/* Phone — left, taller */}
@@ -165,14 +165,14 @@ export default function Hero() {
 
                 {/* Floating badges */}
                 <motion.div
-                  className="absolute -top-4 -right-3 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg shadow-green-500/30 z-20"
+                  className="absolute -top-4 -right-3 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-none shadow-lg shadow-green-500/30 z-20"
                   animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
                   Proven System
                 </motion.div>
                 <motion.div
-                  className="absolute -bottom-3 -left-3 bg-gold text-navy text-xs font-bold px-3 py-1.5 rounded-full shadow-lg shadow-gold/30 z-20"
+                  className="absolute -bottom-3 -left-3 bg-gold text-navy text-xs font-bold px-3 py-1.5 rounded-none shadow-lg shadow-gold/30 z-20"
                   animate={{ y: [0, 6, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
                 >
