@@ -32,6 +32,11 @@ export default function Hero() {
         <ParticleField />
         <div className="absolute inset-0 grid-pattern" />
 
+        {/* Oversized background text */}
+        <div className="bg-text top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+          ROOFCOAT
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 

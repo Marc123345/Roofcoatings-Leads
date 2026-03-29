@@ -8,7 +8,6 @@ import Results from "@/components/Results";
 import BeforeAfter from "@/components/BeforeAfter";
 import Testimonials from "@/components/Testimonials";
 import ComparisonTable from "@/components/ComparisonTable";
-import ROI from "@/components/ROI";
 import Scalability from "@/components/Scalability";
 import WhatsIncluded from "@/components/WhatsIncluded";
 import FAQ from "@/components/FAQ";
@@ -21,28 +20,20 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <div className="section-divider" />
         <Problem />
-        <div className="section-divider" />
         <Solution />
-        <div className="section-divider" />
         <WhyFacebookAds />
+        <div className="section-divider-dark" />
         <HowItWorks />
-        <div className="section-divider" />
         <Results />
-        <div className="section-divider" />
         <BeforeAfter />
         <Testimonials />
-        <div className="section-divider" />
         <ComparisonTable />
-        <ROI />
-        <div className="section-divider" />
         <Scalability />
-        <div className="section-divider" />
+        <div className="section-divider-dark" />
         <WhatsIncluded />
-        <div className="section-divider" />
+        <div className="section-divider-dark" />
         <FAQ />
-        <div className="section-divider" />
         <CTA />
       </main>
       <Footer />

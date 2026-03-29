@@ -22,7 +22,11 @@ const newWay = [
 export default function BeforeAfter() {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-32 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Background text */}
+      <div className="bg-text top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-navy">
+        VS
+      </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateIn>
           <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3 text-center">
             Stop Getting Burned
