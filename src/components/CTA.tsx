@@ -1,64 +1,115 @@
 "use client";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { ArrowRight, Check } from "lucide-react";
 import AnimateIn from "./AnimateIn";
+import CountUp from "./CountUp";
 
 export default function CTA() {
-  return (
-    <section id="cta" className="bg-white py-20 sm:py-28 lg:py-40 relative overflow-hidden">
-      {/* Oversized background text */}
-      <div className="bg-text top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-navy">
-        LEADS
-      </div>
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Massive headline */}
+  return (
+    <section ref={ref} id="cta" className="bg-navy relative overflow-hidden mesh-gradient py-24 sm:py-32 lg:py-44">
+      <div className="absolute inset-0 grid-pattern" />
+
+      {/* Oversized background text — parallax */}
+      <motion.div
+        className="bg-text top-1/2 left-1/2 -translate-x-1/2 text-white"
+        style={{ y }}
+      >
+        GROWTH
+      </motion.div>
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Top pill */}
         <AnimateIn>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-8xl font-black text-navy leading-[0.95] tracking-tight">
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-5 py-2">
+              <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+              <span className="text-gold text-xs font-bold uppercase tracking-widest">Spots Filling Up</span>
+            </div>
+          </div>
+        </AnimateIn>
+
+        {/* Headline */}
+        <AnimateIn delay={0.1}>
+          <h2 className="text-center text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.95] tracking-tight">
             Ready to Fill
             <br />
             <span className="text-gradient-gold">Your Pipeline?</span>
           </h2>
         </AnimateIn>
 
-        <AnimateIn delay={0.15}>
-          <p className="mt-8 text-navy/50 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-            Pre-qualified leads + a free 5-page website.
-            $1,000/month. Cancel anytime.
+        {/* Sub */}
+        <AnimateIn delay={0.2}>
+          <p className="mt-6 text-white/50 text-base sm:text-lg text-center max-w-xl mx-auto">
+            Pre-qualified leads delivered from day one. A free 5-page website
+            built for your business. $1,000/month. Cancel anytime.
           </p>
         </AnimateIn>
 
+        {/* CTA buttons */}
         <AnimateIn delay={0.3}>
-          <motion.a
-            href="/get-started"
-            className="mt-10 inline-flex items-center gap-3 bg-navy text-white px-8 py-4 sm:px-12 sm:py-5 rounded-xl font-bold text-base sm:text-lg group"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Claim Your Free Website + Audit
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.a>
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.a
+              href="/get-started"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-gold/25 group"
+              whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Claim Your Free Website + Audit
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.a>
+            <motion.a
+              href="/how-it-works"
+              className="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 hover:text-white hover:border-white/20 px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-semibold text-base sm:text-lg transition-all"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              See How It Works
+            </motion.a>
+          </div>
         </AnimateIn>
 
-        {/* Trust strip */}
+        {/* Trust pills */}
         <AnimateIn delay={0.4}>
-          <div className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-4">
-            {[
-              { value: "100+", label: "Contractors" },
-              { value: "$1k", label: "Per Month" },
-              { value: "<48h", label: "First Lead" },
-              { value: "5-10x", label: "ROI" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-navy font-black text-2xl sm:text-3xl">{stat.value}</p>
-                <p className="text-navy/40 text-xs uppercase tracking-widest mt-1">{stat.label}</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {["No contracts", "Cancel anytime", "Results from day 1", "Free website"].map((item) => (
+              <div key={item} className="flex items-center gap-1.5 text-white/40 text-xs">
+                <Check className="w-3 h-3 text-gold" />
+                <span>{item}</span>
               </div>
             ))}
           </div>
         </AnimateIn>
 
+        {/* Stats — large, spaced */}
         <AnimateIn delay={0.5}>
-          <div className="mt-12 flex justify-center text-gold text-2xl tracking-[0.3em]">{"★★★★★"}</div>
+          <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] rounded-2xl overflow-hidden">
+            {[
+              { value: 100, suffix: "+", label: "Contractors" },
+              { value: 1, prefix: "$", suffix: "k", label: "Per Month" },
+              { value: 48, prefix: "<", suffix: "h", label: "First Lead" },
+              { value: 10, prefix: "", suffix: "x", label: "Avg. ROI" },
+            ].map((stat) => (
+              <div key={stat.label} className="bg-navy p-6 sm:p-8 text-center">
+                <p className="text-white font-black text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+                  <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                </p>
+                <p className="text-white/30 text-xs uppercase tracking-widest mt-2">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </AnimateIn>
+
+        {/* Stars + domain */}
+        <AnimateIn delay={0.6}>
+          <div className="mt-12 text-center">
+            <div className="flex justify-center text-gold text-2xl tracking-[0.4em] mb-3">★★★★★</div>
+            <p className="text-white/30 text-sm font-medium tracking-wider">roofcoatleads.com</p>
+          </div>
         </AnimateIn>
       </div>
     </section>
