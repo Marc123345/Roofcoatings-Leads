@@ -156,7 +156,7 @@ export default function ResultsContent() {
         <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-14">
-              <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Featured Win-Logs</h2></AnimateIn>
+              <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Featured Win-Logs</h2></AnimateIn>
               <AnimateIn delay={0.1}><p className="mt-3 text-white/80 text-lg">Click a partner to see their full before &amp; after breakdown.</p></AnimateIn>
             </div>
 
@@ -273,7 +273,7 @@ export default function ResultsContent() {
       <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">More Partner Voices</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">More Partner Voices</h2></AnimateIn>
           </div>
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.08}>
@@ -306,7 +306,7 @@ export default function ResultsContent() {
       <section className="bg-navy py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
               Want Your Name in the{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent">
                 Next Win-Log?

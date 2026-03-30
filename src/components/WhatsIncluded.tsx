@@ -234,7 +234,7 @@ export default function WhatsIncluded() {
         <div className="mt-16 sm:mt-20">
           <AnimateIn>
             <div className="text-center mb-8 sm:mb-12">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-navy">Simple, Transparent Pricing</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-navy">Simple, Transparent Pricing</h3>
               <p className="mt-2 text-navy/60">One plan. Optional add-ons. Cancel anytime.</p>
             </div>
           </AnimateIn>

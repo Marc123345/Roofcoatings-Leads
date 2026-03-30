@@ -160,7 +160,7 @@ export default function Testimonials() {
           <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-4">
             <span className="text-gold text-xs font-bold uppercase tracking-widest">Proven Results, Real Partners</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white ">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white ">
             Impact Across the Country
           </h2>
         </div>

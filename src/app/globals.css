@@ -41,7 +41,12 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
   font-weight: 800;
   font-feature-settings: "kern" 1;
-  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Body text — consistent line height and spacing */
+p, li, span, td, th, label, blockquote {
+  font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
 

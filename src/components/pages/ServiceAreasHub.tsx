@@ -69,7 +69,7 @@ export default function ServiceAreasHub() {
         <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-14">
-              <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Explore Our Markets</h2></AnimateIn>
+              <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Explore Our Markets</h2></AnimateIn>
               <AnimateIn delay={0.1}><p className="mt-3 text-white/80 text-lg">Click a state on the map or use the tabs below.</p></AnimateIn>
             </div>
 
@@ -205,7 +205,7 @@ export default function ServiceAreasHub() {
       <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">All Active Markets</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">All Active Markets</h2></AnimateIn>
           </div>
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.08}>
@@ -242,7 +242,7 @@ export default function ServiceAreasHub() {
         <div className="absolute inset-0 grid-pattern" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12">
-            <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-white">We Cover All 50 States</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">We Cover All 50 States</h2></AnimateIn>
             <AnimateIn delay={0.1}><p className="mt-3 text-white/80 text-lg">Select your state to get started with pre-qualified leads in your territory.</p></AnimateIn>
           </div>
 
@@ -289,7 +289,7 @@ export default function ServiceAreasHub() {
       <section className="bg-white py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy">
               Your Territory.{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent">
                 Your Leads. Your Territory.

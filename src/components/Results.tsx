@@ -12,7 +12,7 @@ export default function Results() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateIn>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white text-center">
             The Results Speak for Themselves
           </h2>
         </AnimateIn>
@@ -97,7 +97,7 @@ export default function Results() {
           <div className="mt-12 text-center">
             <motion.a
               href="#cta"
-              className="inline-block bg-gradient-to-r from-blue to-blue-light text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg w-full sm:w-auto text-center overflow-hidden relative group"
+              className="inline-block bg-gradient-to-r from-blue to-blue-light text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base w-full sm:w-auto text-center overflow-hidden relative group"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(37,99,235,0.4)" }}
               whileTap={{ scale: 0.95 }}
             >

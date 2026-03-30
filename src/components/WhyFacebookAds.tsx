@@ -228,7 +228,7 @@ export default function WhyFacebookAds() {
           </p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white text-center">
             The Unfair Advantage
           </h2>
         </AnimateIn>

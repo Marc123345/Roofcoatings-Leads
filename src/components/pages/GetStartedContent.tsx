@@ -85,7 +85,7 @@ export default function GetStartedContent() {
               {/* Left — Context */}
               <div className="lg:col-span-2">
                 <AnimateIn>
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">
                     Claim Your Free Website + Audit
                   </h2>
                   <p className="text-white/70 leading-relaxed mb-8">
@@ -165,7 +165,7 @@ export default function GetStartedContent() {
       <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <AnimateIn><h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Why Contractors Trust the Audit</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Why Contractors Trust the Audit</h2></AnimateIn>
           </div>
 
           <StaggerContainer className="grid sm:grid-cols-2 gap-6" staggerDelay={0.08}>
@@ -192,7 +192,7 @@ export default function GetStartedContent() {
         <div className="absolute inset-0 grid-pattern" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimateIn>
-            <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12">Questions About the Audit</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12">Questions About the Audit</h2>
           </AnimateIn>
 
           <StaggerContainer className="space-y-4" staggerDelay={0.08}>
@@ -220,7 +220,7 @@ export default function GetStartedContent() {
       <section className="bg-white py-20 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Still Thinking About It?</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Still Thinking About It?</h2>
             <p className="mt-4 text-navy/80 text-lg">
               The audit is free, takes 30 minutes, and you keep the blueprint whether you work with us or not.
               The only risk is not knowing what your market looks like.

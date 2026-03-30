@@ -54,7 +54,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                 Get {area.state} Leads &rarr;
               </motion.a>
               <motion.a href="/results"
-                className="border border-white/20 text-white/80 hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg w-full sm:w-auto text-center transition-all"
+                className="border border-white/20 text-white/80 hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base w-full sm:w-auto text-center transition-all"
                 whileHover={{ scale: 1.03 }}>
                 See Win-Logs
               </motion.a>
@@ -86,7 +86,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
         <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimateIn>
-              <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8 sm:mb-12">
                 The {area.state} Roof Coating Market
               </h2>
             </AnimateIn>
@@ -178,7 +178,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
         <div className="absolute inset-0 grid-pattern" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimateIn>
-            <h2 className="text-3xl font-bold text-white mb-3">Cities We Serve in {area.state}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Cities We Serve in {area.state}</h2>
             <p className="text-white/80 mb-10">+ all surrounding areas within your service radius</p>
           </AnimateIn>
 
@@ -201,7 +201,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
       <section className="bg-white py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy">
               Ready to Own {area.state} Leads?
             </h2>
             <p className="mt-4 text-navy/80 text-lg">

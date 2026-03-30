@@ -64,7 +64,7 @@ export default function CTA() {
             </motion.a>
             <motion.a
               href="/how-it-works"
-              className="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 hover:text-white hover:border-white/20 px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-semibold text-base sm:text-lg transition-all"
+              className="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 hover:text-white hover:border-white/20 px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-base transition-all"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

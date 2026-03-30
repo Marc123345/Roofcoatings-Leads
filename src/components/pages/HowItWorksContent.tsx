@@ -399,7 +399,7 @@ export default function HowItWorksContent() {
               <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">Platform Advantage</p>
             </AnimateIn>
             <AnimateIn delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy">
                 Why Facebook Ads — Not Google?
               </h2>
             </AnimateIn>
@@ -436,7 +436,7 @@ export default function HowItWorksContent() {
         <div className="absolute inset-0 grid-pattern" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-14">
-            <AnimateIn><h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Everything You Need to Grow</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">Everything You Need to Grow</h2></AnimateIn>
             <AnimateIn delay={0.1}><p className="mt-4 text-white/70 text-lg">All included. No add-ons. No hidden fees.</p></AnimateIn>
           </div>
 
@@ -460,7 +460,7 @@ export default function HowItWorksContent() {
       <section className="bg-white py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">Ready to See Your Custom Blueprint?</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy">Ready to See Your Custom Blueprint?</h2>
             <p className="mt-4 text-navy/80 text-lg">The strategy audit is free. No pitch. No obligation. If we can&apos;t help, we&apos;ll tell you.</p>
             <motion.a href="/get-started"
               className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"

@@ -279,7 +279,7 @@ export default function NicheExpertiseContent() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
             <AnimateIn>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy">
                 General Agencies Don&apos;t Get This
               </h2>
             </AnimateIn>
@@ -317,7 +317,7 @@ export default function NicheExpertiseContent() {
       <section className="bg-navy py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
               Tell Us Your Niche.{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent">
                 We&apos;ll Build the Campaign.

@@ -39,7 +39,7 @@ export default function Scalability() {
             <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">ROI Calculator</p>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
               See Exactly What Your Pipeline Could Look Like
             </h2>
           </AnimateIn>
@@ -124,7 +124,7 @@ export default function Scalability() {
                   className="bg-navy-light rounded-2xl border border-white/10 p-6"
                 >
                   <p className="text-white/80 text-xs mb-1">Monthly Ad Spend</p>
-                  <p className="text-white text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold">{formatCurrency(calc.adSpend)}</p>
+                  <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">{formatCurrency(calc.adSpend)}</p>
                 </motion.div>
 
                 <motion.div
@@ -147,7 +147,7 @@ export default function Scalability() {
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="text-white/80 text-xs mb-1">Estimated Monthly Revenue</p>
-                    <p className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold">{formatCurrency(calc.revenue)}</p>
+                    <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">{formatCurrency(calc.revenue)}</p>
                   </div>
                   <div className="hidden sm:flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-xl px-4 py-2 shrink-0">
                     <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +196,7 @@ export default function Scalability() {
                   className="bg-gold/10 rounded-2xl border border-gold/20 p-6 text-center"
                 >
                   <p className="text-gold/60 text-xs mb-1">Return on Ad Spend</p>
-                  <p className="text-gold text-3xl sm:text-4xl lg:text-5xl font-bold">{calc.roi.toFixed(1)}x</p>
+                  <p className="text-gold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">{calc.roi.toFixed(1)}x</p>
                 </motion.div>
 
                 <motion.div
@@ -205,7 +205,7 @@ export default function Scalability() {
                   className="bg-navy-light rounded-2xl border border-white/10 p-6 text-center"
                 >
                   <p className="text-white/80 text-xs mb-1">Net Profit</p>
-                  <p className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold">{formatCurrency(calc.profit)}</p>
+                  <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">{formatCurrency(calc.profit)}</p>
                 </motion.div>
               </div>
             </div>

@@ -69,7 +69,7 @@ export default function Hero() {
 
               {/* Subheadline */}
               <motion.p
-                className="mt-6 text-base sm:text-lg text-white/70 max-w-lg leading-relaxed"
+                className="mt-6 text-sm sm:text-base text-white/70 max-w-lg leading-relaxed"
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -97,7 +97,7 @@ export default function Hero() {
                 </motion.a>
                 <motion.a
                   href="/how-it-works"
-                  className="inline-flex items-center justify-center gap-2 text-white/70 hover:text-white border border-white/[0.08] hover:border-white/20 hover:bg-white/[0.04] px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transition-all"
+                  className="inline-flex items-center justify-center gap-2 text-white/70 hover:text-white border border-white/[0.08] hover:border-white/20 hover:bg-white/[0.04] px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                 >

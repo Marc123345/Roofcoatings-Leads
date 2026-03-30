@@ -55,7 +55,7 @@ export default function HowItWorks() {
           </p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy leading-tight">
             Your Path to Predictable Growth
           </h2>
         </AnimateIn>
