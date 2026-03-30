@@ -54,7 +54,7 @@ function WastedSpendVisual() {
       <p className="text-white/70 text-[11px] uppercase tracking-wider mb-3 text-center">Typical generic agency timeline</p>
       {months.map((m, i) => (
         <motion.div key={m.month}
-          className="flex items-center justify-between rounded-none px-4 py-3 bg-red-500/5 border border-red-500/15"
+          className="flex items-center justify-between rounded-xl px-4 py-3 bg-red-500/5 border border-red-500/15"
           initial={{ opacity: 0, x: -15 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 + i * 0.12 }}>
           <div className="flex items-center gap-3">
             <span className="text-white/80 text-xs font-mono w-16">{m.month}</span>
@@ -62,11 +62,11 @@ function WastedSpendVisual() {
           </div>
           <div className="flex items-center gap-3">
             <span className="text-white/80 text-xs">{m.leads}</span>
-            <span className="text-[11px] px-2 py-0.5 rounded-none bg-red-500/10 text-red-400">{m.status}</span>
+            <span className="text-[11px] px-2 py-0.5 rounded-2xl bg-red-500/10 text-red-400">{m.status}</span>
           </div>
         </motion.div>
       ))}
-      <motion.div className="flex items-center justify-between rounded-none px-4 py-3 bg-white/5 border border-white/10 mt-1"
+      <motion.div className="flex items-center justify-between rounded-xl px-4 py-3 bg-white/5 border border-white/10 mt-1"
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
         <span className="text-white/70 text-xs font-medium">Total spent</span>
         <span className="text-red-400 font-bold text-lg">$12,800</span>
@@ -90,7 +90,7 @@ function SlowResultsVisual() {
           {["Week 1-2", "Week 3-4", "Month 2", "Month 3"].map((label, i) => (
             <motion.div key={label} className="flex-1 text-center"
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.1 }}>
-              <div className="h-8 bg-red-500/10 border border-red-500/15 rounded-none flex items-center justify-center mb-1">
+              <div className="h-8 bg-red-500/10 border border-red-500/15 rounded-xl flex items-center justify-center mb-1">
                 <span className="text-red-400/50 text-[11px]">{i < 3 ? "Testing..." : "Maybe?"}</span>
               </div>
               <span className="text-white/70 text-[11px]">{label}</span>
@@ -110,7 +110,7 @@ function SlowResultsVisual() {
           ].map((step, i) => (
             <motion.div key={step.label} className="flex-1 text-center"
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.15 }}>
-              <div className="h-8 bg-green-500/10 border border-green-500/25 rounded-none flex items-center justify-center mb-1">
+              <div className="h-8 bg-green-500/10 border border-green-500/25 rounded-xl flex items-center justify-center mb-1">
                 <span className="text-green-400 text-[11px] font-medium">{step.text}</span>
               </div>
               <span className="text-white/80 text-[11px]">{step.label}</span>
@@ -183,7 +183,7 @@ export default function Problem() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <AnimateIn>
-            <div className="inline-flex items-center gap-2 bg-red-500/5 border border-red-500/15 rounded-none px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2 bg-red-500/5 border border-red-500/15 rounded-full px-4 py-1.5 mb-6">
               <span className="text-red-500 text-xs font-bold uppercase tracking-widest">The Problem</span>
             </div>
           </AnimateIn>
@@ -202,14 +202,14 @@ export default function Problem() {
         {/* Tab selectors */}
         <AnimateIn delay={0.2}>
           <div className="flex justify-center mb-8 sm:mb-12">
-            <div className="inline-flex rounded-none p-1 border border-navy/10 gap-1 overflow-x-auto max-w-full" style={{scrollbarWidth:"none"}}>
+            <div className="inline-flex rounded-xl p-1 border border-navy/10 gap-1 overflow-x-auto max-w-full" style={{scrollbarWidth:"none"}}>
               {PROBLEMS.map((p, i) => {
                 const tabColor = colorMap[p.color].tab;
                 return (
                   <button key={p.id} onClick={() => setActive(i)}
-                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-none text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-white" : "text-navy/40 hover:text-navy/70"}`}>
+                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${active === i ? "text-white" : "text-navy/40 hover:text-navy/70"}`}>
                     {active === i && (
-                      <motion.div className={`absolute inset-0 ${tabColor} rounded-none`}
+                      <motion.div className={`absolute inset-0 ${tabColor} rounded-lg`}
                         layoutId="problemTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
                     )}
                     <span className="relative z-10 flex items-center gap-2">

@@ -111,7 +111,7 @@ export default function BeforeAfter() {
         <AnimateIn delay={0.4}>
           <div className="mt-12 text-center">
             <motion.a href="/get-started"
-              className="inline-flex items-center gap-2 bg-navy text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-none font-bold text-base sm:text-lg border border-white/10 hover:border-gold/30 transition-colors"
+              className="inline-flex items-center gap-2 bg-navy text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg border border-white/10 hover:border-gold/30 transition-colors"
               whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               Stop Burning Cash
               <ArrowRight className="w-4 h-4" />

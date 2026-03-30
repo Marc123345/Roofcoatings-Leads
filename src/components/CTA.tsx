@@ -31,7 +31,7 @@ export default function CTA() {
         <AnimateIn delay={0.3}>
           <motion.a
             href="/get-started"
-            className="mt-10 inline-flex items-center gap-3 bg-navy text-white px-8 py-4 sm:px-12 sm:py-5 rounded-none font-bold text-base sm:text-lg group"
+            className="mt-10 inline-flex items-center gap-3 bg-navy text-white px-8 py-4 sm:px-12 sm:py-5 rounded-xl font-bold text-base sm:text-lg group"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

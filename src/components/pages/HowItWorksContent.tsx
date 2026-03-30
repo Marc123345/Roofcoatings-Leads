@@ -87,12 +87,12 @@ function AuditVisual() {
     <div className="space-y-2">
       {items.map((item) => (
         <motion.div key={item.label}
-          className="flex items-center gap-3 bg-white/5 rounded-none px-4 py-2.5 border border-white/5"
+          className="flex items-center gap-3 bg-white/5 rounded-xl px-4 py-2.5 border border-white/5"
           initial={{ opacity: 0, x: -20, scale: 0.95 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ delay: item.delay, duration: 0.35 }}>
           <motion.div
-            className="w-5 h-5 rounded-none bg-blue flex items-center justify-center shrink-0"
+            className="w-5 h-5 rounded-2xl bg-blue flex items-center justify-center shrink-0"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: item.delay + 0.15, type: "spring" }}>
@@ -102,7 +102,7 @@ function AuditVisual() {
         </motion.div>
       ))}
       <motion.div
-        className="mt-3 bg-blue/10 border border-blue/20 rounded-none px-4 py-3 text-center"
+        className="mt-3 bg-blue/10 border border-blue/20 rounded-xl px-4 py-3 text-center"
         initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
         <span className="text-blue-light text-sm font-medium">Blueprint delivered in 24 hours</span>
       </motion.div>
@@ -126,9 +126,9 @@ function BuildVisual() {
           <div className="flex justify-between mb-1">
             <span className="text-white/80 text-xs">{layer.label}</span>
           </div>
-          <div className="h-7 bg-white/5 rounded-none overflow-hidden relative">
+          <div className="h-7 bg-white/5 rounded-2xl overflow-hidden relative">
             <motion.div
-              className={`h-full ${layer.color} rounded-none flex items-center px-3`}
+              className={`h-full ${layer.color} rounded-xl flex items-center px-3`}
               initial={{ width: 0 }}
               animate={{ width: layer.w }}
               transition={{ delay: layer.delay, duration: 0.6, ease: "easeOut" }}>
@@ -140,7 +140,7 @@ function BuildVisual() {
           </div>
         </div>
       ))}
-      <motion.div className="mt-3 bg-gold/10 border border-gold/20 rounded-none px-4 py-3 text-center"
+      <motion.div className="mt-3 bg-gold/10 border border-gold/20 rounded-xl px-4 py-3 text-center"
         initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}>
         <span className="text-gold text-sm font-medium">Campaign live in 24–48 hours</span>
       </motion.div>
@@ -161,7 +161,7 @@ function QualifyVisual() {
       <p className="text-white/70 text-[11px] uppercase tracking-wider mb-2">Qualification funnel</p>
       {funnel.map((stage) => (
         <motion.div key={stage.label}
-          className={`${stage.bg} rounded-none py-2.5 px-4 flex items-center justify-between border border-white/5`}
+          className={`${stage.bg} rounded-xl py-2.5 px-4 flex items-center justify-between border border-white/5`}
           style={{ width: stage.w }}
           initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: stage.delay, duration: 0.4 }}>
@@ -169,7 +169,7 @@ function QualifyVisual() {
           <span className="text-white font-bold text-xs">{stage.count}</span>
         </motion.div>
       ))}
-      <motion.div className="mt-2 bg-green-500/10 border border-green-500/20 rounded-none px-4 py-3 text-center w-[25%] min-w-[180px]"
+      <motion.div className="mt-2 bg-green-500/10 border border-green-500/20 rounded-xl px-4 py-3 text-center w-[25%] min-w-[180px]"
         initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.2, type: "spring" }}>
         <span className="text-green-400 text-sm font-medium">Only qualified leads reach you</span>
       </motion.div>
@@ -188,13 +188,13 @@ function DeliverVisual() {
       <p className="text-white/70 text-[11px] uppercase tracking-wider mb-2">Live feed</p>
       {notifications.map((n, i) => (
         <motion.div key={n.title}
-          className="bg-white/5 border border-white/10 rounded-none p-4"
+          className="bg-white/5 border border-white/10 rounded-2xl p-4"
           initial={{ opacity: 0, y: 15, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 0.2 + i * 0.25, duration: 0.35 }}>
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
-              <div className={`w-2 h-2 rounded-none ${n.status === "new" ? "bg-blue animate-pulse" : n.status === "contacted" ? "bg-gold" : "bg-green-400"}`} />
+              <div className={`w-2 h-2 rounded-xl ${n.status === "new" ? "bg-blue animate-pulse" : n.status === "contacted" ? "bg-gold" : "bg-green-400"}`} />
               <span className="text-white font-bold text-sm">{n.title}</span>
             </div>
             <span className="text-white/80 text-[11px]">{n.time}</span>
@@ -203,8 +203,8 @@ function DeliverVisual() {
           {n.status === "new" && (
             <motion.div className="mt-2 flex gap-2"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 + i * 0.25 + 0.3 }}>
-              <span className="bg-blue text-white text-[11px] font-bold px-3 py-1 rounded-none">Call Now</span>
-              <span className="bg-white/10 text-white/80 text-[11px] px-3 py-1 rounded-none">View Details</span>
+              <span className="bg-blue text-white text-[11px] font-bold px-3 py-1 rounded-xl">Call Now</span>
+              <span className="bg-white/10 text-white/80 text-[11px] px-3 py-1 rounded-xl">View Details</span>
             </motion.div>
           )}
         </motion.div>
@@ -245,7 +245,7 @@ export default function HowItWorksContent() {
         <motion.div className="relative z-10 py-20 sm:py-28 lg:py-44 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-none px-4 py-1.5 mb-8"
+              className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <span className="text-gold text-xs font-bold uppercase tracking-widest">How It Works</span>
             </motion.div>
@@ -301,7 +301,7 @@ export default function HowItWorksContent() {
                 {steps.map((s, i) => (
                   <button key={s.id} onClick={() => setActiveStep(i)} className="relative z-10 flex flex-col items-center gap-3 group">
                     <motion.div
-                      className={`w-10 h-10 rounded-none flex items-center justify-center text-lg border-2 transition-all duration-300 ${
+                      className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg border-2 transition-all duration-300 ${
                         i <= activeStep
                           ? "bg-gold border-gold text-navy"
                           : "bg-navy-light border-white/10 text-white/80"
@@ -331,9 +331,9 @@ export default function HowItWorksContent() {
                 className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
 
                 {/* Left — Info */}
-                <div className="bg-navy-light rounded-none border border-white/10 p-5 sm:p-8 lg:p-10 flex flex-col">
+                <div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 lg:p-10 flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-14 h-14 rounded-none bg-gradient-to-br ${step.color} flex items-center justify-center text-2xl shadow-lg`}>
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center text-2xl shadow-lg`}>
                       {step.icon}
                     </div>
                     <div>
@@ -345,8 +345,8 @@ export default function HowItWorksContent() {
                   <p className="text-gold font-semibold text-lg mb-4">{step.short}</p>
                   <p className="text-white/80 leading-relaxed flex-1">{step.description}</p>
 
-                  <div className="mt-6 bg-white/5 border border-white/5 rounded-none px-5 py-4 flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-none bg-green-500/20 flex items-center justify-center shrink-0">
+                  <div className="mt-6 bg-white/5 border border-white/5 rounded-xl px-5 py-4 flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-2xl bg-green-500/20 flex items-center justify-center shrink-0">
                       <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                       </svg>
@@ -359,19 +359,19 @@ export default function HowItWorksContent() {
                     <button
                       onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
                       disabled={activeStep === 0}
-                      className="px-5 py-2.5 rounded-none border border-white/10 text-white/80 text-sm font-medium disabled:opacity-20 hover:border-white/20 hover:text-white/80 transition-all">
+                      className="px-5 py-2.5 rounded-2xl border border-white/10 text-white/80 text-sm font-medium disabled:opacity-20 hover:border-white/20 hover:text-white/80 transition-all">
                       &larr; Prev
                     </button>
                     {activeStep < steps.length - 1 ? (
                       <motion.button
                         onClick={() => setActiveStep(activeStep + 1)}
-                        className="flex-1 bg-gradient-to-r from-gold to-yellow-400 text-navy py-2.5 rounded-none font-bold text-sm"
+                        className="flex-1 bg-gradient-to-r from-gold to-yellow-400 text-navy py-2.5 rounded-xl font-bold text-sm"
                         whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                         Next Step &rarr;
                       </motion.button>
                     ) : (
                       <motion.a href="/get-started"
-                        className="flex-1 bg-gradient-to-r from-gold to-yellow-400 text-navy py-2.5 rounded-none font-bold text-sm text-center"
+                        className="flex-1 bg-gradient-to-r from-gold to-yellow-400 text-navy py-2.5 rounded-xl font-bold text-sm text-center"
                         whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                         Start Your Audit &rarr;
                       </motion.a>
@@ -380,7 +380,7 @@ export default function HowItWorksContent() {
                 </div>
 
                 {/* Right — Visual */}
-                <div className="bg-navy-light rounded-none border border-white/10 p-5 sm:p-8 lg:p-10 flex items-center justify-center min-h-[300px] lg:min-h-[420px]">
+                <div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 lg:p-10 flex items-center justify-center min-h-[300px] lg:min-h-[420px]">
                   <div className="w-full max-w-md">
                     <Visual />
                   </div>
@@ -414,10 +414,10 @@ export default function HowItWorksContent() {
             {advantages.map((adv) => (
               <StaggerItem key={adv.title}>
                 <motion.div
-                  className="bg-white rounded-none p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group"
+                  className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full group"
                   whileHover={{ y: -4 }}>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="bg-navy rounded-none px-4 py-2 text-center">
+                    <div className="bg-navy rounded-xl px-4 py-2 text-center">
                       <p className="text-gold text-xl font-bold leading-none">{adv.stat}</p>
                       <p className="text-white/70 text-[11px] mt-0.5">{adv.statLabel}</p>
                     </div>
@@ -444,9 +444,9 @@ export default function HowItWorksContent() {
             {included.map((item, i) => (
               <StaggerItem key={item.title} className={i === 0 ? "col-span-2" : i === 6 ? "col-span-2" : ""}>
                 <motion.div
-                  className="bg-navy-light rounded-none border border-white/5 p-6 h-full group hover:border-gold/20 transition-colors"
+                  className="bg-navy-light rounded-2xl border border-white/5 p-6 h-full group hover:border-gold/20 transition-colors"
                   whileHover={{ y: -4 }}>
-                  <div className="w-10 h-10 bg-white/10 rounded-none flex items-center justify-center">{item.icon}</div>
+                  <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">{item.icon}</div>
                   <h3 className="text-white font-bold text-sm mt-3">{item.title}</h3>
                   <p className="text-white/80 text-xs mt-1.5 leading-relaxed">{item.description}</p>
                 </motion.div>
@@ -463,7 +463,7 @@ export default function HowItWorksContent() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">Ready to See Your Custom Blueprint?</h2>
             <p className="mt-4 text-navy/80 text-lg">The strategy audit is free. No pitch. No obligation. If we can&apos;t help, we&apos;ll tell you.</p>
             <motion.a href="/get-started"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-none font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Claim Your Free Website + Audit &rarr;

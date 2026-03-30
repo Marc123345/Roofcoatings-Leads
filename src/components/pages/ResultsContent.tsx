@@ -75,11 +75,11 @@ function BeforeAfterBar({ label, before, after }: { label: string; before: strin
     <div className="flex items-center gap-3">
       <span className="text-white/80 text-xs w-24 shrink-0 text-right">{label}</span>
       <div className="flex-1 flex gap-1 h-8">
-        <motion.div className="bg-red-500/20 border border-red-500/20 rounded-none flex items-center px-3 text-red-400 text-xs font-bold"
+        <motion.div className="bg-red-500/20 border border-red-500/20 rounded-xl flex items-center px-3 text-red-400 text-xs font-bold"
           initial={{ width: 0 }} animate={{ width: "60%" }} transition={{ duration: 0.6, delay: 0.2 }}>
           {before}
         </motion.div>
-        <motion.div className="bg-green-500/20 border border-green-500/20 rounded-none flex items-center px-3 text-green-400 text-xs font-bold"
+        <motion.div className="bg-green-500/20 border border-green-500/20 rounded-xl flex items-center px-3 text-green-400 text-xs font-bold"
           initial={{ width: 0 }} animate={{ width: "30%" }} transition={{ duration: 0.6, delay: 0.4 }}>
           {after}
         </motion.div>
@@ -109,7 +109,7 @@ export default function ResultsContent() {
 
         <motion.div className="relative z-10 py-20 sm:py-28 lg:py-44" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-none px-4 py-1.5 mb-8"
+            <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Proof</span>
             </motion.div>
@@ -137,7 +137,7 @@ export default function ResultsContent() {
                 { value: 100, suffix: "+", label: "Partners" },
                 { value: 48, prefix: "<", suffix: "h", label: "First Lead" },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-none p-4 text-center">
+                <div key={stat.label} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center">
                   <p className="text-gold text-2xl font-bold">
                     <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   </p>
@@ -162,16 +162,16 @@ export default function ResultsContent() {
 
             {/* Partner selector */}
             <div className="flex justify-center mb-8 sm:mb-12">
-              <div className="inline-flex bg-navy-light rounded-none p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
+              <div className="inline-flex bg-navy-light rounded-xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {winLogs.map((wl, i) => (
                   <button key={wl.id} onClick={() => setActiveLog(i)}
-                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-none text-xs sm:text-sm font-semibold transition-all duration-300 ${activeLog === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
+                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeLog === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
                     {activeLog === i && (
-                      <motion.div className="absolute inset-0 bg-gradient-to-r from-gold to-yellow-400 rounded-none"
+                      <motion.div className="absolute inset-0 bg-gradient-to-r from-gold to-yellow-400 rounded-xl"
                         layoutId="winLogTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
                     )}
                     <span className="relative z-10 flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-none overflow-hidden border border-white/20 shrink-0 hidden sm:block">
+                      <div className="w-6 h-6 rounded-2xl overflow-hidden border border-white/20 shrink-0 hidden sm:block">
                         <Image src={wl.image} alt={wl.name} width={24} height={24} className="object-cover" />
                       </div>
                       {wl.name.split(" ")[0]}
@@ -188,10 +188,10 @@ export default function ResultsContent() {
                 transition={{ duration: 0.35 }}>
 
                 {/* Header card */}
-                <div className="bg-navy-light rounded-none border border-white/10 overflow-hidden mb-6">
+                <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden mb-6">
                   <div className="p-5 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6">
                     <div className="flex items-center gap-5 flex-1 min-w-0">
-                      <div className="w-16 h-16 rounded-none overflow-hidden border-2 border-gold/30 shrink-0">
+                      <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-gold/30 shrink-0">
                         <Image src={log.image} alt={log.name} width={64} height={64} className="object-cover w-full h-full" />
                       </div>
                       <div className="min-w-0">
@@ -200,7 +200,7 @@ export default function ResultsContent() {
                         <p className="text-white/80 text-xs mt-0.5">{log.niche} · {log.city}</p>
                       </div>
                     </div>
-                    <div className="bg-gold/10 border border-gold/20 rounded-none px-8 py-5 text-center shrink-0">
+                    <div className="bg-gold/10 border border-gold/20 rounded-xl px-8 py-5 text-center shrink-0">
                       <p className="text-gold text-4xl lg:text-5xl font-bold">{log.highlight.value}</p>
                       <p className="text-gold/60 text-sm mt-1">{log.highlight.label}</p>
                     </div>
@@ -210,7 +210,7 @@ export default function ResultsContent() {
                 {/* Before / After comparison */}
                 <div className="grid lg:grid-cols-2 gap-6 mb-6">
                   {/* Before */}
-                  <motion.div className="bg-navy-light rounded-none border border-red-500/15 overflow-hidden"
+                  <motion.div className="bg-navy-light rounded-2xl border border-red-500/15 overflow-hidden"
                     initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
                     <div className="bg-red-500/10 px-6 py-3 border-b border-red-500/10">
                       <p className="text-red-400 font-bold text-sm uppercase tracking-wider">Before — {log.before.source}</p>
@@ -230,7 +230,7 @@ export default function ResultsContent() {
                   </motion.div>
 
                   {/* After */}
-                  <motion.div className="bg-navy-light rounded-none border border-green-500/15 overflow-hidden"
+                  <motion.div className="bg-navy-light rounded-2xl border border-green-500/15 overflow-hidden"
                     initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }}>
                     <div className="bg-green-500/10 px-6 py-3 border-b border-green-500/10">
                       <p className="text-green-400 font-bold text-sm uppercase tracking-wider">After — RoofCoat Leads</p>
@@ -251,12 +251,12 @@ export default function ResultsContent() {
                 </div>
 
                 {/* Quote + result */}
-                <div className="bg-navy-light rounded-none border border-white/10 p-4 sm:p-6 lg:p-8">
+                <div className="bg-navy-light rounded-2xl border border-white/10 p-4 sm:p-6 lg:p-8">
                   <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
                     <blockquote className="flex-1 text-white/70 italic text-lg leading-relaxed border-l-4 border-gold pl-6">
                       &ldquo;{log.quote}&rdquo;
                     </blockquote>
-                    <div className="bg-green-500/10 border border-green-500/20 rounded-none px-6 py-4 text-center shrink-0">
+                    <div className="bg-green-500/10 border border-green-500/20 rounded-xl px-6 py-4 text-center shrink-0">
                       <p className="text-green-400 text-xs uppercase tracking-wider mb-1">Result</p>
                       <p className="text-white font-bold">{log.jobs}</p>
                     </div>
@@ -280,14 +280,14 @@ export default function ResultsContent() {
             {testimonials.map((t) => (
               <StaggerItem key={t.name}>
                 <motion.div
-                  className="bg-white rounded-none p-6 shadow-sm border border-transparent hover:border-blue/10 h-full flex flex-col justify-between"
+                  className="bg-white rounded-2xl p-6 shadow-sm border border-transparent hover:border-blue/10 h-full flex flex-col justify-between"
                   whileHover={{ y: -4 }}>
                   <div>
                     <div className="text-gold text-sm mb-3">★★★★★</div>
                     <p className="text-navy/70 italic leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
                   </div>
                   <div className="flex items-center gap-3 mt-6 pt-4 border-t border-gray-light">
-                    <div className="relative w-10 h-10 rounded-none overflow-hidden shrink-0">
+                    <div className="relative w-10 h-10 rounded-2xl overflow-hidden shrink-0">
                       <Image src={t.image} alt={t.name} fill className="object-cover" />
                     </div>
                     <div>
@@ -314,7 +314,7 @@ export default function ResultsContent() {
             </h2>
             <p className="mt-4 text-white/80 text-lg">Join 100+ contractors already on the system.</p>
             <motion.a href="/get-started"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-none font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Talk to Marc &rarr;

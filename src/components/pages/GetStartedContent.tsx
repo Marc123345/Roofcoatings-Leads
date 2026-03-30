@@ -37,7 +37,7 @@ export default function GetStartedContent() {
 
         <motion.div className="relative z-10 py-20 sm:py-28 lg:py-40 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-none px-4 py-1.5 mb-8"
+            <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Free Website + Lead Audit</span>
             </motion.div>
@@ -106,7 +106,7 @@ export default function GetStartedContent() {
                     ].map((item, i) => (
                       <motion.div key={item} className="flex items-start gap-3"
                         initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 + i * 0.08 }}>
-                        <div className="w-5 h-5 rounded-none bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="w-5 h-5 rounded-2xl bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                           <svg className="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
@@ -118,9 +118,9 @@ export default function GetStartedContent() {
                 </AnimateIn>
 
                 <AnimateIn delay={0.2}>
-                  <div className="bg-navy-light rounded-none border border-white/5 p-5">
+                  <div className="bg-navy-light rounded-2xl border border-white/5 p-5">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-gold/20 rounded-none flex items-center justify-center text-gold font-bold text-sm">M</div>
+                      <div className="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center text-gold font-bold text-sm">M</div>
                       <div>
                         <p className="text-white font-bold text-sm">Marc Friedman</p>
                         <p className="text-gold text-xs">Founder, RoofCoat Leads</p>
@@ -137,7 +137,7 @@ export default function GetStartedContent() {
               {/* Right — Calendar Embed */}
               <div className="lg:col-span-3">
                 <AnimateIn delay={0.15}>
-                  <div className="bg-navy-light rounded-none border border-white/10 overflow-hidden">
+                  <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden">
                     <div className="bg-gradient-to-r from-gold to-yellow-400 px-6 py-4">
                       <div className="flex items-center gap-3">
                         <svg className="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,7 +149,7 @@ export default function GetStartedContent() {
                     <div className="p-2">
                       <iframe
                         src="https://api.leadconnectorhq.com/widget/bookings/roofcoatingleads"
-                        style={{ width: "100%", height: "700px", border: "none", borderRadius: "0" }}
+                        style={{ width: "100%", height: "700px", border: "none", borderRadius: "16px" }}
                         title="Book a Free Strategy Audit with RoofCoat Leads"
                       />
                     </div>
@@ -171,9 +171,9 @@ export default function GetStartedContent() {
           <StaggerContainer className="grid sm:grid-cols-2 gap-6" staggerDelay={0.08}>
             {trustPoints.map((point) => (
               <StaggerItem key={point.title}>
-                <motion.div className="bg-white rounded-none p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full"
+                <motion.div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full"
                   whileHover={{ y: -4 }}>
-                  <div className="w-10 h-10 bg-green-100 rounded-none flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                     <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
@@ -198,7 +198,7 @@ export default function GetStartedContent() {
           <StaggerContainer className="space-y-4" staggerDelay={0.08}>
             {faqs.map((faq) => (
               <StaggerItem key={faq.q}>
-                <details className="group bg-navy-light rounded-none border border-white/5 overflow-hidden">
+                <details className="group bg-navy-light rounded-2xl border border-white/5 overflow-hidden">
                   <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
                     <span className="text-white font-semibold">{faq.q}</span>
                     <svg className="w-5 h-5 text-gold shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -226,7 +226,7 @@ export default function GetStartedContent() {
               The only risk is not knowing what your market looks like.
             </p>
             <motion.a href="#book"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-none font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Claim My Free Website + Audit &rarr;
             </motion.a>
