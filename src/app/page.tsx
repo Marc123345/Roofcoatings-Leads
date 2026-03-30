@@ -9,6 +9,7 @@ import BeforeAfter from "@/components/BeforeAfter";
 import Testimonials from "@/components/Testimonials";
 import ComparisonTable from "@/components/ComparisonTable";
 import Scalability from "@/components/Scalability";
+import ServiceAreasMap from "@/components/ServiceAreasMap";
 import WhatsIncluded from "@/components/WhatsIncluded";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -28,6 +29,7 @@ export default function Home() {
         <Results />
         <BeforeAfter />
         <Testimonials />
+        <ServiceAreasMap />
         <ComparisonTable />
         <Scalability />
         <div className="section-divider-dark" />
