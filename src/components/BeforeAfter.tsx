@@ -70,7 +70,7 @@ export default function BeforeAfter() {
 
               <div className="mt-10 pt-6 border-t border-white/5">
                 <p className="text-white/30 text-xs uppercase tracking-wider mb-2">Total damage</p>
-                <p className="text-white font-bold text-3xl sm:text-4xl tracking-tight">$10k–$20k</p>
+                <p className="text-white font-bold text-3xl sm:text-4xl ">$10k–$20k</p>
                 <p className="text-white/40 text-sm mt-1">burned before you even know if it works</p>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function BeforeAfter() {
 
               <div className="mt-10 pt-6 border-t border-gold/10">
                 <p className="text-gold/60 text-xs uppercase tracking-wider mb-2">Month one result</p>
-                <p className="text-gold font-bold text-3xl sm:text-4xl tracking-tight">3+ jobs closed</p>
+                <p className="text-gold font-bold text-3xl sm:text-4xl ">3+ jobs closed</p>
                 <p className="text-white/40 text-sm mt-1">5-10x return on ad spend, from day one</p>
               </div>
             </div>

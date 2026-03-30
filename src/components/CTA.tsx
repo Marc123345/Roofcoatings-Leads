@@ -35,7 +35,7 @@ export default function CTA() {
 
         {/* Headline */}
         <AnimateIn delay={0.1}>
-          <h2 className="text-center text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.95] tracking-tight">
+          <h2 className="text-center text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.95] ">
             Ready to Fill
             <br />
             <span className="text-gradient-gold">Your Pipeline?</span>
@@ -95,7 +95,7 @@ export default function CTA() {
               { value: 10, prefix: "", suffix: "x", label: "Avg. ROI" },
             ].map((stat) => (
               <div key={stat.label} className="bg-navy p-6 sm:p-8 text-center">
-                <p className="text-white font-black text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+                <p className="text-white font-black text-3xl sm:text-4xl lg:text-5xl ">
                   <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </p>
                 <p className="text-white/30 text-xs uppercase tracking-widest mt-2">{stat.label}</p>

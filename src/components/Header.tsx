@@ -40,7 +40,7 @@ export default function Header() {
             whileTap={{ scale: 0.98 }}
           >
             <Logo size={42} />
-            <span className="text-white font-bold text-lg tracking-tight">
+            <span className="text-white font-bold text-lg ">
               RoofCoat <span className="text-gold">Leads</span>
             </span>
           </motion.a>

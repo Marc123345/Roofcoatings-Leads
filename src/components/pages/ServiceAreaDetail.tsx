@@ -32,7 +32,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
               <span className="text-gold/60 text-sm">Service Area</span>
             </motion.div>
 
-            <motion.h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight"
+            <motion.h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] "
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}>
               {area.state}{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent animate-gradient">
