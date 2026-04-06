@@ -40,96 +40,86 @@ const PROBLEMS = [
   },
 ];
 
-/* ── Visuals ────────────────────────────────────────── */
-
-function WastedSpendVisual() {
-  const months = [
-    { month: "Month 1", spend: "$3,200", leads: "2 leads", status: "Learning phase" },
-    { month: "Month 2", spend: "$3,200", leads: "5 leads", status: "Still optimizing" },
-    { month: "Month 3", spend: "$3,200", leads: "4 leads", status: "Testing new audiences" },
-    { month: "Month 4", spend: "$3,200", leads: "3 leads", status: "Pivoting strategy" },
-  ];
-  return (
-    <div className="space-y-2.5">
-      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-3 text-center">Typical generic agency timeline</p>
-      {months.map((m, i) => (
-        <motion.div key={m.month}
-          className="flex items-center justify-between rounded-xl px-4 py-3 bg-red-500/5 border border-red-500/15"
-          initial={{ opacity: 0, x: -15 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 + i * 0.12 }}>
-          <div className="flex items-center gap-3">
-            <span className="text-white/80 text-xs font-mono w-16">{m.month}</span>
-            <span className="text-red-400 font-bold text-sm">{m.spend}</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="text-white/80 text-xs">{m.leads}</span>
-            <span className="text-[11px] px-2 py-0.5 rounded-2xl bg-red-500/10 text-red-400">{m.status}</span>
-          </div>
+/* ── Dashboard visual the man points at ── */
+function DashboardVisual({ problemId }: { problemId: string }) {
+  if (problemId === "wasted-spend") {
+    const months = [
+      { month: "Month 1", spend: "$3,200", leads: "2 leads", status: "Learning phase" },
+      { month: "Month 2", spend: "$3,200", leads: "5 leads", status: "Still optimizing" },
+      { month: "Month 3", spend: "$3,200", leads: "4 leads", status: "Testing audiences" },
+      { month: "Month 4", spend: "$3,200", leads: "3 leads", status: "Pivoting strategy" },
+    ];
+    return (
+      <div className="space-y-2">
+        <p className="text-white/50 text-[10px] uppercase tracking-wider mb-2">Typical agency timeline</p>
+        {months.map((m, i) => (
+          <motion.div key={m.month}
+            className="flex items-center justify-between rounded-lg px-3 py-2 bg-red-500/5 border border-red-500/15"
+            initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 + i * 0.1 }}>
+            <div className="flex items-center gap-2">
+              <span className="text-white/60 text-[10px] font-mono w-14">{m.month}</span>
+              <span className="text-red-400 font-bold text-xs">{m.spend}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-white/60 text-[10px]">{m.leads}</span>
+              <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-red-500/10 text-red-400">{m.status}</span>
+            </div>
+          </motion.div>
+        ))}
+        <motion.div className="flex items-center justify-between rounded-lg px-3 py-2 bg-white/5 border border-white/10 mt-1"
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
+          <span className="text-white/50 text-xs">Total spent</span>
+          <span className="text-red-400 font-bold text-base">$12,800</span>
         </motion.div>
-      ))}
-      <motion.div className="flex items-center justify-between rounded-xl px-4 py-3 bg-white/5 border border-white/10 mt-1"
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
-        <span className="text-white/70 text-xs font-medium">Total spent</span>
-        <span className="text-red-400 font-bold text-lg">$12,800</span>
-      </motion.div>
-      <motion.p className="text-red-400 text-xs font-medium text-center pt-1"
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
-        4 months. $12,800. Still &ldquo;optimizing.&rdquo;
-      </motion.p>
-    </div>
-  );
-}
+      </div>
+    );
+  }
 
-function SlowResultsVisual() {
-  return (
-    <div className="space-y-4">
-      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-3 text-center">Generic agency vs. RoofCoat Leads</p>
-      {/* Generic agency timeline */}
-      <div className="space-y-1">
-        <p className="text-red-400 text-xs font-bold mb-2">Generic Agency</p>
-        <div className="flex gap-1">
-          {["Week 1-2", "Week 3-4", "Month 2", "Month 3"].map((label, i) => (
-            <motion.div key={label} className="flex-1 text-center"
-              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.1 }}>
-              <div className="h-8 bg-red-500/10 border border-red-500/15 rounded-xl flex items-center justify-center mb-1">
-                <span className="text-red-400/50 text-[11px]">{i < 3 ? "Testing..." : "Maybe?"}</span>
-              </div>
-              <span className="text-white/70 text-[11px]">{label}</span>
-            </motion.div>
-          ))}
+  if (problemId === "slow-results") {
+    return (
+      <div className="space-y-3">
+        <p className="text-white/50 text-[10px] uppercase tracking-wider mb-2">Generic agency vs. RoofCoat</p>
+        <div>
+          <p className="text-red-400 text-[10px] font-bold mb-1.5">Generic Agency</p>
+          <div className="flex gap-1">
+            {["Wk 1-2", "Wk 3-4", "Month 2", "Month 3"].map((l, i) => (
+              <motion.div key={l} className="flex-1 text-center"
+                initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.08 }}>
+                <div className="h-7 bg-red-500/8 border border-red-500/15 rounded-md flex items-center justify-center mb-0.5">
+                  <span className="text-red-400/50 text-[9px]">{i < 3 ? "Testing..." : "Maybe?"}</span>
+                </div>
+                <span className="text-white/40 text-[9px]">{l}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p className="text-green-400 text-[10px] font-bold mb-1.5">RoofCoat Leads</p>
+          <div className="flex gap-1">
+            {[
+              { l: "Day 0", t: "Audit" },
+              { l: "Day 1", t: "Live!" },
+              { l: "Day 1-2", t: "1st Lead" },
+              { l: "Week 1", t: "3+ Jobs" },
+            ].map((s, i) => (
+              <motion.div key={s.l} className="flex-1 text-center"
+                initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.1 }}>
+                <div className="h-7 bg-green-500/8 border border-green-500/20 rounded-md flex items-center justify-center mb-0.5">
+                  <span className="text-green-400 text-[9px] font-medium">{s.t}</span>
+                </div>
+                <span className="text-white/50 text-[9px]">{s.l}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
-      {/* RoofCoat timeline */}
-      <div className="space-y-1 pt-2">
-        <p className="text-green-400 text-xs font-bold mb-2">RoofCoat Leads</p>
-        <div className="flex gap-1">
-          {[
-            { label: "Day 0", text: "Audit", done: true },
-            { label: "Day 1", text: "Live!", done: true },
-            { label: "Day 1-2", text: "First Lead", done: true },
-            { label: "Week 1", text: "3+ Jobs", done: true },
-          ].map((step, i) => (
-            <motion.div key={step.label} className="flex-1 text-center"
-              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.15 }}>
-              <div className="h-8 bg-green-500/10 border border-green-500/25 rounded-xl flex items-center justify-center mb-1">
-                <span className="text-green-400 text-[11px] font-medium">{step.text}</span>
-              </div>
-              <span className="text-white/80 text-[11px]">{step.label}</span>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-      <motion.p className="text-orange-400 text-xs font-medium text-center pt-2"
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>
-        They&apos;re still &ldquo;learning.&rdquo; You&apos;re already closing.
-      </motion.p>
-    </div>
-  );
-}
+    );
+  }
 
-function ConsistencyVisual() {
+  // no-system — volatile chart
   const values = [65, 30, 80, 20, 70, 15, 90, 35, 55, 10, 75, 25];
   const months = ["J","F","M","A","M","J","J","A","S","O","N","D"];
-  const W = 380, H = 140, max = 100;
+  const W = 320, H = 120, max = 100;
   const pts = values.map((v, i) => ({ x: (i / (values.length - 1)) * W, y: H - (v / max) * H }));
   const d = pts.reduce((a, p, i) => {
     if (!i) return `M${p.x},${p.y}`;
@@ -139,26 +129,21 @@ function ConsistencyVisual() {
 
   return (
     <div>
-      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-3 text-center">Your revenue this year</p>
-      <svg viewBox={`-10 -5 ${W + 20} ${H + 30}`} className="w-full">
-        {[0, .25, .5, .75, 1].map(p => <line key={p} x1={0} y1={H*(1-p)} x2={W} y2={H*(1-p)} stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>)}
-        <motion.path d={`${d} L${W},${H} L0,${H} Z`} fill="url(#rcFill)" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} />
-        <motion.path d={d} fill="none" stroke="url(#rcStroke)" strokeWidth="2" strokeLinecap="round"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.8, delay: 0.2, ease: "easeInOut" }} />
+      <p className="text-white/50 text-[10px] uppercase tracking-wider mb-2">Your revenue this year</p>
+      <svg viewBox={`-5 -5 ${W + 10} ${H + 25}`} className="w-full">
+        <motion.path d={`${d} L${W},${H} L0,${H} Z`} fill="url(#pFill)" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} />
+        <motion.path d={d} fill="none" stroke="url(#pStroke)" strokeWidth="2" strokeLinecap="round"
+          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }} />
         {pts.filter((_, i) => values[i] < 25).map((p, i) => (
-          <motion.circle key={i} cx={p.x} cy={p.y} r="3.5" fill="#ef4444"
-            initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.8 + i * 0.15, type: "spring" }} />
+          <motion.circle key={i} cx={p.x} cy={p.y} r="3" fill="#ef4444"
+            initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.5 + i * 0.1, type: "spring" }} />
         ))}
-        {months.map((m, i) => <text key={m+i} x={pts[i].x} y={H + 16} textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.25)" fontFamily="system-ui">{m}</text>)}
+        {months.map((m, i) => <text key={m+i} x={pts[i].x} y={H + 14} textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.2)" fontFamily="system-ui">{m}</text>)}
         <defs>
-          <linearGradient id="rcFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#ef4444" stopOpacity="0.12"/><stop offset="100%" stopColor="#ef4444" stopOpacity="0"/></linearGradient>
-          <linearGradient id="rcStroke" x1="0" y1="0" x2={`${W}`} y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stopColor="#ef4444"/><stop offset="50%" stopColor="#eab308"/><stop offset="100%" stopColor="#ef4444"/></linearGradient>
+          <linearGradient id="pFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#ef4444" stopOpacity="0.1"/><stop offset="100%" stopColor="#ef4444" stopOpacity="0"/></linearGradient>
+          <linearGradient id="pStroke" x1="0" y1="0" x2={`${W}`} y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stopColor="#ef4444"/><stop offset="50%" stopColor="#eab308"/><stop offset="100%" stopColor="#ef4444"/></linearGradient>
         </defs>
       </svg>
-      <motion.p className="text-white/70 text-xs font-medium text-center mt-3"
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }}>
-        You can&apos;t grow a business on a pipeline you can&apos;t predict.
-      </motion.p>
     </div>
   );
 }
@@ -223,15 +208,15 @@ export default function Problem() {
           </div>
         </AnimateIn>
 
-        {/* Content */}
+        {/* Content — man pointing at dashboard */}
         <AnimatePresence mode="wait">
           <motion.div key={problem.id}
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.3 }}
-            className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-0 items-stretch">
+            className="grid lg:grid-cols-12 gap-0 items-stretch">
 
             {/* Left — text */}
-            <div className="order-2 lg:order-1">
+            <div className="lg:col-span-5 order-2 lg:order-1">
               <div className={`h-full border-2 ${c.border} p-5 sm:p-8 lg:p-10 flex flex-col`}>
                 <motion.span
                   className={`text-5xl lg:text-7xl font-bold ${c.accent} opacity-20`}
@@ -251,12 +236,46 @@ export default function Problem() {
               </div>
             </div>
 
-            {/* Right — visual */}
-            <div className="order-1 lg:order-2">
-              <div className="bg-navy h-full p-6 lg:p-8 min-h-[260px] lg:min-h-[340px] flex items-center justify-center">
-                {problem.id === "wasted-spend" && <WastedSpendVisual />}
-                {problem.id === "slow-results" && <SlowResultsVisual />}
-                {problem.id === "no-system" && <ConsistencyVisual />}
+            {/* Right — man pointing at dashboard */}
+            <div className="lg:col-span-7 order-1 lg:order-2 relative">
+              <div className="bg-navy h-full relative overflow-hidden min-h-[360px] sm:min-h-[420px] lg:min-h-0">
+
+                {/* Dashboard the man is pointing at */}
+                <div className="absolute top-6 left-6 sm:top-8 sm:left-8 w-[55%] sm:w-[50%] z-10">
+                  <DashboardVisual problemId={problem.id} />
+                </div>
+
+                {/* Man pointing left at the dashboard */}
+                <motion.div
+                  className="absolute bottom-0 right-0 sm:right-4 w-[45%] sm:w-[42%] lg:w-[40%] z-20"
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <Image
+                    src="https://ik.imagekit.io/qcvroy8xpd/cheerful-man-pointing-finger-left-advertise-product-removebg%20(1)%201.png"
+                    alt="Man pointing at agency results"
+                    width={400}
+                    height={500}
+                    className="w-full h-auto object-contain"
+                    style={{ filter: "drop-shadow(0 0 40px rgba(0,0,0,0.5))" }}
+                  />
+                </motion.div>
+
+                {/* Glow behind the man */}
+                <div
+                  className="absolute bottom-0 right-0 w-[60%] h-[80%] pointer-events-none"
+                  style={{ background: "radial-gradient(ellipse at 80% 90%, rgba(234,179,8,0.12) 0%, transparent 60%)" }}
+                />
+
+                {/* Floating badge */}
+                <motion.div
+                  className="absolute bottom-[30%] right-[35%] sm:right-[38%] bg-red-500 text-white text-[9px] sm:text-[10px] font-extrabold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full shadow-lg shadow-red-500/30 uppercase tracking-wider z-30"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  Poor Results
+                </motion.div>
               </div>
             </div>
           </motion.div>

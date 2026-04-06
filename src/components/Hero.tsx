@@ -1,15 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, Zap, Users, Clock, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Marquee from "./visuals/Marquee";
-
-const stats = [
-  { icon: <Zap className="w-5 h-5" />, value: "Free", label: "5-Page Website" },
-  { icon: <Users className="w-5 h-5" />, value: "100+", label: "Contractors" },
-  { icon: <Clock className="w-5 h-5" />, value: "<48h", label: "First Lead" },
-  { icon: <TrendingUp className="w-5 h-5" />, value: "5-10x", label: "Avg. ROI" },
-];
 
 export default function Hero() {
   return (
@@ -135,94 +128,6 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* ── Stats section — man pointing at the numbers ── */}
-      <section className="bg-navy border-t border-white/[0.06] relative overflow-hidden">
-        {/* Subtle glow behind the man */}
-        <div
-          className="absolute hidden lg:block rounded-full pointer-events-none"
-          style={{
-            width: 500,
-            height: 500,
-            right: "10%",
-            top: "50%",
-            transform: "translateY(-50%)",
-            opacity: 0.25,
-            background: "radial-gradient(circle, rgba(234,179,8,0.4) 0%, transparent 70%)",
-          }}
-        />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 items-end gap-0 lg:gap-8">
-
-            {/* Left: Stats the man is pointing at */}
-            <motion.div
-              className="lg:col-span-7 py-12 sm:py-16 lg:py-20"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="grid grid-cols-2 gap-6 sm:gap-8">
-                {stats.map((stat, i) => (
-                  <motion.div
-                    key={stat.label}
-                    className="relative p-5 sm:p-6 rounded-xl border border-white/[0.06] bg-white/[0.02]"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                    whileHover={{ borderColor: "rgba(234,179,8,0.25)", backgroundColor: "rgba(234,179,8,0.04)" }}
-                  >
-                    <div className="text-gold/50 mb-3">{stat.icon}</div>
-                    <p className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none">
-                      {stat.value}
-                    </p>
-                    <p className="text-white/40 text-xs sm:text-sm uppercase tracking-widest mt-2">
-                      {stat.label}
-                    </p>
-                    {/* Corner accent */}
-                    <div className="absolute top-0 right-0 w-8 h-8">
-                      <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-l from-gold/30 to-transparent" />
-                      <div className="absolute top-0 right-0 w-[1px] h-full bg-gradient-to-b from-gold/30 to-transparent" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Right: Man pointing left at the stats */}
-            <motion.div
-              className="lg:col-span-5 relative flex justify-center lg:justify-end items-end"
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-            >
-              {/* The image is a PNG with transparent bg — sits flush at the bottom */}
-              <div className="relative w-[280px] sm:w-[340px] lg:w-[420px] xl:w-[480px]">
-                <Image
-                  src="https://ik.imagekit.io/qcvroy8xpd/cheerful-man-pointing-finger-left-advertise-product-removebg%20(1)%201.png"
-                  alt="Man pointing to lead generation stats"
-                  width={480}
-                  height={600}
-                  className="w-full h-auto object-contain drop-shadow-2xl"
-                  style={{ filter: "drop-shadow(0 0 60px rgba(234,179,8,0.15))" }}
-                  priority
-                />
-                {/* Floating badge near his hand */}
-                <motion.div
-                  className="absolute top-[15%] left-0 sm:-left-4 bg-gold text-navy text-[10px] sm:text-xs font-extrabold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg shadow-gold/30 uppercase tracking-wider"
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  Proven Results
-                </motion.div>
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
 
       {/* ── Logo marquee ── */}
       <Marquee />
