@@ -161,6 +161,35 @@ export default function GetStartedContent() {
         </div>
       </section>
 
+      {/* ── JotForm Contact Form ── */}
+      <section className="bg-navy relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern" />
+        <div className="relative z-10 py-16 sm:py-20 lg:py-28">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimateIn>
+              <div className="text-center mb-10">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
+                  Prefer to Fill Out a Form?
+                </h2>
+                <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto">
+                  Not ready to book a call? No problem — send us your details and we&apos;ll reach out within 24 hours.
+                </p>
+              </div>
+            </AnimateIn>
+            <AnimateIn delay={0.1}>
+              <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden p-2">
+                <iframe
+                  src="https://form.jotform.com/260952924952062"
+                  style={{ width: "100%", minHeight: "600px", border: "none", borderRadius: "16px" }}
+                  title="Contact Form — RoofCoat Leads"
+                  allow="geolocation; microphone; camera; fullscreen"
+                />
+              </div>
+            </AnimateIn>
+          </div>
+        </div>
+      </section>
+
       {/* ── Trust Section ── */}
       <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
