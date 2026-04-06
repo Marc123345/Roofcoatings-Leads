@@ -1,41 +1,9 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Check, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import AnimateIn from "./AnimateIn";
 
-const SERVICE_TYPES = [
-  "Roof Coatings",
-  "Roof Restoration",
-  "Exterior Painting",
-  "Pressure Washing",
-  "Multiple Services",
-];
-
 export default function ContactForm() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    serviceType: "",
-    serviceArea: "",
-    message: "",
-  });
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.phone) return;
-    setStatus("submitting");
-    // Simulate submission — replace with actual API call
-    setTimeout(() => {
-      setStatus("success");
-      setForm({ name: "", email: "", phone: "", company: "", serviceType: "", serviceArea: "", message: "" });
-      setTimeout(() => setStatus("idle"), 4000);
-    }, 1500);
-  };
-
   return (
     <section id="contact" className="bg-navy relative overflow-hidden py-20 sm:py-28 lg:py-36">
       <div className="absolute inset-0 grid-pattern" />
@@ -72,7 +40,7 @@ export default function ContactForm() {
                     <p className="text-white font-medium text-sm">marc@roofcoatleads.com</p>
                   </div>
                 </a>
-                <a href="tel:+1234567890" className="flex items-center gap-4 group min-h-[48px]">
+                <a href="/get-started" className="flex items-center gap-4 group min-h-[48px]">
                   <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                     <Phone className="w-5 h-5 text-gold" />
                   </div>
@@ -115,148 +83,25 @@ export default function ContactForm() {
             </AnimateIn>
           </div>
 
-          {/* Right — Form */}
+          {/* Right — JotForm embed */}
           <div className="lg:col-span-3">
             <AnimateIn delay={0.15}>
-              <form onSubmit={handleSubmit} className="bg-navy-light rounded-2xl border border-white/10 p-6 sm:p-8">
-                {status === "success" ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="flex flex-col items-center justify-center py-16 text-center"
-                  >
-                    <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-4">
-                      <Check className="w-8 h-8 text-green-400" />
-                    </div>
-                    <h3 className="text-white font-bold text-xl mb-2">Message Sent!</h3>
-                    <p className="text-white/60 text-sm max-w-sm">
-                      We&apos;ll review your details and get back to you within 24 hours with a custom strategy.
-                    </p>
-                  </motion.div>
-                ) : (
-                  <div className="space-y-5">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className="text-white/50 text-xs uppercase tracking-widest font-medium mb-2 block">Name *</label>
-                        <input
-                          type="text"
-                          required
-                          autoComplete="name"
-                          placeholder="John Smith"
-                          value={form.name}
-                          onChange={(e) => setForm({ ...form, name: e.target.value })}
-                          className="w-full bg-navy border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder:text-white/20 outline-none focus:border-gold/50 transition-colors min-h-[48px]"
-                          style={{ fontSize: 16 }}
-                        />
-                      </div>
-                      <div>
-                        <label className="text-white/50 text-xs uppercase tracking-widest font-medium mb-2 block">Company</label>
-                        <input
-                          type="text"
-                          autoComplete="organization"
-                          placeholder="Your Business Name"
-                          value={form.company}
-                          onChange={(e) => setForm({ ...form, company: e.target.value })}
-                          className="w-full bg-navy border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder:text-white/20 outline-none focus:border-gold/50 transition-colors min-h-[48px]"
-                          style={{ fontSize: 16 }}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className="text-white/50 text-xs uppercase tracking-widest font-medium mb-2 block">Email *</label>
-                        <input
-                          type="email"
-                          inputMode="email"
-                          required
-                          autoComplete="email"
-                          placeholder="john@company.com"
-                          value={form.email}
-                          onChange={(e) => setForm({ ...form, email: e.target.value })}
-                          className="w-full bg-navy border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder:text-white/20 outline-none focus:border-gold/50 transition-colors min-h-[48px]"
-                          style={{ fontSize: 16 }}
-                        />
-                      </div>
-                      <div>
-                        <label className="text-white/50 text-xs uppercase tracking-widest font-medium mb-2 block">Phone *</label>
-                        <input
-                          type="tel"
-                          inputMode="tel"
-                          required
-                          autoComplete="tel"
-                          placeholder="(555) 123-4567"
-                          value={form.phone}
-                          onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                          className="w-full bg-navy border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder:text-white/20 outline-none focus:border-gold/50 transition-colors min-h-[48px]"
-                          style={{ fontSize: 16 }}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className="text-white/50 text-xs uppercase tracking-widest font-medium mb-2 block">Service Type</label>
-                        <select
-                          value={form.serviceType}
-                          onChange={(e) => setForm({ ...form, serviceType: e.target.value })}
-                          className="w-full bg-navy border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm outline-none focus:border-gold/50 transition-colors min-h-[48px] appearance-none"
-                          style={{ fontSize: 16 }}
-                        >
-                          <option value="" className="bg-navy">Select your service...</option>
-                          {SERVICE_TYPES.map((type) => (
-                            <option key={type} value={type} className="bg-navy">{type}</option>
-                          ))}
-                        </select>
-                      </div>
-                      <div>
-                        <label className="text-white/50 text-xs uppercase tracking-widest font-medium mb-2 block">Service Area</label>
-                        <input
-                          type="text"
-                          placeholder="City, State"
-                          value={form.serviceArea}
-                          onChange={(e) => setForm({ ...form, serviceArea: e.target.value })}
-                          className="w-full bg-navy border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder:text-white/20 outline-none focus:border-gold/50 transition-colors min-h-[48px]"
-                          style={{ fontSize: 16 }}
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="text-white/50 text-xs uppercase tracking-widest font-medium mb-2 block">Message</label>
-                      <textarea
-                        rows={4}
-                        placeholder="Tell us about your business and what you're looking for..."
-                        value={form.message}
-                        onChange={(e) => setForm({ ...form, message: e.target.value })}
-                        className="w-full bg-navy border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder:text-white/20 outline-none focus:border-gold/50 transition-colors resize-none"
-                        style={{ fontSize: 16 }}
-                      />
-                    </div>
-
-                    <motion.button
-                      type="submit"
-                      disabled={status === "submitting"}
-                      className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 rounded-xl font-bold text-base shadow-lg shadow-gold/20 min-h-[52px] disabled:opacity-60"
-                      whileHover={status === "idle" ? { scale: 1.02, boxShadow: "0 0 40px rgba(234,179,8,0.3)" } : {}}
-                      whileTap={status === "idle" ? { scale: 0.98 } : {}}
-                    >
-                      {status === "submitting" ? (
-                        <span>Sending...</span>
-                      ) : (
-                        <>
-                          <Send className="w-4 h-4" />
-                          <span>Send Message</span>
-                        </>
-                      )}
-                    </motion.button>
-
-                    <p className="text-white/30 text-xs text-center">
-                      We respond within 24 hours. No spam, ever.
-                    </p>
+              <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden">
+                <div className="bg-gradient-to-r from-gold to-yellow-400 px-6 py-4">
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5 text-navy" />
+                    <span className="text-navy font-bold">Send Us a Message</span>
                   </div>
-                )}
-              </form>
+                </div>
+                <div className="p-2">
+                  <iframe
+                    src="https://form.jotform.com/260952924952062"
+                    style={{ width: "100%", minHeight: "600px", border: "none", borderRadius: "16px" }}
+                    title="Contact Form — RoofCoat Leads"
+                    allow="geolocation; microphone; camera; fullscreen"
+                  />
+                </div>
+              </div>
             </AnimateIn>
           </div>
         </div>
