@@ -12,6 +12,7 @@ import Scalability from "@/components/Scalability";
 import ServiceAreasMap from "@/components/ServiceAreasMap";
 import WhatsIncluded from "@/components/WhatsIncluded";
 import FAQ from "@/components/FAQ";
+import ContactForm from "@/components/ContactForm";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -36,6 +37,7 @@ export default function Home() {
         <WhatsIncluded />
         <div className="section-divider-dark" />
         <FAQ />
+        <ContactForm />
         <CTA />
       </main>
       <Footer />
