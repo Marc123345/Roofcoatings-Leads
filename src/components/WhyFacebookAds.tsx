@@ -233,7 +233,7 @@ export default function WhyFacebookAds() {
           </h2>
         </AnimateIn>
         <AnimateIn delay={0.15}>
-          <p className="mt-4 text-white/70 text-lg text-center max-w-2xl mx-auto">
+          <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed text-center max-w-2xl mx-auto">
             We leverage Facebook&apos;s powerful targeting to reach property owners at the
             exact moment they&apos;re researching roof solutions.
           </p>
@@ -291,7 +291,7 @@ export default function WhyFacebookAds() {
                 <h3 className="text-white font-bold text-2xl lg:text-3xl mt-4">
                   {active.title}
                 </h3>
-                <p className="text-white/80 mt-3 text-lg leading-relaxed">
+                <p className="text-white/60 mt-3 text-base sm:text-lg leading-relaxed">
                   {active.description}
                 </p>
 

@@ -124,7 +124,7 @@ export default function SocialProof() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
               What Our <span className="text-gradient-gold">Contractors</span> Say
             </h2>
-            <p className="mt-4 text-white/40 text-sm sm:text-base max-w-2xl mx-auto">
+            <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               Real results from real roof coating contractors across all 50 states.
               No fluff, no fake reviews — just numbers that speak for themselves.
             </p>

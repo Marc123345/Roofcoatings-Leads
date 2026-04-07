@@ -92,7 +92,7 @@ export default function HowItWorks() {
                       {step.icon}
                     </div>
                     <h3 className="text-lg font-bold text-navy">{step.title}</h3>
-                    <p className="text-navy/80 text-sm mt-2 leading-relaxed">{step.description}</p>
+                    <p className="text-navy/70 text-sm mt-2 leading-relaxed">{step.description}</p>
                   </motion.div>
                 </div>
               </StaggerItem>

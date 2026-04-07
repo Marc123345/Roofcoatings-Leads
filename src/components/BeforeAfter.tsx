@@ -38,7 +38,7 @@ export default function BeforeAfter() {
           </h2>
         </AnimateIn>
         <AnimateIn delay={0.15}>
-          <p className="text-navy/60 text-center text-base sm:text-lg mt-4 max-w-xl mx-auto">
+          <p className="text-navy/70 text-center text-base sm:text-lg leading-relaxed mt-4 max-w-xl mx-auto">
             Here&apos;s what changes when you switch to a system built for roof coating.
           </p>
         </AnimateIn>
@@ -93,7 +93,7 @@ export default function BeforeAfter() {
                     transition={{ delay: 0.1 + i * 0.08 }}>
                     <span className="text-gold font-mono text-xs mt-1 w-12 shrink-0 text-right">{item.value}</span>
                     <div className="w-px h-full bg-gold/20 shrink-0 self-stretch" />
-                    <p className="text-white/80 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-white/70 text-sm leading-relaxed">{item.text}</p>
                   </motion.div>
                 ))}
               </div>

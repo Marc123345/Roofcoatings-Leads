@@ -17,7 +17,7 @@ export default function Results() {
           </h2>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <p className="mt-4 text-white/80 text-lg text-center">Real numbers from our partner network</p>
+          <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed text-center">Real numbers from our partner network</p>
         </AnimateIn>
 
         {/* Bento layout: stats + dashboard */}

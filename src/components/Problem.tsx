@@ -141,7 +141,7 @@ export default function Problem() {
               </h2>
             </AnimateIn>
             <AnimateIn delay={0.15}>
-              <p className="mt-6 text-white/50 text-base sm:text-lg max-w-lg leading-relaxed">
+              <p className="mt-6 text-white/60 text-base sm:text-lg max-w-lg leading-relaxed">
                 Most roof coating contractors don&apos;t realize they&apos;re losing{" "}
                 <span className="text-red-400 font-semibold">$3,000+ every month</span>{" "}
                 simply because their agency wasn&apos;t built for this niche. The leak is invisible on a spreadsheet — but it&apos;s killing your growth.
@@ -197,7 +197,7 @@ export default function Problem() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/40 text-sm leading-relaxed">
+                <p className="text-white/50 text-sm leading-relaxed">
                   {leak.description}
                 </p>
 

@@ -21,7 +21,7 @@ export default function Solution() {
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.2}>
-            <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               We run targeted Facebook Ad campaigns that connect you directly with building
               owners and homeowners actively dealing with roof issues.
             </p>
@@ -43,7 +43,7 @@ export default function Solution() {
                   </svg>
                 </div>
                 <h3 className="text-white font-bold text-2xl">Precision Targeting</h3>
-                <p className="text-white/80 mt-2 max-w-md">
+                <p className="text-white/60 mt-2 max-w-md text-sm leading-relaxed">
                   Advanced demographics and behavioral targeting reaches property owners at the exact moment they need roof solutions.
                 </p>
               </div>
@@ -68,7 +68,7 @@ export default function Solution() {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-lg">Commercial Property Owners</h3>
-                  <p className="text-white/80 text-sm mt-1">Target facility managers and building owners with aging roofs</p>
+                  <p className="text-white/60 text-sm leading-relaxed mt-1">Target facility managers and building owners with aging roofs</p>
                 </div>
               </div>
               <div className="mt-5 grid grid-cols-2 gap-3">
@@ -99,7 +99,7 @@ export default function Solution() {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-lg">Homeowners with Leaks</h3>
-                  <p className="text-white/80 text-sm mt-1">Connect with residential flat roof owners experiencing issues</p>
+                  <p className="text-white/60 text-sm leading-relaxed mt-1">Connect with residential flat roof owners experiencing issues</p>
                 </div>
               </div>
               <div className="flex justify-center scale-90 origin-top">

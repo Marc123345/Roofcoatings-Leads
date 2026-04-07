@@ -117,7 +117,7 @@ export default function WhatsIncluded() {
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.15}>
-            <p className="mt-4 text-navy/60 text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-navy/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               One system. No piecemeal tools. Every component is built to work together.
             </p>
           </AnimateIn>

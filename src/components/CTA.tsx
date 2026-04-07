@@ -44,7 +44,7 @@ export default function CTA() {
 
         {/* Sub */}
         <AnimateIn delay={0.2}>
-          <p className="mt-6 text-white/50 text-base sm:text-lg text-center max-w-xl mx-auto">
+          <p className="mt-6 text-white/60 text-base sm:text-lg leading-relaxed text-center max-w-xl mx-auto">
             Pre-qualified leads delivered from day one. A free 5-page website
             built for your business. $1,000/month. Cancel anytime.
           </p>

@@ -50,6 +50,10 @@ p, li, span, td, th, label, blockquote {
   text-rendering: optimizeLegibility;
 }
 
+p {
+  line-height: 1.7;
+}
+
 @supports (-webkit-touch-callout: none) {
   body { min-height: -webkit-fill-available; }
   html { height: -webkit-fill-available; }

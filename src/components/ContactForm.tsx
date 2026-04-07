@@ -20,7 +20,7 @@ export default function ContactForm() {
               Let&apos;s Talk About{" "}
               <span className="text-gradient-gold">Your Growth</span>
             </h2>
-            <p className="mt-4 text-white/50 text-base sm:text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               Fill out the form below and we&apos;ll get back to you within 24 hours with a custom lead strategy for your business.
             </p>
           </div>

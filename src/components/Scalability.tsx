@@ -44,7 +44,7 @@ export default function Scalability() {
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.15}>
-            <p className="mt-4 text-white/70 text-lg max-w-xl mx-auto">
+            <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
               Adjust the inputs to match your business. The math does the talking.
             </p>
           </AnimateIn>
