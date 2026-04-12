@@ -16,7 +16,7 @@ const newWay = [
   { text: "First lead in under 48 hours — the system is already built", value: "<48 hours" },
   { text: "Pre-qualified residential homeowners with active roof issues", value: "Real leads" },
   { text: "Predictable pipeline — know exactly how many leads you'll get", value: "Predictable" },
-  { text: "Free 5-page custom website built for your business", value: "Free site" },
+  { text: "Dedicated campaign manager assigned to your account", value: "Manager" },
 ];
 
 export default function BeforeAfter() {

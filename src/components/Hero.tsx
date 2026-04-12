@@ -1,10 +1,13 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Marquee from "./visuals/Marquee";
+import BookingOverlay from "./BookingOverlay";
 
 export default function Hero() {
+  const [overlayOpen, setOverlayOpen] = useState(false);
   return (
     <>
       {/* ── HERO — Figma split layout: text left, image right ── */}
@@ -86,34 +89,25 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
             >
               100+ contractors already on the system. Pre-qualified leads from day one.
-              Sign up and get a free custom 5-page website for your business.
+              Book a free call and we&apos;ll map out your lead strategy.
             </motion.p>
 
-            {/* Two CTA buttons — side by side like Figma */}
+            {/* CTA */}
             <motion.div
-              className="mt-10 flex flex-col sm:flex-row gap-4"
+              className="mt-10"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              <motion.a
-                href="/get-started"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-7 py-4 rounded-md font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-gold/20 group"
+              <motion.button
+                onClick={() => setOverlayOpen(true)}
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-7 py-4 rounded-md font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-gold/20 group cursor-pointer"
                 whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
                 whileTap={{ scale: 0.97 }}
               >
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                Claim Free Website
-              </motion.a>
-              <motion.a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-white text-navy px-7 py-4 rounded-md font-extrabold text-sm uppercase tracking-wider border border-white/80 hover:bg-white/90 transition-colors"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <ArrowRight className="w-4 h-4 text-gold" />
-                Get In Touch
-              </motion.a>
+                Book a Free Call
+              </motion.button>
             </motion.div>
 
             <motion.p
@@ -131,6 +125,7 @@ export default function Hero() {
 
       {/* ── Logo marquee ── */}
       <Marquee />
+      <BookingOverlay open={overlayOpen} onClose={() => setOverlayOpen(false)} />
     </>
   );
 }

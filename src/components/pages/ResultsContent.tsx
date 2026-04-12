@@ -317,7 +317,7 @@ export default function ResultsContent() {
               className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
-              Talk to Marc &rarr;
+              Book a Free Call &rarr;
             </motion.a>
             <p className="mt-3 text-white/80 text-sm">Free audit. No contracts. Results from day 1.</p>
           </AnimateIn>

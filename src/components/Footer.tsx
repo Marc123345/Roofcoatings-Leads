@@ -92,10 +92,10 @@ export default function Footer() {
           {/* CTA column */}
           <div className="lg:col-span-2">
             <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Get Started</h3>
-            <p className="text-white/80 text-sm mb-4">Free 5-page website + proven lead system for your business.</p>
+            <p className="text-white/80 text-sm mb-4">Proven lead system for your roof coating business.</p>
             <a href="/get-started"
               className="inline-flex items-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-gold/10 hover:shadow-gold/20 transition-shadow">
-              Talk to Marc &rarr;
+              Book a Free Call &rarr;
             </a>
           </div>
         </div>

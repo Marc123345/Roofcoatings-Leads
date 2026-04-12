@@ -26,7 +26,7 @@ export default function TermsPage() {
             <p>RoofCoat Leads operates on a month-to-month basis. There are no long-term contracts or commitments. You may cancel your service at any time with no penalties or fees.</p>
 
             <h2 className="text-white text-xl font-bold mt-8">3. Pricing</h2>
-            <p>Our lead generation service is priced at $2,000 per month. This includes all campaign management, lead qualification, AI chatbot booking, and a free custom website. Pricing is subject to change with 30 days notice.</p>
+            <p>Our lead generation service is priced at $2,000 per month. This includes all campaign management, lead qualification, AI chatbot booking, and dedicated campaign management. Pricing is subject to change with 30 days notice.</p>
 
             <h2 className="text-white text-xl font-bold mt-8">4. Lead Exclusivity</h2>
             <p>All leads generated through our system are 100% exclusive to your business. We do not share, resell, or distribute leads to competing contractors in your service area.</p>

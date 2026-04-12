@@ -70,7 +70,6 @@ export default function ContactForm() {
                   {[
                     "We review your info within 24 hours",
                     "You get a custom lead strategy for your area",
-                    "We build your free 5-page website",
                     "Leads start flowing within 48 hours of launch",
                   ].map((step, i) => (
                     <div key={step} className="flex items-start gap-3">

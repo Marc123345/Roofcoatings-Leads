@@ -256,7 +256,7 @@ export default function WhatsIncluded() {
                   <span className="text-white/40 text-sm">/mo</span>
                 </div>
                 <div className="space-y-3 text-left flex-1">
-                  {["Custom Facebook Ad campaigns", "Lead pre-qualification funnel", "Pre-qualified, high-intent leads", "Real-time notifications", "Follow-up script support", "Dedicated campaign manager", "Free 5-page custom website"].map((item) => (
+                  {["Custom Facebook Ad campaigns", "Lead pre-qualification funnel", "Pre-qualified, high-intent leads", "Real-time notifications", "Follow-up script support", "Dedicated campaign manager", "Monthly performance reporting"].map((item) => (
                     <div key={item} className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-gold shrink-0" />
                       <span className="text-white/70 text-sm">{item}</span>
@@ -309,7 +309,7 @@ export default function WhatsIncluded() {
           {/* Trust bar */}
           <AnimateIn delay={0.3}>
             <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-navy/50">
-              {["No contracts", "Cancel anytime", "Results from day 1", "Free website included"].map((item) => (
+              {["No contracts", "Cancel anytime", "Results from day 1", "Dedicated support"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-green-500" />
                   <span>{item}</span>

@@ -90,27 +90,26 @@ export default function GetStartedContent() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-              <span className="text-gold text-xs font-bold uppercase tracking-widest">Free Website + Lead Audit</span>
+              <span className="text-gold text-xs font-bold uppercase tracking-widest">Free Lead Strategy Audit</span>
             </motion.div>
 
             <motion.h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] "
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}>
-              Free 5-Page Website{" "}
+              Free Strategy{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent animate-gradient">
-                + Lead Pipeline.
+                Audit.
               </span>
             </motion.h1>
 
             <motion.p className="mt-6 text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-              Sign up for our lead system and we&apos;ll build you a custom 5-page website for
-              your roof coating business — completely free. Plus a full strategy audit to map
-              out your market and lead potential.
+              Book a free 30-minute call and we&apos;ll map out your market, your ideal
+              lead profile, and how many exclusive leads we can deliver each month.
             </motion.p>
 
             <motion.p className="mt-4 text-white/80 text-sm"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
-              No charge for the website. No charge for the audit. No contracts. If we&apos;re not the right fit, we&apos;ll tell you.
+              No charge for the audit. No contracts. If we&apos;re not the right fit, we&apos;ll tell you.
             </motion.p>
 
             <motion.a href="#book"
@@ -137,11 +136,11 @@ export default function GetStartedContent() {
               <div className="lg:col-span-2">
                 <AnimateIn>
                   <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">
-                    Claim Your Free Website + Audit
+                    Book Your Free Strategy Audit
                   </h2>
                   <p className="text-white/70 leading-relaxed mb-8">
-                    Pick a time that works for you. In 30 minutes we&apos;ll map out your lead strategy
-                    and kick off your free 5-page custom website build.
+                    Pick a time that works for you. In 30 minutes we&apos;ll map out your
+                    lead strategy and build a custom campaign blueprint.
                   </p>
                 </AnimateIn>
 
@@ -149,7 +148,6 @@ export default function GetStartedContent() {
                   <div className="space-y-4 mb-8">
                     <h3 className="text-white font-bold text-sm uppercase tracking-wider">What you get:</h3>
                     {[
-                      "Free custom 5-page website for your business",
                       "Your local market & competition analysis",
                       "Ideal customer profile for your niche",
                       "Estimated lead volume & cost per lead",
@@ -263,7 +261,7 @@ export default function GetStartedContent() {
             <motion.a href="#book"
               className="mt-8 inline-flex items-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              Claim My Free Website + Audit &rarr;
+              Book My Free Strategy Audit &rarr;
             </motion.a>
             <p className="mt-3 text-gray/50 text-sm">No charge. No contracts. Just clarity.</p>
           </AnimateIn>

@@ -1,16 +1,19 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import AnimateIn from "./AnimateIn";
 import CountUp from "./CountUp";
+import BookingOverlay from "./BookingOverlay";
 
 export default function CTA() {
   const ref = useRef<HTMLElement>(null);
+  const [overlayOpen, setOverlayOpen] = useState(false);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   return (
+    <>
     <section ref={ref} id="cta" className="bg-navy relative overflow-hidden mesh-gradient py-24 sm:py-32 lg:py-44">
       <div className="absolute inset-0 grid-pattern" />
 
@@ -45,38 +48,29 @@ export default function CTA() {
         {/* Sub */}
         <AnimateIn delay={0.2}>
           <p className="mt-6 text-white/60 text-base sm:text-lg leading-relaxed text-center max-w-xl mx-auto">
-            Pre-qualified leads delivered from day one. A free 5-page website
-            built for your business. $2,000/month. Cancel anytime.
+            Pre-qualified leads delivered from day one. $2,000/month. Cancel anytime.
           </p>
         </AnimateIn>
 
         {/* CTA buttons */}
         <AnimateIn delay={0.3}>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.a
-              href="/get-started"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-lg shadow-lg shadow-gold/25 group"
+          <div className="mt-10 flex justify-center">
+            <motion.button
+              onClick={() => setOverlayOpen(true)}
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-lg shadow-lg shadow-gold/25 group cursor-pointer"
               whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
               whileTap={{ scale: 0.97 }}
             >
-              Claim Your Free Website + Audit
+              Book a Free Call
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.a>
-            <motion.a
-              href="/how-it-works"
-              className="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 hover:text-white hover:border-white/20 px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-base transition-all"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              See How It Works
-            </motion.a>
+            </motion.button>
           </div>
         </AnimateIn>
 
         {/* Trust pills */}
         <AnimateIn delay={0.4}>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {["No contracts", "Cancel anytime", "Results from day 1", "Free website"].map((item) => (
+            {["No contracts", "Cancel anytime", "Results from day 1", "Dedicated support"].map((item) => (
               <div key={item} className="flex items-center gap-1.5 text-white/40 text-xs">
                 <Check className="w-3 h-3 text-gold" />
                 <span>{item}</span>
@@ -113,5 +107,7 @@ export default function CTA() {
         </AnimateIn>
       </div>
     </section>
+    <BookingOverlay open={overlayOpen} onClose={() => setOverlayOpen(false)} />
+    </>
   );
 }

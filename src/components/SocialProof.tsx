@@ -20,7 +20,7 @@ const REVIEWS: Review[] = [
   { name: "David C.", company: "Citywide Restorations", state: "OH", text: "Pre-qualification saves my team hours every week. Ohio owners are ready to move fast before winter.", stat: "22%", statLabel: "close rate" },
   { name: "James W.", company: "Wilson & Sons", state: "GA", text: "We used to rely on referrals — not scalable. Now we can actually plan growth quarter to quarter.", stat: "5.8x", statLabel: "ROAS" },
   { name: "Tony M.", company: "Apex Coating Co.", state: "FL", text: "We went from 0 to 15 coating jobs per month. The system literally pays for itself in the first week." },
-  { name: "Lisa R.", company: "ProShield Roofing", state: "TX", text: "The free website alone was worth thousands. Professional, fast, and it converts like crazy." },
+  { name: "Lisa R.", company: "ProShield Roofing", state: "TX", text: "The lead system pays for itself in the first week. Professional, consistent, and it converts like crazy." },
   { name: "Marcus D.", company: "Guardian Coat", state: "NC", text: "Signed up Monday, first lead Tuesday. Not even exaggerating — the speed is real.", stat: "24hrs", statLabel: "to first lead" },
   { name: "Rachel K.", company: "SunCoat Pros", state: "AZ", text: "Phoenix is competitive but these leads are exclusive to us. Nobody else is calling the same homeowner." },
   { name: "Steve B.", company: "Titan Roof Solutions", state: "CA", text: "California compliance makes coating a premium service. This system targets the right property owners.", stat: "6.1x", statLabel: "ROI" },
