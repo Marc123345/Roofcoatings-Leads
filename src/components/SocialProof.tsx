@@ -82,7 +82,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       </div>
 
       {/* Quote */}
-      <p className="text-white text-sm leading-relaxed flex-1">
+      <p className="text-navy/70 text-sm leading-relaxed flex-1">
         &ldquo;{review.text}&rdquo;
       </p>
 
@@ -90,7 +90,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       {review.stat && (
         <div className="flex items-center gap-2 bg-gold/[0.06] border border-gold/15 rounded-sm px-3 py-1.5 self-start">
           <span className="text-gold text-sm font-bold">{review.stat}</span>
-          <span className="text-white text-xs">{review.statLabel}</span>
+          <span className="text-navy/50 text-xs">{review.statLabel}</span>
         </div>
       )}
 
@@ -100,7 +100,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
           <span className="text-gold text-[10px] font-bold">{review.name.charAt(0)}</span>
         </div>
         <div className="min-w-0">
-          <p className="text-white text-xs font-semibold truncate">{review.name}</p>
+          <p className="text-navy/50 text-xs font-semibold truncate">{review.name}</p>
           <p className="text-white/35 text-xs truncate">{review.company} · {review.state}</p>
         </div>
       </div>

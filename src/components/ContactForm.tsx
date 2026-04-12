@@ -7,7 +7,7 @@ import AnimateIn from "./AnimateIn";
 export default function ContactForm() {
   const [tab, setTab] = useState<"book" | "contact">("book");
   return (
-    <section id="contact" className="bg-navy relative overflow-hidden py-20 sm:py-28 lg:py-36">
+    <section id="contact" className="bg-gray-50 relative overflow-hidden py-20 sm:py-28 lg:py-36">
       <div className="absolute inset-0 grid-pattern" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -38,8 +38,8 @@ export default function ContactForm() {
                     <Mail className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <p className="text-white text-xs uppercase tracking-widest mb-0.5">Email</p>
-                    <p className="text-white font-medium text-sm">marcfriedmancm@roofcoatleads.com</p>
+                    <p className="text-navy/50 text-xs uppercase tracking-widest mb-0.5">Email</p>
+                    <p className="text-navy font-medium text-sm">marcfriedmancm@roofcoatleads.com</p>
                   </div>
                 </a>
                 <a href="/get-started" className="flex items-center gap-4 group min-h-[48px]">
@@ -47,8 +47,8 @@ export default function ContactForm() {
                     <Phone className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <p className="text-white text-xs uppercase tracking-widest mb-0.5">Phone</p>
-                    <p className="text-white font-medium text-sm">Book a call instead →</p>
+                    <p className="text-navy/50 text-xs uppercase tracking-widest mb-0.5">Phone</p>
+                    <p className="text-navy font-medium text-sm">Book a call instead →</p>
                   </div>
                 </a>
                 <div className="flex items-center gap-4 min-h-[48px]">
@@ -56,8 +56,8 @@ export default function ContactForm() {
                     <MapPin className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <p className="text-white text-xs uppercase tracking-widest mb-0.5">Coverage</p>
-                    <p className="text-white font-medium text-sm">All 50 US States</p>
+                    <p className="text-navy/50 text-xs uppercase tracking-widest mb-0.5">Coverage</p>
+                    <p className="text-navy font-medium text-sm">All 50 US States</p>
                   </div>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function ContactForm() {
 
             <AnimateIn delay={0.2}>
               <div className="bg-navy-light rounded-sm border border-zinc-800 p-6">
-                <h3 className="text-white font-bold text-sm mb-3">What happens next?</h3>
+                <h3 className="text-navy font-bold text-sm mb-3">What happens next?</h3>
                 <div className="space-y-3">
                   {[
                     "We review your info within 24 hours",
@@ -76,7 +76,7 @@ export default function ContactForm() {
                       <div className="w-5 h-5 rounded-sm bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-gold text-[10px] font-bold">{i + 1}</span>
                       </div>
-                      <span className="text-white text-sm">{step}</span>
+                      <span className="text-navy/70 text-sm">{step}</span>
                     </div>
                   ))}
                 </div>

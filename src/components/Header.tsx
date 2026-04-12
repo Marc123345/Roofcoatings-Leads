@@ -31,7 +31,7 @@ export default function Header() {
         transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-navy/80 border-b border-zinc-800 shadow-[0_1px_3px_rgba(0,0,0,0.3)]"
+            ? "bg-white/95 border-b border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)]"
             : "bg-transparent"
         }`}
       >
@@ -44,7 +44,7 @@ export default function Header() {
               whileTap={{ scale: 0.98 }}
             >
               <Logo size={42} />
-              <span className="text-white font-bold text-lg">
+              <span className="text-navy font-bold text-lg">
                 RoofCoat <span className="text-gold">Leads</span>
               </span>
             </motion.a>
@@ -54,7 +54,7 @@ export default function Header() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  className="text-white hover:text-gold transition-colors text-sm relative group"
+                  className="text-navy hover:text-gold transition-colors text-sm relative group"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * i + 0.3 }}
@@ -78,7 +78,7 @@ export default function Header() {
             </nav>
 
             <motion.button
-              className="lg:hidden text-white w-11 h-11 flex items-center justify-center"
+              className="lg:hidden text-navy w-11 h-11 flex items-center justify-center"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
               whileTap={{ scale: 0.9 }}
@@ -107,7 +107,7 @@ export default function Header() {
                     <motion.a
                       key={link.href}
                       href={link.href}
-                      className="text-white hover:text-gold transition-colors text-sm py-2 px-2"
+                      className="text-navy hover:text-gold transition-colors text-sm py-2 px-2"
                       onClick={() => setMobileOpen(false)}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}

@@ -27,7 +27,7 @@ function LogoTile({ name, abbr }: { name: string; abbr: string }) {
       <div className="w-9 h-9 rounded-sm bg-zinc-900 border border-zinc-800 flex items-center justify-center shrink-0">
         <span className="text-gold text-[10px] font-black tracking-wide">{abbr}</span>
       </div>
-      <span className="text-white text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">
+      <span className="text-navy/50 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">
         {name}
       </span>
     </div>
@@ -41,7 +41,7 @@ export default function LogoSlider() {
     <section className="bg-navy py-10 sm:py-14 relative overflow-hidden">
       <AnimateIn>
         <div className="text-center mb-8">
-          <p className="text-white text-xs sm:text-sm font-bold uppercase tracking-[0.25em]">
+          <p className="text-navy/50 text-xs sm:text-sm font-bold uppercase tracking-[0.25em]">
             Trusted by 100+ roof coating contractors nationwide
           </p>
         </div>
