@@ -51,7 +51,7 @@ export default function Header() {
               <motion.a
                 key={link.href}
                 href={link.href}
-                className="text-gray hover:text-white transition-colors text-sm relative group"
+                className="text-white hover:text-gold transition-colors text-sm relative group"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * i + 0.3 }}
@@ -104,7 +104,7 @@ export default function Header() {
                   <motion.a
                     key={link.href}
                     href={link.href}
-                    className="text-gray hover:text-white transition-colors text-sm py-2 px-2"
+                    className="text-white hover:text-gold transition-colors text-sm py-2 px-2"
                     onClick={() => setMobileOpen(false)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
