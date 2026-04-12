@@ -27,7 +27,7 @@ const tabs = [
     label: "Lower Cost",
     stat: "40%",
     title: "Lower Cost Per Lead",
-    description: "Our precision targeting and exclusive model drives cost per acquisition down by 40% compared to Google Ads and HomeAdvisor.",
+    description: "Our precision targeting and exclusive model drives cost per acquisition down by 40% compared to HomeAdvisor and shared lead platforms.",
     visual: "cost",
   },
   {
@@ -45,7 +45,7 @@ function FunnelVisual() {
     <div className="space-y-2">
       {[
         { label: "Shared Lead Platforms", users: "5+ contractors see it", w: "100%", bg: "bg-red-500/80", text: "text-red-100" },
-        { label: "Google Ads", users: "3-4 competitors bidding", w: "75%", bg: "bg-orange-500/80", text: "text-orange-100" },
+        { label: "HomeAdvisor", users: "3-4 contractors per lead", w: "75%", bg: "bg-orange-500/80", text: "text-orange-100" },
         { label: "RoofCoat Leads", users: "Pre-qualified for you", w: "40%", bg: "bg-gold", text: "text-navy" },
       ].map((step, i) => (
         <motion.div
@@ -111,7 +111,7 @@ function TargetingVisual() {
 function CostVisual() {
   const providers = [
     { name: "HomeAdvisor", cost: 150, color: "bg-red-500", label: "text-zinc-500" },
-    { name: "Google Ads", cost: 120, color: "bg-orange-500", label: "text-orange-400" },
+    { name: "HomeAdvisor", cost: 120, color: "bg-orange-500", label: "text-orange-400" },
     { name: "RoofCoat Leads", cost: 45, color: "bg-gradient-to-t from-gold to-yellow-400", label: "text-gold", highlight: true },
   ];
   const maxCost = 150;

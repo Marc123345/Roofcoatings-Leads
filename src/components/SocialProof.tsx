@@ -16,7 +16,7 @@ interface Review {
 const REVIEWS: Review[] = [
   { name: "Michael P.", company: "Summit Roof Coatings", state: "FL", text: "Booked 3 commercial coating jobs in our first month. Cost per acquisition dropped 40%.", stat: "3 jobs", statLabel: "month one" },
   { name: "Sarah J.", company: "Jenkins Roofing", state: "TX", text: "Lead quality is unmatched. These leads are exclusive and actually ready to book. Results from week one.", stat: "8.2x", statLabel: "ROI" },
-  { name: "Robert G.", company: "RG Commercial", state: "CA", text: "Best investment this year. CPA is significantly lower than Google Ads and leads close at premium rates.", stat: "40%", statLabel: "lower CPA" },
+  { name: "Robert G.", company: "RG Commercial", state: "CA", text: "Best investment this year. CPA is significantly lower than HomeAdvisor and leads close at premium rates.", stat: "40%", statLabel: "lower CPA" },
   { name: "Karen L.", company: "Lewis Roofing & Solar", state: "AZ", text: "Cost per lead dropped 40% compared to HomeAdvisor. The energy savings angle works incredibly in Arizona.", stat: "$34", statLabel: "per lead" },
   { name: "David C.", company: "Citywide Restorations", state: "OH", text: "Pre-qualification saves my team hours every week. Ohio owners are ready to move fast before winter.", stat: "22%", statLabel: "close rate" },
   { name: "James W.", company: "Wilson & Sons", state: "GA", text: "We used to rely on referrals — not scalable. Now we can actually plan growth quarter to quarter.", stat: "5.8x", statLabel: "ROAS" },

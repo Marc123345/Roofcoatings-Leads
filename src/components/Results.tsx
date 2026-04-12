@@ -33,7 +33,7 @@ export default function Results() {
                 <CountUp end={40} suffix="%" />
               </p>
               <p className="text-white font-bold mt-3">Lower Cost Per Acquisition</p>
-              <p className="text-white text-sm mt-2">vs. HomeAdvisor & Google Ads</p>
+              <p className="text-white text-sm mt-2">vs. HomeAdvisor & shared platforms</p>
             </motion.div>
           </StaggerItem>
 

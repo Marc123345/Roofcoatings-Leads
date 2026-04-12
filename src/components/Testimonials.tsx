@@ -44,7 +44,7 @@ const PARTNERS = [
     city: "Los Angeles",
     service: "Commercial TPO",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
-    quote: "Best investment this year. Cost per acquisition is significantly lower than Google Ads — and California leads close at premium rates because of Title 24 compliance.",
+    quote: "Best investment this year. Cost per acquisition is significantly lower than other platforms — and California leads close at premium rates because of Title 24 compliance.",
     stat: "40%",
     statLabel: "lower CPA",
   },

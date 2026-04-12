@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RoofCoat Leads | Exclusive Roof Coating Leads via Facebook Ads",
     description:
-      "Get 100% exclusive, pre-qualified roof coating leads delivered in real time. 40% lower cost per acquisition than Google Ads & HomeAdvisor.",
+      "Get 100% exclusive, pre-qualified roof coating leads delivered in real time. 40% lower cost per acquisition than HomeAdvisor & shared lead platforms.",
     url: "https://roofcoatleads.com",
     siteName: "RoofCoat Leads",
     type: "website",
@@ -96,7 +96,7 @@ const jsonLd = {
           name: "What are exclusive roof coating leads?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Exclusive roof coating leads are prospects sent only to your business — no sharing with competitors. Unlike shared leads from HomeAdvisor or Google Ads, you are the only contractor who receives the lead, resulting in higher close rates and lower cost per acquisition.",
+            text: "Exclusive roof coating leads are prospects sent only to your business — no sharing with competitors. Unlike shared leads from HomeAdvisor or shared lead platforms, you are the only contractor who receives the lead, resulting in higher close rates and lower cost per acquisition.",
           },
         },
         {
@@ -120,7 +120,7 @@ const jsonLd = {
           name: "How much do roof coating leads cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our exclusive leads cost $30-$60 per lead, which is 40% lower than shared leads from Google Ads or HomeAdvisor ($80-$150). With close rates of 20-35%, the cost per closed job is $150-$300 compared to $1,500+ with shared leads.",
+            text: "Our exclusive leads cost $30-$60 per lead, which is 40% lower than shared leads from HomeAdvisor or other platforms ($80-$150). With close rates of 20-35%, the cost per closed job is $150-$300 compared to $1,500+ with shared leads.",
           },
         },
         {
@@ -152,15 +152,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="min-h-screen">
-        {children}
-        <ConsentBanner />
-        {/* Google Analytics */}
+        {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-F34YP77Z0F" />
         <script
           dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F34YP77Z0F');` }}
         />
+      </head>
+      <body className="min-h-screen">
+        {children}
+        <ConsentBanner />
         {/* Plausible Analytics */}
         <script async src="https://plausible.io/js/pa-df7lV-XI8Y4HIePV-rOBs.js" />
         <script

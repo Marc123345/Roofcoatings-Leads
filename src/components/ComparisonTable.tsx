@@ -134,7 +134,7 @@ export default function ComparisonTable() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white uppercase tracking-tighter">
               Why Contractors Choose Us Over
               <br />
-              <span className="text-white">Google Ads &amp; HomeAdvisor</span>
+              <span className="text-white">HomeAdvisor &amp; Shared Platforms</span>
             </h2>
           </AnimateIn>
         </div>

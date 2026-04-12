@@ -58,7 +58,7 @@ const steps = [
 const advantages = [
   { title: "Behavioral Targeting", stat: "2.9B+", statLabel: "users", description: "Facebook knows when someone is researching home improvement or matches the profile of a property owner with an aging building. Google only knows what they typed." },
   { title: "Interruption Advantage", stat: "Before", statLabel: "they search", description: "Roof coating is a problem people don't know they have. Facebook reaches them at the problem-awareness stage — before they're comparing contractors." },
-  { title: "40% Lower CPA", stat: "40%", statLabel: "lower cost", description: "Our Facebook campaigns consistently deliver cost-per-acquisition 40% below comparable Google Ads for the same contractors." },
+  { title: "40% Lower CPA", stat: "40%", statLabel: "lower cost", description: "Our Facebook campaigns consistently deliver cost-per-acquisition 40% below comparable HomeAdvisor leads for the same contractors." },
   { title: "Pre-Qualification Depth", stat: "5+", statLabel: "screening Qs", description: "Facebook Lead Ads allow multi-question forms — that's how we qualify leads before you ever see them. Google search doesn't support this natively." },
 ];
 

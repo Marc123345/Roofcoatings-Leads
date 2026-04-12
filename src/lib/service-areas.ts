@@ -27,7 +27,7 @@ export const serviceAreas: ServiceArea[] = [
     climate: "Extreme heat, UV exposure, and hailstorms make roof coatings essential for Texas property owners. Silicone and acrylic coatings protect against 100°F+ summers and extend roof life by 15+ years.",
     buildingStock: "Texas has one of the largest commercial flat roof inventories in the US — warehouses, strip malls, and office parks across DFW, Houston, San Antonio, and Austin all need coating solutions.",
     seasonal: "Peak season runs March through October. Hail season (April–June) creates urgent demand. Smart contractors ramp up campaigns in February to capture early-season leads.",
-    localInsight: "Texas contractors face heavy competition from general roofers on Google Ads. Facebook targeting lets you bypass that noise and reach building owners directly — before they search.",
+    localInsight: "Texas contractors face heavy competition from general roofers on shared lead platforms. Facebook targeting lets you bypass that noise and reach building owners directly — before they search.",
     caseStudy: {
       name: "Mark Thompson",
       company: "Thompson Commercial Coatings",
@@ -69,7 +69,7 @@ export const serviceAreas: ServiceArea[] = [
     caseStudy: {
       name: "Robert Garcia",
       company: "RG Commercial Systems",
-      quote: "Best investment this year. Cost per acquisition is significantly lower than Google Ads — and California leads close at premium rates.",
+      quote: "Best investment this year. Cost per acquisition is significantly lower than other platforms — and California leads close at premium rates.",
       stat: "8.2x",
       statLabel: "ROI in first 90 days",
     },
