@@ -214,7 +214,7 @@ html { scroll-behavior: smooth; }
 
 .bg-text {
   position: absolute;
-  font-size: clamp(6rem, 15vw, 14rem);
+  font-size: clamp(3rem, 15vw, 14rem);
   font-weight: 900;
   line-height: 1;
   opacity: 0.03;

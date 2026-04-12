@@ -141,7 +141,7 @@ export default function ComparisonTable() {
 
         {/* Scrollable table wrapper for mobile */}
         <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}>
-        <div className="min-w-[520px]">
+        <div className="min-w-full sm:min-w-[520px]">
         {/* Header row */}
         <AnimateIn delay={0.2}>
           <div className="grid grid-cols-4 gap-1.5 sm:gap-3 mb-3 px-1 sm:px-2">

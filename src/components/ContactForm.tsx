@@ -96,7 +96,7 @@ export default function ContactForm() {
                 <div className="p-2">
                   <iframe
                     src="https://form.jotform.com/260952924952062"
-                    style={{ width: "100%", minHeight: "min(600px, 80vh)", border: "none", borderRadius: "16px" }}
+                    style={{ width: "100%", minHeight: "clamp(350px, 80vh, 600px)", border: "none", borderRadius: "16px" }}
                     title="Contact Form — RoofCoat Leads"
                     allow="geolocation; microphone; camera; fullscreen"
                   />

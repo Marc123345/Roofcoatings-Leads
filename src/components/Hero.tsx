@@ -42,7 +42,7 @@ export default function Hero() {
 
         {/* ── Ghost background text ── */}
         <div className="bg-text bottom-[10%] left-1/2 -translate-x-1/2 text-white/[0.03] select-none pointer-events-none"
-          style={{ fontSize: "clamp(120px, 20vw, 300px)" }}>
+          style={{ fontSize: "clamp(60px, 20vw, 300px)" }}>
           ROOFCOAT
         </div>
 

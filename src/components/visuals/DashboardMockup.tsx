@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function DashboardMockup() {
   return (
-    <div className="relative w-full max-w-md mx-auto">
+    <div className="relative w-full max-w-xs sm:max-w-md mx-auto">
       <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
         {/* Title bar */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5">
