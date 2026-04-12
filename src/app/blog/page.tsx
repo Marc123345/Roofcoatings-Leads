@@ -19,6 +19,14 @@ const posts = [
     date: "April 12, 2026",
     readTime: "8 min read",
   },
+  {
+    slug: "roof-coating-facebook-ads-case-study",
+    title: "How a Roof Coating Contractor Generated Qualified Leads With Facebook Ads",
+    excerpt: "A case study on how we helped a contractor go from inconsistent referrals to a predictable pipeline of pre-qualified commercial roofing leads using Facebook Ads.",
+    image: "https://ik.imagekit.io/qcvroy8xpd/Sylicone.jpeg",
+    date: "April 12, 2026",
+    readTime: "10 min read",
+  },
 ];
 
 export default function BlogPage() {

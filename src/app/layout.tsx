@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import ConsentBanner from "@/components/ConsentBanner";
+import ConsultationPopup from "@/components/ConsultationPopup";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,7 +16,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "RoofCoat Leads | Exclusive Roof Coating Leads via Facebook Ads",
+  title: "RoofCoat Leads | Exclusive Commercial Roofing Leads via Facebook Ads",
   description:
     "Stop buying shared leads. Get 100% exclusive, pre-qualified commercial & residential roof coating leads through our proven Facebook Ad system. 40% lower CPA. First lead in under 48 hours.",
   keywords: [
@@ -165,6 +166,7 @@ export default function RootLayout({
       <body className="min-h-screen">
         {children}
         <ConsentBanner />
+        <ConsultationPopup />
         {/* Plausible Analytics */}
         <script async src="https://plausible.io/js/pa-df7lV-XI8Y4HIePV-rOBs.js" />
         <script
