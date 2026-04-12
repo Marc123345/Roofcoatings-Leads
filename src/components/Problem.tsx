@@ -152,7 +152,7 @@ export default function Problem() {
           {/* Animated leak visual */}
           <AnimateIn delay={0.2}>
             <div className="flex justify-center lg:justify-end">
-              <div className="w-[240px] h-[300px] sm:w-[280px] sm:h-[340px] relative">
+              <div className="w-[200px] h-[260px] sm:w-[280px] sm:h-[340px] max-w-full relative">
                 <LeakAnimation />
                 {/* Counter — money lost */}
                 <motion.div

@@ -55,7 +55,7 @@ export default function CTA() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
               href="/get-started"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-gold/25 group"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-lg shadow-lg shadow-gold/25 group"
               whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
               whileTap={{ scale: 0.97 }}
             >
@@ -64,7 +64,7 @@ export default function CTA() {
             </motion.a>
             <motion.a
               href="/how-it-works"
-              className="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 hover:text-white hover:border-white/20 px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-base transition-all"
+              className="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 hover:text-white hover:border-white/20 px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-base transition-all"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

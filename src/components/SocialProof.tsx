@@ -90,7 +90,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       {review.stat && (
         <div className="flex items-center gap-2 bg-gold/[0.06] border border-gold/15 rounded-lg px-3 py-1.5 self-start">
           <span className="text-gold text-sm font-bold">{review.stat}</span>
-          <span className="text-white/40 text-[11px]">{review.statLabel}</span>
+          <span className="text-white/40 text-xs">{review.statLabel}</span>
         </div>
       )}
 
@@ -101,7 +101,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
         </div>
         <div className="min-w-0">
           <p className="text-white text-xs font-semibold truncate">{review.name}</p>
-          <p className="text-white/35 text-[10px] truncate">{review.company} · {review.state}</p>
+          <p className="text-white/35 text-xs truncate">{review.company} · {review.state}</p>
         </div>
       </div>
     </motion.div>

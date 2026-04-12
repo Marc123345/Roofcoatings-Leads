@@ -78,7 +78,7 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
         <div className="w-8 h-8 rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
           <Check className="w-4 h-4 text-green-400" />
         </div>
-        <span className="text-green-400 text-[11px] font-medium hidden sm:block">{info.detail}</span>
+        <span className="text-green-400 text-xs font-medium hidden sm:block">{info.detail}</span>
       </div>
     );
   }
@@ -88,7 +88,7 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
         <div className="w-8 h-8 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
           <X className="w-4 h-4 text-red-400" />
         </div>
-        <span className="text-white/30 text-[11px] hidden sm:block">{info.detail}</span>
+        <span className="text-white/30 text-xs hidden sm:block">{info.detail}</span>
       </div>
     );
   }
@@ -98,7 +98,7 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
         <div className="w-8 h-8 rounded-2xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center">
           <Minus className="w-4 h-4 text-yellow-400" />
         </div>
-        <span className="text-yellow-400/70 text-[11px] hidden sm:block">{info.detail}</span>
+        <span className="text-yellow-400/70 text-xs hidden sm:block">{info.detail}</span>
       </div>
     );
   }
@@ -139,26 +139,29 @@ export default function ComparisonTable() {
           </AnimateIn>
         </div>
 
+        {/* Scrollable table wrapper for mobile */}
+        <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}>
+        <div className="min-w-[520px]">
         {/* Header row */}
         <AnimateIn delay={0.2}>
           <div className="grid grid-cols-4 gap-1.5 sm:gap-3 mb-3 px-1 sm:px-2">
             <div />
             <div className="text-center">
               <div className="bg-gradient-to-b from-gold/20 to-gold/5 border border-gold/20 rounded-xl py-3 px-2">
-                <p className="text-gold font-bold text-[11px] sm:text-sm">RoofCoat</p>
-                <p className="text-gold/60 text-[11px]">$1,000/mo</p>
+                <p className="text-gold font-bold text-xs sm:text-sm">RoofCoat</p>
+                <p className="text-gold/60 text-xs">$1,000/mo</p>
               </div>
             </div>
             <div className="text-center">
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl py-3 px-2">
-                <p className="text-white/50 font-bold text-[11px] sm:text-sm">Google</p>
-                <p className="text-white/30 text-[11px]">Self-serve</p>
+                <p className="text-white/50 font-bold text-xs sm:text-sm">Google</p>
+                <p className="text-white/30 text-xs">Self-serve</p>
               </div>
             </div>
             <div className="text-center">
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl py-3 px-2">
-                <p className="text-white/50 font-bold text-[11px] sm:text-sm">HomeAdv.</p>
-                <p className="text-white/30 text-[11px]">Per-lead</p>
+                <p className="text-white/50 font-bold text-xs sm:text-sm">HomeAdv.</p>
+                <p className="text-white/30 text-xs">Per-lead</p>
               </div>
             </div>
           </div>
@@ -225,6 +228,8 @@ export default function ComparisonTable() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+        </div>{/* end min-w wrapper */}
+        </div>{/* end scroll wrapper */}
 
         {/* Bottom CTA */}
         <AnimateIn delay={0.4}>
