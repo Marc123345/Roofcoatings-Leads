@@ -38,9 +38,8 @@ export default function CTA() {
 
         {/* Headline */}
         <AnimateIn delay={0.1}>
-          <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-[0.95] ">
-            Ready to Fill
-            <br />
+          <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+            Ready to Fill{" "}
             <span className="text-gradient-gold">Your Pipeline?</span>
           </h2>
         </AnimateIn>
