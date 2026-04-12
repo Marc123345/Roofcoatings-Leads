@@ -266,7 +266,7 @@ export default function WhatsIncluded() {
                 <motion.a href="/get-started"
                   className="mt-8 w-full bg-gradient-to-r from-gold to-yellow-400 text-navy py-3.5 rounded-xl font-bold text-sm text-center block"
                   whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  Get Started &rarr;
+                  Book a Free Call &rarr;
                 </motion.a>
               </motion.div>
             </StaggerItem>

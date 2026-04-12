@@ -22,7 +22,7 @@ export default function NotFound() {
             href="/get-started"
             className="inline-flex items-center justify-center bg-white text-navy px-6 py-3 rounded-md font-extrabold text-sm uppercase tracking-wider"
           >
-            Get Started
+            Book a Free Call
           </Link>
         </div>
       </div>

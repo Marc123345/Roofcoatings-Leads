@@ -172,7 +172,7 @@ export default function GetStartedContent() {
                       <div className="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center text-gold font-bold text-sm">M</div>
                       <div>
                         <p className="text-white font-bold text-sm">Marc Friedman</p>
-                        <p className="text-gold text-xs">Founder, RoofCoat Leads</p>
+                        <p className="text-gold text-xs">Head of Sales, RoofCoat Leads</p>
                       </div>
                     </div>
                     <p className="text-white text-xs leading-relaxed">

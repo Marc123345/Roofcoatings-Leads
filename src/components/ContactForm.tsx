@@ -33,13 +33,13 @@ export default function ContactForm() {
           <div className="lg:col-span-2">
             <AnimateIn delay={0.1}>
               <div className="space-y-6 mb-8">
-                <a href="mailto:marc@roofcoatleads.com" className="flex items-center gap-4 group min-h-[48px]">
+                <a href="mailto:marcfriedmancm@roofcoatleads.com" className="flex items-center gap-4 group min-h-[48px]">
                   <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                     <Mail className="w-5 h-5 text-gold" />
                   </div>
                   <div>
                     <p className="text-white text-xs uppercase tracking-widest mb-0.5">Email</p>
-                    <p className="text-white font-medium text-sm">marc@roofcoatleads.com</p>
+                    <p className="text-white font-medium text-sm">marcfriedmancm@roofcoatleads.com</p>
                   </div>
                 </a>
                 <a href="/get-started" className="flex items-center gap-4 group min-h-[48px]">
