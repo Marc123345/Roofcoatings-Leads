@@ -1,7 +1,8 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Calendar, Mail } from "lucide-react";
 import AnimateIn, { StaggerContainer, StaggerItem } from "../AnimateIn";
 import ParticleField from "../visuals/ParticleField";
 
@@ -18,6 +19,56 @@ const faqs = [
   { q: "Is the audit really free?", a: "Yes. No credit card. No commitment. We only do paid work after you've seen your blueprint and decided to move forward." },
   { q: "What if I'm not ready to start immediately?", a: "That's fine. The audit is yours to keep. We've had contractors book campaigns 3 months later because the timing wasn't right at first." },
 ];
+
+function BookingTabs() {
+  const [tab, setTab] = useState<"book" | "contact">("book");
+  return (
+    <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden">
+      {/* Tab bar */}
+      <div className="flex">
+        <button
+          onClick={() => setTab("book")}
+          className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
+            tab === "book"
+              ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+              : "bg-navy-light text-white/50 hover:text-white"
+          }`}
+        >
+          <Calendar className="w-4 h-4" />
+          Book Appointment
+        </button>
+        <button
+          onClick={() => setTab("contact")}
+          className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
+            tab === "contact"
+              ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+              : "bg-navy-light text-white/50 hover:text-white"
+          }`}
+        >
+          <Mail className="w-4 h-4" />
+          Contact Us
+        </button>
+      </div>
+      {/* Tab content */}
+      <div className="p-2">
+        {tab === "book" ? (
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/bookings/roofcoatingleads"
+            style={{ width: "100%", height: "700px", border: "none", borderRadius: "16px" }}
+            title="Book a Free Strategy Audit with RoofCoat Leads"
+          />
+        ) : (
+          <iframe
+            src="https://form.jotform.com/260952924952062"
+            style={{ width: "100%", minHeight: "clamp(350px, 80vh, 600px)", border: "none", borderRadius: "16px" }}
+            title="Contact Form — RoofCoat Leads"
+            allow="geolocation; microphone; camera; fullscreen"
+          />
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function GetStartedContent() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -134,58 +185,13 @@ export default function GetStartedContent() {
                 </AnimateIn>
               </div>
 
-              {/* Right — Calendar Embed */}
+              {/* Right — Tabbed Calendar + Contact Form */}
               <div className="lg:col-span-3">
                 <AnimateIn delay={0.15}>
-                  <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden">
-                    <div className="bg-gradient-to-r from-gold to-yellow-400 px-6 py-4">
-                      <div className="flex items-center gap-3">
-                        <svg className="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <span className="text-navy font-bold">Claim Your Free Website + Audit</span>
-                      </div>
-                    </div>
-                    <div className="p-2">
-                      <iframe
-                        src="https://api.leadconnectorhq.com/widget/bookings/roofcoatingleads"
-                        style={{ width: "100%", height: "700px", border: "none", borderRadius: "16px" }}
-                        title="Book a Free Strategy Audit with RoofCoat Leads"
-                      />
-                    </div>
-                  </div>
+                  <BookingTabs />
                 </AnimateIn>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── JotForm Contact Form ── */}
-      <section className="bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern" />
-        <div className="relative z-10 py-16 sm:py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimateIn>
-              <div className="text-center mb-10">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
-                  Prefer to Fill Out a Form?
-                </h2>
-                <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto">
-                  Not ready to book a call? No problem — send us your details and we&apos;ll reach out within 24 hours.
-                </p>
-              </div>
-            </AnimateIn>
-            <AnimateIn delay={0.1}>
-              <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden p-2">
-                <iframe
-                  src="https://form.jotform.com/260952924952062"
-                  style={{ width: "100%", minHeight: "600px", border: "none", borderRadius: "16px" }}
-                  title="Contact Form — RoofCoat Leads"
-                  allow="geolocation; microphone; camera; fullscreen"
-                />
-              </div>
-            </AnimateIn>
           </div>
         </div>
       </section>

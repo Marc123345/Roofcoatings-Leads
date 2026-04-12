@@ -1,9 +1,11 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, Calendar } from "lucide-react";
 import AnimateIn from "./AnimateIn";
 
 export default function ContactForm() {
+  const [tab, setTab] = useState<"book" | "contact">("book");
   return (
     <section id="contact" className="bg-navy relative overflow-hidden py-20 sm:py-28 lg:py-36">
       <div className="absolute inset-0 grid-pattern" />
@@ -83,43 +85,55 @@ export default function ContactForm() {
             </AnimateIn>
           </div>
 
-          {/* Right — JotForm embed */}
+          {/* Right — Tabbed Calendar + Contact Form */}
           <div className="lg:col-span-3">
             <AnimateIn delay={0.15}>
               <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden">
-                <div className="bg-gradient-to-r from-gold to-yellow-400 px-6 py-4">
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-navy" />
-                    <span className="text-navy font-bold">Send Us a Message</span>
-                  </div>
+                <div className="flex">
+                  <button
+                    onClick={() => setTab("book")}
+                    className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
+                      tab === "book"
+                        ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+                        : "bg-navy-light text-white/50 hover:text-white"
+                    }`}
+                  >
+                    <Calendar className="w-4 h-4" />
+                    Book Appointment
+                  </button>
+                  <button
+                    onClick={() => setTab("contact")}
+                    className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
+                      tab === "contact"
+                        ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+                        : "bg-navy-light text-white/50 hover:text-white"
+                    }`}
+                  >
+                    <Mail className="w-4 h-4" />
+                    Contact Us
+                  </button>
                 </div>
                 <div className="p-2">
-                  <iframe
-                    src="https://form.jotform.com/260952924952062"
-                    style={{ width: "100%", minHeight: "clamp(350px, 80vh, 600px)", border: "none", borderRadius: "16px" }}
-                    title="Contact Form — RoofCoat Leads"
-                    allow="geolocation; microphone; camera; fullscreen"
-                  />
+                  {tab === "book" ? (
+                    <iframe
+                      src="https://api.leadconnectorhq.com/widget/bookings/roofcoatingleads"
+                      style={{ width: "100%", height: "700px", border: "none", borderRadius: "16px" }}
+                      title="Book a Free Strategy Audit with RoofCoat Leads"
+                    />
+                  ) : (
+                    <iframe
+                      src="https://form.jotform.com/260952924952062"
+                      style={{ width: "100%", minHeight: "clamp(350px, 80vh, 600px)", border: "none", borderRadius: "16px" }}
+                      title="Contact Form — RoofCoat Leads"
+                      allow="geolocation; microphone; camera; fullscreen"
+                    />
+                  )}
                 </div>
               </div>
             </AnimateIn>
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <AnimateIn delay={0.3}>
-          <div className="mt-12 text-center">
-            <p className="text-white/40 text-sm mb-3">Prefer to talk now?</p>
-            <motion.a
-              href="/get-started"
-              className="inline-flex items-center gap-2 text-gold hover:text-yellow-300 font-medium text-sm transition-colors"
-              whileHover={{ x: 4 }}
-            >
-              Book a free strategy call instead
-              <ArrowRight className="w-4 h-4" />
-            </motion.a>
-          </div>
-        </AnimateIn>
       </div>
     </section>
   );
