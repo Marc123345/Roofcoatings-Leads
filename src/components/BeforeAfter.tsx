@@ -78,7 +78,7 @@ export default function BeforeAfter() {
                   <AlertTriangle className="w-5 h-5 text-red-500" />
                 </div>
                 <div>
-                  <p className="text-navy font-bold text-sm">The Agency Trap</p>
+                  <h3 className="text-navy font-bold text-sm">The Agency Trap</h3>
                   <p className="text-navy/40 text-xs">What you&apos;ve been paying for</p>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function BeforeAfter() {
                   <Zap className="w-5 h-5 text-gold" />
                 </div>
                 <div>
-                  <p className="text-white font-bold text-sm">The RoofCoat System</p>
+                  <h3 className="text-white font-bold text-sm">The RoofCoat System</h3>
                   <p className="text-white/50 text-xs">What winning looks like</p>
                 </div>
               </div>

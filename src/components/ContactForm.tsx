@@ -18,7 +18,7 @@ export default function ContactForm() {
               <Mail className="w-3.5 h-3.5 text-gold" />
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Get In Touch</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
               Let&apos;s Talk About{" "}
               <span className="text-gradient-gold">Your Growth</span>
             </h2>
@@ -65,7 +65,7 @@ export default function ContactForm() {
 
             <AnimateIn delay={0.2}>
               <div className="bg-navy-light rounded-2xl border border-white/5 p-6">
-                <p className="text-white font-bold text-sm mb-3">What happens next?</p>
+                <h3 className="text-white font-bold text-sm mb-3">What happens next?</h3>
                 <div className="space-y-3">
                   {[
                     "We review your info within 24 hours",

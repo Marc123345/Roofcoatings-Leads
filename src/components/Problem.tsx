@@ -134,7 +134,7 @@ export default function Problem() {
               </div>
             </AnimateIn>
             <AnimateIn delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.08]">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-[1.08]">
                 Your Ad Budget Is{" "}
                 <span className="text-red-400">Silently Draining</span>{" "}
                 Every Month.

@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       <Header />
       <main className="bg-navy min-h-screen">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <h1 className="text-4xl font-extrabold text-white tracking-tight mb-8">Privacy Policy</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-8">Privacy Policy</h1>
           <div className="prose prose-invert prose-sm max-w-none text-white space-y-6">
             <p><strong className="text-white">Last Updated:</strong> April 2026</p>
 

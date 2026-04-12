@@ -121,7 +121,7 @@ export default function SocialProof() {
               <Star className="w-3.5 h-3.5 text-gold fill-gold" />
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Wall of Love</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
               What Our <span className="text-gradient-gold">Contractors</span> Say
             </h2>
             <p className="mt-4 text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">

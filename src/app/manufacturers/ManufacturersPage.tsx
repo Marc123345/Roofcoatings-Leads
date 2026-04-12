@@ -128,7 +128,7 @@ export default function ManufacturersPage() {
               <span className="text-gold text-xs font-bold uppercase tracking-widest mb-4 block">
                 The Problem You Already Know
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight leading-tight">
                 When Your Contractors Slow Down,{" "}
                 <span className="text-gold">Your Orders Drop.</span>
               </h2>
@@ -189,7 +189,7 @@ export default function ManufacturersPage() {
               <span className="text-gold text-xs font-bold uppercase tracking-widest mb-4 block">
                 The Partnership
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight leading-tight">
                 We Become Your{" "}
                 <span className="text-gold">Contractor Support Arm.</span>
               </h2>
@@ -256,7 +256,7 @@ export default function ManufacturersPage() {
               <span className="text-gold text-xs font-bold uppercase tracking-widest mb-4 block">
                 The Result
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight leading-tight">
                 Your Contractors Get{" "}
                 <span className="text-gold">More Jobs.</span>
               </h2>
@@ -318,7 +318,7 @@ export default function ManufacturersPage() {
               <span className="text-gold text-xs font-bold uppercase tracking-widest mb-4 block">
                 The Numbers
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight">
                 This Is a Real{" "}
                 <span className="text-gold">Machine.</span>
               </h2>
@@ -381,7 +381,7 @@ export default function ManufacturersPage() {
               custom={0}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
                 Let&apos;s Keep Your Contractors{" "}
                 <span className="text-gold">Booked.</span>
               </h2>
