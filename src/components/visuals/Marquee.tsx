@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const items = [
   "100+ Contractors on the System",
-  "$1,000/mo — Cancel Anytime",
+  "$2,000/mo — Cancel Anytime",
   "First Lead in Under 48 Hours",
   "5-10x Return on Ad Spend",
   "Free 5-Page Custom Website",

@@ -12,7 +12,7 @@ const oldWay = [
 ];
 
 const newWay = [
-  { text: "$1,000/month flat — everything included, no hidden fees", value: "$1k/mo" },
+  { text: "$2,000/month flat — everything included, no hidden fees", value: "$2k/mo" },
   { text: "First lead in under 48 hours — the system is already built", value: "<48 hours" },
   { text: "Pre-qualified residential homeowners with active roof issues", value: "Real leads" },
   { text: "Predictable pipeline — know exactly how many leads you'll get", value: "Predictable" },
@@ -116,7 +116,7 @@ export default function BeforeAfter() {
               Stop Burning Cash
               <ArrowRight className="w-4 h-4" />
             </motion.a>
-            <p className="mt-3 text-navy/50 text-sm">$1,000/month. Cancel anytime. Results from day one.</p>
+            <p className="mt-3 text-navy/50 text-sm">$2,000/month. Cancel anytime. Results from day one.</p>
           </div>
         </AnimateIn>
       </div>

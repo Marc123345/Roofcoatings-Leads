@@ -149,7 +149,7 @@ export default function ComparisonTable() {
             <div className="text-center">
               <div className="bg-gradient-to-b from-gold/20 to-gold/5 border border-gold/20 rounded-xl py-3 px-2">
                 <p className="text-gold font-bold text-xs sm:text-sm">RoofCoat</p>
-                <p className="text-gold/60 text-xs">$1,000/mo</p>
+                <p className="text-gold/60 text-xs">$2,000/mo</p>
               </div>
             </div>
             <div className="text-center">
