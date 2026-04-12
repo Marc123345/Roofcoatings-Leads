@@ -160,7 +160,7 @@ export default function SocialProof() {
           <div className="mt-12 sm:mt-16 text-center">
             <motion.a
               href="/get-started"
-              className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-8 py-4 rounded-sm font-extrabold text-sm uppercase tracking-wider "
+              className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-8 py-4 rounded-sm font-bold text-sm uppercase tracking-wider "
               whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
               whileTap={{ scale: 0.97 }}
             >

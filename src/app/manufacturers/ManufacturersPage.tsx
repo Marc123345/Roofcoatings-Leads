@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, TrendingUp, Package, Zap, Shield, BarChart3, CheckCircle } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Users, TrendingUp, Package, Zap, Shield, BarChart3, CheckCircle, Megaphone, Target, Wrench, HardHat, Building2, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -85,7 +86,7 @@ export default function ManufacturersPage() {
               >
                 <motion.a
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-7 py-4 rounded-sm font-extrabold text-sm uppercase tracking-wider  group"
+                  className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-7 py-4 rounded-sm font-bold text-sm uppercase tracking-wider  group"
                   whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -94,7 +95,7 @@ export default function ManufacturersPage() {
                 </motion.a>
                 <motion.a
                   href="#how-it-works"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-navy px-7 py-4 rounded-sm font-extrabold text-sm uppercase tracking-wider border border-white/80 hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-navy px-7 py-4 rounded-sm font-bold text-sm uppercase tracking-wider border border-white/80 hover:bg-white/90 transition-colors"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -142,7 +143,7 @@ export default function ManufacturersPage() {
             <div className="grid sm:grid-cols-3 gap-6">
               {[
                 {
-                  icon: Users,
+                  icon: Wrench,
                   title: "Contractors Can't Find Jobs",
                   desc: "New applicators lack marketing budgets and reputation. They sit idle while competitors with bigger names get the calls.",
                 },
@@ -152,7 +153,7 @@ export default function ManufacturersPage() {
                   desc: "If your certified contractors aren't landing jobs, they're not ordering product. Your growth stalls even with a superior coating.",
                 },
                 {
-                  icon: Package,
+                  icon: Building2,
                   title: "Competitors Poach Talent",
                   desc: "When applicators can't stay busy with your product, they switch to competitors who offer better contractor support programs.",
                 },
@@ -179,63 +180,96 @@ export default function ManufacturersPage() {
         <section id="how-it-works" className="py-24 sm:py-32 bg-navy px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              className="max-w-3xl mx-auto text-center mb-16"
+              className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-zinc-800 pb-8 mb-16"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
               custom={0}
             >
-              <span className="text-gold text-xs font-bold uppercase tracking-widest mb-4 block">
-                The Partnership
-              </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight leading-tight">
-                We Become Your{" "}
-                <span className="text-gold">Contractor Support Arm.</span>
-              </h2>
-              <p className="mt-6 text-white text-lg leading-relaxed max-w-2xl mx-auto">
-                We generate exclusive, pre-qualified roof coating leads at scale and funnel
-                them directly to your certified applicators. More jobs, more material orders,
-                more revenue for everyone.
+              <div>
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-gold mb-4 block">
+                  // The Partnership
+                </span>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white uppercase tracking-tighter leading-tight">
+                  We Become Your{" "}
+                  <span className="text-gold">Contractor Support Arm.</span>
+                </h2>
+              </div>
+              <p className="text-zinc-400 text-sm sm:text-base max-w-md leading-relaxed">
+                More jobs for your applicators. More material orders for you. A system that grows your revenue without growing your ad budget.
               </p>
             </motion.div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-6">
               {[
                 {
                   step: "01",
-                  icon: Zap,
+                  icon: Megaphone,
                   title: "We Generate the Leads",
                   desc: "Our proven Facebook & Google ad system produces 100+ exclusive, pre-qualified roof coating leads per month. AI chatbot qualifies and books appointments automatically.",
+                  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+                  bullets: ["100+ leads/month", "AI-powered booking", "Exclusive territories"],
                 },
                 {
                   step: "02",
-                  icon: Users,
+                  icon: HardHat,
                   title: "Your Contractors Get Booked",
-                  desc: "Leads are routed directly to your certified applicators based on service area. They get warm, ready-to-buy homeowners — no cold calling, no shared leads.",
+                  desc: "Leads are routed directly to your certified applicators based on service area. Warm, ready-to-buy homeowners — no cold calling.",
+                  image: "https://ik.imagekit.io/qcvroy8xpd/photo-1674485169641-bcb2bf6f1df9%20(1).jpeg",
+                  bullets: ["Direct lead routing", "Pre-qualified prospects", "No shared leads"],
                 },
                 {
                   step: "03",
                   icon: Package,
                   title: "You Sell More Product",
-                  desc: "Busy contractors order more coating, silicone, and materials. Your revenue grows because your applicator network is thriving — not because you spent more on ads.",
+                  desc: "Busy contractors order more coating, silicone, and materials. Your revenue grows because your network is thriving.",
+                  image: "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&q=80",
+                  bullets: ["Higher order volume", "Contractor loyalty", "Predictable revenue"],
                 },
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  className="relative bg-navy-light border border-zinc-800 rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
+                  className="relative bg-zinc-950 border border-zinc-800 rounded-sm overflow-hidden group hover:border-gold/30 transition-colors duration-300"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
                   custom={i + 1}
                 >
-                  <span className="text-gold/20 text-6xl font-extrabold absolute top-4 right-6">
-                    {item.step}
-                  </span>
-                  <item.icon className="w-8 h-8 text-gold mb-4" />
-                  <h3 className="text-white text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-white text-sm leading-relaxed">{item.desc}</p>
+                  {/* Card Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent" />
+                    <span className="absolute top-4 left-4 font-mono text-[10px] tracking-[0.2em] uppercase bg-gold text-navy px-3 py-1">
+                      Phase {item.step}
+                    </span>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-6 sm:p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <item.icon className="w-5 h-5 text-gold" />
+                      <h3 className="text-white text-lg font-black uppercase tracking-tight">{item.title}</h3>
+                    </div>
+                    <p className="text-zinc-400 text-sm leading-relaxed mb-6">{item.desc}</p>
+
+                    {/* Bullet points */}
+                    <div className="space-y-2 border-t border-zinc-800 pt-4">
+                      {item.bullets.map((bullet, j) => (
+                        <div key={j} className="flex items-center gap-2">
+                          <CheckCircle className="w-3.5 h-3.5 text-gold shrink-0" />
+                          <span className="text-zinc-400 text-xs font-mono tracking-wide">{bullet}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>

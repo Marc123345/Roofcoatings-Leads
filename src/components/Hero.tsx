@@ -101,7 +101,7 @@ export default function Hero() {
             >
               <motion.button
                 onClick={() => setOverlayOpen(true)}
-                className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-7 py-4 rounded-sm font-extrabold text-sm uppercase tracking-wider  group cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-7 py-4 rounded-sm font-bold text-sm uppercase tracking-wider  group cursor-pointer"
                 whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
                 whileTap={{ scale: 0.97 }}
               >

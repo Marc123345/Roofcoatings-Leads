@@ -97,7 +97,7 @@ export default function Results() {
           <div className="mt-12 text-center">
             <motion.a
               href="#cta"
-              className="inline-block bg-gradient-to-r from-blue to-blue-light text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-sm font-bold text-sm sm:text-base w-full sm:w-auto text-center overflow-hidden relative group"
+              className="inline-block bg-blue text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-sm font-bold text-sm sm:text-base w-full sm:w-auto text-center overflow-hidden relative group"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(37,99,235,0.4)" }}
               whileTap={{ scale: 0.95 }}
             >
