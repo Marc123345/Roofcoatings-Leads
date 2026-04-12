@@ -31,7 +31,7 @@ export default function Header() {
         transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-navy/80 border-b border-white/[0.04] shadow-[0_1px_3px_rgba(0,0,0,0.3)]"
+            ? "bg-navy/80 border-b border-zinc-800 shadow-[0_1px_3px_rgba(0,0,0,0.3)]"
             : "bg-transparent"
         }`}
       >

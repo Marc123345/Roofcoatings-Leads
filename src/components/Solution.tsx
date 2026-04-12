@@ -72,11 +72,11 @@ export default function Solution() {
                 </div>
               </div>
               <div className="mt-5 grid grid-cols-2 gap-3">
-                <div className="bg-white/5 rounded-sm p-3 text-center">
+                <div className="bg-zinc-900 rounded-sm p-3 text-center">
                   <p className="text-2xl font-bold text-gold">2.9B+</p>
                   <p className="text-white text-xs mt-0.5">Active Users</p>
                 </div>
-                <div className="bg-white/5 rounded-sm p-3 text-center">
+                <div className="bg-zinc-900 rounded-sm p-3 text-center">
                   <p className="text-2xl font-bold text-gold">97%</p>
                   <p className="text-white text-xs mt-0.5">Reach Rate</p>
                 </div>

@@ -24,7 +24,7 @@ const CLIENTS = [
 function LogoTile({ name, abbr }: { name: string; abbr: string }) {
   return (
     <div className="flex items-center gap-3 shrink-0 px-4 sm:px-8">
-      <div className="w-9 h-9 rounded-sm bg-white/[0.06] border border-white/[0.08] flex items-center justify-center shrink-0">
+      <div className="w-9 h-9 rounded-sm bg-zinc-900 border border-zinc-800 flex items-center justify-center shrink-0">
         <span className="text-gold text-[10px] font-black tracking-wide">{abbr}</span>
       </div>
       <span className="text-white text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">

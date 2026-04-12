@@ -72,7 +72,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4, delay: (index % 6) * 0.05 }}
-      className="bg-navy-light border border-white/[0.06] rounded-sm p-5 sm:p-6 flex flex-col gap-3 hover:border-gold/20 transition-colors duration-300"
+      className="bg-navy-light border border-zinc-800 rounded-sm p-5 sm:p-6 flex flex-col gap-3 hover:border-gold/20 transition-colors duration-300"
     >
       {/* Stars */}
       <div className="flex gap-0.5">
@@ -95,7 +95,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       )}
 
       {/* Author */}
-      <div className="flex items-center gap-3 pt-2 border-t border-white/[0.04]">
+      <div className="flex items-center gap-3 pt-2 border-t border-zinc-800">
         <div className="w-8 h-8 rounded-sm bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
           <span className="text-gold text-[10px] font-bold">{review.name.charAt(0)}</span>
         </div>

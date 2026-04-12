@@ -159,7 +159,7 @@ export default function ManufacturersPage() {
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  className="bg-navy border border-white/[0.06] rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
+                  className="bg-navy border border-zinc-800 rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -223,7 +223,7 @@ export default function ManufacturersPage() {
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  className="relative bg-navy-light border border-white/[0.06] rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
+                  className="relative bg-navy-light border border-zinc-800 rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -286,7 +286,7 @@ export default function ManufacturersPage() {
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  className="relative bg-navy border border-white/[0.06] rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
+                  className="relative bg-navy border border-zinc-800 rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -333,7 +333,7 @@ export default function ManufacturersPage() {
               ].map((stat, i) => (
                 <motion.div
                   key={i}
-                  className="text-center bg-navy-light border border-white/[0.06] rounded-sm p-8"
+                  className="text-center bg-navy-light border border-zinc-800 rounded-sm p-8"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -398,7 +398,7 @@ export default function ManufacturersPage() {
               variants={fadeUp}
               custom={1}
             >
-              <div className="bg-navy rounded-sm border border-white/10 overflow-hidden">
+              <div className="bg-navy rounded-sm border border-zinc-800 overflow-hidden">
                 <div className="bg-gold px-6 py-4">
                   <div className="flex items-center gap-3">
                     <Package className="w-5 h-5 text-navy" />

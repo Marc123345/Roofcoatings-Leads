@@ -110,7 +110,7 @@ export default function ResultsContent() {
                 { value: 100, suffix: "+", label: "Partners" },
                 { value: 48, prefix: "<", suffix: "h", label: "First Lead" },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white/5 border border-white/10 rounded-sm p-4 text-center">
+                <div key={stat.label} className="bg-zinc-900 border border-zinc-800 rounded-sm p-4 text-center">
                   <p className="text-gold text-2xl font-bold">
                     <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   </p>

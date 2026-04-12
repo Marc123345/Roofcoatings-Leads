@@ -52,7 +52,7 @@ export default function ServiceAreasHub() {
             <motion.div className="mt-10 flex justify-center gap-3 flex-wrap"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
               {serviceAreas.map((sa) => (
-                <div key={sa.slug} className="bg-white/5 border border-white/10 rounded-sm px-4 py-2">
+                <div key={sa.slug} className="bg-zinc-900 border border-zinc-800 rounded-sm px-4 py-2">
                   <span className="text-gold font-bold text-sm">{sa.abbr}</span>
                   <span className="text-white text-xs ml-1.5">{sa.state}</span>
                 </div>
@@ -75,7 +75,7 @@ export default function ServiceAreasHub() {
 
             {/* State tabs */}
             <div className="flex justify-center mb-8 sm:mb-12">
-              <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
+              <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-zinc-800 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {serviceAreas.map((sa, i) => (
                   <button key={sa.slug} onClick={() => setActiveIdx(i)}
                     className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-sm text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white hover:text-white"}`}>
@@ -99,7 +99,7 @@ export default function ServiceAreasHub() {
 
                 <div className="grid lg:grid-cols-5 gap-6">
                   {/* Map panel */}
-                  <div className="lg:col-span-2 bg-navy-light rounded-sm border border-white/10 p-6 flex flex-col">
+                  <div className="lg:col-span-2 bg-navy-light rounded-sm border border-zinc-800 p-6 flex flex-col">
                     <div className="flex-1 min-h-[280px]">
                       <USMap
                         activeState={area.slug}
@@ -144,7 +144,7 @@ export default function ServiceAreasHub() {
                         { icon: <Lightbulb className="w-4 h-4 text-gold" />, title: "Local Insight", text: area.localInsight },
                       ].map((card, i) => (
                         <motion.div key={card.title}
-                          className="bg-navy-light rounded-sm border border-white/5 p-5"
+                          className="bg-navy-light rounded-sm border border-zinc-800 p-5"
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.1 + i * 0.08 }}>
@@ -158,7 +158,7 @@ export default function ServiceAreasHub() {
                     </div>
 
                     {/* Local Win-Log */}
-                    <div className="bg-navy-light rounded-sm border border-white/10 p-6">
+                    <div className="bg-navy-light rounded-sm border border-zinc-800 p-6">
                       <div className="flex items-center gap-4 mb-4">
                         <div className="w-12 h-12 bg-gold/20 rounded-sm flex items-center justify-center text-gold font-bold shrink-0">
                           {area.caseStudy.name.split(" ").map((n) => n[0]).join("")}
@@ -188,7 +188,7 @@ export default function ServiceAreasHub() {
             {/* Expanding note */}
             <AnimateIn delay={0.3}>
               <div className="mt-16 text-center">
-                <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-sm px-6 py-3">
+                <div className="inline-flex items-center gap-3 bg-zinc-900 border border-zinc-800 rounded-sm px-6 py-3">
                   <span className="w-2 h-2 bg-green-500 rounded-sm animate-pulse" />
                   <span className="text-white text-sm">
                     Expanding to new states monthly — don&apos;t see yours?{" "}
@@ -257,7 +257,7 @@ export default function ServiceAreasHub() {
                       className={`block rounded-sm p-3 text-center border transition-all duration-200 ${
                         isFeatured
                           ? "bg-gold/10 border-gold/20 hover:bg-gold/20"
-                          : "bg-white/[0.03] border-white/5 hover:bg-white/[0.06] hover:border-white/10"
+                          : "bg-zinc-950 border-zinc-800 hover:bg-zinc-900 hover:border-zinc-800"
                       }`}
                       whileHover={{ y: -2 }}
                     >
@@ -277,7 +277,7 @@ export default function ServiceAreasHub() {
                 <span>Featured markets (full detail pages)</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-sm bg-white/5 border border-white/10" />
+                <div className="w-3 h-3 rounded-sm bg-zinc-900 border border-zinc-800" />
                 <span>Available — book audit for custom blueprint</span>
               </div>
             </div>

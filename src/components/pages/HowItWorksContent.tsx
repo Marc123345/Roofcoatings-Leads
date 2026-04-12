@@ -87,7 +87,7 @@ function AuditVisual() {
     <div className="space-y-2">
       {items.map((item) => (
         <motion.div key={item.label}
-          className="flex items-center gap-3 bg-white/5 rounded-sm px-4 py-2.5 border border-white/5"
+          className="flex items-center gap-3 bg-zinc-900 rounded-sm px-4 py-2.5 border border-zinc-800"
           initial={{ opacity: 0, x: -20, scale: 0.95 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ delay: item.delay, duration: 0.35 }}>
@@ -126,7 +126,7 @@ function BuildVisual() {
           <div className="flex justify-between mb-1">
             <span className="text-white text-xs">{layer.label}</span>
           </div>
-          <div className="h-7 bg-white/5 rounded-sm overflow-hidden relative">
+          <div className="h-7 bg-zinc-900 rounded-sm overflow-hidden relative">
             <motion.div
               className={`h-full ${layer.color} rounded-sm flex items-center px-3`}
               initial={{ width: 0 }}
@@ -150,7 +150,7 @@ function BuildVisual() {
 
 function QualifyVisual() {
   const funnel = [
-    { label: "All inquiries", count: "100", w: "100%", bg: "bg-white/10", delay: 0.1 },
+    { label: "All inquiries", count: "100", w: "100%", bg: "bg-zinc-800", delay: 0.1 },
     { label: "Property type match", count: "72", w: "72%", bg: "bg-blue/20", delay: 0.3 },
     { label: "Urgency confirmed", count: "48", w: "48%", bg: "bg-blue/30", delay: 0.5 },
     { label: "Budget qualified", count: "31", w: "31%", bg: "bg-green-500/25", delay: 0.7 },
@@ -161,7 +161,7 @@ function QualifyVisual() {
       <p className="text-white text-[11px] uppercase tracking-wider mb-2">Qualification funnel</p>
       {funnel.map((stage) => (
         <motion.div key={stage.label}
-          className={`${stage.bg} rounded-sm py-2.5 px-4 flex items-center justify-between border border-white/5`}
+          className={`${stage.bg} rounded-sm py-2.5 px-4 flex items-center justify-between border border-zinc-800`}
           style={{ width: stage.w }}
           initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: stage.delay, duration: 0.4 }}>
@@ -188,7 +188,7 @@ function DeliverVisual() {
       <p className="text-white text-[11px] uppercase tracking-wider mb-2">Live feed</p>
       {notifications.map((n, i) => (
         <motion.div key={n.title}
-          className="bg-white/5 border border-white/10 rounded-sm p-4"
+          className="bg-zinc-900 border border-zinc-800 rounded-sm p-4"
           initial={{ opacity: 0, y: 15, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 0.2 + i * 0.25, duration: 0.35 }}>
@@ -204,7 +204,7 @@ function DeliverVisual() {
             <motion.div className="mt-2 flex gap-2"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 + i * 0.25 + 0.3 }}>
               <span className="bg-blue text-white text-[11px] font-bold px-3 py-1 rounded-sm">Call Now</span>
-              <span className="bg-white/10 text-white text-[11px] px-3 py-1 rounded-sm">View Details</span>
+              <span className="bg-zinc-800 text-white text-[11px] px-3 py-1 rounded-sm">View Details</span>
             </motion.div>
           )}
         </motion.div>
@@ -291,7 +291,7 @@ export default function HowItWorksContent() {
             <div className="mb-16">
               <div className="flex items-center justify-between max-w-3xl mx-auto relative">
                 {/* Connecting line */}
-                <div className="absolute top-5 left-[10%] right-[10%] h-px bg-white/10" />
+                <div className="absolute top-5 left-[10%] right-[10%] h-px bg-zinc-800" />
                 <motion.div
                   className="absolute top-5 left-[10%] h-px bg-gradient-to-r from-gold to-green-400"
                   animate={{ width: `${(activeStep / (steps.length - 1)) * 80}%` }}
@@ -304,7 +304,7 @@ export default function HowItWorksContent() {
                       className={`w-10 h-10 rounded-sm flex items-center justify-center text-lg border-2 transition-all duration-300 ${
                         i <= activeStep
                           ? "bg-gold border-gold text-navy"
-                          : "bg-navy-light border-white/10 text-white"
+                          : "bg-navy-light border-zinc-800 text-white"
                       }`}
                       whileHover={{ scale: 1.15 }}
                       animate={i === activeStep ? { scale: [1, 1.1, 1] } : {}}
@@ -331,7 +331,7 @@ export default function HowItWorksContent() {
                 className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
 
                 {/* Left — Info */}
-                <div className="bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 lg:p-10 flex flex-col">
+                <div className="bg-navy-light rounded-sm border border-zinc-800 p-5 sm:p-8 lg:p-10 flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`w-14 h-14 rounded-sm bg-gradient-to-br ${step.color} flex items-center justify-center text-2xl shadow-lg`}>
                       {step.icon}
@@ -345,7 +345,7 @@ export default function HowItWorksContent() {
                   <p className="text-gold font-semibold text-lg mb-4">{step.short}</p>
                   <p className="text-white leading-relaxed flex-1">{step.description}</p>
 
-                  <div className="mt-6 bg-white/5 border border-white/5 rounded-sm px-5 py-4 flex items-center gap-3">
+                  <div className="mt-6 bg-zinc-900 border border-zinc-800 rounded-sm px-5 py-4 flex items-center gap-3">
                     <div className="w-8 h-8 rounded-sm bg-green-500/20 flex items-center justify-center shrink-0">
                       <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -359,7 +359,7 @@ export default function HowItWorksContent() {
                     <button
                       onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
                       disabled={activeStep === 0}
-                      className="px-5 py-2.5 rounded-sm border border-white/10 text-white text-sm font-medium disabled:opacity-20 hover:border-white/20 hover:text-white transition-all">
+                      className="px-5 py-2.5 rounded-sm border border-zinc-800 text-white text-sm font-medium disabled:opacity-20 hover:border-zinc-700 hover:text-white transition-all">
                       &larr; Prev
                     </button>
                     {activeStep < steps.length - 1 ? (
@@ -380,7 +380,7 @@ export default function HowItWorksContent() {
                 </div>
 
                 {/* Right — Visual */}
-                <div className="bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 lg:p-10 flex items-center justify-center min-h-[300px] lg:min-h-[420px]">
+                <div className="bg-navy-light rounded-sm border border-zinc-800 p-5 sm:p-8 lg:p-10 flex items-center justify-center min-h-[300px] lg:min-h-[420px]">
                   <div className="w-full max-w-md">
                     <Visual />
                   </div>
@@ -444,9 +444,9 @@ export default function HowItWorksContent() {
             {included.map((item, i) => (
               <StaggerItem key={item.title} className={i === 0 ? "col-span-2" : i === 6 ? "col-span-2" : ""}>
                 <motion.div
-                  className="bg-navy-light rounded-sm border border-white/5 p-6 h-full group hover:border-gold/20 transition-colors"
+                  className="bg-navy-light rounded-sm border border-zinc-800 p-6 h-full group hover:border-gold/20 transition-colors"
                   whileHover={{ y: -4 }}>
-                  <div className="w-10 h-10 bg-white/10 rounded-sm flex items-center justify-center">{item.icon}</div>
+                  <div className="w-10 h-10 bg-zinc-800 rounded-sm flex items-center justify-center">{item.icon}</div>
                   <h3 className="text-white font-bold text-sm mt-3">{item.title}</h3>
                   <p className="text-white text-xs mt-1.5 leading-relaxed">{item.description}</p>
                 </motion.div>

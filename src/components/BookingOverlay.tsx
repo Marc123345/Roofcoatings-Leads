@@ -44,7 +44,7 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
 
           {/* Modal */}
           <motion.div
-            className="relative w-full max-w-2xl max-h-[90vh] bg-navy-light rounded-sm border border-white/10 overflow-hidden flex flex-col"
+            className="relative w-full max-w-2xl max-h-[90vh] bg-navy-light rounded-sm border border-zinc-800 overflow-hidden flex flex-col"
             initial={{ scale: 0.95, y: 20, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.95, y: 20, opacity: 0 }}
@@ -53,7 +53,7 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
             {/* Close button */}
             <button
               onClick={onClose}
-              className="absolute top-3 right-3 z-10 w-10 h-10 rounded-sm bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="absolute top-3 right-3 z-10 w-10 h-10 rounded-sm bg-zinc-800 flex items-center justify-center text-white hover:bg-zinc-800 transition-colors"
               aria-label="Close"
             >
               <X className="w-5 h-5" />

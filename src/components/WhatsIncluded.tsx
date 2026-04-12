@@ -146,7 +146,7 @@ export default function WhatsIncluded() {
                   >
                     <div className="flex items-center gap-4">
                       <div className={`w-11 h-11 rounded-sm flex items-center justify-center shrink-0 transition-colors ${
-                        isActive ? "bg-white/10 text-white" : `${c.bg} ${c.text}`
+                        isActive ? "bg-zinc-800 text-white" : `${c.bg} ${c.text}`
                       }`}>
                         {f.icon}
                       </div>
@@ -206,7 +206,7 @@ export default function WhatsIncluded() {
                       {feature.details.map((detail, i) => (
                         <motion.div
                           key={detail}
-                          className="flex items-start gap-3 bg-white/[0.04] rounded-sm p-3.5 border border-white/[0.06]"
+                          className="flex items-start gap-3 bg-zinc-900 rounded-sm p-3.5 border border-zinc-800"
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: i * 0.08 }}
@@ -220,7 +220,7 @@ export default function WhatsIncluded() {
                     </div>
                   </div>
 
-                  <div className="mt-8 flex items-center gap-3 bg-white/[0.04] rounded-sm p-4 border border-white/[0.06]">
+                  <div className="mt-8 flex items-center gap-3 bg-zinc-900 rounded-sm p-4 border border-zinc-800">
                     <div className="w-2 h-2 rounded-sm bg-green-400 animate-pulse" />
                     <span className="text-white text-sm">Included in your $2,000/mo plan — no extra cost</span>
                   </div>

@@ -56,7 +56,7 @@ export default function ROI() {
                   {oldWay.map((item, i) => (
                     <motion.div
                       key={item.label}
-                      className="flex justify-between items-center py-3 border-b border-white/5"
+                      className="flex justify-between items-center py-3 border-b border-zinc-800"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -91,7 +91,7 @@ export default function ROI() {
                   {newWay.map((item, i) => (
                     <motion.div
                       key={item.label}
-                      className="flex justify-between items-center py-3 border-b border-white/5"
+                      className="flex justify-between items-center py-3 border-b border-zinc-800"
                       initial={{ opacity: 0, x: 10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}

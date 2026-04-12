@@ -172,7 +172,7 @@ export default function Problem() {
           {LEAKS.map((leak, i) => (
             <AnimateIn key={leak.title} delay={0.1 + i * 0.1}>
               <motion.div
-                className="relative p-6 sm:p-8 rounded-sm border border-white/[0.06] bg-white/[0.02] h-full group"
+                className="relative p-6 sm:p-8 rounded-sm border border-zinc-800 bg-zinc-950 h-full group"
                 whileHover={{ borderColor: "rgba(239,68,68,0.25)", backgroundColor: "rgba(239,68,68,0.03)" }}
                 transition={{ duration: 0.3 }}
               >

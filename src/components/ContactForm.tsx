@@ -64,7 +64,7 @@ export default function ContactForm() {
             </AnimateIn>
 
             <AnimateIn delay={0.2}>
-              <div className="bg-navy-light rounded-sm border border-white/5 p-6">
+              <div className="bg-navy-light rounded-sm border border-zinc-800 p-6">
                 <h3 className="text-white font-bold text-sm mb-3">What happens next?</h3>
                 <div className="space-y-3">
                   {[
@@ -87,7 +87,7 @@ export default function ContactForm() {
           {/* Right — Tabbed Calendar + Contact Form */}
           <div className="lg:col-span-3">
             <AnimateIn delay={0.15}>
-              <div className="bg-navy-light rounded-sm border border-white/10 overflow-hidden">
+              <div className="bg-navy-light rounded-sm border border-zinc-800 overflow-hidden">
                 <div className="flex">
                   <button
                     onClick={() => setTab("book")}

@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 export default function DashboardMockup() {
   return (
     <div className="relative w-full max-w-xs sm:max-w-md mx-auto">
-      <div className="bg-navy-light rounded-sm border border-white/10 overflow-hidden border border-zinc-800">
+      <div className="bg-navy-light rounded-sm border border-zinc-800 overflow-hidden border border-zinc-800">
         {/* Title bar */}
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5">
+        <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800">
           <div className="w-3 h-3 rounded-sm bg-red-400" />
           <div className="w-3 h-3 rounded-sm bg-yellow-400" />
           <div className="w-3 h-3 rounded-sm bg-green-400" />
@@ -23,7 +23,7 @@ export default function DashboardMockup() {
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
-                className="bg-white/5 rounded-sm p-3 text-center"
+                className="bg-zinc-900 rounded-sm p-3 text-center"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -36,7 +36,7 @@ export default function DashboardMockup() {
           </div>
 
           {/* Chart area */}
-          <div className="bg-white/5 rounded-sm p-4">
+          <div className="bg-zinc-900 rounded-sm p-4">
             <div className="flex items-center justify-between mb-3">
               <span className="text-white text-xs">Lead Volume (30 days)</span>
               <span className="text-green-400 text-xs font-medium">+27%</span>
@@ -79,7 +79,7 @@ export default function DashboardMockup() {
             ].map((lead, i) => (
               <motion.div
                 key={lead.name}
-                className="flex items-center justify-between bg-white/5 rounded-sm px-3 py-2"
+                className="flex items-center justify-between bg-zinc-900 rounded-sm px-3 py-2"
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}

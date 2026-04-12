@@ -54,7 +54,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                 Get {area.state} Leads &rarr;
               </motion.a>
               <motion.a href="/results"
-                className="border border-white/20 text-white hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-sm font-bold text-sm sm:text-base w-full sm:w-auto text-center transition-all"
+                className="border border-zinc-700 text-white hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-sm font-bold text-sm sm:text-base w-full sm:w-auto text-center transition-all"
                 whileHover={{ scale: 1.03 }}>
                 See Win-Logs
               </motion.a>
@@ -63,15 +63,15 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
             {/* Quick stat strip */}
             <motion.div className="mt-12 flex justify-center gap-4 flex-wrap"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
-              <div className="bg-white/5 border border-white/10 rounded-sm px-5 py-3 text-center">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-sm px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">{area.caseStudy.stat}</p>
                 <p className="text-white text-[11px]">{area.caseStudy.statLabel}</p>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-sm px-5 py-3 text-center">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-sm px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">{area.cities.length}+</p>
                 <p className="text-white text-[11px]">cities covered</p>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-sm px-5 py-3 text-center">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-sm px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">&lt;48h</p>
                 <p className="text-white text-[11px]">to first lead</p>
               </div>
@@ -94,7 +94,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
             <div className="grid md:grid-cols-12 gap-4 lg:gap-6">
               {/* Climate — wide */}
               <AnimateIn className="md:col-span-7" delay={0.1}>
-                <motion.div className="bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-sm border border-zinc-800 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <CloudSun className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Climate &amp; Conditions</h3>
@@ -105,7 +105,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Building stock — narrow */}
               <AnimateIn className="md:col-span-5" delay={0.15}>
-                <motion.div className="bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-sm border border-zinc-800 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <Building2 className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Building Stock</h3>
@@ -116,7 +116,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Seasonal — narrow */}
               <AnimateIn className="md:col-span-5" delay={0.2}>
-                <motion.div className="bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-sm border border-zinc-800 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <CalendarDays className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Seasonal Patterns</h3>
@@ -127,7 +127,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
 
               {/* Local insight — wide */}
               <AnimateIn className="md:col-span-7" delay={0.25}>
-                <motion.div className="bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
+                <motion.div className="bg-navy-light rounded-sm border border-zinc-800 p-5 sm:p-8 h-full" whileHover={{ borderColor: "rgba(234,179,8,0.2)" }}>
                   <div className="flex items-center gap-3 mb-4">
                     <Lightbulb className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Local Insight</h3>
@@ -186,7 +186,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
             {area.cities.map((city) => (
               <StaggerItem key={city}>
                 <motion.div
-                  className="bg-navy-light rounded-sm p-4 text-center border border-white/5 hover:border-gold/20 transition-colors"
+                  className="bg-navy-light rounded-sm p-4 text-center border border-zinc-800 hover:border-gold/20 transition-colors"
                   whileHover={{ y: -3 }}>
                   <p className="text-white font-semibold">{city}</p>
                   <p className="text-white text-xs mt-0.5">{area.abbr}</p>

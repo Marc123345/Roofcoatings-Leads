@@ -94,7 +94,7 @@ function TargetingVisual() {
               {seg.pct}% match
             </motion.span>
           </div>
-          <div className="h-3 bg-white/10 rounded-sm overflow-hidden">
+          <div className="h-3 bg-zinc-800 rounded-sm overflow-hidden">
             <motion.div
               className="h-full bg-gradient-to-r from-blue-light to-gold rounded-sm"
               initial={{ width: 0 }}
@@ -139,7 +139,7 @@ function CostVisual() {
             >
               {p.highlight && (
                 <motion.div
-                  className="absolute inset-0 bg-white/20"
+                  className="absolute inset-0 bg-zinc-800"
                   animate={{ opacity: [0, 0.3, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
@@ -167,7 +167,7 @@ function TimelineVisual() {
     <div className="relative">
       {/* Connecting line */}
       <motion.div
-        className="absolute top-6 left-6 right-6 h-1 bg-white/10 rounded-sm"
+        className="absolute top-6 left-6 right-6 h-1 bg-zinc-800 rounded-sm"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 0.6 }}
@@ -193,7 +193,7 @@ function TimelineVisual() {
               className={`w-12 h-12 mx-auto rounded-sm flex items-center justify-center text-xl relative z-10 ${
                 i === 3
                   ? "bg-gold shadow-lg shadow-gold/40"
-                  : "bg-navy-light border-2 border-white/20"
+                  : "bg-navy-light border-2 border-zinc-700"
               }`}
               whileHover={{ scale: 1.15 }}
               animate={i === 3 ? { scale: [1, 1.1, 1] } : {}}
@@ -242,7 +242,7 @@ export default function WhyFacebookAds() {
         {/* Interactive Tab Selector */}
         <AnimateIn delay={0.2}>
           <div className="mt-12 flex justify-center">
-            <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-white/10">
+            <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-zinc-800">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -279,7 +279,7 @@ export default function WhyFacebookAds() {
               className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center"
             >
               {/* Left: stat + info */}
-              <div className="bg-navy-light rounded-sm p-5 sm:p-8 lg:p-10 border border-white/5">
+              <div className="bg-navy-light rounded-sm p-5 sm:p-8 lg:p-10 border border-zinc-800">
                 <motion.p
                   className="text-gold text-4xl sm:text-6xl lg:text-8xl font-bold"
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -297,15 +297,15 @@ export default function WhyFacebookAds() {
 
                 {/* Mini stats under description */}
                 <div className="mt-6 flex gap-4">
-                  <div className="bg-white/5 rounded-sm px-4 py-3 flex-1 text-center">
+                  <div className="bg-zinc-900 rounded-sm px-4 py-3 flex-1 text-center">
                     <p className="text-gold font-bold text-lg">$2k</p>
                     <p className="text-white text-xs">/month</p>
                   </div>
-                  <div className="bg-white/5 rounded-sm px-4 py-3 flex-1 text-center">
+                  <div className="bg-zinc-900 rounded-sm px-4 py-3 flex-1 text-center">
                     <p className="text-gold font-bold text-lg">24/7</p>
                     <p className="text-white text-xs">AI Booking</p>
                   </div>
-                  <div className="bg-white/5 rounded-sm px-4 py-3 flex-1 text-center">
+                  <div className="bg-zinc-900 rounded-sm px-4 py-3 flex-1 text-center">
                     <p className="text-gold font-bold text-lg">
                       <CountUp end={100} suffix="+" />
                     </p>
@@ -315,7 +315,7 @@ export default function WhyFacebookAds() {
               </div>
 
               {/* Right: interactive visual */}
-              <div className="bg-navy-light rounded-sm p-5 sm:p-8 lg:p-10 border border-white/5 min-h-[280px] lg:min-h-[360px] flex flex-col justify-center">
+              <div className="bg-navy-light rounded-sm p-5 sm:p-8 lg:p-10 border border-zinc-800 min-h-[280px] lg:min-h-[360px] flex flex-col justify-center">
                 {active.visual === "funnel" && <FunnelVisual />}
                 {active.visual === "targeting" && <TargetingVisual />}
                 {active.visual === "cost" && <CostVisual />}
@@ -334,7 +334,7 @@ export default function WhyFacebookAds() {
                 className={`w-full rounded-sm p-5 text-center transition-all duration-300 border ${
                   activeTab === tab.id
                     ? "bg-gold/10 border-gold/30"
-                    : "bg-white/[0.02] border-white/5 hover:bg-white/5 hover:border-white/10"
+                    : "bg-zinc-950 border-zinc-800 hover:bg-zinc-900 hover:border-zinc-800"
                 }`}
                 whileHover={{ y: -3 }}
               >

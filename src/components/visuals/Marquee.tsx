@@ -14,7 +14,7 @@ const items = [
 
 export default function Marquee() {
   return (
-    <div className="relative overflow-hidden py-4 bg-navy border-y border-white/[0.04]">
+    <div className="relative overflow-hidden py-4 bg-navy border-y border-zinc-800">
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-navy to-transparent z-10" />
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-navy to-transparent z-10" />
       <motion.div

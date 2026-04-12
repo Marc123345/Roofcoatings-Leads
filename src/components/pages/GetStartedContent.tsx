@@ -23,7 +23,7 @@ const faqs = [
 function BookingTabs() {
   const [tab, setTab] = useState<"book" | "contact">("book");
   return (
-    <div className="bg-navy-light rounded-sm border border-white/10 overflow-hidden">
+    <div className="bg-navy-light rounded-sm border border-zinc-800 overflow-hidden">
       {/* Tab bar */}
       <div className="flex">
         <button
@@ -167,7 +167,7 @@ export default function GetStartedContent() {
                 </AnimateIn>
 
                 <AnimateIn delay={0.2}>
-                  <div className="bg-navy-light rounded-sm border border-white/5 p-5">
+                  <div className="bg-navy-light rounded-sm border border-zinc-800 p-5">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-10 h-10 bg-gold/20 rounded-sm flex items-center justify-center text-gold font-bold text-sm">M</div>
                       <div>
@@ -231,7 +231,7 @@ export default function GetStartedContent() {
           <StaggerContainer className="space-y-4" staggerDelay={0.08}>
             {faqs.map((faq) => (
               <StaggerItem key={faq.q}>
-                <details className="group bg-navy-light rounded-sm border border-white/5 overflow-hidden">
+                <details className="group bg-navy-light rounded-sm border border-zinc-800 overflow-hidden">
                   <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
                     <span className="text-white font-semibold">{faq.q}</span>
                     <svg className="w-5 h-5 text-gold shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -239,7 +239,7 @@ export default function GetStartedContent() {
                     </svg>
                   </summary>
                   <div className="px-6 pb-5">
-                    <div className="h-px bg-white/5 mb-4" />
+                    <div className="h-px bg-zinc-900 mb-4" />
                     <p className="text-white text-sm leading-relaxed">{faq.a}</p>
                   </div>
                 </details>

@@ -153,7 +153,7 @@ export default function Testimonials() {
 
   return (
     <div ref={containerRef} id="testimonials" className="relative h-[150vh] sm:h-[200vh] lg:h-[300vh] bg-navy">
-      <div className="sticky top-0 h-[100dvh] flex flex-col justify-center overflow-hidden border-t border-white/5 pt-14 pb-2 sm:pt-16 sm:pb-4 lg:pt-20 lg:pb-0">
+      <div className="sticky top-0 h-[100dvh] flex flex-col justify-center overflow-hidden border-t border-zinc-800 pt-14 pb-2 sm:pt-16 sm:pb-4 lg:pt-20 lg:pb-0">
 
         {/* Header */}
         <div className="text-center mb-6 lg:mb-10 px-4">
@@ -168,7 +168,7 @@ export default function Testimonials() {
         <div className="max-w-[1400px] mx-auto w-full flex-1 min-h-0 flex gap-4 lg:gap-6 px-3 sm:px-5 lg:px-8">
 
           {/* LEFT: US Map Panel — desktop only */}
-          <div className="hidden lg:flex w-[420px] flex-col items-center justify-between py-8 px-6 text-white relative shrink-0 bg-navy-light rounded-sm border border-white/10">
+          <div className="hidden lg:flex w-[420px] flex-col items-center justify-between py-8 px-6 text-white relative shrink-0 bg-navy-light rounded-sm border border-zinc-800">
             <div className="text-center z-10">
               <p className="text-lg font-bold">
                 <span className="text-gold">Trusted</span> Across
@@ -208,7 +208,7 @@ export default function Testimonials() {
 
           {/* RIGHT: Testimonial Card */}
           <div
-            className="flex-1 bg-navy-light rounded-sm relative overflow-hidden flex flex-col min-w-0 border border-white/10"
+            className="flex-1 bg-navy-light rounded-sm relative overflow-hidden flex flex-col min-w-0 border border-zinc-800"
             style={{ minHeight: "clamp(320px, 55dvh, 620px)" }}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
@@ -225,7 +225,7 @@ export default function Testimonials() {
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  className="absolute bg-navy text-white flex flex-col rounded-sm border border-white/10"
+                  className="absolute bg-navy text-white flex flex-col rounded-sm border border-zinc-800"
                   style={{
                     width: "min(92%, 580px)",
                     maxHeight: "calc(100% - 2rem)",
@@ -237,7 +237,7 @@ export default function Testimonials() {
                   <div className="flex flex-col gap-5">
                     {/* Service tag */}
                     <div className="flex items-center gap-3">
-                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-sm text-white">
+                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-sm text-white">
                         {partner.service}
                       </span>
                       <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-gold/10 border border-gold/20 rounded-sm text-gold">
@@ -257,7 +257,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Author */}
-                    <div className="flex items-center gap-4 mt-auto pt-3 border-t border-white/5">
+                    <div className="flex items-center gap-4 mt-auto pt-3 border-t border-zinc-800">
                       <div>
                         <p className="text-white font-bold">{partner.name}</p>
                         <span className="inline-block bg-gold text-navy text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 mt-1">
@@ -271,7 +271,7 @@ export default function Testimonials() {
             </div>
 
             {/* Navigation strip */}
-            <div className="relative z-20 shrink-0 border-t border-white/5 bg-navy-light rounded-b-2xl">
+            <div className="relative z-20 shrink-0 border-t border-zinc-800 bg-navy-light rounded-b-2xl">
               {/* Mobile: dots */}
               <div className="flex lg:hidden items-center justify-between px-4 py-3">
                 <div className="flex items-center gap-2">

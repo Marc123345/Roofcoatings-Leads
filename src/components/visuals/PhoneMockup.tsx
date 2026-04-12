@@ -5,7 +5,7 @@ export default function PhoneMockup() {
   return (
     <div className="relative w-[220px] mx-auto">
       {/* Phone frame */}
-      <div className="bg-navy-light rounded-[2rem] border-2 border-white/10 p-2 border border-zinc-800">
+      <div className="bg-navy-light rounded-[2rem] border-2 border-zinc-800 p-2 border border-zinc-800">
         {/* Notch */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 bg-navy-light rounded-b-xl z-10" />
 
@@ -42,12 +42,12 @@ export default function PhoneMockup() {
               </p>
               <div className="flex gap-2 mt-2">
                 <div className="bg-blue text-white text-[11px] px-3 py-1 rounded-sm font-medium">Call Now</div>
-                <div className="bg-white/10 text-white text-[11px] px-3 py-1 rounded-sm">Details</div>
+                <div className="bg-zinc-800 text-white text-[11px] px-3 py-1 rounded-sm">Details</div>
               </div>
             </motion.div>
 
             <motion.div
-              className="bg-white/5 border border-white/5 rounded-sm p-3"
+              className="bg-zinc-900 border border-zinc-800 rounded-sm p-3"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -68,7 +68,7 @@ export default function PhoneMockup() {
             </motion.div>
 
             <motion.div
-              className="bg-white/5 border border-white/5 rounded-sm p-3"
+              className="bg-zinc-900 border border-zinc-800 rounded-sm p-3"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

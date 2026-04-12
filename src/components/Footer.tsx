@@ -35,7 +35,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy border-t border-white/[0.04]">
+    <footer className="bg-navy border-t border-zinc-800">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
@@ -55,7 +55,7 @@ export default function Footer() {
             {/* Contact info */}
             <div className="space-y-3">
               <a href="mailto:marcfriedmancm@roofcoatleads.com" className="flex items-center gap-3 text-white hover:text-gold transition-colors group">
-                <div className="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center group-hover:bg-gold/10 transition-colors shrink-0">
+                <div className="w-9 h-9 bg-zinc-900 rounded-sm flex items-center justify-center group-hover:bg-gold/10 transition-colors shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -63,7 +63,7 @@ export default function Footer() {
                 <span className="text-sm break-all">marcfriedmancm@roofcoatleads.com</span>
               </a>
               <a href="/get-started" className="flex items-center gap-3 text-white hover:text-gold transition-colors group">
-                <div className="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center group-hover:bg-gold/10 transition-colors shrink-0">
+                <div className="w-9 h-9 bg-zinc-900 rounded-sm flex items-center justify-center group-hover:bg-gold/10 transition-colors shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
@@ -102,7 +102,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/5">
+      <div className="border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <p className="text-white text-xs">

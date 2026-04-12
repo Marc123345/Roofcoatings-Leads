@@ -80,7 +80,7 @@ export default function CTA() {
 
         {/* Stats — large, spaced */}
         <AnimateIn delay={0.5}>
-          <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] rounded-sm overflow-hidden">
+          <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-zinc-900 rounded-sm overflow-hidden">
             {[
               { value: 100, suffix: "+", label: "Contractors" },
               { value: 1, prefix: "$", suffix: "k", label: "Per Month" },

@@ -153,13 +153,13 @@ export default function ComparisonTable() {
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-white/[0.03] border border-white/[0.06] rounded-sm py-3 px-2">
+              <div className="bg-zinc-950 border border-zinc-800 rounded-sm py-3 px-2">
                 <p className="text-white font-bold text-xs sm:text-sm">Google</p>
                 <p className="text-white text-xs">Self-serve</p>
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-white/[0.03] border border-white/[0.06] rounded-sm py-3 px-2">
+              <div className="bg-zinc-950 border border-zinc-800 rounded-sm py-3 px-2">
                 <p className="text-white font-bold text-xs sm:text-sm">HomeAdv.</p>
                 <p className="text-white text-xs">Per-lead</p>
               </div>
@@ -174,8 +174,8 @@ export default function ComparisonTable() {
               <motion.div
                 className={`rounded-sm border transition-all duration-300 cursor-pointer ${
                   expanded === i
-                    ? "bg-white/[0.04] border-white/10"
-                    : "bg-white/[0.02] border-white/[0.04] hover:bg-white/[0.04] hover:border-white/[0.08]"
+                    ? "bg-zinc-900 border-zinc-800"
+                    : "bg-zinc-950 border-zinc-800 hover:bg-zinc-900 hover:border-zinc-800"
                 }`}
                 onClick={() => setExpanded(expanded === i ? null : i)}
                 layout
@@ -183,7 +183,7 @@ export default function ComparisonTable() {
                 <div className="grid grid-cols-4 gap-1.5 sm:gap-3 items-center p-2.5 sm:p-4">
                   {/* Feature name */}
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="w-9 h-9 rounded-sm bg-white/[0.06] flex items-center justify-center text-white shrink-0 hidden sm:flex">
+                    <div className="w-9 h-9 rounded-sm bg-zinc-900 flex items-center justify-center text-white shrink-0 hidden sm:flex">
                       {feature.icon}
                     </div>
                     <div className="min-w-0">
@@ -218,7 +218,7 @@ export default function ComparisonTable() {
                       className="overflow-hidden"
                     >
                       <div className="px-4 pb-4 pt-0">
-                        <div className="h-px bg-white/[0.06] mb-3" />
+                        <div className="h-px bg-zinc-900 mb-3" />
                         <p className="text-white text-sm">{feature.description}</p>
                       </div>
                     </motion.div>

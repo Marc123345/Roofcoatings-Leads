@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { BarChart3, Wallet, MapPin, CloudSun } from "lucide-react";
 import AnimateIn, { StaggerContainer, StaggerItem } from "./AnimateIn";
 
-const sliderClass = "w-full h-3 appearance-none cursor-pointer rounded-sm bg-white/10 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-11 [&::-webkit-slider-thumb]:h-11 [[&::-webkit-slider-thumb]:rounded-none::-webkit-slider-thumb]:rounded-sm [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing [&::-moz-range-thumb]:w-11 [&::-moz-range-thumb]:h-11 [[&::-moz-range-thumb]:rounded-none::-moz-range-thumb]:rounded-sm [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab";
+const sliderClass = "w-full h-3 appearance-none cursor-pointer rounded-sm bg-zinc-800 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-11 [&::-webkit-slider-thumb]:h-11 [[&::-webkit-slider-thumb]:rounded-none::-webkit-slider-thumb]:rounded-sm [&::-webkit-slider-thumb]:bg-gold [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-gold/40 [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-navy-light [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing [&::-moz-range-thumb]:w-11 [&::-moz-range-thumb]:h-11 [[&::-moz-range-thumb]:rounded-none::-moz-range-thumb]:rounded-sm [&::-moz-range-thumb]:bg-gold [&::-moz-range-thumb]:border-4 [&::-moz-range-thumb]:border-navy-light [&::-moz-range-thumb]:cursor-grab";
 
 export default function Scalability() {
   const [leads, setLeads] = useState(25);
@@ -54,7 +54,7 @@ export default function Scalability() {
           <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-6">
 
             {/* LEFT — Inputs */}
-            <div className="lg:col-span-2 bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 space-y-8">
+            <div className="lg:col-span-2 bg-navy-light rounded-sm border border-zinc-800 p-5 sm:p-8 space-y-8">
               <h3 className="text-white font-bold text-lg">Your Inputs</h3>
 
               {/* Leads per month */}
@@ -121,7 +121,7 @@ export default function Scalability() {
                 <motion.div
                   key={`spend-${calc.adSpend}`}
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                  className="bg-navy-light rounded-sm border border-white/10 p-6"
+                  className="bg-navy-light rounded-sm border border-zinc-800 p-6"
                 >
                   <p className="text-white text-xs mb-1">Monthly Ad Spend</p>
                   <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">{formatCurrency(calc.adSpend)}</p>
@@ -130,7 +130,7 @@ export default function Scalability() {
                 <motion.div
                   key={`jobs-${calc.jobsClosed}`}
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                  className="bg-navy-light rounded-sm border border-white/10 p-6"
+                  className="bg-navy-light rounded-sm border border-zinc-800 p-6"
                 >
                   <p className="text-white text-xs mb-1">Jobs Closed</p>
                   <p className="text-green-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{calc.jobsClosed}</p>
@@ -164,9 +164,9 @@ export default function Scalability() {
                       <span className="text-white">Ad spend</span>
                       <span className="text-white font-medium">{formatCurrency(calc.adSpend)}</span>
                     </div>
-                    <div className="h-3 bg-white/5 rounded-sm overflow-hidden">
+                    <div className="h-3 bg-zinc-900 rounded-sm overflow-hidden">
                       <motion.div
-                        className="h-full bg-white/20 rounded-sm"
+                        className="h-full bg-zinc-800 rounded-sm"
                         animate={{ width: `${Math.min((calc.adSpend / calc.revenue) * 100, 100)}%` }}
                         transition={{ duration: 0.4 }}
                       />
@@ -177,7 +177,7 @@ export default function Scalability() {
                       <span className="text-white">Revenue</span>
                       <span className="text-green-400 font-medium">{formatCurrency(calc.revenue)}</span>
                     </div>
-                    <div className="h-3 bg-white/5 rounded-sm overflow-hidden">
+                    <div className="h-3 bg-zinc-900 rounded-sm overflow-hidden">
                       <motion.div
                         className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-sm"
                         animate={{ width: "100%" }}
@@ -202,7 +202,7 @@ export default function Scalability() {
                 <motion.div
                   key={`profit-${calc.profit}`}
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                  className="bg-navy-light rounded-sm border border-white/10 p-6 text-center"
+                  className="bg-navy-light rounded-sm border border-zinc-800 p-6 text-center"
                 >
                   <p className="text-white text-xs mb-1">Net Profit</p>
                   <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">{formatCurrency(calc.profit)}</p>
@@ -222,7 +222,7 @@ export default function Scalability() {
           ].map((f) => (
             <StaggerItem key={f.title}>
               <motion.div
-                className="bg-navy-light rounded-sm border border-white/5 p-5 text-center group hover:border-gold/20 transition-colors"
+                className="bg-navy-light rounded-sm border border-zinc-800 p-5 text-center group hover:border-gold/20 transition-colors"
                 whileHover={{ y: -4 }}
               >
                 <div className="flex justify-center">{f.icon}</div>

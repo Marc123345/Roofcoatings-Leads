@@ -104,12 +104,12 @@ function CampaignBreakdown({ niche }: { niche: typeof niches[0] }) {
     <div className="space-y-3">
       {rows.map((row, i) => (
         <motion.div key={row.label}
-          className="bg-white/5 border border-white/5 rounded-sm p-4"
+          className="bg-zinc-900 border border-zinc-800 rounded-sm p-4"
           initial={{ opacity: 0, x: -15 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.15 + i * 0.1 }}>
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 bg-white/10 rounded-sm flex items-center justify-center shrink-0">{row.icon}</div>
+            <div className="w-8 h-8 bg-zinc-800 rounded-sm flex items-center justify-center shrink-0">{row.icon}</div>
             <div className="min-w-0">
               <p className="text-white text-[11px] uppercase tracking-wider mb-0.5">{row.label}</p>
               <p className="text-white text-sm leading-relaxed">{row.value}</p>
@@ -185,7 +185,7 @@ export default function NicheExpertiseContent() {
 
             {/* Tab selector */}
             <div className="flex justify-center mb-8 sm:mb-14">
-              <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
+              <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-zinc-800 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {niches.map((n, i) => (
                   <button key={n.id} onClick={() => setActiveIdx(i)}
                     className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-sm text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white hover:text-white"}`}>
@@ -218,7 +218,7 @@ export default function NicheExpertiseContent() {
                     <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 lg:p-10">
                       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                         <div>
-                          <motion.div className={`inline-flex items-center justify-center w-14 h-14 bg-white/10 rounded-sm mb-3 text-white`}
+                          <motion.div className={`inline-flex items-center justify-center w-14 h-14 bg-zinc-800 rounded-sm mb-3 text-white`}
                             animate={{ rotate: [0, 5, -5, 0] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
                             {niche.icon}
@@ -229,7 +229,7 @@ export default function NicheExpertiseContent() {
 
                         <div className="flex gap-3 shrink-0">
                           {niche.stats.map((stat) => (
-                            <div key={stat.label} className="bg-navy/80 border border-white/10 rounded-sm px-4 py-3 text-center min-w-[80px]">
+                            <div key={stat.label} className="bg-navy/80 border border-zinc-800 rounded-sm px-4 py-3 text-center min-w-[80px]">
                               <p className="text-gold text-xl font-bold">{stat.value}</p>
                               <p className="text-white text-[11px]">{stat.label}</p>
                             </div>
@@ -244,7 +244,7 @@ export default function NicheExpertiseContent() {
                 <div className="grid lg:grid-cols-3 gap-6">
 
                   {/* Description + Job Value */}
-                  <div className="bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 flex flex-col">
+                  <div className="bg-navy-light rounded-sm border border-zinc-800 p-5 sm:p-8 flex flex-col">
                     <h3 className="text-white font-bold text-xl mb-4">Why This Niche</h3>
                     <p className="text-white leading-relaxed flex-1">{niche.description}</p>
 
@@ -256,7 +256,7 @@ export default function NicheExpertiseContent() {
                   </div>
 
                   {/* Campaign Breakdown */}
-                  <div className="lg:col-span-2 bg-navy-light rounded-sm border border-white/10 p-4 sm:p-6 lg:p-8">
+                  <div className="lg:col-span-2 bg-navy-light rounded-sm border border-zinc-800 p-4 sm:p-6 lg:p-8">
                     <h3 className="text-white font-bold text-xl mb-5">Campaign Breakdown</h3>
                     <CampaignBreakdown niche={niche} />
 
