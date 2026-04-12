@@ -3,16 +3,57 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shield } from "lucide-react";
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
 export default function ConsentBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const consent = localStorage.getItem("roofcoat-consent");
-    if (!consent) setVisible(true);
+
+    // Set default consent state (denied until user accepts)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) { window.dataLayer.push(args); }
+
+    if (consent === "accepted") {
+      // User already accepted — grant all
+      gtag("consent", "update", {
+        ad_user_data: "granted",
+        ad_personalization: "granted",
+        ad_storage: "granted",
+        analytics_storage: "granted",
+      });
+    } else {
+      // Default: deny until consent
+      gtag("consent", "default", {
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 500,
+      });
+      setVisible(true);
+    }
   }, []);
 
   const accept = () => {
     localStorage.setItem("roofcoat-consent", "accepted");
+
+    // Update consent to granted
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) { window.dataLayer.push(args); }
+    gtag("consent", "update", {
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      ad_storage: "granted",
+      analytics_storage: "granted",
+    });
+
     setVisible(false);
   };
 
@@ -33,7 +74,7 @@ export default function ConsentBanner() {
               <a href="/privacy" className="text-gold hover:underline">Privacy Policy</a>
               {" "}and{" "}
               <a href="/terms" className="text-gold hover:underline">Terms of Service</a>.
-              We use cookies to improve your experience.
+              We use cookies for analytics and to improve your experience.
             </p>
             <button
               onClick={accept}
