@@ -7,6 +7,7 @@ const footerLinks = [
       { label: "How It Works", href: "/how-it-works" },
       { label: "Results", href: "/results" },
       { label: "Niche Expertise", href: "/niche-expertise" },
+      { label: "Manufacturers", href: "/manufacturers" },
       { label: "Get Started", href: "/get-started" },
     ],
   },
@@ -106,9 +107,13 @@ export default function Footer() {
           <p className="text-white/80 text-xs">
             &copy; {new Date().getFullYear()} RoofCoat Leads. All rights reserved.
           </p>
-          <p className="text-white/70 text-xs font-medium">
-            Proven System. No Contracts. Just Results.
-          </p>
+          <div className="flex items-center gap-4">
+            <a href="/sitemap.xml" className="text-white/40 hover:text-gold text-xs transition-colors">Sitemap</a>
+            <span className="text-white/20">|</span>
+            <p className="text-white/70 text-xs font-medium">
+              Proven System. No Contracts. Just Results.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
