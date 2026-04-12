@@ -31,7 +31,7 @@ export default function Header() {
         transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-navy/80 backdrop-blur-xl border-b border-white/[0.04] shadow-[0_1px_3px_rgba(0,0,0,0.3)]"
+            ? "bg-navy/80 border-b border-white/[0.04] shadow-[0_1px_3px_rgba(0,0,0,0.3)]"
             : "bg-transparent"
         }`}
       >
@@ -65,7 +65,7 @@ export default function Header() {
               ))}
               <motion.button
                 onClick={() => setOverlayOpen(true)}
-                className="relative bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-2.5 rounded-xl font-bold text-sm overflow-hidden group shadow-lg shadow-gold/20 cursor-pointer"
+                className="relative bg-gold text-navy px-6 py-2.5 rounded-sm font-bold text-sm overflow-hidden group  cursor-pointer"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.7 }}
@@ -118,7 +118,7 @@ export default function Header() {
                   ))}
                   <button
                     onClick={() => { setMobileOpen(false); setOverlayOpen(true); }}
-                    className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-5 py-2.5 rounded-xl font-bold text-sm text-center cursor-pointer"
+                    className="bg-gold text-navy px-5 py-2.5 rounded-sm font-bold text-sm text-center cursor-pointer"
                   >
                     Book a Free Call
                   </button>

@@ -85,11 +85,11 @@ const ExpandingPanel = memo(function ExpandingPanel() {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: idx * 0.05 }}
-            className="flex items-center gap-3 p-3 border border-white/10 rounded-xl hover:border-gold/30 hover:bg-gold/5 transition-colors group"
+            className="flex items-center gap-3 p-3 border border-white/10 rounded-sm hover:border-gold/30 hover:bg-gold/5 transition-colors group"
           >
             <span className="text-gold font-bold text-sm w-8">{state.abbr}</span>
             <span className="text-white font-medium text-sm group-hover:text-white transition-colors">{state.name}</span>
-            <span className="ml-auto text-[9px] uppercase tracking-wider px-2 py-1 bg-green-500/10 text-green-400 rounded-lg font-bold">Coming Soon</span>
+            <span className="ml-auto text-[9px] uppercase tracking-wider px-2 py-1 bg-green-500/10 text-green-400 rounded-sm font-bold">Coming Soon</span>
           </motion.div>
         ))}
       </div>
@@ -121,14 +121,14 @@ const DetailPanel = memo(function DetailPanel({ active }: { active: StateData | 
                 {active.name}
               </h3>
               <div className="flex items-center gap-3 flex-wrap">
-                <span className={`px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-lg border ${
+                <span className={`px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-sm border ${
                   active.maturity === "High Demand"
                     ? "border-gold/40 text-gold bg-gold/10"
                     : "border-white/10 text-white bg-white/5"
                 }`}>
                   {active.maturity}
                 </span>
-                <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-lg border border-green-500/30 text-green-400 bg-green-500/10">
+                <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-sm border border-green-500/30 text-green-400 bg-green-500/10">
                   {active.growth} YoY
                 </span>
               </div>
@@ -147,7 +147,7 @@ const DetailPanel = memo(function DetailPanel({ active }: { active: StateData | 
             </div>
 
             {/* Stat highlight */}
-            <div className="flex items-center gap-4 bg-gold/10 border border-gold/20 rounded-xl px-5 py-4">
+            <div className="flex items-center gap-4 bg-gold/10 border border-gold/20 rounded-sm px-5 py-4">
               <span className="text-gold text-3xl font-bold">{active.stat}</span>
               <span className="text-white text-sm">{active.statLabel}</span>
             </div>
@@ -218,10 +218,10 @@ export default function ServiceAreasMap() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10 lg:mb-16">
-          <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-5">
+          <div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-5">
             <span className="text-gold text-xs font-bold uppercase tracking-widest">Service Areas</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-white uppercase tracking-tighter">
             Hyper-Local Leads.{" "}
             <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent">
               Your Territory.
@@ -229,7 +229,7 @@ export default function ServiceAreasMap() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-0 rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-black/20">
+        <div className="grid lg:grid-cols-12 gap-0 rounded-sm border border-white/10 overflow-hidden border border-zinc-800 shadow-black/20">
 
           {/* LEFT: Map */}
           <div className="lg:col-span-7 bg-navy-light relative p-6 sm:p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-white/10 overflow-hidden">
@@ -250,11 +250,11 @@ export default function ServiceAreasMap() {
             {/* Legend */}
             <div className="mt-4 flex items-center justify-center gap-6">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-gold" />
+                <div className="w-3 h-3 rounded-sm bg-gold" />
                 <span className="text-[10px] uppercase tracking-widest text-white font-bold">Active</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-blue" />
+                <div className="w-3 h-3 rounded-sm bg-blue" />
                 <span className="text-[10px] uppercase tracking-widest text-white font-bold">Available</span>
               </div>
             </div>
@@ -266,7 +266,7 @@ export default function ServiceAreasMap() {
             {/* Search */}
             {!isExpanding && (
               <div ref={searchRef} className="relative mb-8">
-                <div className="bg-white/[0.03] border border-white/10 rounded-xl p-4 hover:border-gold/30 transition-colors">
+                <div className="bg-white/[0.03] border border-white/10 rounded-sm p-4 hover:border-gold/30 transition-colors">
                   <label className="block text-[10px] uppercase tracking-[0.25em] font-bold text-white mb-3">
                     Search Markets
                   </label>
@@ -296,7 +296,7 @@ export default function ServiceAreasMap() {
                         initial={{ opacity: 0, y: -8 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -8 }}
-                        className="absolute left-0 right-0 top-full mt-2 bg-navy-light border border-white/10 rounded-xl shadow-xl z-50 overflow-hidden"
+                        className="absolute left-0 right-0 top-full mt-2 bg-navy-light border border-white/10 rounded-sm border border-zinc-800 z-50 overflow-hidden"
                       >
                         {results.map((s) => (
                           <button
@@ -323,7 +323,7 @@ export default function ServiceAreasMap() {
               <h6 className="text-gold text-xs font-bold uppercase tracking-[0.25em] mb-3">
                 {isExpanding ? "Expanding" : "Proven Footprint"}
               </h6>
-              <h2 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
+              <h2 className="text-2xl lg:text-3xl font-black text-white leading-tight uppercase tracking-tighter">
                 {isExpanding ? (
                   <>New markets <span className="text-gold">launching soon</span>.</>
                 ) : (
@@ -348,7 +348,7 @@ export default function ServiceAreasMap() {
               {isExpanding ? (
                 <a
                   href="/service-areas"
-                  className="group w-full flex items-center justify-between bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-gold/20 transition-all"
+                  className="group w-full flex items-center justify-between bg-gold text-navy px-6 py-4 rounded-sm font-bold text-sm hover:shadow-lg hover:shadow-gold/20 transition-all"
                 >
                   <span className="uppercase tracking-[0.15em]">View All Service Areas</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -356,7 +356,7 @@ export default function ServiceAreasMap() {
               ) : (
                 <button
                   onClick={() => setIsExpanding(true)}
-                  className="group w-full flex items-center justify-between bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-gold/20 transition-all"
+                  className="group w-full flex items-center justify-between bg-gold text-navy px-6 py-4 rounded-sm font-bold text-sm hover:shadow-lg hover:shadow-gold/20 transition-all"
                 >
                   <span className="uppercase tracking-[0.15em]">See Expanding Markets</span>
                   <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />

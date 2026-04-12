@@ -46,11 +46,11 @@ function FunnelVisual() {
       {[
         { label: "Shared Lead Platforms", users: "5+ contractors see it", w: "100%", bg: "bg-red-500/80", text: "text-red-100" },
         { label: "Google Ads", users: "3-4 competitors bidding", w: "75%", bg: "bg-orange-500/80", text: "text-orange-100" },
-        { label: "RoofCoat Leads", users: "Pre-qualified for you", w: "40%", bg: "bg-gradient-to-r from-gold to-yellow-400", text: "text-navy" },
+        { label: "RoofCoat Leads", users: "Pre-qualified for you", w: "40%", bg: "bg-gold", text: "text-navy" },
       ].map((step, i) => (
         <motion.div
           key={step.label}
-          className={`${step.bg} rounded-xl px-5 py-3 flex items-center justify-between ${step.text}`}
+          className={`${step.bg} rounded-sm px-5 py-3 flex items-center justify-between ${step.text}`}
           style={{ width: step.w, marginLeft: "auto", marginRight: "auto" }}
           initial={{ scaleX: 0, opacity: 0 }}
           animate={{ scaleX: 1, opacity: 1 }}
@@ -94,9 +94,9 @@ function TargetingVisual() {
               {seg.pct}% match
             </motion.span>
           </div>
-          <div className="h-3 bg-white/10 rounded-2xl overflow-hidden">
+          <div className="h-3 bg-white/10 rounded-sm overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-blue-light to-gold rounded-xl"
+              className="h-full bg-gradient-to-r from-blue-light to-gold rounded-sm"
               initial={{ width: 0 }}
               animate={{ width: `${seg.pct}%` }}
               transition={{ duration: 1, delay: seg.delay, ease: "easeOut" }}
@@ -167,14 +167,14 @@ function TimelineVisual() {
     <div className="relative">
       {/* Connecting line */}
       <motion.div
-        className="absolute top-6 left-6 right-6 h-1 bg-white/10 rounded-xl"
+        className="absolute top-6 left-6 right-6 h-1 bg-white/10 rounded-sm"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 0.6 }}
         style={{ transformOrigin: "left" }}
       />
       <motion.div
-        className="absolute top-6 left-6 h-1 bg-gradient-to-r from-blue-light via-gold to-gold rounded-xl"
+        className="absolute top-6 left-6 h-1 bg-gradient-to-r from-blue-light via-gold to-gold rounded-sm"
         initial={{ width: 0 }}
         animate={{ width: "calc(100% - 48px)" }}
         transition={{ duration: 2, delay: 0.5, ease: "easeInOut" }}
@@ -190,7 +190,7 @@ function TimelineVisual() {
             transition={{ delay: 0.3 + i * 0.3 }}
           >
             <motion.div
-              className={`w-12 h-12 mx-auto rounded-xl flex items-center justify-center text-xl relative z-10 ${
+              className={`w-12 h-12 mx-auto rounded-sm flex items-center justify-center text-xl relative z-10 ${
                 i === 3
                   ? "bg-gold shadow-lg shadow-gold/40"
                   : "bg-navy-light border-2 border-white/20"
@@ -218,8 +218,8 @@ export default function WhyFacebookAds() {
   return (
     <section className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern" />
-      <div className="absolute top-0 right-0 hidden sm:block w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-blue/5 rounded-xl blur-[100px]" />
-      <div className="absolute bottom-0 left-0 hidden sm:block w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-gold/3 rounded-xl blur-[80px]" />
+      <div className="absolute top-0 right-0 hidden sm:block w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-blue/5 rounded-sm blur-[100px]" />
+      <div className="absolute bottom-0 left-0 hidden sm:block w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-gold/3 rounded-sm blur-[80px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateIn>
@@ -242,12 +242,12 @@ export default function WhyFacebookAds() {
         {/* Interactive Tab Selector */}
         <AnimateIn delay={0.2}>
           <div className="mt-12 flex justify-center">
-            <div className="inline-flex bg-navy-light rounded-xl p-1.5 border border-white/10">
+            <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-white/10">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${
+                  className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-sm text-xs sm:text-sm font-semibold transition-all duration-300 ${
                     activeTab === tab.id
                       ? "text-navy"
                       : "text-white hover:text-white"
@@ -255,7 +255,7 @@ export default function WhyFacebookAds() {
                 >
                   {activeTab === tab.id && (
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-gold to-yellow-400 rounded-xl"
+                      className="absolute inset-0 bg-gold rounded-sm"
                       layoutId="activeTab"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
                     />
@@ -279,7 +279,7 @@ export default function WhyFacebookAds() {
               className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center"
             >
               {/* Left: stat + info */}
-              <div className="bg-navy-light rounded-2xl p-5 sm:p-8 lg:p-10 border border-white/5">
+              <div className="bg-navy-light rounded-sm p-5 sm:p-8 lg:p-10 border border-white/5">
                 <motion.p
                   className="text-gold text-4xl sm:text-6xl lg:text-8xl font-bold"
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -297,15 +297,15 @@ export default function WhyFacebookAds() {
 
                 {/* Mini stats under description */}
                 <div className="mt-6 flex gap-4">
-                  <div className="bg-white/5 rounded-xl px-4 py-3 flex-1 text-center">
+                  <div className="bg-white/5 rounded-sm px-4 py-3 flex-1 text-center">
                     <p className="text-gold font-bold text-lg">$2k</p>
                     <p className="text-white text-xs">/month</p>
                   </div>
-                  <div className="bg-white/5 rounded-xl px-4 py-3 flex-1 text-center">
+                  <div className="bg-white/5 rounded-sm px-4 py-3 flex-1 text-center">
                     <p className="text-gold font-bold text-lg">24/7</p>
                     <p className="text-white text-xs">AI Booking</p>
                   </div>
-                  <div className="bg-white/5 rounded-xl px-4 py-3 flex-1 text-center">
+                  <div className="bg-white/5 rounded-sm px-4 py-3 flex-1 text-center">
                     <p className="text-gold font-bold text-lg">
                       <CountUp end={100} suffix="+" />
                     </p>
@@ -315,7 +315,7 @@ export default function WhyFacebookAds() {
               </div>
 
               {/* Right: interactive visual */}
-              <div className="bg-navy-light rounded-2xl p-5 sm:p-8 lg:p-10 border border-white/5 min-h-[280px] lg:min-h-[360px] flex flex-col justify-center">
+              <div className="bg-navy-light rounded-sm p-5 sm:p-8 lg:p-10 border border-white/5 min-h-[280px] lg:min-h-[360px] flex flex-col justify-center">
                 {active.visual === "funnel" && <FunnelVisual />}
                 {active.visual === "targeting" && <TargetingVisual />}
                 {active.visual === "cost" && <CostVisual />}
@@ -331,7 +331,7 @@ export default function WhyFacebookAds() {
             <StaggerItem key={tab.id}>
               <motion.button
                 onClick={() => setActiveTab(tab.id)}
-                className={`w-full rounded-2xl p-5 text-center transition-all duration-300 border ${
+                className={`w-full rounded-sm p-5 text-center transition-all duration-300 border ${
                   activeTab === tab.id
                     ? "bg-gold/10 border-gold/30"
                     : "bg-white/[0.02] border-white/5 hover:bg-white/5 hover:border-white/10"

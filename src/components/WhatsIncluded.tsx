@@ -107,12 +107,12 @@ export default function WhatsIncluded() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-16">
           <AnimateIn>
-            <div className="inline-flex items-center gap-2 bg-blue/5 border border-blue/10 rounded-full px-4 py-1.5 mb-6">
+            <div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-6">
               <span className="text-blue text-xs font-bold uppercase tracking-widest">What&apos;s Included</span>
             </div>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-navy uppercase tracking-tighter">
               Everything You Need to Grow
             </h2>
           </AnimateIn>
@@ -136,16 +136,16 @@ export default function WhatsIncluded() {
                   <motion.button
                     key={f.id}
                     onClick={() => setActiveFeature(i)}
-                    className={`w-full text-left rounded-2xl p-4 sm:p-5 transition-all duration-300 border ${
+                    className={`w-full text-left rounded-sm p-4 sm:p-5 transition-all duration-300 border ${
                       isActive
-                        ? `bg-navy text-white border-navy shadow-xl shadow-navy/20`
+                        ? `bg-navy text-white border-navy border border-zinc-800 shadow-navy/20`
                         : `bg-white border-gray-light/80 hover:border-blue/20 hover:shadow-md`
                     }`}
                     whileHover={!isActive ? { y: -2 } : {}}
                     layout
                   >
                     <div className="flex items-center gap-4">
-                      <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                      <div className={`w-11 h-11 rounded-sm flex items-center justify-center shrink-0 transition-colors ${
                         isActive ? "bg-white/10 text-white" : `${c.bg} ${c.text}`
                       }`}>
                         {f.icon}
@@ -182,10 +182,10 @@ export default function WhatsIncluded() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -12 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-navy rounded-2xl p-6 sm:p-8 lg:p-10 h-full flex flex-col"
+                  className="bg-navy rounded-sm p-6 sm:p-8 lg:p-10 h-full flex flex-col"
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-white ${
+                    <div className={`w-14 h-14 rounded-sm flex items-center justify-center text-white ${
                       `bg-gradient-to-br ${feature.color === "blue" ? "from-blue to-blue-light" : feature.color === "gold" ? "from-gold to-yellow-500" : feature.color === "green" ? "from-green-500 to-green-600" : "from-navy-light to-navy"}`
                     } shadow-lg`}>
                       {feature.icon}
@@ -206,12 +206,12 @@ export default function WhatsIncluded() {
                       {feature.details.map((detail, i) => (
                         <motion.div
                           key={detail}
-                          className="flex items-start gap-3 bg-white/[0.04] rounded-xl p-3.5 border border-white/[0.06]"
+                          className="flex items-start gap-3 bg-white/[0.04] rounded-sm p-3.5 border border-white/[0.06]"
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: i * 0.08 }}
                         >
-                          <div className="w-5 h-5 rounded-2xl bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-5 h-5 rounded-sm bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                             <Check className="w-3 h-3 text-gold" />
                           </div>
                           <span className="text-white text-sm">{detail}</span>
@@ -220,8 +220,8 @@ export default function WhatsIncluded() {
                     </div>
                   </div>
 
-                  <div className="mt-8 flex items-center gap-3 bg-white/[0.04] rounded-2xl p-4 border border-white/[0.06]">
-                    <div className="w-2 h-2 rounded-2xl bg-green-400 animate-pulse" />
+                  <div className="mt-8 flex items-center gap-3 bg-white/[0.04] rounded-sm p-4 border border-white/[0.06]">
+                    <div className="w-2 h-2 rounded-sm bg-green-400 animate-pulse" />
                     <span className="text-white text-sm">Included in your $2,000/mo plan — no extra cost</span>
                   </div>
                 </motion.div>
@@ -234,7 +234,7 @@ export default function WhatsIncluded() {
         <div className="mt-16 sm:mt-20">
           <AnimateIn>
             <div className="text-center mb-8 sm:mb-12">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-navy">Simple, Transparent Pricing</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-navy uppercase tracking-tighter">Simple, Transparent Pricing</h3>
               <p className="mt-2 text-navy/60">One plan. Optional add-ons. Cancel anytime.</p>
             </div>
           </AnimateIn>
@@ -243,11 +243,11 @@ export default function WhatsIncluded() {
             {/* Core plan */}
             <StaggerItem className="md:col-span-1">
               <motion.div
-                className="bg-navy rounded-2xl p-6 sm:p-8 text-center relative overflow-hidden h-full flex flex-col"
+                className="bg-navy rounded-sm p-6 sm:p-8 text-center relative overflow-hidden h-full flex flex-col"
                 whileHover={{ y: -4 }}
               >
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold to-yellow-400" />
-                <div className="inline-flex items-center gap-1.5 bg-gold/20 rounded-full px-3 py-1 mx-auto mb-6">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gold" />
+                <div className="inline-flex items-center gap-1.5 bg-gold/20 rounded-sm px-3 py-1 mx-auto mb-6">
                   <span className="text-gold text-[11px] font-bold uppercase tracking-wider">Most Popular</span>
                 </div>
                 <p className="text-white text-sm mb-2">Core Lead System</p>
@@ -264,7 +264,7 @@ export default function WhatsIncluded() {
                   ))}
                 </div>
                 <motion.a href="/get-started"
-                  className="mt-8 w-full bg-gradient-to-r from-gold to-yellow-400 text-navy py-3.5 rounded-xl font-bold text-sm text-center block"
+                  className="mt-8 w-full bg-gold text-navy py-3.5 rounded-sm font-bold text-sm text-center block"
                   whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   Book a Free Call &rarr;
                 </motion.a>
@@ -275,10 +275,10 @@ export default function WhatsIncluded() {
             {addOns.map((addon) => (
               <StaggerItem key={addon.title}>
                 <motion.div
-                  className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-light/80 text-center h-full flex flex-col"
+                  className="bg-white rounded-sm p-6 sm:p-8 border border-gray-light/80 text-center h-full flex flex-col"
                   whileHover={{ y: -4, borderColor: "rgba(37,99,235,0.2)", boxShadow: "0 12px 40px rgba(0,0,0,0.06)" }}
                 >
-                  <div className="w-14 h-14 bg-navy/5 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <div className="w-14 h-14 bg-navy/5 rounded-sm flex items-center justify-center mx-auto mb-6">
                     {addon.icon}
                   </div>
                   <p className="text-navy/60 text-sm mb-2">Add-On</p>
@@ -297,7 +297,7 @@ export default function WhatsIncluded() {
                     ))}
                   </div>
                   <motion.a href="/get-started"
-                    className="mt-8 w-full border-2 border-navy/10 text-navy py-3.5 rounded-xl font-bold text-sm text-center block hover:border-blue/30 hover:bg-blue/5 transition-all"
+                    className="mt-8 w-full border-2 border-navy/10 text-navy py-3.5 rounded-sm font-bold text-sm text-center block hover:border-blue/30 hover:bg-blue/5 transition-all"
                     whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     Add to Plan &rarr;
                   </motion.a>

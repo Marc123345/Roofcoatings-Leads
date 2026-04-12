@@ -72,7 +72,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4, delay: (index % 6) * 0.05 }}
-      className="bg-navy-light border border-white/[0.06] rounded-xl p-5 sm:p-6 flex flex-col gap-3 hover:border-gold/20 transition-colors duration-300"
+      className="bg-navy-light border border-white/[0.06] rounded-sm p-5 sm:p-6 flex flex-col gap-3 hover:border-gold/20 transition-colors duration-300"
     >
       {/* Stars */}
       <div className="flex gap-0.5">
@@ -88,7 +88,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
 
       {/* Stat highlight */}
       {review.stat && (
-        <div className="flex items-center gap-2 bg-gold/[0.06] border border-gold/15 rounded-lg px-3 py-1.5 self-start">
+        <div className="flex items-center gap-2 bg-gold/[0.06] border border-gold/15 rounded-sm px-3 py-1.5 self-start">
           <span className="text-gold text-sm font-bold">{review.stat}</span>
           <span className="text-white text-xs">{review.statLabel}</span>
         </div>
@@ -96,7 +96,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
 
       {/* Author */}
       <div className="flex items-center gap-3 pt-2 border-t border-white/[0.04]">
-        <div className="w-8 h-8 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
+        <div className="w-8 h-8 rounded-sm bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
           <span className="text-gold text-[10px] font-bold">{review.name.charAt(0)}</span>
         </div>
         <div className="min-w-0">
@@ -117,11 +117,11 @@ export default function SocialProof() {
         {/* Header */}
         <AnimateIn>
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-5 py-2 mb-6">
+            <div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-6">
               <Star className="w-3.5 h-3.5 text-gold fill-gold" />
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Wall of Love</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white leading-tight uppercase tracking-tighter">
               What Our <span className="text-gradient-gold">Contractors</span> Say
             </h2>
             <p className="mt-4 text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
@@ -160,7 +160,7 @@ export default function SocialProof() {
           <div className="mt-12 sm:mt-16 text-center">
             <motion.a
               href="/get-started"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 rounded-lg font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-gold/20"
+              className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-8 py-4 rounded-sm font-extrabold text-sm uppercase tracking-wider "
               whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
               whileTap={{ scale: 0.97 }}
             >

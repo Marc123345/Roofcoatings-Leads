@@ -40,11 +40,11 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
           transition={{ duration: 0.3 }}
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
+          <div className="absolute inset-0 bg-black/80" onClick={onClose} />
 
           {/* Modal */}
           <motion.div
-            className="relative w-full max-w-2xl max-h-[90vh] bg-navy-light rounded-2xl border border-white/10 overflow-hidden flex flex-col"
+            className="relative w-full max-w-2xl max-h-[90vh] bg-navy-light rounded-sm border border-white/10 overflow-hidden flex flex-col"
             initial={{ scale: 0.95, y: 20, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.95, y: 20, opacity: 0 }}
@@ -53,7 +53,7 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
             {/* Close button */}
             <button
               onClick={onClose}
-              className="absolute top-3 right-3 z-10 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="absolute top-3 right-3 z-10 w-10 h-10 rounded-sm bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
               aria-label="Close"
             >
               <X className="w-5 h-5" />
@@ -65,7 +65,7 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
                 onClick={() => setTab("book")}
                 className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
                   tab === "book"
-                    ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+                    ? "bg-gold text-navy"
                     : "bg-navy-light text-white hover:text-white"
                 }`}
               >
@@ -76,7 +76,7 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
                 onClick={() => setTab("contact")}
                 className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
                   tab === "contact"
-                    ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+                    ? "bg-gold text-navy"
                     : "bg-navy-light text-white hover:text-white"
                 }`}
               >

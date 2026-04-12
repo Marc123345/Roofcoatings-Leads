@@ -29,8 +29,8 @@ export default function CTA() {
         {/* Top pill */}
         <AnimateIn>
           <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-5 py-2">
-              <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+            <div className="font-mono text-[10px] tracking-[0.2em] uppercase">
+              
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Spots Filling Up</span>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function CTA() {
 
         {/* Headline */}
         <AnimateIn delay={0.1}>
-          <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+          <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight uppercase tracking-tighter">
             Ready to Fill{" "}
             <span className="text-gradient-gold">Your Pipeline?</span>
           </h2>
@@ -56,7 +56,7 @@ export default function CTA() {
           <div className="mt-10 flex justify-center">
             <motion.button
               onClick={() => setOverlayOpen(true)}
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-lg shadow-lg shadow-gold/25 group cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-6 py-3.5 sm:px-10 sm:py-5 rounded-sm font-bold text-sm sm:text-lg  group cursor-pointer"
               whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
               whileTap={{ scale: 0.97 }}
             >
@@ -80,7 +80,7 @@ export default function CTA() {
 
         {/* Stats — large, spaced */}
         <AnimateIn delay={0.5}>
-          <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] rounded-2xl overflow-hidden">
+          <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] rounded-sm overflow-hidden">
             {[
               { value: 100, suffix: "+", label: "Contractors" },
               { value: 1, prefix: "$", suffix: "k", label: "Per Month" },

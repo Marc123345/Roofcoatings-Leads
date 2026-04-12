@@ -8,7 +8,7 @@ export default function Logo({ size = 40, className = "" }: { size?: number; cla
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* Background rounded-xl square */}
+      {/* Background rounded-sm square */}
       <rect width="80" height="80" rx="18" fill="url(#logoBg)" />
 
       {/* Roof silhouette */}

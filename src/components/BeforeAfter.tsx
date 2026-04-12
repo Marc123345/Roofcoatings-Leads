@@ -57,7 +57,7 @@ export default function BeforeAfter() {
           </p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy text-center leading-tight max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-navy text-center leading-tight uppercase tracking-tighter max-w-3xl mx-auto">
             You&apos;ve Spent Thousands on Agencies That Don&apos;t Get It.
           </h2>
         </AnimateIn>
@@ -72,9 +72,9 @@ export default function BeforeAfter() {
 
           {/* LEFT: The Agency Trap */}
           <AnimateIn direction="left" delay={0.2}>
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8 h-full relative">
+            <div className="bg-gray-50 border border-gray-200 rounded-sm p-6 sm:p-8 h-full relative">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-sm bg-red-100 flex items-center justify-center">
                   <AlertTriangle className="w-5 h-5 text-red-500" />
                 </div>
                 <div>
@@ -98,7 +98,7 @@ export default function BeforeAfter() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 + i * 0.08 }}
                   >
-                    <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-6 h-6 rounded-sm bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
                       <X className="w-3.5 h-3.5 text-red-500" />
                     </div>
                     <div>
@@ -110,7 +110,7 @@ export default function BeforeAfter() {
               </div>
 
               {/* Cost of Inaction callout */}
-              <div className="mt-6 bg-red-50 border border-red-200 rounded-xl p-4">
+              <div className="mt-6 bg-red-50 border border-red-200 rounded-sm p-4">
                 <p className="text-red-600 text-xs font-bold uppercase tracking-wider mb-1">Total Damage</p>
                 <p className="text-navy font-bold text-2xl">$10k–$20k</p>
                 <p className="text-navy/60 text-xs mt-1">Average amount burned on traditional agencies before results</p>
@@ -120,16 +120,16 @@ export default function BeforeAfter() {
 
           {/* RIGHT: The RoofCoat System */}
           <AnimateIn direction="right" delay={0.2}>
-            <div className="bg-navy border border-gold/20 rounded-2xl p-6 sm:p-8 h-full relative shadow-[0_0_40px_rgba(234,179,8,0.08)]">
+            <div className="bg-navy border border-gold/20 rounded-sm p-6 sm:p-8 h-full relative shadow-[0_0_40px_rgba(234,179,8,0.08)]">
               {/* Best Value badge */}
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="bg-gradient-to-r from-gold to-yellow-400 text-navy text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg">
+                <span className="bg-gold text-navy text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-sm shadow-lg">
                   Best Value
                 </span>
               </div>
 
               <div className="flex items-center gap-3 mb-6 pt-2">
-                <div className="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-sm bg-gold/20 flex items-center justify-center">
                   <Zap className="w-5 h-5 text-gold" />
                 </div>
                 <div>
@@ -153,7 +153,7 @@ export default function BeforeAfter() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 + i * 0.08 }}
                   >
-                    <div className="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-6 h-6 rounded-sm bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5 text-gold" />
                     </div>
                     <div>
@@ -165,7 +165,7 @@ export default function BeforeAfter() {
               </div>
 
               {/* Result callout */}
-              <div className="mt-6 bg-gold/10 border border-gold/20 rounded-xl p-4">
+              <div className="mt-6 bg-gold/10 border border-gold/20 rounded-sm p-4">
                 <p className="text-gold text-xs font-bold uppercase tracking-wider mb-1">Month One Result</p>
                 <p className="text-white font-bold text-2xl">3+ Jobs Closed</p>
                 <p className="text-white/60 text-xs mt-1">5-10x return on ad spend, from day one</p>
@@ -186,7 +186,7 @@ export default function BeforeAfter() {
                       <span className="text-navy/40 text-xs uppercase tracking-wider font-bold">Industry Average</span>
                     </th>
                     <th className="text-center py-3 px-4 w-[35%]">
-                      <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-lg px-3 py-1">
+                      <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-sm px-3 py-1">
                         <span className="text-gold text-xs uppercase tracking-wider font-bold">RoofCoat Leads</span>
                       </div>
                     </th>
@@ -225,7 +225,7 @@ export default function BeforeAfter() {
 
         {/* ── Risk-Killer CTA ── */}
         <AnimateIn delay={0.4}>
-          <div className="mt-12 sm:mt-16 bg-navy rounded-2xl p-8 sm:p-12 text-center relative overflow-hidden">
+          <div className="mt-12 sm:mt-16 bg-navy rounded-sm p-8 sm:p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent pointer-events-none" />
             <div className="relative z-10">
               <p className="text-white/60 text-sm mb-2">We built the system so you don&apos;t have to.</p>
@@ -233,7 +233,7 @@ export default function BeforeAfter() {
               <p className="text-white/60 text-sm mb-8">$2,000/month. Cancel anytime. Results from day one.</p>
               <motion.button
                 onClick={() => setOverlayOpen(true)}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-sm sm:text-lg shadow-lg shadow-gold/20 group cursor-pointer"
+                className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 sm:px-10 sm:py-5 rounded-sm font-bold text-sm sm:text-lg  group cursor-pointer"
                 whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
                 whileTap={{ scale: 0.97 }}
               >

@@ -128,7 +128,7 @@ export default function Problem() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-16 sm:mb-20">
           <div>
             <AnimateIn>
-              <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 mb-6">
+              <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-sm px-4 py-1.5 mb-6">
                 <AlertTriangle className="w-3.5 h-3.5 text-red-500" />
                 <span className="text-red-400 text-xs font-bold uppercase tracking-widest">The Hidden Leak</span>
               </div>
@@ -156,7 +156,7 @@ export default function Problem() {
                 <LeakAnimation />
                 {/* Counter — money lost */}
                 <motion.div
-                  className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-red-500/10 border border-red-500/20 rounded-xl px-5 py-3 text-center backdrop-blur-sm"
+                  className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-red-500/10 border border-red-500/20 rounded-sm px-5 py-3 text-center"
                   style={{ y: counterY }}
                 >
                   <p className="text-red-400 font-extrabold text-2xl sm:text-3xl tracking-tight">$12,800</p>
@@ -172,7 +172,7 @@ export default function Problem() {
           {LEAKS.map((leak, i) => (
             <AnimateIn key={leak.title} delay={0.1 + i * 0.1}>
               <motion.div
-                className="relative p-6 sm:p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] h-full group"
+                className="relative p-6 sm:p-8 rounded-sm border border-white/[0.06] bg-white/[0.02] h-full group"
                 whileHover={{ borderColor: "rgba(239,68,68,0.25)", backgroundColor: "rgba(239,68,68,0.03)" }}
                 transition={{ duration: 0.3 }}
               >
@@ -182,7 +182,7 @@ export default function Problem() {
                 </span>
 
                 {/* Icon */}
-                <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-5">
+                <div className="w-10 h-10 rounded-sm bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-5">
                   <leak.icon className="w-5 h-5 text-red-400" />
                 </div>
 
@@ -202,7 +202,7 @@ export default function Problem() {
                 </p>
 
                 {/* Bottom accent line */}
-                <div className="mt-6 h-[2px] w-full bg-gradient-to-r from-red-500/30 via-red-500/10 to-transparent rounded-full" />
+                <div className="mt-6 h-[2px] w-full bg-gradient-to-r from-red-500/30 via-red-500/10 to-transparent rounded-sm" />
               </motion.div>
             </AnimateIn>
           ))}

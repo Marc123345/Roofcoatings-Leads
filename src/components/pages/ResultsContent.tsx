@@ -83,7 +83,7 @@ export default function ResultsContent() {
 
         <motion.div className="relative z-10 py-20 sm:py-28 lg:py-44" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
+            <motion.div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Proof</span>
             </motion.div>
@@ -110,7 +110,7 @@ export default function ResultsContent() {
                 { value: 100, suffix: "+", label: "Partners" },
                 { value: 48, prefix: "<", suffix: "h", label: "First Lead" },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center">
+                <div key={stat.label} className="bg-white/5 border border-white/10 rounded-sm p-4 text-center">
                   <p className="text-gold text-2xl font-bold">
                     <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   </p>
@@ -127,18 +127,18 @@ export default function ResultsContent() {
         <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-14">
-              <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Featured Win-Logs</h2></AnimateIn>
+              <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy uppercase tracking-tighter">Featured Win-Logs</h2></AnimateIn>
               <AnimateIn delay={0.1}><p className="mt-3 text-navy/60 text-lg">Click a partner to see their full before &amp; after breakdown.</p></AnimateIn>
             </div>
 
             {/* Partner selector — no faces */}
             <div className="flex justify-center mb-8 sm:mb-12">
-              <div className="inline-flex bg-gray-100 rounded-xl p-1.5 border border-gray-200 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
+              <div className="inline-flex bg-gray-100 rounded-sm p-1.5 border border-gray-200 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {winLogs.map((wl, i) => (
                   <button key={wl.id} onClick={() => setActiveLog(i)}
-                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeLog === i ? "text-navy" : "text-navy/50 hover:text-navy/70"}`}>
+                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-sm text-xs sm:text-sm font-semibold transition-all duration-300 ${activeLog === i ? "text-navy" : "text-navy/50 hover:text-navy/70"}`}>
                     {activeLog === i && (
-                      <motion.div className="absolute inset-0 bg-gradient-to-r from-gold to-yellow-400 rounded-xl"
+                      <motion.div className="absolute inset-0 bg-gold rounded-sm"
                         layoutId="winLogTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
                     )}
                     <span className="relative z-10">{wl.name.split(" ").slice(0, 2).join(" ")}</span>
@@ -154,13 +154,13 @@ export default function ResultsContent() {
                 transition={{ duration: 0.35 }}>
 
                 {/* Header card — no face */}
-                <div className="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden mb-6">
+                <div className="bg-gray-50 rounded-sm border border-gray-200 overflow-hidden mb-6">
                   <div className="p-5 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6">
                     <div className="flex-1 min-w-0">
                       <h3 className="text-navy font-bold text-2xl">{log.name}</h3>
                       <p className="text-navy/50 text-sm mt-1">{log.niche} · {log.city}</p>
                     </div>
-                    <div className="bg-gold/10 border border-gold/20 rounded-xl px-8 py-5 text-center shrink-0">
+                    <div className="bg-gold/10 border border-gold/20 rounded-sm px-8 py-5 text-center shrink-0">
                       <p className="text-gold text-4xl lg:text-5xl font-bold">{log.highlight.value}</p>
                       <p className="text-gold/60 text-sm mt-1">{log.highlight.label}</p>
                     </div>
@@ -170,7 +170,7 @@ export default function ResultsContent() {
                 {/* Before / After comparison */}
                 <div className="grid lg:grid-cols-2 gap-6 mb-6">
                   {/* Before */}
-                  <motion.div className="bg-red-50 rounded-2xl border border-red-200/50 overflow-hidden"
+                  <motion.div className="bg-red-50 rounded-sm border border-red-200/50 overflow-hidden"
                     initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
                     <div className="bg-red-100 px-6 py-3 border-b border-red-200/50">
                       <p className="text-red-600 font-bold text-sm uppercase tracking-wider">Before — {log.before.source}</p>
@@ -190,7 +190,7 @@ export default function ResultsContent() {
                   </motion.div>
 
                   {/* After */}
-                  <motion.div className="bg-green-50 rounded-2xl border border-green-200/50 overflow-hidden"
+                  <motion.div className="bg-green-50 rounded-sm border border-green-200/50 overflow-hidden"
                     initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }}>
                     <div className="bg-green-100 px-6 py-3 border-b border-green-200/50">
                       <p className="text-green-600 font-bold text-sm uppercase tracking-wider">After — RoofCoat Leads</p>
@@ -211,12 +211,12 @@ export default function ResultsContent() {
                 </div>
 
                 {/* Quote + result */}
-                <div className="bg-gray-50 rounded-2xl border border-gray-200 p-4 sm:p-6 lg:p-8">
+                <div className="bg-gray-50 rounded-sm border border-gray-200 p-4 sm:p-6 lg:p-8">
                   <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
                     <blockquote className="flex-1 text-navy/70 italic text-lg leading-relaxed border-l-4 border-gold pl-6">
                       &ldquo;{log.quote}&rdquo;
                     </blockquote>
-                    <div className="bg-green-50 border border-green-200/50 rounded-xl px-6 py-4 text-center shrink-0">
+                    <div className="bg-green-50 border border-green-200/50 rounded-sm px-6 py-4 text-center shrink-0">
                       <p className="text-green-600 text-xs uppercase tracking-wider mb-1">Result</p>
                       <p className="text-navy font-bold">{log.jobs}</p>
                     </div>
@@ -233,14 +233,14 @@ export default function ResultsContent() {
       <section className="bg-gray-50 py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">More Partner Voices</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy uppercase tracking-tighter">More Partner Voices</h2></AnimateIn>
           </div>
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.08}>
             {testimonials.map((t) => (
               <StaggerItem key={t.name}>
                 <motion.div
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 h-full flex flex-col justify-between"
+                  className="bg-white rounded-sm p-6 border border-zinc-800/50 border border-gray-100 h-full flex flex-col justify-between"
                   whileHover={{ y: -4 }}>
                   <div>
                     <div className="text-gold text-sm mb-3">★★★★★</div>
@@ -261,7 +261,7 @@ export default function ResultsContent() {
       <section className="bg-navy py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white uppercase tracking-tighter">
               Want Your Name in the{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent">
                 Next Win-Log?
@@ -269,7 +269,7 @@ export default function ResultsContent() {
             </h2>
             <p className="mt-4 text-white text-lg">Join 100+ contractors already on the system.</p>
             <motion.a href="/get-started"
-              className="mt-8 inline-flex items-center justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center justify-center bg-gold text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-sm font-bold text-base sm:text-lg "
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Book a Free Call &rarr;

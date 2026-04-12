@@ -14,11 +14,11 @@ export default function ContactForm() {
         {/* Header */}
         <AnimateIn>
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-5 py-2 mb-6">
+            <div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-6">
               <Mail className="w-3.5 h-3.5 text-gold" />
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Get In Touch</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white leading-tight uppercase tracking-tighter">
               Let&apos;s Talk About{" "}
               <span className="text-gradient-gold">Your Growth</span>
             </h2>
@@ -34,7 +34,7 @@ export default function ContactForm() {
             <AnimateIn delay={0.1}>
               <div className="space-y-6 mb-8">
                 <a href="mailto:marcfriedmancm@roofcoatleads.com" className="flex items-center gap-4 group min-h-[48px]">
-                  <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
+                  <div className="w-12 h-12 rounded-sm bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                     <Mail className="w-5 h-5 text-gold" />
                   </div>
                   <div>
@@ -43,7 +43,7 @@ export default function ContactForm() {
                   </div>
                 </a>
                 <a href="/get-started" className="flex items-center gap-4 group min-h-[48px]">
-                  <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
+                  <div className="w-12 h-12 rounded-sm bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                     <Phone className="w-5 h-5 text-gold" />
                   </div>
                   <div>
@@ -52,7 +52,7 @@ export default function ContactForm() {
                   </div>
                 </a>
                 <div className="flex items-center gap-4 min-h-[48px]">
-                  <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-sm bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-gold" />
                   </div>
                   <div>
@@ -64,7 +64,7 @@ export default function ContactForm() {
             </AnimateIn>
 
             <AnimateIn delay={0.2}>
-              <div className="bg-navy-light rounded-2xl border border-white/5 p-6">
+              <div className="bg-navy-light rounded-sm border border-white/5 p-6">
                 <h3 className="text-white font-bold text-sm mb-3">What happens next?</h3>
                 <div className="space-y-3">
                   {[
@@ -73,7 +73,7 @@ export default function ContactForm() {
                     "Leads start flowing within 48 hours of launch",
                   ].map((step, i) => (
                     <div key={step} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-5 h-5 rounded-sm bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-gold text-[10px] font-bold">{i + 1}</span>
                       </div>
                       <span className="text-white text-sm">{step}</span>
@@ -87,13 +87,13 @@ export default function ContactForm() {
           {/* Right — Tabbed Calendar + Contact Form */}
           <div className="lg:col-span-3">
             <AnimateIn delay={0.15}>
-              <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden">
+              <div className="bg-navy-light rounded-sm border border-white/10 overflow-hidden">
                 <div className="flex">
                   <button
                     onClick={() => setTab("book")}
                     className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
                       tab === "book"
-                        ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+                        ? "bg-gold text-navy"
                         : "bg-navy-light text-white hover:text-white"
                     }`}
                   >
@@ -104,7 +104,7 @@ export default function ContactForm() {
                     onClick={() => setTab("contact")}
                     className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
                       tab === "contact"
-                        ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+                        ? "bg-gold text-navy"
                         : "bg-navy-light text-white hover:text-white"
                     }`}
                   >

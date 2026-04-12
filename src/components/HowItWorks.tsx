@@ -64,7 +64,7 @@ export default function HowItWorks() {
           {/* Animated connecting line */}
           <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5">
             <motion.div
-              className="h-full bg-gradient-to-r from-blue via-blue-light to-blue rounded-xl"
+              className="h-full bg-gradient-to-r from-blue via-blue-light to-blue rounded-sm"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -78,20 +78,20 @@ export default function HowItWorks() {
               <StaggerItem key={step.number}>
                 <div className="relative text-center group">
                   <motion.div
-                    className="w-20 h-20 bg-gradient-to-br from-blue to-blue-light text-white rounded-xl flex items-center justify-center text-xl font-bold mx-auto relative z-10 shadow-lg"
+                    className="w-20 h-20 bg-gradient-to-br from-blue to-blue-light text-white rounded-sm flex items-center justify-center text-xl font-bold mx-auto relative z-10 shadow-lg"
                     whileHover={{ scale: 1.1, rotate: 5, boxShadow: "0 0 30px rgba(37,99,235,0.4)" }}
                     transition={{ duration: 0.2 }}
                   >
                     {step.number}
                   </motion.div>
                   <motion.div
-                    className="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-light/80 group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-300"
+                    className="mt-8 bg-white rounded-sm p-6 border border-zinc-800/50 border border-gray-light/80 group-hover:border border-zinc-800 group-hover:-translate-y-1 transition-all duration-300"
                     whileHover={{ borderColor: "rgba(37,99,235,0.2)" }}
                   >
                     <div className="flex justify-center mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
                       {step.icon}
                     </div>
-                    <h3 className="text-lg font-bold text-navy">{step.title}</h3>
+                    <h3 className="text-lg font-black text-navy uppercase tracking-tighter">{step.title}</h3>
                     <p className="text-navy/70 text-sm mt-2 leading-relaxed">{step.description}</p>
                   </motion.div>
                 </div>

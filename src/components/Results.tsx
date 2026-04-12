@@ -8,7 +8,7 @@ export default function Results() {
   return (
     <section id="results" className="bg-navy py-16 sm:py-20 lg:py-32 relative overflow-hidden noise">
       <div className="absolute inset-0 grid-pattern" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block w-[250px] h-[250px] lg:w-[600px] lg:h-[600px] bg-gold/5 rounded-xl blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block w-[250px] h-[250px] lg:w-[600px] lg:h-[600px] bg-gold/5 rounded-sm blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateIn>
@@ -25,7 +25,7 @@ export default function Results() {
           {/* Stat: 40% */}
           <StaggerItem className="lg:col-span-3">
             <motion.div
-              className="glass rounded-2xl p-6 h-full text-center border-t-2 border-gold/40 shimmer"
+              className="glass rounded-sm p-6 h-full text-center border-t-2 border-gold/40 shimmer"
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ duration: 0.2 }}
             >
@@ -40,7 +40,7 @@ export default function Results() {
           {/* Dashboard mockup — large center */}
           <StaggerItem className="col-span-2 lg:col-span-6 row-span-2">
             <motion.div
-              className="glass rounded-2xl p-4 sm:p-6 h-full flex flex-col justify-center"
+              className="glass rounded-sm p-4 sm:p-6 h-full flex flex-col justify-center"
               whileHover={{ borderColor: "rgba(37,99,235,0.3)" }}
             >
               <DashboardMockup />
@@ -50,7 +50,7 @@ export default function Results() {
           {/* Stat: 3+ */}
           <StaggerItem className="lg:col-span-3">
             <motion.div
-              className="glass rounded-2xl p-6 h-full text-center border-t-2 border-gold/40 shimmer"
+              className="glass rounded-sm p-6 h-full text-center border-t-2 border-gold/40 shimmer"
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ duration: 0.2 }}
             >
@@ -65,7 +65,7 @@ export default function Results() {
           {/* Stat: 15% */}
           <StaggerItem className="lg:col-span-3">
             <motion.div
-              className="glass rounded-2xl p-6 h-full text-center border-t-2 border-gold/40 shimmer"
+              className="glass rounded-sm p-6 h-full text-center border-t-2 border-gold/40 shimmer"
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ duration: 0.2 }}
             >
@@ -80,7 +80,7 @@ export default function Results() {
           {/* Stat: <48h */}
           <StaggerItem className="lg:col-span-3">
             <motion.div
-              className="glass rounded-2xl p-6 h-full text-center border-t-2 border-gold/40 shimmer"
+              className="glass rounded-sm p-6 h-full text-center border-t-2 border-gold/40 shimmer"
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ duration: 0.2 }}
             >
@@ -97,7 +97,7 @@ export default function Results() {
           <div className="mt-12 text-center">
             <motion.a
               href="#cta"
-              className="inline-block bg-gradient-to-r from-blue to-blue-light text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base w-full sm:w-auto text-center overflow-hidden relative group"
+              className="inline-block bg-gradient-to-r from-blue to-blue-light text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-sm font-bold text-sm sm:text-base w-full sm:w-auto text-center overflow-hidden relative group"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(37,99,235,0.4)" }}
               whileTap={{ scale: 0.95 }}
             >

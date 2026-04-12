@@ -21,7 +21,7 @@ export default function ManufacturersPage() {
         {/* ═══ HERO ═══ */}
         <section className="relative min-h-screen bg-navy overflow-hidden flex items-center">
           <div
-            className="absolute hidden lg:block rounded-full pointer-events-none"
+            className="absolute hidden lg:block rounded-sm pointer-events-none"
             style={{
               width: 626,
               height: 626,
@@ -44,7 +44,7 @@ export default function ManufacturersPage() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-md px-4 py-1.5 mb-8"
+                className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-sm px-4 py-1.5 mb-8"
               >
                 <span className="text-gold text-xs font-bold uppercase tracking-widest">
                   Manufacturer Partnership Program
@@ -85,7 +85,7 @@ export default function ManufacturersPage() {
               >
                 <motion.a
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-7 py-4 rounded-md font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-gold/20 group"
+                  className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-7 py-4 rounded-sm font-extrabold text-sm uppercase tracking-wider  group"
                   whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -94,7 +94,7 @@ export default function ManufacturersPage() {
                 </motion.a>
                 <motion.a
                   href="#how-it-works"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-navy px-7 py-4 rounded-md font-extrabold text-sm uppercase tracking-wider border border-white/80 hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-navy px-7 py-4 rounded-sm font-extrabold text-sm uppercase tracking-wider border border-white/80 hover:bg-white/90 transition-colors"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -159,7 +159,7 @@ export default function ManufacturersPage() {
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  className="bg-navy border border-white/[0.06] rounded-xl p-8 hover:border-gold/20 transition-colors duration-300"
+                  className="bg-navy border border-white/[0.06] rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -223,7 +223,7 @@ export default function ManufacturersPage() {
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  className="relative bg-navy-light border border-white/[0.06] rounded-xl p-8 hover:border-gold/20 transition-colors duration-300"
+                  className="relative bg-navy-light border border-white/[0.06] rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -286,14 +286,14 @@ export default function ManufacturersPage() {
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  className="relative bg-navy border border-white/[0.06] rounded-xl p-8 hover:border-gold/20 transition-colors duration-300"
+                  className="relative bg-navy border border-white/[0.06] rounded-sm p-8 hover:border-gold/20 transition-colors duration-300"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
                   custom={i + 1}
                 >
-                  <span className="inline-block text-gold text-[10px] font-bold uppercase tracking-widest bg-gold/10 border border-gold/20 rounded-md px-3 py-1 mb-4">
+                  <span className="inline-block text-gold text-[10px] font-bold uppercase tracking-widest bg-gold/10 border border-gold/20 rounded-sm px-3 py-1 mb-4">
                     {item.tag}
                   </span>
                   <h3 className="text-white text-xl font-bold mb-3">{item.title}</h3>
@@ -333,7 +333,7 @@ export default function ManufacturersPage() {
               ].map((stat, i) => (
                 <motion.div
                   key={i}
-                  className="text-center bg-navy-light border border-white/[0.06] rounded-xl p-8"
+                  className="text-center bg-navy-light border border-white/[0.06] rounded-sm p-8"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -398,8 +398,8 @@ export default function ManufacturersPage() {
               variants={fadeUp}
               custom={1}
             >
-              <div className="bg-navy rounded-2xl border border-white/10 overflow-hidden">
-                <div className="bg-gradient-to-r from-gold to-yellow-400 px-6 py-4">
+              <div className="bg-navy rounded-sm border border-white/10 overflow-hidden">
+                <div className="bg-gold px-6 py-4">
                   <div className="flex items-center gap-3">
                     <Package className="w-5 h-5 text-navy" />
                     <span className="text-navy font-bold">Manufacturer Partnership Inquiry</span>

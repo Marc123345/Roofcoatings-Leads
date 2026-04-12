@@ -32,7 +32,7 @@ export default function Hero() {
 
         {/* ── Decorative glow circle (gold, top-right area) ── */}
         <div
-          className="absolute hidden lg:block rounded-full pointer-events-none"
+          className="absolute hidden lg:block rounded-sm pointer-events-none"
           style={{
             width: 626,
             height: 626,
@@ -58,7 +58,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-md px-4 py-1.5 mb-8"
+              className="font-mono text-[10px] tracking-[0.2em] uppercase mb-8"
             >
               <span className="text-gold text-xs font-bold uppercase tracking-widest">
                 Exclusive Leads — One Click at a Time
@@ -101,7 +101,7 @@ export default function Hero() {
             >
               <motion.button
                 onClick={() => setOverlayOpen(true)}
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-7 py-4 rounded-md font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-gold/20 group cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-7 py-4 rounded-sm font-extrabold text-sm uppercase tracking-wider  group cursor-pointer"
                 whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
                 whileTap={{ scale: 0.97 }}
               >

@@ -104,12 +104,12 @@ function CampaignBreakdown({ niche }: { niche: typeof niches[0] }) {
     <div className="space-y-3">
       {rows.map((row, i) => (
         <motion.div key={row.label}
-          className="bg-white/5 border border-white/5 rounded-2xl p-4"
+          className="bg-white/5 border border-white/5 rounded-sm p-4"
           initial={{ opacity: 0, x: -15 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.15 + i * 0.1 }}>
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 bg-white/10 rounded-xl flex items-center justify-center shrink-0">{row.icon}</div>
+            <div className="w-8 h-8 bg-white/10 rounded-sm flex items-center justify-center shrink-0">{row.icon}</div>
             <div className="min-w-0">
               <p className="text-white text-[11px] uppercase tracking-wider mb-0.5">{row.label}</p>
               <p className="text-white text-sm leading-relaxed">{row.value}</p>
@@ -142,7 +142,7 @@ export default function NicheExpertiseContent() {
 
         <motion.div className="relative z-10 py-20 sm:py-28 lg:py-44 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
+            <motion.div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Niche Expertise</span>
             </motion.div>
@@ -185,12 +185,12 @@ export default function NicheExpertiseContent() {
 
             {/* Tab selector */}
             <div className="flex justify-center mb-8 sm:mb-14">
-              <div className="inline-flex bg-navy-light rounded-xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
+              <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {niches.map((n, i) => (
                   <button key={n.id} onClick={() => setActiveIdx(i)}
-                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white hover:text-white"}`}>
+                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-sm text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white hover:text-white"}`}>
                     {activeIdx === i && (
-                      <motion.div className={`absolute inset-0 bg-gradient-to-r ${n.color} rounded-lg`}
+                      <motion.div className={`absolute inset-0 bg-gradient-to-r ${n.color} rounded-sm`}
                         layoutId="nicheTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
                     )}
                     <span className="relative z-10 flex items-center gap-2">
@@ -209,7 +209,7 @@ export default function NicheExpertiseContent() {
                 transition={{ duration: 0.35 }}>
 
                 {/* Top: Image + Title card */}
-                <div className="relative rounded-2xl overflow-hidden mb-8">
+                <div className="relative rounded-sm overflow-hidden mb-8">
                   <div className="relative h-[280px] lg:h-[360px]">
                     <Image src={niche.image} alt={niche.title} fill className="object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
@@ -218,18 +218,18 @@ export default function NicheExpertiseContent() {
                     <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 lg:p-10">
                       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                         <div>
-                          <motion.div className={`inline-flex items-center justify-center w-14 h-14 bg-white/10 rounded-xl mb-3 text-white`}
+                          <motion.div className={`inline-flex items-center justify-center w-14 h-14 bg-white/10 rounded-sm mb-3 text-white`}
                             animate={{ rotate: [0, 5, -5, 0] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
                             {niche.icon}
                           </motion.div>
-                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">{niche.title}</h2>
+                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white uppercase tracking-tighter">{niche.title}</h2>
                           <p className={`mt-2 font-semibold text-lg ${niche.textColor}`}>{niche.tagline}</p>
                         </div>
 
                         <div className="flex gap-3 shrink-0">
                           {niche.stats.map((stat) => (
-                            <div key={stat.label} className="bg-navy/80 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 text-center min-w-[80px]">
+                            <div key={stat.label} className="bg-navy/80 border border-white/10 rounded-sm px-4 py-3 text-center min-w-[80px]">
                               <p className="text-gold text-xl font-bold">{stat.value}</p>
                               <p className="text-white text-[11px]">{stat.label}</p>
                             </div>
@@ -244,11 +244,11 @@ export default function NicheExpertiseContent() {
                 <div className="grid lg:grid-cols-3 gap-6">
 
                   {/* Description + Job Value */}
-                  <div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 flex flex-col">
+                  <div className="bg-navy-light rounded-sm border border-white/10 p-5 sm:p-8 flex flex-col">
                     <h3 className="text-white font-bold text-xl mb-4">Why This Niche</h3>
                     <p className="text-white leading-relaxed flex-1">{niche.description}</p>
 
-                    <div className={`mt-6 bg-gradient-to-r ${niche.color} rounded-2xl p-5 text-center`}>
+                    <div className={`mt-6 bg-gradient-to-r ${niche.color} rounded-sm p-5 text-center`}>
                       <p className="text-white text-xs uppercase tracking-wider mb-1">Avg. Job Value</p>
                       <p className="text-white text-3xl font-bold">{niche.avgValue}</p>
                       <p className="text-white text-xs mt-1">per closed project</p>
@@ -256,12 +256,12 @@ export default function NicheExpertiseContent() {
                   </div>
 
                   {/* Campaign Breakdown */}
-                  <div className="lg:col-span-2 bg-navy-light rounded-2xl border border-white/10 p-4 sm:p-6 lg:p-8">
+                  <div className="lg:col-span-2 bg-navy-light rounded-sm border border-white/10 p-4 sm:p-6 lg:p-8">
                     <h3 className="text-white font-bold text-xl mb-5">Campaign Breakdown</h3>
                     <CampaignBreakdown niche={niche} />
 
                     <motion.a href="/get-started"
-                      className={`mt-6 w-full inline-flex items-center justify-center bg-gradient-to-r ${niche.color} text-white py-4 rounded-xl font-bold text-lg shadow-lg`}
+                      className={`mt-6 w-full inline-flex items-center justify-center bg-gradient-to-r ${niche.color} text-white py-4 rounded-sm font-bold text-lg shadow-lg`}
                       whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                       Get {niche.label} Leads &rarr;
                     </motion.a>
@@ -279,7 +279,7 @@ export default function NicheExpertiseContent() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
             <AnimateIn>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-navy uppercase tracking-tighter">
                 General Agencies Don&apos;t Get This
               </h2>
             </AnimateIn>
@@ -301,9 +301,9 @@ export default function NicheExpertiseContent() {
               { icon: <Zap className="w-5 h-5 text-blue" />, title: "Same Speed, Any Niche", desc: "Whether silicone or TPO, first lead in under 48 hours. The system is already built." },
             ].map((item) => (
               <StaggerItem key={item.title}>
-                <motion.div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full"
+                <motion.div className="bg-white rounded-sm p-5 sm:p-8 border border-zinc-800/50 border border-transparent hover:border-blue/10 h-full"
                   whileHover={{ y: -4 }}>
-                  <div className="w-10 h-10 bg-blue/10 rounded-xl flex items-center justify-center">{item.icon}</div>
+                  <div className="w-10 h-10 bg-blue/10 rounded-sm flex items-center justify-center">{item.icon}</div>
                   <h3 className="text-navy font-bold text-lg mt-4">{item.title}</h3>
                   <p className="text-navy/80 text-sm mt-2 leading-relaxed">{item.desc}</p>
                 </motion.div>
@@ -317,7 +317,7 @@ export default function NicheExpertiseContent() {
       <section className="bg-navy py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white uppercase tracking-tighter">
               Tell Us Your Niche.{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent">
                 We&apos;ll Build the Campaign.
@@ -325,7 +325,7 @@ export default function NicheExpertiseContent() {
             </h2>
             <p className="mt-4 text-white text-lg">Free strategy audit tailored to your specific coating type and territory.</p>
             <motion.a href="/get-started"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gold text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-sm font-bold text-base sm:text-lg w-full sm:w-auto text-center "
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Book a Free Call &rarr;

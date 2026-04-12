@@ -52,7 +52,7 @@ export default function FAQ() {
         <StaggerContainer className="mt-14 space-y-4" staggerDelay={0.08}>
           {faqs.map((faq, index) => (
             <StaggerItem key={index}>
-              <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-transparent hover:border-blue/10 transition-colors">
+              <div className="bg-white rounded-sm border border-zinc-800/50 overflow-hidden border border-transparent hover:border-blue/10 transition-colors">
                 <motion.button
                   className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -63,7 +63,7 @@ export default function FAQ() {
                   <motion.div
                     animate={{ rotate: openIndex === index ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="w-11 h-11 bg-blue/10 rounded-xl flex items-center justify-center shrink-0"
+                    className="w-11 h-11 bg-blue/10 rounded-sm flex items-center justify-center shrink-0"
                   >
                     <svg className="w-4 h-4 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

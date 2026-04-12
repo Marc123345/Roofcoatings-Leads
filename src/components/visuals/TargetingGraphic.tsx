@@ -6,28 +6,28 @@ export default function TargetingGraphic() {
     <div className="relative w-full aspect-square max-w-[300px] mx-auto">
       {/* Concentric targeting rings */}
       <motion.div
-        className="absolute inset-0 rounded-2xl border border-blue/10"
+        className="absolute inset-0 rounded-sm border border-blue/10"
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       />
       <motion.div
-        className="absolute inset-[15%] rounded-2xl border border-blue/20"
+        className="absolute inset-[15%] rounded-sm border border-blue/20"
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.4 }}
       />
       <motion.div
-        className="absolute inset-[30%] rounded-2xl border border-blue/30 bg-blue/5"
+        className="absolute inset-[30%] rounded-sm border border-blue/30 bg-blue/5"
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.6 }}
       />
       <motion.div
-        className="absolute inset-[42%] rounded-2xl bg-gradient-to-br from-blue to-blue-light flex items-center justify-center shadow-lg glow-blue"
+        className="absolute inset-[42%] rounded-sm bg-gradient-to-br from-blue to-blue-light flex items-center justify-center shadow-lg glow-blue"
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
@@ -56,8 +56,8 @@ export default function TargetingGraphic() {
           transition={{ delay: point.delay, type: "spring" }}
         >
           <div className="relative">
-            <div className="w-3 h-3 bg-gold rounded-xl" />
-            <div className="absolute inset-0 w-3 h-3 bg-gold rounded-xl animate-ping opacity-30" />
+            <div className="w-3 h-3 bg-gold rounded-sm" />
+            <div className="absolute inset-0 w-3 h-3 bg-gold rounded-sm animate-ping opacity-30" />
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-[11px] whitespace-nowrap">{point.label}</span>
           </div>
         </motion.div>

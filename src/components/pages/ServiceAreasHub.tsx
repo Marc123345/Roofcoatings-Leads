@@ -30,7 +30,7 @@ export default function ServiceAreasHub() {
 
         <motion.div className="relative z-10 py-20 sm:py-28 lg:py-44 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
+            <motion.div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Service Areas</span>
             </motion.div>
@@ -52,7 +52,7 @@ export default function ServiceAreasHub() {
             <motion.div className="mt-10 flex justify-center gap-3 flex-wrap"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
               {serviceAreas.map((sa) => (
-                <div key={sa.slug} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-2">
+                <div key={sa.slug} className="bg-white/5 border border-white/10 rounded-sm px-4 py-2">
                   <span className="text-gold font-bold text-sm">{sa.abbr}</span>
                   <span className="text-white text-xs ml-1.5">{sa.state}</span>
                 </div>
@@ -69,18 +69,18 @@ export default function ServiceAreasHub() {
         <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-14">
-              <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Explore Our Markets</h2></AnimateIn>
+              <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white uppercase tracking-tighter">Explore Our Markets</h2></AnimateIn>
               <AnimateIn delay={0.1}><p className="mt-3 text-white text-lg">Click a state on the map or use the tabs below.</p></AnimateIn>
             </div>
 
             {/* State tabs */}
             <div className="flex justify-center mb-8 sm:mb-12">
-              <div className="inline-flex bg-navy-light rounded-xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
+              <div className="inline-flex bg-navy-light rounded-sm p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {serviceAreas.map((sa, i) => (
                   <button key={sa.slug} onClick={() => setActiveIdx(i)}
-                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white hover:text-white"}`}>
+                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-sm text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white hover:text-white"}`}>
                     {activeIdx === i && (
-                      <motion.div className="absolute inset-0 bg-gradient-to-r from-gold to-yellow-400 rounded-xl"
+                      <motion.div className="absolute inset-0 bg-gold rounded-sm"
                         layoutId="areaTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
                     )}
                     <span className="relative z-10 flex items-center gap-1.5">
@@ -99,7 +99,7 @@ export default function ServiceAreasHub() {
 
                 <div className="grid lg:grid-cols-5 gap-6">
                   {/* Map panel */}
-                  <div className="lg:col-span-2 bg-navy-light rounded-2xl border border-white/10 p-6 flex flex-col">
+                  <div className="lg:col-span-2 bg-navy-light rounded-sm border border-white/10 p-6 flex flex-col">
                     <div className="flex-1 min-h-[280px]">
                       <USMap
                         activeState={area.slug}
@@ -118,7 +118,7 @@ export default function ServiceAreasHub() {
                   {/* Details panel */}
                   <div className="lg:col-span-3 flex flex-col gap-6">
                     {/* Hero image + title */}
-                    <div className="relative rounded-2xl overflow-hidden h-[220px]">
+                    <div className="relative rounded-sm overflow-hidden h-[220px]">
                       <Image src={area.image} alt={`${area.state} skyline`} fill className="object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-navy/10" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -127,7 +127,7 @@ export default function ServiceAreasHub() {
                             <h3 className="text-white font-bold text-2xl lg:text-3xl">{area.state} Roof Coating Leads</h3>
                             <p className="text-white text-sm mt-1">{area.cities.slice(0, 4).join(" · ")} + more</p>
                           </div>
-                          <div className="bg-gold/20 border border-gold/30 rounded-xl px-4 py-2 text-center shrink-0 hidden sm:block">
+                          <div className="bg-gold/20 border border-gold/30 rounded-sm px-4 py-2 text-center shrink-0 hidden sm:block">
                             <p className="text-gold text-xl font-bold">{area.caseStudy.stat}</p>
                             <p className="text-gold/60 text-[11px]">{area.caseStudy.statLabel}</p>
                           </div>
@@ -144,7 +144,7 @@ export default function ServiceAreasHub() {
                         { icon: <Lightbulb className="w-4 h-4 text-gold" />, title: "Local Insight", text: area.localInsight },
                       ].map((card, i) => (
                         <motion.div key={card.title}
-                          className="bg-navy-light rounded-2xl border border-white/5 p-5"
+                          className="bg-navy-light rounded-sm border border-white/5 p-5"
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.1 + i * 0.08 }}>
@@ -158,9 +158,9 @@ export default function ServiceAreasHub() {
                     </div>
 
                     {/* Local Win-Log */}
-                    <div className="bg-navy-light rounded-2xl border border-white/10 p-6">
+                    <div className="bg-navy-light rounded-sm border border-white/10 p-6">
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center text-gold font-bold shrink-0">
+                        <div className="w-12 h-12 bg-gold/20 rounded-sm flex items-center justify-center text-gold font-bold shrink-0">
                           {area.caseStudy.name.split(" ").map((n) => n[0]).join("")}
                         </div>
                         <div className="min-w-0">
@@ -175,7 +175,7 @@ export default function ServiceAreasHub() {
 
                     {/* CTA */}
                     <motion.a href={`/service-areas/${area.slug}`}
-                      className="w-full bg-gradient-to-r from-gold to-yellow-400 text-navy py-4 rounded-xl font-bold text-lg text-center shadow-lg shadow-gold/20 block"
+                      className="w-full bg-gold text-navy py-4 rounded-sm font-bold text-lg text-center  block"
                       whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                       Explore {area.state} in Detail &rarr;
                     </motion.a>
@@ -188,8 +188,8 @@ export default function ServiceAreasHub() {
             {/* Expanding note */}
             <AnimateIn delay={0.3}>
               <div className="mt-16 text-center">
-                <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-3">
-                  <span className="w-2 h-2 bg-green-500 rounded-xl animate-pulse" />
+                <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-sm px-6 py-3">
+                  <span className="w-2 h-2 bg-green-500 rounded-sm animate-pulse" />
                   <span className="text-white text-sm">
                     Expanding to new states monthly — don&apos;t see yours?{" "}
                     <a href="/get-started" className="text-gold font-bold hover:underline">Book a Free Call &rarr;</a>
@@ -205,19 +205,19 @@ export default function ServiceAreasHub() {
       <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">All Active Markets</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy uppercase tracking-tighter">All Active Markets</h2></AnimateIn>
           </div>
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.08}>
             {serviceAreas.map((sa) => (
               <StaggerItem key={sa.slug}>
                 <motion.a href={`/service-areas/${sa.slug}`}
-                  className="block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group h-full"
+                  className="block bg-white rounded-sm overflow-hidden border border-zinc-800/50 hover:border border-zinc-800 transition-all duration-300 group h-full"
                   whileHover={{ y: -6 }}>
                   <div className="relative h-44 overflow-hidden">
                     <Image src={sa.image} alt={`${sa.state}`} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
-                    <div className="absolute top-4 right-4 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-xl">{sa.abbr}</div>
+                    <div className="absolute top-4 right-4 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-sm">{sa.abbr}</div>
                     <div className="absolute bottom-4 left-4">
                       <h3 className="text-white font-bold text-xl">{sa.state}</h3>
                       <p className="text-white text-xs mt-0.5">{sa.cities.slice(0, 3).join(" · ")}</p>
@@ -242,7 +242,7 @@ export default function ServiceAreasHub() {
         <div className="absolute inset-0 grid-pattern" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12">
-            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">We Cover All 50 States</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white uppercase tracking-tighter">We Cover All 50 States</h2></AnimateIn>
             <AnimateIn delay={0.1}><p className="mt-3 text-white text-lg">Select your state to get started with pre-qualified leads in your territory.</p></AnimateIn>
           </div>
 
@@ -254,7 +254,7 @@ export default function ServiceAreasHub() {
                   <StaggerItem key={st.slug}>
                     <motion.a
                       href={isFeatured ? `/service-areas/${st.slug}` : "/get-started"}
-                      className={`block rounded-xl p-3 text-center border transition-all duration-200 ${
+                      className={`block rounded-sm p-3 text-center border transition-all duration-200 ${
                         isFeatured
                           ? "bg-gold/10 border-gold/20 hover:bg-gold/20"
                           : "bg-white/[0.03] border-white/5 hover:bg-white/[0.06] hover:border-white/10"
@@ -273,11 +273,11 @@ export default function ServiceAreasHub() {
           <AnimateIn delay={0.3}>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-white">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-2xl bg-gold/20 border border-gold/30" />
+                <div className="w-3 h-3 rounded-sm bg-gold/20 border border-gold/30" />
                 <span>Featured markets (full detail pages)</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-2xl bg-white/5 border border-white/10" />
+                <div className="w-3 h-3 rounded-sm bg-white/5 border border-white/10" />
                 <span>Available — book audit for custom blueprint</span>
               </div>
             </div>
@@ -289,7 +289,7 @@ export default function ServiceAreasHub() {
       <section className="bg-white py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-navy uppercase tracking-tighter">
               Your Territory.{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent">
                 Your Leads. Your Territory.
@@ -297,7 +297,7 @@ export default function ServiceAreasHub() {
             </h2>
             <p className="mt-4 text-navy/80 text-lg">We&apos;ll build a campaign blueprint specific to your market. Free.</p>
             <motion.a href="/get-started"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gold text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-sm font-bold text-base sm:text-lg w-full sm:w-auto text-center "
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Book a Free Call &rarr;

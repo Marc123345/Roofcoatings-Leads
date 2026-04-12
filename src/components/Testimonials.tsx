@@ -157,7 +157,7 @@ export default function Testimonials() {
 
         {/* Header */}
         <div className="text-center mb-6 lg:mb-10 px-4">
-          <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-4">
+          <div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-4">
             <span className="text-gold text-xs font-bold uppercase tracking-widest">Proven Results, Real Partners</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white ">
@@ -168,7 +168,7 @@ export default function Testimonials() {
         <div className="max-w-[1400px] mx-auto w-full flex-1 min-h-0 flex gap-4 lg:gap-6 px-3 sm:px-5 lg:px-8">
 
           {/* LEFT: US Map Panel — desktop only */}
-          <div className="hidden lg:flex w-[420px] flex-col items-center justify-between py-8 px-6 text-white relative shrink-0 bg-navy-light rounded-2xl border border-white/10">
+          <div className="hidden lg:flex w-[420px] flex-col items-center justify-between py-8 px-6 text-white relative shrink-0 bg-navy-light rounded-sm border border-white/10">
             <div className="text-center z-10">
               <p className="text-lg font-bold">
                 <span className="text-gold">Trusted</span> Across
@@ -208,7 +208,7 @@ export default function Testimonials() {
 
           {/* RIGHT: Testimonial Card */}
           <div
-            className="flex-1 bg-navy-light rounded-xl relative overflow-hidden flex flex-col min-w-0 border border-white/10"
+            className="flex-1 bg-navy-light rounded-sm relative overflow-hidden flex flex-col min-w-0 border border-white/10"
             style={{ minHeight: "clamp(320px, 55dvh, 620px)" }}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
@@ -225,7 +225,7 @@ export default function Testimonials() {
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  className="absolute bg-navy text-white flex flex-col rounded-2xl border border-white/10"
+                  className="absolute bg-navy text-white flex flex-col rounded-sm border border-white/10"
                   style={{
                     width: "min(92%, 580px)",
                     maxHeight: "calc(100% - 2rem)",
@@ -237,10 +237,10 @@ export default function Testimonials() {
                   <div className="flex flex-col gap-5">
                     {/* Service tag */}
                     <div className="flex items-center gap-3">
-                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-xl text-white">
+                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-sm text-white">
                         {partner.service}
                       </span>
-                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-gold/10 border border-gold/20 rounded-xl text-gold">
+                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-gold/10 border border-gold/20 rounded-sm text-gold">
                         {partner.state}
                       </span>
                     </div>
@@ -251,7 +251,7 @@ export default function Testimonials() {
                     </blockquote>
 
                     {/* Stat highlight */}
-                    <div className="flex items-center gap-3 bg-gold/10 border border-gold/20 rounded-xl px-5 py-3 self-start">
+                    <div className="flex items-center gap-3 bg-gold/10 border border-gold/20 rounded-sm px-5 py-3 self-start">
                       <span className="text-gold text-xl sm:text-2xl font-bold">{partner.stat}</span>
                       <span className="text-white text-sm">{partner.statLabel}</span>
                     </div>
@@ -282,7 +282,7 @@ export default function Testimonials() {
                   {PARTNERS.map((_, i) => (
                     <div
                       key={i}
-                      className="transition-all duration-300 rounded-xl"
+                      className="transition-all duration-300 rounded-sm"
                       style={{
                         width: i === activeIndex ? 20 : 6,
                         height: 5,
@@ -305,7 +305,7 @@ export default function Testimonials() {
                         setActiveIndex(i);
                       }
                     }}
-                    className="flex items-center shrink-0 gap-2 px-4 py-2 transition-all duration-200 rounded-xl"
+                    className="flex items-center shrink-0 gap-2 px-4 py-2 transition-all duration-200 rounded-sm"
                     style={{
                       border: i === activeIndex ? "1px solid rgba(234,179,8,0.4)" : "1px solid rgba(255,255,255,0.06)",
                       background: i === activeIndex ? "rgba(234,179,8,0.1)" : "transparent",

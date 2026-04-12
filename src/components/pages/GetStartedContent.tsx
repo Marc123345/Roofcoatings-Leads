@@ -23,14 +23,14 @@ const faqs = [
 function BookingTabs() {
   const [tab, setTab] = useState<"book" | "contact">("book");
   return (
-    <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden">
+    <div className="bg-navy-light rounded-sm border border-white/10 overflow-hidden">
       {/* Tab bar */}
       <div className="flex">
         <button
           onClick={() => setTab("book")}
           className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
             tab === "book"
-              ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+              ? "bg-gold text-navy"
               : "bg-navy-light text-white hover:text-white"
           }`}
         >
@@ -41,7 +41,7 @@ function BookingTabs() {
           onClick={() => setTab("contact")}
           className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
             tab === "contact"
-              ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
+              ? "bg-gold text-navy"
               : "bg-navy-light text-white hover:text-white"
           }`}
         >
@@ -88,7 +88,7 @@ export default function GetStartedContent() {
 
         <motion.div className="relative z-10 py-20 sm:py-28 lg:py-40 text-center" style={{ opacity: heroOpacity }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-8"
+            <motion.div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-8"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Free Lead Strategy Audit</span>
             </motion.div>
@@ -155,7 +155,7 @@ export default function GetStartedContent() {
                     ].map((item, i) => (
                       <motion.div key={item} className="flex items-start gap-3"
                         initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 + i * 0.08 }}>
-                        <div className="w-5 h-5 rounded-2xl bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="w-5 h-5 rounded-sm bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                           <svg className="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
@@ -167,9 +167,9 @@ export default function GetStartedContent() {
                 </AnimateIn>
 
                 <AnimateIn delay={0.2}>
-                  <div className="bg-navy-light rounded-2xl border border-white/5 p-5">
+                  <div className="bg-navy-light rounded-sm border border-white/5 p-5">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center text-gold font-bold text-sm">M</div>
+                      <div className="w-10 h-10 bg-gold/20 rounded-sm flex items-center justify-center text-gold font-bold text-sm">M</div>
                       <div>
                         <p className="text-white font-bold text-sm">Marc Friedman</p>
                         <p className="text-gold text-xs">Head of Sales, RoofCoat Leads</p>
@@ -198,15 +198,15 @@ export default function GetStartedContent() {
       <section className="bg-white py-16 sm:py-20 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Why Contractors Trust the Audit</h2></AnimateIn>
+            <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy uppercase tracking-tighter">Why Contractors Trust the Audit</h2></AnimateIn>
           </div>
 
           <StaggerContainer className="grid sm:grid-cols-2 gap-6" staggerDelay={0.08}>
             {trustPoints.map((point) => (
               <StaggerItem key={point.title}>
-                <motion.div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-transparent hover:border-blue/10 h-full"
+                <motion.div className="bg-white rounded-sm p-5 sm:p-8 border border-zinc-800/50 border border-transparent hover:border-blue/10 h-full"
                   whileHover={{ y: -4 }}>
-                  <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 bg-green-100 rounded-sm flex items-center justify-center mb-4">
                     <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
@@ -231,7 +231,7 @@ export default function GetStartedContent() {
           <StaggerContainer className="space-y-4" staggerDelay={0.08}>
             {faqs.map((faq) => (
               <StaggerItem key={faq.q}>
-                <details className="group bg-navy-light rounded-2xl border border-white/5 overflow-hidden">
+                <details className="group bg-navy-light rounded-sm border border-white/5 overflow-hidden">
                   <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
                     <span className="text-white font-semibold">{faq.q}</span>
                     <svg className="w-5 h-5 text-gold shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,13 +253,13 @@ export default function GetStartedContent() {
       <section className="bg-white py-20 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Still Thinking About It?</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy uppercase tracking-tighter">Still Thinking About It?</h2>
             <p className="mt-4 text-navy/80 text-lg">
               The audit is free, takes 30 minutes, and you keep the blueprint whether you work with us or not.
               The only risk is not knowing what your market looks like.
             </p>
             <motion.a href="#book"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center bg-gold text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-sm font-bold text-base sm:text-lg w-full sm:w-auto text-center "
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Book My Free Strategy Audit &rarr;
             </motion.a>
