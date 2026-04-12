@@ -95,7 +95,7 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
                 />
               ) : (
                 <iframe
-                  src="https://form.jotform.com/260952924952062"
+                  src="https://form.jotform.com/260953770990064"
                   style={{ width: "100%", minHeight: "clamp(350px, 70vh, 600px)", border: "none", borderRadius: "16px" }}
                   title="Contact Form"
                   allow="geolocation; microphone; camera; fullscreen"
