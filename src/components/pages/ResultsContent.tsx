@@ -9,11 +9,9 @@ import ParticleField from "../visuals/ParticleField";
 const winLogs = [
   {
     id: "summit",
-    name: "Michael Patterson",
-    company: "Summit Roof Coatings",
+    name: "Summit Roof Coatings",
     city: "Tampa, FL",
     niche: "Commercial Silicone",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
     quote: "Our cost per acquisition dropped by 40%. We booked 3 commercial coating jobs in the first month alone. The system was already proven — we just plugged in.",
     before: { cpl: "$142", source: "HomeAdvisor", closeRate: "8%", costPerJob: "$1,775" },
     after: { cpl: "$38", source: "RoofCoat Leads", closeRate: "32%", costPerJob: "$119" },
@@ -22,11 +20,9 @@ const winLogs = [
   },
   {
     id: "jenkins",
-    name: "Sarah Jenkins",
-    company: "Jenkins Roofing Solutions",
+    name: "Jenkins Roofing Solutions",
     city: "Dallas, TX",
     niche: "Residential Acrylic",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
     quote: "The lead quality is unmatched. These leads are exclusive and actually ready to book. ROI has been incredible — we saw results from the very first week.",
     before: { cpl: "$118", source: "Google Ads", closeRate: "11%", costPerJob: "$1,073" },
     after: { cpl: "$34", source: "RoofCoat Leads", closeRate: "29%", costPerJob: "$117" },
@@ -35,11 +31,9 @@ const winLogs = [
   },
   {
     id: "rg",
-    name: "Robert Garcia",
-    company: "RG Commercial Systems",
+    name: "RG Commercial Systems",
     city: "Los Angeles, CA",
     niche: "Commercial TPO",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
     quote: "Best investment this year. Cost per acquisition is significantly lower than Google Ads — and California leads close at premium rates because of Title 24.",
     before: { cpl: "$165", source: "Google Ads", closeRate: "7%", costPerJob: "$2,357" },
     after: { cpl: "$48", source: "RoofCoat Leads", closeRate: "25%", costPerJob: "$192" },
@@ -48,11 +42,9 @@ const winLogs = [
   },
   {
     id: "lewis",
-    name: "Karen Lewis",
-    company: "Lewis Roofing & Solar",
+    name: "Lewis Roofing & Solar",
     city: "Phoenix, AZ",
     niche: "Reflective Coatings",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80",
     quote: "Our cost per lead dropped by 40% compared to HomeAdvisor. The energy savings angle works incredibly well in Arizona — property owners respond immediately.",
     before: { cpl: "$130", source: "HomeAdvisor", closeRate: "9%", costPerJob: "$1,444" },
     after: { cpl: "$34", source: "RoofCoat Leads", closeRate: "28%", costPerJob: "$121" },
@@ -62,31 +54,13 @@ const winLogs = [
 ];
 
 const testimonials = [
-  { quote: "The lead quality is incredible. When I call, they're already pre-qualified and ready to talk. Close rates went through the roof.", name: "Linda Hall", company: "Hall Systems Inc.", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" },
-  { quote: "I was skeptical at first, but the booking rate speaks for itself. We closed 3 large commercial projects.", name: "Mark Thompson", company: "Thompson Commercial Coatings", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" },
-  { quote: "The pre-qualification process saves my sales team hours every week. Finally a lead source that gets it.", name: "David Chen", company: "Citywide Restorations", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80" },
-  { quote: "We used to rely on referrals, but that wasn't scalable. Now we plan growth quarter to quarter.", name: "James Wilson", company: "Wilson & Sons Coatings", image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&q=80" },
-  { quote: "The AI appointment setter books calls for me automatically. Lead notifications are instant — speed to lead is everything.", name: "Patricia Moore", company: "Elite Roof Systems", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" },
-  { quote: "From setup to first lead took less than 48 hours. The results were immediate.", name: "Christopher Young", company: "Young's Roof Care", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" },
+  { quote: "The lead quality is incredible. When I call, they're already pre-qualified and ready to talk. Close rates went through the roof.", name: "Hall Systems Inc.", city: "FL" },
+  { quote: "I was skeptical at first, but the booking rate speaks for itself. We closed 3 large commercial projects.", name: "Thompson Commercial Coatings", city: "TX" },
+  { quote: "The pre-qualification process saves my sales team hours every week. Finally a lead source that gets it.", name: "Citywide Restorations", city: "CA" },
+  { quote: "We used to rely on referrals, but that wasn't scalable. Now we plan growth quarter to quarter.", name: "Wilson & Sons Coatings", city: "OH" },
+  { quote: "The AI appointment setter books calls for me automatically. Lead notifications are instant — speed to lead is everything.", name: "Elite Roof Systems", city: "GA" },
+  { quote: "From setup to first lead took less than 48 hours. The results were immediate.", name: "Young's Roof Care", city: "AZ" },
 ];
-
-function BeforeAfterBar({ label, before, after }: { label: string; before: string; after: string }) {
-  return (
-    <div className="flex items-center gap-3">
-      <span className="text-white/80 text-xs w-24 shrink-0 text-right">{label}</span>
-      <div className="flex-1 flex gap-1 h-8">
-        <motion.div className="bg-red-500/20 border border-red-500/20 rounded-xl flex items-center px-3 text-red-400 text-xs font-bold"
-          initial={{ width: 0 }} animate={{ width: "60%" }} transition={{ duration: 0.6, delay: 0.2 }}>
-          {before}
-        </motion.div>
-        <motion.div className="bg-green-500/20 border border-green-500/20 rounded-xl flex items-center px-3 text-green-400 text-xs font-bold"
-          initial={{ width: 0 }} animate={{ width: "30%" }} transition={{ duration: 0.6, delay: 0.4 }}>
-          {after}
-        </motion.div>
-      </div>
-    </div>
-  );
-}
 
 export default function ResultsContent() {
   const [activeLog, setActiveLog] = useState(0);
@@ -114,7 +88,7 @@ export default function ResultsContent() {
               <span className="text-gold text-xs font-bold uppercase tracking-widest">Proof</span>
             </motion.div>
 
-            <motion.h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] "
+            <motion.h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05]"
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}>
               Contractor{" "}
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent animate-gradient">
@@ -124,8 +98,7 @@ export default function ResultsContent() {
 
             <motion.p className="mt-6 text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-              We don&apos;t do case studies. We do Win-Logs — real numbers from real partners.
-              No stock photos. No made-up metrics. Just results.
+              Real numbers from real partners. No made-up metrics. Just results.
             </motion.p>
 
             {/* Headline stats */}
@@ -149,33 +122,26 @@ export default function ResultsContent() {
         </motion.div>
       </div>
 
-      {/* ── Interactive Win-Log Explorer ── */}
-      <section className="bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern" />
-
+      {/* ── Interactive Win-Log Explorer — WHITE ── */}
+      <section className="bg-white relative overflow-hidden">
         <div className="relative z-10 py-16 sm:py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-14">
-              <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Featured Win-Logs</h2></AnimateIn>
-              <AnimateIn delay={0.1}><p className="mt-3 text-white/80 text-lg">Click a partner to see their full before &amp; after breakdown.</p></AnimateIn>
+              <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">Featured Win-Logs</h2></AnimateIn>
+              <AnimateIn delay={0.1}><p className="mt-3 text-navy/60 text-lg">Click a partner to see their full before &amp; after breakdown.</p></AnimateIn>
             </div>
 
-            {/* Partner selector */}
+            {/* Partner selector — no faces */}
             <div className="flex justify-center mb-8 sm:mb-12">
-              <div className="inline-flex bg-navy-light rounded-xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
+              <div className="inline-flex bg-gray-100 rounded-xl p-1.5 border border-gray-200 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {winLogs.map((wl, i) => (
                   <button key={wl.id} onClick={() => setActiveLog(i)}
-                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeLog === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
+                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeLog === i ? "text-navy" : "text-navy/50 hover:text-navy/70"}`}>
                     {activeLog === i && (
                       <motion.div className="absolute inset-0 bg-gradient-to-r from-gold to-yellow-400 rounded-xl"
                         layoutId="winLogTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
                     )}
-                    <span className="relative z-10 flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-2xl overflow-hidden border border-white/20 shrink-0 hidden sm:block">
-                        <Image src={wl.image} alt={wl.name} width={24} height={24} className="object-cover" />
-                      </div>
-                      {wl.name.split(" ")[0]}
-                    </span>
+                    <span className="relative z-10">{wl.name.split(" ").slice(0, 2).join(" ")}</span>
                   </button>
                 ))}
               </div>
@@ -187,18 +153,12 @@ export default function ResultsContent() {
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.35 }}>
 
-                {/* Header card */}
-                <div className="bg-navy-light rounded-2xl border border-white/10 overflow-hidden mb-6">
+                {/* Header card — no face */}
+                <div className="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden mb-6">
                   <div className="p-5 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6">
-                    <div className="flex items-center gap-5 flex-1 min-w-0">
-                      <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-gold/30 shrink-0">
-                        <Image src={log.image} alt={log.name} width={64} height={64} className="object-cover w-full h-full" />
-                      </div>
-                      <div className="min-w-0">
-                        <h3 className="text-white font-bold text-2xl">{log.name}</h3>
-                        <p className="text-gold text-sm font-medium">{log.company}</p>
-                        <p className="text-white/80 text-xs mt-0.5">{log.niche} · {log.city}</p>
-                      </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-navy font-bold text-2xl">{log.name}</h3>
+                      <p className="text-navy/50 text-sm mt-1">{log.niche} · {log.city}</p>
                     </div>
                     <div className="bg-gold/10 border border-gold/20 rounded-xl px-8 py-5 text-center shrink-0">
                       <p className="text-gold text-4xl lg:text-5xl font-bold">{log.highlight.value}</p>
@@ -210,10 +170,10 @@ export default function ResultsContent() {
                 {/* Before / After comparison */}
                 <div className="grid lg:grid-cols-2 gap-6 mb-6">
                   {/* Before */}
-                  <motion.div className="bg-navy-light rounded-2xl border border-red-500/15 overflow-hidden"
+                  <motion.div className="bg-red-50 rounded-2xl border border-red-200/50 overflow-hidden"
                     initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
-                    <div className="bg-red-500/10 px-6 py-3 border-b border-red-500/10">
-                      <p className="text-red-400 font-bold text-sm uppercase tracking-wider">Before — {log.before.source}</p>
+                    <div className="bg-red-100 px-6 py-3 border-b border-red-200/50">
+                      <p className="text-red-600 font-bold text-sm uppercase tracking-wider">Before — {log.before.source}</p>
                     </div>
                     <div className="p-6 space-y-4">
                       {[
@@ -221,19 +181,19 @@ export default function ResultsContent() {
                         { label: "Close rate", value: log.before.closeRate },
                         { label: "Cost per closed job", value: log.before.costPerJob },
                       ].map((row) => (
-                        <div key={row.label} className="flex justify-between items-center py-1 border-b border-white/5 last:border-0">
-                          <span className="text-white/80 text-sm">{row.label}</span>
-                          <span className="text-red-400 font-bold">{row.value}</span>
+                        <div key={row.label} className="flex justify-between items-center py-1 border-b border-red-100 last:border-0">
+                          <span className="text-navy/60 text-sm">{row.label}</span>
+                          <span className="text-red-600 font-bold">{row.value}</span>
                         </div>
                       ))}
                     </div>
                   </motion.div>
 
                   {/* After */}
-                  <motion.div className="bg-navy-light rounded-2xl border border-green-500/15 overflow-hidden"
+                  <motion.div className="bg-green-50 rounded-2xl border border-green-200/50 overflow-hidden"
                     initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }}>
-                    <div className="bg-green-500/10 px-6 py-3 border-b border-green-500/10">
-                      <p className="text-green-400 font-bold text-sm uppercase tracking-wider">After — RoofCoat Leads</p>
+                    <div className="bg-green-100 px-6 py-3 border-b border-green-200/50">
+                      <p className="text-green-600 font-bold text-sm uppercase tracking-wider">After — RoofCoat Leads</p>
                     </div>
                     <div className="p-6 space-y-4">
                       {[
@@ -241,9 +201,9 @@ export default function ResultsContent() {
                         { label: "Close rate", value: log.after.closeRate },
                         { label: "Cost per closed job", value: log.after.costPerJob },
                       ].map((row) => (
-                        <div key={row.label} className="flex justify-between items-center py-1 border-b border-white/5 last:border-0">
-                          <span className="text-white/80 text-sm">{row.label}</span>
-                          <span className="text-green-400 font-bold">{row.value}</span>
+                        <div key={row.label} className="flex justify-between items-center py-1 border-b border-green-100 last:border-0">
+                          <span className="text-navy/60 text-sm">{row.label}</span>
+                          <span className="text-green-600 font-bold">{row.value}</span>
                         </div>
                       ))}
                     </div>
@@ -251,14 +211,14 @@ export default function ResultsContent() {
                 </div>
 
                 {/* Quote + result */}
-                <div className="bg-navy-light rounded-2xl border border-white/10 p-4 sm:p-6 lg:p-8">
+                <div className="bg-gray-50 rounded-2xl border border-gray-200 p-4 sm:p-6 lg:p-8">
                   <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
-                    <blockquote className="flex-1 text-white/70 italic text-lg leading-relaxed border-l-4 border-gold pl-6">
+                    <blockquote className="flex-1 text-navy/70 italic text-lg leading-relaxed border-l-4 border-gold pl-6">
                       &ldquo;{log.quote}&rdquo;
                     </blockquote>
-                    <div className="bg-green-500/10 border border-green-500/20 rounded-xl px-6 py-4 text-center shrink-0">
-                      <p className="text-green-400 text-xs uppercase tracking-wider mb-1">Result</p>
-                      <p className="text-white font-bold">{log.jobs}</p>
+                    <div className="bg-green-50 border border-green-200/50 rounded-xl px-6 py-4 text-center shrink-0">
+                      <p className="text-green-600 text-xs uppercase tracking-wider mb-1">Result</p>
+                      <p className="text-navy font-bold">{log.jobs}</p>
                     </div>
                   </div>
                 </div>
@@ -269,8 +229,8 @@ export default function ResultsContent() {
         </div>
       </section>
 
-      {/* ── More Voices ── */}
-      <section className="bg-white py-16 sm:py-20 lg:py-32">
+      {/* ── More Voices — LIGHT ── */}
+      <section className="bg-gray-50 py-16 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
             <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">More Partner Voices</h2></AnimateIn>
@@ -280,20 +240,15 @@ export default function ResultsContent() {
             {testimonials.map((t) => (
               <StaggerItem key={t.name}>
                 <motion.div
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-transparent hover:border-blue/10 h-full flex flex-col justify-between"
+                  className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 h-full flex flex-col justify-between"
                   whileHover={{ y: -4 }}>
                   <div>
                     <div className="text-gold text-sm mb-3">★★★★★</div>
                     <p className="text-navy/70 italic leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
                   </div>
-                  <div className="flex items-center gap-3 mt-6 pt-4 border-t border-gray-light">
-                    <div className="relative w-10 h-10 rounded-2xl overflow-hidden shrink-0">
-                      <Image src={t.image} alt={t.name} fill className="object-cover" />
-                    </div>
-                    <div>
-                      <p className="text-navy font-bold text-sm">{t.name}</p>
-                      <p className="text-gold text-xs">{t.company}</p>
-                    </div>
+                  <div className="mt-6 pt-4 border-t border-gray-100">
+                    <p className="text-navy font-bold text-sm">{t.name}</p>
+                    <p className="text-navy/40 text-xs">{t.city}</p>
                   </div>
                 </motion.div>
               </StaggerItem>
@@ -302,7 +257,7 @@ export default function ResultsContent() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* ── CTA — DARK ── */}
       <section className="bg-navy py-16 sm:py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateIn>
@@ -314,12 +269,12 @@ export default function ResultsContent() {
             </h2>
             <p className="mt-4 text-white/80 text-lg">Join 100+ contractors already on the system.</p>
             <motion.a href="/get-started"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
+              className="mt-8 inline-flex items-center justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Book a Free Call &rarr;
             </motion.a>
-            <p className="mt-3 text-white/80 text-sm">Free audit. No contracts. Results from day 1.</p>
+            <p className="mt-3 text-white/80 text-sm">No contracts. Results from day 1.</p>
           </AnimateIn>
         </div>
       </section>

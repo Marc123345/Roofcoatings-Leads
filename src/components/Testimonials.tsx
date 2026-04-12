@@ -258,9 +258,6 @@ export default function Testimonials() {
 
                     {/* Author */}
                     <div className="flex items-center gap-4 mt-auto pt-3 border-t border-white/5">
-                      <div className="w-12 h-12 rounded-2xl overflow-hidden border-2 border-gold/30 shrink-0">
-                        <Image src={partner.avatar} alt={partner.name} width={48} height={48} className="w-full h-full object-cover" />
-                      </div>
                       <div>
                         <p className="text-white font-bold">{partner.name}</p>
                         <span className="inline-block bg-gold text-navy text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 mt-1">
