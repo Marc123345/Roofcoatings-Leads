@@ -128,22 +128,22 @@ export default function Problem() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-16 sm:mb-20">
           <div>
             <AnimateIn>
-              <div className="inline-flex items-center gap-2 bg-zinc-800 border border-zinc-700 rounded-sm px-4 py-1.5 mb-6">
-                <AlertTriangle className="w-3.5 h-3.5 text-zinc-500" />
-                <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">The Hidden Leak</span>
+              <div className="inline-flex items-center gap-2 bg-blue/10 border border-blue/20 rounded-sm px-4 py-1.5 mb-6">
+                <AlertTriangle className="w-3.5 h-3.5 text-blue" />
+                <span className="text-blue text-xs font-bold uppercase tracking-widest">The Hidden Leak</span>
               </div>
             </AnimateIn>
             <AnimateIn delay={0.1}>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-[1.08]">
                 Your Ad Budget Is{" "}
-                <span className="text-zinc-500">Silently Draining</span>{" "}
+                <span className="text-blue">Silently Draining</span>{" "}
                 Every Month.
               </h2>
             </AnimateIn>
             <AnimateIn delay={0.15}>
               <p className="mt-6 text-white text-base sm:text-lg max-w-lg leading-relaxed">
                 Most roof coating contractors don&apos;t realize they&apos;re losing{" "}
-                <span className="text-zinc-500 font-semibold">$3,000+ every month</span>{" "}
+                <span className="text-blue font-semibold">$3,000+ every month</span>{" "}
                 simply because their agency wasn&apos;t built for this niche. The leak is invisible on a spreadsheet — but it&apos;s killing your growth.
               </p>
             </AnimateIn>
@@ -156,10 +156,10 @@ export default function Problem() {
                 <LeakAnimation />
                 {/* Counter — money lost */}
                 <motion.div
-                  className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-zinc-800 border border-zinc-700 rounded-sm px-5 py-3 text-center"
+                  className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-blue/10 border border-blue/20 rounded-sm px-5 py-3 text-center"
                   style={{ y: counterY }}
                 >
-                  <p className="text-zinc-500 font-extrabold text-2xl sm:text-3xl tracking-tight">$12,800</p>
+                  <p className="text-blue font-extrabold text-2xl sm:text-3xl tracking-tight">$12,800</p>
                   <p className="text-white text-[10px] uppercase tracking-widest mt-0.5">avg. lost in 4 months</p>
                 </motion.div>
               </div>
@@ -183,11 +183,11 @@ export default function Problem() {
 
                 {/* Icon */}
                 <div className="w-10 h-10 rounded-sm bg-zinc-800 border border-zinc-700 flex items-center justify-center mb-5">
-                  <leak.icon className="w-5 h-5 text-zinc-500" />
+                  <leak.icon className="w-5 h-5 text-blue" />
                 </div>
 
                 {/* Hook stat */}
-                <p className="text-zinc-500 font-extrabold text-xl sm:text-2xl tracking-tight mb-1">
+                <p className="text-blue font-extrabold text-xl sm:text-2xl tracking-tight mb-1">
                   {leak.hook}
                 </p>
 

@@ -1,6 +1,7 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, ChevronDown } from "lucide-react";
 import AnimateIn from "./AnimateIn";
 
 interface Review {
@@ -109,6 +110,9 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
 }
 
 export default function SocialProof() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleReviews = showAll ? REVIEWS : REVIEWS.slice(0, 8);
+
   return (
     <section className="bg-navy relative overflow-hidden py-16 sm:py-24">
       <div className="absolute inset-0 grid-pattern" />
@@ -148,12 +152,25 @@ export default function SocialProof() {
 
         {/* Masonry grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-5 space-y-4 sm:space-y-5">
-          {REVIEWS.map((review, i) => (
+          {visibleReviews.map((review, i) => (
             <div key={i} className="break-inside-avoid">
               <ReviewCard review={review} index={i} />
             </div>
           ))}
         </div>
+
+        {/* View All button */}
+        {!showAll && REVIEWS.length > 8 && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-flex items-center gap-2 border border-zinc-700 text-white px-6 py-3 rounded-sm font-bold text-sm uppercase tracking-wider hover:border-gold/30 hover:text-gold transition-colors cursor-pointer"
+            >
+              View All {REVIEWS.length} Reviews
+              <ChevronDown className="w-4 h-4" />
+            </button>
+          </div>
+        )}
 
         {/* Bottom CTA */}
         <AnimateIn delay={0.2}>
