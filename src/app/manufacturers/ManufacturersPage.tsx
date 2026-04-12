@@ -242,7 +242,7 @@ export default function ManufacturersPage() {
           </div>
         </section>
 
-        {/* ═══ PARTNERSHIP MODELS ═══ */}
+        {/* ═══ WHAT YOUR CONTRACTORS GET ═══ */}
         <section className="py-24 sm:py-32 bg-navy-light px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -254,30 +254,34 @@ export default function ManufacturersPage() {
               custom={0}
             >
               <span className="text-gold text-xs font-bold uppercase tracking-widest mb-4 block">
-                Flexible Models
+                The Result
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                Choose How We{" "}
-                <span className="text-gold">Work Together.</span>
+                Your Contractors Get{" "}
+                <span className="text-gold">More Jobs.</span>
               </h2>
+              <p className="mt-6 text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">
+                That&apos;s the whole point. More jobs for your applicators means more product
+                moving off your shelves. Here&apos;s what changes when you partner with us.
+              </p>
             </motion.div>
 
             <div className="grid sm:grid-cols-3 gap-6">
               {[
                 {
-                  title: "Subsidized Lead Gen",
-                  desc: "You subsidize lead generation costs for your top contractors. They stay loyal, stay busy, and keep ordering your product.",
-                  tag: "Most Popular",
+                  title: "Consistent Pipeline",
+                  desc: "Your contractors stop chasing work and start choosing jobs. A steady flow of pre-qualified leads means they're never sitting idle — and never slowing down on orders.",
+                  tag: "More Volume",
                 },
                 {
-                  title: "Value-Add Program",
-                  desc: "Offer lead generation as a perk to attract new applicators to your brand. Differentiate from competitors who offer no contractor support.",
-                  tag: "Growth Play",
+                  title: "Faster Growth for New Applicators",
+                  desc: "New contractors certified on your product get booked from day one. No reputation needed — we bring the leads, they bring the skill. They ramp faster and order sooner.",
+                  tag: "Faster Ramp",
                 },
                 {
-                  title: "White-Label",
-                  desc: "We white-label under your brand so it looks and feels like your own program. Your contractors see you as the source of their leads.",
-                  tag: "Premium",
+                  title: "Contractor Loyalty",
+                  desc: "When your brand is the reason they're booked solid, they don't switch to a competitor. You become the partner they can't afford to leave.",
+                  tag: "Retention",
                 },
               ].map((item, i) => (
                 <motion.div
