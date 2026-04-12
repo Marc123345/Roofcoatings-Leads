@@ -8,7 +8,6 @@ import WhyFacebookAds from "@/components/WhyFacebookAds";
 import HowItWorks from "@/components/HowItWorks";
 import Results from "@/components/Results";
 import BeforeAfter from "@/components/BeforeAfter";
-import ComparisonTable from "@/components/ComparisonTable";
 import Scalability from "@/components/Scalability";
 import WhatsIncluded from "@/components/WhatsIncluded";
 import FAQ from "@/components/FAQ";
@@ -31,7 +30,6 @@ export default function Home() {
         <HowItWorks />
         <Results />
         <BeforeAfter />
-        <ComparisonTable />
         <Scalability />
         <div className="section-divider-dark" />
         <WhatsIncluded />
