@@ -88,7 +88,7 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
         <div className="w-8 h-8 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
           <X className="w-4 h-4 text-red-400" />
         </div>
-        <span className="text-white/30 text-xs hidden sm:block">{info.detail}</span>
+        <span className="text-white text-xs hidden sm:block">{info.detail}</span>
       </div>
     );
   }
@@ -134,7 +134,7 @@ export default function ComparisonTable() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
               Why Contractors Choose Us Over
               <br />
-              <span className="text-white/40">Google Ads &amp; HomeAdvisor</span>
+              <span className="text-white">Google Ads &amp; HomeAdvisor</span>
             </h2>
           </AnimateIn>
         </div>
@@ -154,14 +154,14 @@ export default function ComparisonTable() {
             </div>
             <div className="text-center">
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl py-3 px-2">
-                <p className="text-white/50 font-bold text-xs sm:text-sm">Google</p>
-                <p className="text-white/30 text-xs">Self-serve</p>
+                <p className="text-white font-bold text-xs sm:text-sm">Google</p>
+                <p className="text-white text-xs">Self-serve</p>
               </div>
             </div>
             <div className="text-center">
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl py-3 px-2">
-                <p className="text-white/50 font-bold text-xs sm:text-sm">HomeAdv.</p>
-                <p className="text-white/30 text-xs">Per-lead</p>
+                <p className="text-white font-bold text-xs sm:text-sm">HomeAdv.</p>
+                <p className="text-white text-xs">Per-lead</p>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@ export default function ComparisonTable() {
                 <div className="grid grid-cols-4 gap-1.5 sm:gap-3 items-center p-2.5 sm:p-4">
                   {/* Feature name */}
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="w-9 h-9 rounded-2xl bg-white/[0.06] flex items-center justify-center text-white/50 shrink-0 hidden sm:flex">
+                    <div className="w-9 h-9 rounded-2xl bg-white/[0.06] flex items-center justify-center text-white shrink-0 hidden sm:flex">
                       {feature.icon}
                     </div>
                     <div className="min-w-0">
@@ -219,7 +219,7 @@ export default function ComparisonTable() {
                     >
                       <div className="px-4 pb-4 pt-0">
                         <div className="h-px bg-white/[0.06] mb-3" />
-                        <p className="text-white/60 text-sm">{feature.description}</p>
+                        <p className="text-white text-sm">{feature.description}</p>
                       </div>
                     </motion.div>
                   )}

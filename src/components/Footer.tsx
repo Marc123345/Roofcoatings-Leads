@@ -47,14 +47,14 @@ export default function Footer() {
                 RoofCoat <span className="text-gold">Leads</span>
               </span>
             </div>
-            <p className="text-white/80 text-sm leading-relaxed max-w-xs mb-6">
+            <p className="text-white text-sm leading-relaxed max-w-xs mb-6">
               Pre-qualified lead generation for commercial and residential
               roof coating contractors through proven Facebook Ad campaigns.
             </p>
 
             {/* Contact info */}
             <div className="space-y-3">
-              <a href="mailto:marcfriedmancm@roofcoatleads.com" className="flex items-center gap-3 text-white/70 hover:text-gold transition-colors group">
+              <a href="mailto:marcfriedmancm@roofcoatleads.com" className="flex items-center gap-3 text-white hover:text-gold transition-colors group">
                 <div className="w-9 h-9 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-gold/10 transition-colors shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -62,7 +62,7 @@ export default function Footer() {
                 </div>
                 <span className="text-sm break-all">marcfriedmancm@roofcoatleads.com</span>
               </a>
-              <a href="/get-started" className="flex items-center gap-3 text-white/70 hover:text-gold transition-colors group">
+              <a href="/get-started" className="flex items-center gap-3 text-white hover:text-gold transition-colors group">
                 <div className="w-9 h-9 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-gold/10 transition-colors shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -80,7 +80,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="text-white/70 hover:text-gold text-sm transition-colors">
+                    <a href={link.href} className="text-white hover:text-gold text-sm transition-colors">
                       {link.label}
                     </a>
                   </li>
@@ -92,7 +92,7 @@ export default function Footer() {
           {/* CTA column */}
           <div className="lg:col-span-2">
             <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Get Started</h3>
-            <p className="text-white/80 text-sm mb-4">Proven lead system for your roof coating business.</p>
+            <p className="text-white text-sm mb-4">Proven lead system for your roof coating business.</p>
             <a href="/get-started"
               className="inline-flex items-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-gold/10 hover:shadow-gold/20 transition-shadow">
               Book a Free Call &rarr;
@@ -105,17 +105,17 @@ export default function Footer() {
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <p className="text-white/80 text-xs">
+            <p className="text-white text-xs">
               &copy; {new Date().getFullYear()} RoofCoat Leads. All rights reserved.
             </p>
             <span className="text-white/20">|</span>
-            <a href="/privacy" className="text-white/40 hover:text-gold text-xs transition-colors">Privacy</a>
-            <a href="/terms" className="text-white/40 hover:text-gold text-xs transition-colors">Terms</a>
+            <a href="/privacy" className="text-white hover:text-gold text-xs transition-colors">Privacy</a>
+            <a href="/terms" className="text-white hover:text-gold text-xs transition-colors">Terms</a>
           </div>
           <div className="flex items-center gap-4">
-            <a href="/sitemap.xml" className="text-white/40 hover:text-gold text-xs transition-colors">Sitemap</a>
+            <a href="/sitemap.xml" className="text-white hover:text-gold text-xs transition-colors">Sitemap</a>
             <span className="text-white/20">|</span>
-            <p className="text-white/70 text-xs font-medium">
+            <p className="text-white text-xs font-medium">
               Proven System. No Contracts. Just Results.
             </p>
           </div>

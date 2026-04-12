@@ -8,7 +8,7 @@ export default function NotFound() {
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
           Wrong Turn.
         </h1>
-        <p className="text-white/50 text-base mb-8">
+        <p className="text-white text-base mb-8">
           The page you&apos;re looking for doesn&apos;t exist. Let&apos;s get you back on track.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -145,7 +145,7 @@ function CostVisual() {
                 />
               )}
             </motion.div>
-            <span className={`text-xs font-medium text-center ${p.highlight ? "text-gold" : "text-white/80"}`}>
+            <span className={`text-xs font-medium text-center ${p.highlight ? "text-gold" : "text-white"}`}>
               {p.name}
             </span>
           </motion.div>
@@ -202,8 +202,8 @@ function TimelineVisual() {
               {step.icon}
             </motion.div>
             <p className="text-white font-bold text-sm mt-3">{step.label}</p>
-            <p className="text-white/70 text-xs mt-0.5">{step.desc}</p>
-            <p className={`text-xs font-mono mt-1 ${i === 3 ? "text-gold font-bold" : "text-white/80"}`}>{step.time}</p>
+            <p className="text-white text-xs mt-0.5">{step.desc}</p>
+            <p className={`text-xs font-mono mt-1 ${i === 3 ? "text-gold font-bold" : "text-white"}`}>{step.time}</p>
           </motion.div>
         ))}
       </div>
@@ -233,7 +233,7 @@ export default function WhyFacebookAds() {
           </h2>
         </AnimateIn>
         <AnimateIn delay={0.15}>
-          <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed text-center max-w-2xl mx-auto">
+          <p className="mt-4 text-white text-base sm:text-lg leading-relaxed text-center max-w-2xl mx-auto">
             We leverage Facebook&apos;s powerful targeting to reach property owners at the
             exact moment they&apos;re researching roof solutions.
           </p>
@@ -250,7 +250,7 @@ export default function WhyFacebookAds() {
                   className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${
                     activeTab === tab.id
                       ? "text-navy"
-                      : "text-white/70 hover:text-white/80"
+                      : "text-white hover:text-white"
                   }`}
                 >
                   {activeTab === tab.id && (
@@ -291,7 +291,7 @@ export default function WhyFacebookAds() {
                 <h3 className="text-white font-bold text-2xl lg:text-3xl mt-4">
                   {active.title}
                 </h3>
-                <p className="text-white/60 mt-3 text-base sm:text-lg leading-relaxed">
+                <p className="text-white mt-3 text-base sm:text-lg leading-relaxed">
                   {active.description}
                 </p>
 
@@ -299,17 +299,17 @@ export default function WhyFacebookAds() {
                 <div className="mt-6 flex gap-4">
                   <div className="bg-white/5 rounded-xl px-4 py-3 flex-1 text-center">
                     <p className="text-gold font-bold text-lg">$2k</p>
-                    <p className="text-white/80 text-xs">/month</p>
+                    <p className="text-white text-xs">/month</p>
                   </div>
                   <div className="bg-white/5 rounded-xl px-4 py-3 flex-1 text-center">
-                    <p className="text-gold font-bold text-lg">Free</p>
-                    <p className="text-white/80 text-xs">5-Page Website</p>
+                    <p className="text-gold font-bold text-lg">24/7</p>
+                    <p className="text-white text-xs">AI Booking</p>
                   </div>
                   <div className="bg-white/5 rounded-xl px-4 py-3 flex-1 text-center">
                     <p className="text-gold font-bold text-lg">
                       <CountUp end={100} suffix="+" />
                     </p>
-                    <p className="text-white/80 text-xs">Partners</p>
+                    <p className="text-white text-xs">Partners</p>
                   </div>
                 </div>
               </div>
@@ -338,10 +338,10 @@ export default function WhyFacebookAds() {
                 }`}
                 whileHover={{ y: -3 }}
               >
-                <p className={`text-2xl font-bold ${activeTab === tab.id ? "text-gold" : "text-white/70"}`}>
+                <p className={`text-2xl font-bold ${activeTab === tab.id ? "text-gold" : "text-white"}`}>
                   {tab.stat}
                 </p>
-                <p className={`text-xs mt-1 font-medium ${activeTab === tab.id ? "text-gold/70" : "text-white/80"}`}>
+                <p className={`text-xs mt-1 font-medium ${activeTab === tab.id ? "text-gold/70" : "text-white"}`}>
                   {tab.title}
                 </p>
               </motion.button>

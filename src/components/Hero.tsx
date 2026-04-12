@@ -83,7 +83,7 @@ export default function Hero() {
 
             {/* Sub */}
             <motion.p
-              className="mt-6 text-white/60 text-base sm:text-lg max-w-lg leading-relaxed"
+              className="mt-6 text-white text-base sm:text-lg max-w-lg leading-relaxed"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -111,7 +111,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.p
-              className="mt-4 text-white/30 text-xs uppercase tracking-widest"
+              className="mt-4 text-white text-xs uppercase tracking-widest"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9 }}

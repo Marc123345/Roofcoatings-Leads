@@ -62,7 +62,7 @@ export default function ROI() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + i * 0.08 }}
                     >
-                      <span className="text-white/70">{item.label}</span>
+                      <span className="text-white">{item.label}</span>
                       <span className={`font-bold ${item.color}`}>{item.value}</span>
                     </motion.div>
                   ))}
@@ -97,7 +97,7 @@ export default function ROI() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + i * 0.08 }}
                     >
-                      <span className="text-white/70">{item.label}</span>
+                      <span className="text-white">{item.label}</span>
                       <span className={`font-bold ${item.color}`}>{item.value}</span>
                     </motion.div>
                   ))}

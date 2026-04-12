@@ -31,7 +31,7 @@ function BookingTabs() {
           className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
             tab === "book"
               ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
-              : "bg-navy-light text-white/50 hover:text-white"
+              : "bg-navy-light text-white hover:text-white"
           }`}
         >
           <Calendar className="w-4 h-4" />
@@ -42,7 +42,7 @@ function BookingTabs() {
           className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
             tab === "contact"
               ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
-              : "bg-navy-light text-white/50 hover:text-white"
+              : "bg-navy-light text-white hover:text-white"
           }`}
         >
           <Mail className="w-4 h-4" />
@@ -101,13 +101,13 @@ export default function GetStartedContent() {
               </span>
             </motion.h1>
 
-            <motion.p className="mt-6 text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
+            <motion.p className="mt-6 text-white text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
               Book a free 30-minute call and we&apos;ll map out your market, your ideal
               lead profile, and how many exclusive leads we can deliver each month.
             </motion.p>
 
-            <motion.p className="mt-4 text-white/80 text-sm"
+            <motion.p className="mt-4 text-white text-sm"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
               No charge for the audit. No contracts. If we&apos;re not the right fit, we&apos;ll tell you.
             </motion.p>
@@ -138,7 +138,7 @@ export default function GetStartedContent() {
                   <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4">
                     Book Your Free Strategy Audit
                   </h2>
-                  <p className="text-white/70 leading-relaxed mb-8">
+                  <p className="text-white leading-relaxed mb-8">
                     Pick a time that works for you. In 30 minutes we&apos;ll map out your
                     lead strategy and build a custom campaign blueprint.
                   </p>
@@ -160,7 +160,7 @@ export default function GetStartedContent() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <span className="text-white/80 text-sm">{item}</span>
+                        <span className="text-white text-sm">{item}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -175,7 +175,7 @@ export default function GetStartedContent() {
                         <p className="text-gold text-xs">Founder, RoofCoat Leads</p>
                       </div>
                     </div>
-                    <p className="text-white/80 text-xs leading-relaxed">
+                    <p className="text-white text-xs leading-relaxed">
                       You&apos;ll be talking directly with me — not a sales rep, not an account manager.
                       I built this system and I know your niche inside out.
                     </p>
@@ -240,7 +240,7 @@ export default function GetStartedContent() {
                   </summary>
                   <div className="px-6 pb-5">
                     <div className="h-px bg-white/5 mb-4" />
-                    <p className="text-white/70 text-sm leading-relaxed">{faq.a}</p>
+                    <p className="text-white text-sm leading-relaxed">{faq.a}</p>
                   </div>
                 </details>
               </StaggerItem>

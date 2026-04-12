@@ -66,7 +66,7 @@ export default function AdCreativeMockup({ variant = 1 }: { variant?: number }) 
         <div className="text-center relative z-10 p-4">
           <p className="text-white font-bold text-sm">Commercial Roof Coating</p>
           <p className="text-gold text-[11px] mt-1 font-semibold">Save up to 70% vs. Replacement</p>
-          <p className="text-white/80 text-[11px] mt-1">Extend your roof life by 15+ years</p>
+          <p className="text-white text-[11px] mt-1">Extend your roof life by 15+ years</p>
           <div className="mt-3 bg-blue text-white text-[11px] font-bold px-4 py-1.5 rounded-xl inline-block">
             Learn More
           </div>

@@ -10,7 +10,7 @@ export default function DashboardMockup() {
           <div className="w-3 h-3 rounded-2xl bg-red-400" />
           <div className="w-3 h-3 rounded-2xl bg-yellow-400" />
           <div className="w-3 h-3 rounded-2xl bg-green-400" />
-          <span className="ml-2 text-white/80 text-xs">RoofCoat Leads Dashboard</span>
+          <span className="ml-2 text-white text-xs">RoofCoat Leads Dashboard</span>
         </div>
 
         <div className="p-5 space-y-4">
@@ -30,7 +30,7 @@ export default function DashboardMockup() {
                 transition={{ delay: 0.5 + i * 0.15 }}
               >
                 <p className={`text-lg font-bold ${stat.color}`}>{stat.value}</p>
-                <p className="text-white/70 text-[11px] mt-0.5">{stat.label}</p>
+                <p className="text-white text-[11px] mt-0.5">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -38,7 +38,7 @@ export default function DashboardMockup() {
           {/* Chart area */}
           <div className="bg-white/5 rounded-2xl p-4">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-white/80 text-xs">Lead Volume (30 days)</span>
+              <span className="text-white text-xs">Lead Volume (30 days)</span>
               <span className="text-green-400 text-xs font-medium">+27%</span>
             </div>
             <svg viewBox="0 0 300 80" className="w-full">
@@ -71,7 +71,7 @@ export default function DashboardMockup() {
 
           {/* Recent leads list */}
           <div className="space-y-2">
-            <p className="text-white/80 text-xs mb-2">Recent Leads</p>
+            <p className="text-white text-xs mb-2">Recent Leads</p>
             {[
               { name: "Commercial — 12,000 sq ft", time: "2 min ago", status: "New" },
               { name: "Residential — Flat Roof Leak", time: "18 min ago", status: "Contacted" },
@@ -87,10 +87,10 @@ export default function DashboardMockup() {
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-2xl bg-green-400 animate-pulse" />
-                  <span className="text-white/70 text-xs">{lead.name}</span>
+                  <span className="text-white text-xs">{lead.name}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-white/80 text-[11px]">{lead.time}</span>
+                  <span className="text-white text-[11px]">{lead.time}</span>
                   <span className={`text-[11px] px-2 py-0.5 rounded-xl ${
                     lead.status === "New" ? "bg-blue/20 text-blue-light" :
                     lead.status === "Contacted" ? "bg-gold/20 text-gold" :

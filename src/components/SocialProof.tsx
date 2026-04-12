@@ -82,7 +82,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       </div>
 
       {/* Quote */}
-      <p className="text-white/70 text-sm leading-relaxed flex-1">
+      <p className="text-white text-sm leading-relaxed flex-1">
         &ldquo;{review.text}&rdquo;
       </p>
 
@@ -90,7 +90,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
       {review.stat && (
         <div className="flex items-center gap-2 bg-gold/[0.06] border border-gold/15 rounded-lg px-3 py-1.5 self-start">
           <span className="text-gold text-sm font-bold">{review.stat}</span>
-          <span className="text-white/40 text-xs">{review.statLabel}</span>
+          <span className="text-white text-xs">{review.statLabel}</span>
         </div>
       )}
 
@@ -124,7 +124,7 @@ export default function SocialProof() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
               What Our <span className="text-gradient-gold">Contractors</span> Say
             </h2>
-            <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               Real results from real roof coating contractors across all 50 states.
               No fluff, no fake reviews — just numbers that speak for themselves.
             </p>
@@ -139,7 +139,7 @@ export default function SocialProof() {
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="text-gold text-xl sm:text-2xl font-black">{s.val}</p>
-                  <p className="text-white/30 text-[10px] sm:text-xs uppercase tracking-widest mt-0.5">{s.label}</p>
+                  <p className="text-white text-[10px] sm:text-xs uppercase tracking-widest mt-0.5">{s.label}</p>
                 </div>
               ))}
             </div>

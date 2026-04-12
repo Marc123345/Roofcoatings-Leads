@@ -17,7 +17,7 @@ export default function Results() {
           </h2>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed text-center">Real numbers from our partner network</p>
+          <p className="mt-4 text-white text-base sm:text-lg leading-relaxed text-center">Real numbers from our partner network</p>
         </AnimateIn>
 
         {/* Bento layout: stats + dashboard */}
@@ -33,7 +33,7 @@ export default function Results() {
                 <CountUp end={40} suffix="%" />
               </p>
               <p className="text-white font-bold mt-3">Lower Cost Per Acquisition</p>
-              <p className="text-white/80 text-sm mt-2">vs. HomeAdvisor & Google Ads</p>
+              <p className="text-white text-sm mt-2">vs. HomeAdvisor & Google Ads</p>
             </motion.div>
           </StaggerItem>
 
@@ -58,7 +58,7 @@ export default function Results() {
                 <CountUp end={3} suffix="+" />
               </p>
               <p className="text-white font-bold mt-3">Commercial Jobs First Month</p>
-              <p className="text-white/80 text-sm mt-2">Average for new partners</p>
+              <p className="text-white text-sm mt-2">Average for new partners</p>
             </motion.div>
           </StaggerItem>
 
@@ -73,7 +73,7 @@ export default function Results() {
                 <CountUp end={15} suffix="%" />
               </p>
               <p className="text-white font-bold mt-3">Conversion Rate Increase</p>
-              <p className="text-white/80 text-sm mt-2">With our follow-up scripts</p>
+              <p className="text-white text-sm mt-2">With our follow-up scripts</p>
             </motion.div>
           </StaggerItem>
 
@@ -88,7 +88,7 @@ export default function Results() {
                 <CountUp end={48} prefix="<" suffix="h" />
               </p>
               <p className="text-white font-bold mt-3">Setup to First Lead</p>
-              <p className="text-white/80 text-sm mt-2">Fast onboarding process</p>
+              <p className="text-white text-sm mt-2">Fast onboarding process</p>
             </motion.div>
           </StaggerItem>
         </StaggerContainer>

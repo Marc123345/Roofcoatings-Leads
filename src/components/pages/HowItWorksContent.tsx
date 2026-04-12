@@ -98,7 +98,7 @@ function AuditVisual() {
             transition={{ delay: item.delay + 0.15, type: "spring" }}>
             <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/></svg>
           </motion.div>
-          <span className="text-white/70 text-sm">{item.label}</span>
+          <span className="text-white text-sm">{item.label}</span>
         </motion.div>
       ))}
       <motion.div
@@ -120,11 +120,11 @@ function BuildVisual() {
   ];
   return (
     <div className="space-y-3">
-      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-2">Campaign components</p>
+      <p className="text-white text-[11px] uppercase tracking-wider mb-2">Campaign components</p>
       {layers.map((layer) => (
         <div key={layer.label}>
           <div className="flex justify-between mb-1">
-            <span className="text-white/80 text-xs">{layer.label}</span>
+            <span className="text-white text-xs">{layer.label}</span>
           </div>
           <div className="h-7 bg-white/5 rounded-2xl overflow-hidden relative">
             <motion.div
@@ -132,7 +132,7 @@ function BuildVisual() {
               initial={{ width: 0 }}
               animate={{ width: layer.w }}
               transition={{ delay: layer.delay, duration: 0.6, ease: "easeOut" }}>
-              <motion.svg className="w-3 h-3 text-white/80 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              <motion.svg className="w-3 h-3 text-white ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: layer.delay + 0.5 }}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/>
               </motion.svg>
@@ -158,14 +158,14 @@ function QualifyVisual() {
   ];
   return (
     <div className="flex flex-col items-center gap-2">
-      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-2">Qualification funnel</p>
+      <p className="text-white text-[11px] uppercase tracking-wider mb-2">Qualification funnel</p>
       {funnel.map((stage) => (
         <motion.div key={stage.label}
           className={`${stage.bg} rounded-xl py-2.5 px-4 flex items-center justify-between border border-white/5`}
           style={{ width: stage.w }}
           initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: stage.delay, duration: 0.4 }}>
-          <span className="text-white/80 text-xs">{stage.label}</span>
+          <span className="text-white text-xs">{stage.label}</span>
           <span className="text-white font-bold text-xs">{stage.count}</span>
         </motion.div>
       ))}
@@ -185,7 +185,7 @@ function DeliverVisual() {
   ];
   return (
     <div className="space-y-3">
-      <p className="text-white/70 text-[11px] uppercase tracking-wider mb-2">Live feed</p>
+      <p className="text-white text-[11px] uppercase tracking-wider mb-2">Live feed</p>
       {notifications.map((n, i) => (
         <motion.div key={n.title}
           className="bg-white/5 border border-white/10 rounded-2xl p-4"
@@ -197,14 +197,14 @@ function DeliverVisual() {
               <div className={`w-2 h-2 rounded-xl ${n.status === "new" ? "bg-blue animate-pulse" : n.status === "contacted" ? "bg-gold" : "bg-green-400"}`} />
               <span className="text-white font-bold text-sm">{n.title}</span>
             </div>
-            <span className="text-white/80 text-[11px]">{n.time}</span>
+            <span className="text-white text-[11px]">{n.time}</span>
           </div>
-          <p className="text-white/70 text-xs">{n.detail}</p>
+          <p className="text-white text-xs">{n.detail}</p>
           {n.status === "new" && (
             <motion.div className="mt-2 flex gap-2"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 + i * 0.25 + 0.3 }}>
               <span className="bg-blue text-white text-[11px] font-bold px-3 py-1 rounded-xl">Call Now</span>
-              <span className="bg-white/10 text-white/80 text-[11px] px-3 py-1 rounded-xl">View Details</span>
+              <span className="bg-white/10 text-white text-[11px] px-3 py-1 rounded-xl">View Details</span>
             </motion.div>
           )}
         </motion.div>
@@ -261,14 +261,14 @@ export default function HowItWorksContent() {
             </motion.h1>
 
             <motion.p
-              className="mt-6 text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
+              className="mt-6 text-white text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
               Most lead generation is a black box. You pay, you wait, you hope.
               Here&apos;s exactly what happens — step by step.
             </motion.p>
 
             <motion.a href="#process"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center gap-2 text-white/70 hover:text-white transition-colors"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center gap-2 text-white hover:text-white transition-colors"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
               <span className="text-sm">Scroll to explore</span>
               <motion.svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -304,7 +304,7 @@ export default function HowItWorksContent() {
                       className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg border-2 transition-all duration-300 ${
                         i <= activeStep
                           ? "bg-gold border-gold text-navy"
-                          : "bg-navy-light border-white/10 text-white/80"
+                          : "bg-navy-light border-white/10 text-white"
                       }`}
                       whileHover={{ scale: 1.15 }}
                       animate={i === activeStep ? { scale: [1, 1.1, 1] } : {}}
@@ -312,8 +312,8 @@ export default function HowItWorksContent() {
                       {s.icon}
                     </motion.div>
                     <div className="text-center">
-                      <p className={`text-xs font-bold transition-colors ${i === activeStep ? "text-gold" : "text-white/80"}`}>{s.time}</p>
-                      <p className={`text-[11px] transition-colors hidden sm:block ${i === activeStep ? "text-white/70" : "text-white/70"}`}>{s.title}</p>
+                      <p className={`text-xs font-bold transition-colors ${i === activeStep ? "text-gold" : "text-white"}`}>{s.time}</p>
+                      <p className={`text-[11px] transition-colors hidden sm:block ${i === activeStep ? "text-white" : "text-white"}`}>{s.title}</p>
                     </div>
                   </button>
                 ))}
@@ -337,13 +337,13 @@ export default function HowItWorksContent() {
                       {step.icon}
                     </div>
                     <div>
-                      <p className="text-white/80 text-xs font-mono">Step {step.number}</p>
+                      <p className="text-white text-xs font-mono">Step {step.number}</p>
                       <h2 className="text-white font-bold text-2xl lg:text-3xl">{step.title}</h2>
                     </div>
                   </div>
 
                   <p className="text-gold font-semibold text-lg mb-4">{step.short}</p>
-                  <p className="text-white/80 leading-relaxed flex-1">{step.description}</p>
+                  <p className="text-white leading-relaxed flex-1">{step.description}</p>
 
                   <div className="mt-6 bg-white/5 border border-white/5 rounded-xl px-5 py-4 flex items-center gap-3">
                     <div className="w-8 h-8 rounded-2xl bg-green-500/20 flex items-center justify-center shrink-0">
@@ -351,7 +351,7 @@ export default function HowItWorksContent() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                       </svg>
                     </div>
-                    <span className="text-white/70 text-sm">{step.detail}</span>
+                    <span className="text-white text-sm">{step.detail}</span>
                   </div>
 
                   {/* Step navigation */}
@@ -359,7 +359,7 @@ export default function HowItWorksContent() {
                     <button
                       onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
                       disabled={activeStep === 0}
-                      className="px-5 py-2.5 rounded-2xl border border-white/10 text-white/80 text-sm font-medium disabled:opacity-20 hover:border-white/20 hover:text-white/80 transition-all">
+                      className="px-5 py-2.5 rounded-2xl border border-white/10 text-white text-sm font-medium disabled:opacity-20 hover:border-white/20 hover:text-white transition-all">
                       &larr; Prev
                     </button>
                     {activeStep < steps.length - 1 ? (
@@ -404,7 +404,7 @@ export default function HowItWorksContent() {
               </h2>
             </AnimateIn>
             <AnimateIn delay={0.15}>
-              <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">
+              <p className="mt-4 text-white text-lg max-w-2xl mx-auto">
                 Most roofing contractors think Google first. Here&apos;s why Facebook is the better fit for roof coating.
               </p>
             </AnimateIn>
@@ -419,7 +419,7 @@ export default function HowItWorksContent() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="bg-navy rounded-xl px-4 py-2 text-center">
                       <p className="text-gold text-xl font-bold leading-none">{adv.stat}</p>
-                      <p className="text-white/70 text-[11px] mt-0.5">{adv.statLabel}</p>
+                      <p className="text-white text-[11px] mt-0.5">{adv.statLabel}</p>
                     </div>
                     <h3 className="text-navy font-bold text-xl">{adv.title}</h3>
                   </div>
@@ -437,7 +437,7 @@ export default function HowItWorksContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-14">
             <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">Everything You Need to Grow</h2></AnimateIn>
-            <AnimateIn delay={0.1}><p className="mt-4 text-white/70 text-lg">All included. No add-ons. No hidden fees.</p></AnimateIn>
+            <AnimateIn delay={0.1}><p className="mt-4 text-white text-lg">All included. No add-ons. No hidden fees.</p></AnimateIn>
           </div>
 
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4" staggerDelay={0.06}>
@@ -448,7 +448,7 @@ export default function HowItWorksContent() {
                   whileHover={{ y: -4 }}>
                   <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">{item.icon}</div>
                   <h3 className="text-white font-bold text-sm mt-3">{item.title}</h3>
-                  <p className="text-white/80 text-xs mt-1.5 leading-relaxed">{item.description}</p>
+                  <p className="text-white text-xs mt-1.5 leading-relaxed">{item.description}</p>
                 </motion.div>
               </StaggerItem>
             ))}

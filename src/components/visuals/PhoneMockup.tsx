@@ -12,7 +12,7 @@ export default function PhoneMockup() {
         <div className="bg-navy rounded-[1.5rem] overflow-hidden">
           {/* Status bar */}
           <div className="flex items-center justify-between px-5 pt-3 pb-1">
-            <span className="text-white/80 text-[11px]">9:41</span>
+            <span className="text-white text-[11px]">9:41</span>
             <div className="flex gap-1">
               <div className="w-3 h-1.5 bg-white/40 rounded-xl" />
               <div className="w-1.5 h-1.5 bg-white/40 rounded-xl" />
@@ -35,14 +35,14 @@ export default function PhoneMockup() {
                   </svg>
                 </div>
                 <span className="text-white text-[11px] font-bold">New Lead Alert</span>
-                <span className="text-white/70 text-[8px] ml-auto">now</span>
+                <span className="text-white text-[8px] ml-auto">now</span>
               </div>
-              <p className="text-white/70 text-[11px] leading-tight">
+              <p className="text-white text-[11px] leading-tight">
                 Commercial roof coating inquiry — 15,000 sq ft warehouse in Tampa, FL
               </p>
               <div className="flex gap-2 mt-2">
                 <div className="bg-blue text-white text-[11px] px-3 py-1 rounded-xl font-medium">Call Now</div>
-                <div className="bg-white/10 text-white/70 text-[11px] px-3 py-1 rounded-xl">Details</div>
+                <div className="bg-white/10 text-white text-[11px] px-3 py-1 rounded-xl">Details</div>
               </div>
             </motion.div>
 
@@ -60,9 +60,9 @@ export default function PhoneMockup() {
                   </svg>
                 </div>
                 <span className="text-white text-[11px] font-bold">Lead Booked!</span>
-                <span className="text-white/70 text-[8px] ml-auto">3m ago</span>
+                <span className="text-white text-[8px] ml-auto">3m ago</span>
               </div>
-              <p className="text-white/70 text-[11px] leading-tight">
+              <p className="text-white text-[11px] leading-tight">
                 Residential flat roof — Appointment set for Thursday 2pm
               </p>
             </motion.div>
@@ -82,7 +82,7 @@ export default function PhoneMockup() {
                 </div>
                 <span className="text-white text-[11px] font-bold">Weekly Summary</span>
               </div>
-              <p className="text-white/70 text-[11px]">18 leads | 6 booked | $38 avg CPA</p>
+              <p className="text-white text-[11px]">18 leads | 6 booked | $38 avg CPA</p>
             </motion.div>
           </div>
         </div>

@@ -40,7 +40,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
               </span>
             </motion.h1>
 
-            <motion.p className="mt-6 text-white/70 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
+            <motion.p className="mt-6 text-white text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
               Pre-qualified, high-intent leads for {area.state} roof coating contractors.
               Custom campaigns targeting {area.cities.slice(0, 3).join(", ")} and beyond.
@@ -54,7 +54,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                 Get {area.state} Leads &rarr;
               </motion.a>
               <motion.a href="/results"
-                className="border border-white/20 text-white/80 hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base w-full sm:w-auto text-center transition-all"
+                className="border border-white/20 text-white hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base w-full sm:w-auto text-center transition-all"
                 whileHover={{ scale: 1.03 }}>
                 See Win-Logs
               </motion.a>
@@ -65,15 +65,15 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">{area.caseStudy.stat}</p>
-                <p className="text-white/70 text-[11px]">{area.caseStudy.statLabel}</p>
+                <p className="text-white text-[11px]">{area.caseStudy.statLabel}</p>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">{area.cities.length}+</p>
-                <p className="text-white/70 text-[11px]">cities covered</p>
+                <p className="text-white text-[11px]">cities covered</p>
               </div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 text-center">
                 <p className="text-gold text-xl font-bold">&lt;48h</p>
-                <p className="text-white/70 text-[11px]">to first lead</p>
+                <p className="text-white text-[11px]">to first lead</p>
               </div>
             </motion.div>
           </div>
@@ -99,7 +99,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                     <CloudSun className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Climate &amp; Conditions</h3>
                   </div>
-                  <p className="text-white/70 leading-relaxed">{area.climate}</p>
+                  <p className="text-white leading-relaxed">{area.climate}</p>
                 </motion.div>
               </AnimateIn>
 
@@ -110,7 +110,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                     <Building2 className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Building Stock</h3>
                   </div>
-                  <p className="text-white/70 leading-relaxed">{area.buildingStock}</p>
+                  <p className="text-white leading-relaxed">{area.buildingStock}</p>
                 </motion.div>
               </AnimateIn>
 
@@ -121,7 +121,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                     <CalendarDays className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Seasonal Patterns</h3>
                   </div>
-                  <p className="text-white/70 leading-relaxed">{area.seasonal}</p>
+                  <p className="text-white leading-relaxed">{area.seasonal}</p>
                 </motion.div>
               </AnimateIn>
 
@@ -132,7 +132,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                     <Lightbulb className="w-6 h-6 text-gold" />
                     <h3 className="text-white font-bold text-xl">Local Insight</h3>
                   </div>
-                  <p className="text-white/70 leading-relaxed">{area.localInsight}</p>
+                  <p className="text-white leading-relaxed">{area.localInsight}</p>
                 </motion.div>
               </AnimateIn>
             </div>
@@ -159,7 +159,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                 <div className="flex flex-col sm:flex-row items-center gap-6">
                   <div className="bg-navy rounded-xl px-8 py-5 text-center">
                     <p className="text-gold text-2xl sm:text-4xl font-bold">{area.caseStudy.stat}</p>
-                    <p className="text-white/70 text-sm mt-1">{area.caseStudy.statLabel}</p>
+                    <p className="text-white text-sm mt-1">{area.caseStudy.statLabel}</p>
                   </div>
                   <motion.a href="/get-started"
                     className="bg-gradient-to-r from-gold to-yellow-400 text-navy px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-gold/20"
@@ -179,7 +179,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimateIn>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Cities We Serve in {area.state}</h2>
-            <p className="text-white/80 mb-10">+ all surrounding areas within your service radius</p>
+            <p className="text-white mb-10">+ all surrounding areas within your service radius</p>
           </AnimateIn>
 
           <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" staggerDelay={0.04}>
@@ -189,7 +189,7 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                   className="bg-navy-light rounded-2xl p-4 text-center border border-white/5 hover:border-gold/20 transition-colors"
                   whileHover={{ y: -3 }}>
                   <p className="text-white font-semibold">{city}</p>
-                  <p className="text-white/80 text-xs mt-0.5">{area.abbr}</p>
+                  <p className="text-white text-xs mt-0.5">{area.abbr}</p>
                 </motion.div>
               </StaggerItem>
             ))}

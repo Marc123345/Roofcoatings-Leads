@@ -43,7 +43,7 @@ export default function ServiceAreasHub() {
               </span>
             </motion.h1>
 
-            <motion.p className="mt-6 text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
+            <motion.p className="mt-6 text-white text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
               We don&apos;t do national blasts. Every campaign is custom-built for your state,
               your cities, your customer base. Precision targeting that fills local pipelines.
@@ -54,7 +54,7 @@ export default function ServiceAreasHub() {
               {serviceAreas.map((sa) => (
                 <div key={sa.slug} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-2">
                   <span className="text-gold font-bold text-sm">{sa.abbr}</span>
-                  <span className="text-white/70 text-xs ml-1.5">{sa.state}</span>
+                  <span className="text-white text-xs ml-1.5">{sa.state}</span>
                 </div>
               ))}
             </motion.div>
@@ -70,7 +70,7 @@ export default function ServiceAreasHub() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-14">
               <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Explore Our Markets</h2></AnimateIn>
-              <AnimateIn delay={0.1}><p className="mt-3 text-white/80 text-lg">Click a state on the map or use the tabs below.</p></AnimateIn>
+              <AnimateIn delay={0.1}><p className="mt-3 text-white text-lg">Click a state on the map or use the tabs below.</p></AnimateIn>
             </div>
 
             {/* State tabs */}
@@ -78,7 +78,7 @@ export default function ServiceAreasHub() {
               <div className="inline-flex bg-navy-light rounded-xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {serviceAreas.map((sa, i) => (
                   <button key={sa.slug} onClick={() => setActiveIdx(i)}
-                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
+                    className={`relative px-3 sm:px-5 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white hover:text-white"}`}>
                     {activeIdx === i && (
                       <motion.div className="absolute inset-0 bg-gradient-to-r from-gold to-yellow-400 rounded-xl"
                         layoutId="areaTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
@@ -111,7 +111,7 @@ export default function ServiceAreasHub() {
                     </div>
                     <div className="mt-4 text-center">
                       <p className="text-gold font-bold text-lg">{area.state}</p>
-                      <p className="text-white/80 text-xs">{area.cities.length}+ cities covered</p>
+                      <p className="text-white text-xs">{area.cities.length}+ cities covered</p>
                     </div>
                   </div>
 
@@ -125,7 +125,7 @@ export default function ServiceAreasHub() {
                         <div className="flex items-end justify-between">
                           <div>
                             <h3 className="text-white font-bold text-2xl lg:text-3xl">{area.state} Roof Coating Leads</h3>
-                            <p className="text-white/80 text-sm mt-1">{area.cities.slice(0, 4).join(" · ")} + more</p>
+                            <p className="text-white text-sm mt-1">{area.cities.slice(0, 4).join(" · ")} + more</p>
                           </div>
                           <div className="bg-gold/20 border border-gold/30 rounded-xl px-4 py-2 text-center shrink-0 hidden sm:block">
                             <p className="text-gold text-xl font-bold">{area.caseStudy.stat}</p>
@@ -152,7 +152,7 @@ export default function ServiceAreasHub() {
                             {card.icon}
                             <h4 className="text-white font-bold text-sm">{card.title}</h4>
                           </div>
-                          <p className="text-white/70 text-xs leading-relaxed line-clamp-3">{card.text}</p>
+                          <p className="text-white text-xs leading-relaxed line-clamp-3">{card.text}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -168,7 +168,7 @@ export default function ServiceAreasHub() {
                           <p className="text-gold text-xs">{area.caseStudy.company}</p>
                         </div>
                       </div>
-                      <p className="text-white/70 italic text-sm leading-relaxed border-l-2 border-gold pl-4">
+                      <p className="text-white italic text-sm leading-relaxed border-l-2 border-gold pl-4">
                         &ldquo;{area.caseStudy.quote}&rdquo;
                       </p>
                     </div>
@@ -190,7 +190,7 @@ export default function ServiceAreasHub() {
               <div className="mt-16 text-center">
                 <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-3">
                   <span className="w-2 h-2 bg-green-500 rounded-xl animate-pulse" />
-                  <span className="text-white/80 text-sm">
+                  <span className="text-white text-sm">
                     Expanding to new states monthly — don&apos;t see yours?{" "}
                     <a href="/get-started" className="text-gold font-bold hover:underline">Book a Free Call &rarr;</a>
                   </span>
@@ -220,7 +220,7 @@ export default function ServiceAreasHub() {
                     <div className="absolute top-4 right-4 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-xl">{sa.abbr}</div>
                     <div className="absolute bottom-4 left-4">
                       <h3 className="text-white font-bold text-xl">{sa.state}</h3>
-                      <p className="text-white/80 text-xs mt-0.5">{sa.cities.slice(0, 3).join(" · ")}</p>
+                      <p className="text-white text-xs mt-0.5">{sa.cities.slice(0, 3).join(" · ")}</p>
                     </div>
                   </div>
                   <div className="p-5 flex items-center justify-between">
@@ -243,7 +243,7 @@ export default function ServiceAreasHub() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12">
             <AnimateIn><h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">We Cover All 50 States</h2></AnimateIn>
-            <AnimateIn delay={0.1}><p className="mt-3 text-white/80 text-lg">Select your state to get started with pre-qualified leads in your territory.</p></AnimateIn>
+            <AnimateIn delay={0.1}><p className="mt-3 text-white text-lg">Select your state to get started with pre-qualified leads in your territory.</p></AnimateIn>
           </div>
 
           <AnimateIn delay={0.2}>
@@ -261,8 +261,8 @@ export default function ServiceAreasHub() {
                       }`}
                       whileHover={{ y: -2 }}
                     >
-                      <p className={`font-bold text-sm ${isFeatured ? "text-gold" : "text-white/80"}`}>{st.abbr}</p>
-                      <p className={`text-[11px] mt-0.5 ${isFeatured ? "text-gold/60" : "text-white/70"}`}>{st.state}</p>
+                      <p className={`font-bold text-sm ${isFeatured ? "text-gold" : "text-white"}`}>{st.abbr}</p>
+                      <p className={`text-[11px] mt-0.5 ${isFeatured ? "text-gold/60" : "text-white"}`}>{st.state}</p>
                     </motion.a>
                   </StaggerItem>
                 );
@@ -271,7 +271,7 @@ export default function ServiceAreasHub() {
           </AnimateIn>
 
           <AnimateIn delay={0.3}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-white/80">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-white">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-2xl bg-gold/20 border border-gold/30" />
                 <span>Featured markets (full detail pages)</span>

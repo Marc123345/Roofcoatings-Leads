@@ -111,8 +111,8 @@ function CampaignBreakdown({ niche }: { niche: typeof niches[0] }) {
           <div className="flex items-start gap-3">
             <div className="w-8 h-8 bg-white/10 rounded-xl flex items-center justify-center shrink-0">{row.icon}</div>
             <div className="min-w-0">
-              <p className="text-white/70 text-[11px] uppercase tracking-wider mb-0.5">{row.label}</p>
-              <p className="text-white/80 text-sm leading-relaxed">{row.value}</p>
+              <p className="text-white text-[11px] uppercase tracking-wider mb-0.5">{row.label}</p>
+              <p className="text-white text-sm leading-relaxed">{row.value}</p>
             </div>
           </div>
         </motion.div>
@@ -150,21 +150,21 @@ export default function NicheExpertiseContent() {
             <motion.h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] "
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}>
               We Don&apos;t Do{" "}
-              <span className="line-through text-white/80">General Roofing</span>
+              <span className="line-through text-white">General Roofing</span>
               <br />
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent animate-gradient">
                 We Speak Your Niche.
               </span>
             </motion.h1>
 
-            <motion.p className="mt-6 text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
+            <motion.p className="mt-6 text-white text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
               Silicone vs acrylic. TPO vs metal. Every coating type needs a different campaign.
               We build each one from the ground up for your exact niche.
             </motion.p>
 
             <motion.a href="#niches"
-              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center gap-2 text-white/70 hover:text-white transition-colors"
+              className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center gap-2 text-white hover:text-white transition-colors"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
               <span className="text-sm">Explore coating types</span>
               <motion.svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -188,7 +188,7 @@ export default function NicheExpertiseContent() {
               <div className="inline-flex bg-navy-light rounded-xl p-1.5 border border-white/10 gap-1 overflow-x-auto max-w-full scrollbar-none" style={{scrollbarWidth:"none"}}>
                 {niches.map((n, i) => (
                   <button key={n.id} onClick={() => setActiveIdx(i)}
-                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white/70 hover:text-white/70"}`}>
+                    className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${activeIdx === i ? "text-navy" : "text-white hover:text-white"}`}>
                     {activeIdx === i && (
                       <motion.div className={`absolute inset-0 bg-gradient-to-r ${n.color} rounded-lg`}
                         layoutId="nicheTab" transition={{ type: "spring", bounce: 0.2, duration: 0.5 }} />
@@ -231,7 +231,7 @@ export default function NicheExpertiseContent() {
                           {niche.stats.map((stat) => (
                             <div key={stat.label} className="bg-navy/80 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 text-center min-w-[80px]">
                               <p className="text-gold text-xl font-bold">{stat.value}</p>
-                              <p className="text-white/70 text-[11px]">{stat.label}</p>
+                              <p className="text-white text-[11px]">{stat.label}</p>
                             </div>
                           ))}
                         </div>
@@ -246,12 +246,12 @@ export default function NicheExpertiseContent() {
                   {/* Description + Job Value */}
                   <div className="bg-navy-light rounded-2xl border border-white/10 p-5 sm:p-8 flex flex-col">
                     <h3 className="text-white font-bold text-xl mb-4">Why This Niche</h3>
-                    <p className="text-white/80 leading-relaxed flex-1">{niche.description}</p>
+                    <p className="text-white leading-relaxed flex-1">{niche.description}</p>
 
                     <div className={`mt-6 bg-gradient-to-r ${niche.color} rounded-2xl p-5 text-center`}>
-                      <p className="text-white/70 text-xs uppercase tracking-wider mb-1">Avg. Job Value</p>
+                      <p className="text-white text-xs uppercase tracking-wider mb-1">Avg. Job Value</p>
                       <p className="text-white text-3xl font-bold">{niche.avgValue}</p>
-                      <p className="text-white/80 text-xs mt-1">per closed project</p>
+                      <p className="text-white text-xs mt-1">per closed project</p>
                     </div>
                   </div>
 
@@ -323,14 +323,14 @@ export default function NicheExpertiseContent() {
                 We&apos;ll Build the Campaign.
               </span>
             </h2>
-            <p className="mt-4 text-white/80 text-lg">Free strategy audit tailored to your specific coating type and territory.</p>
+            <p className="mt-4 text-white text-lg">Free strategy audit tailored to your specific coating type and territory.</p>
             <motion.a href="/get-started"
               className="mt-8 inline-flex items-center w-full sm:w-auto justify-center w-full sm:w-auto justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg w-full sm:w-auto text-center shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Book a Free Call &rarr;
             </motion.a>
-            <p className="mt-3 text-white/80 text-sm">No charge. No pitch. No contracts.</p>
+            <p className="mt-3 text-white text-sm">No charge. No pitch. No contracts.</p>
           </AnimateIn>
         </div>
       </section>

@@ -202,7 +202,7 @@ export default function Testimonials() {
 
             <div className="z-10 text-center">
               <p className="text-2xl font-bold text-gold">6 States</p>
-              <p className="text-white/80 text-sm">and expanding monthly</p>
+              <p className="text-white text-sm">and expanding monthly</p>
             </div>
           </div>
 
@@ -237,7 +237,7 @@ export default function Testimonials() {
                   <div className="flex flex-col gap-5">
                     {/* Service tag */}
                     <div className="flex items-center gap-3">
-                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-xl text-white/80">
+                      <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-white/5 border border-white/10 rounded-xl text-white">
                         {partner.service}
                       </span>
                       <span className="text-[11px] tracking-[0.2em] uppercase px-3 py-1 bg-gold/10 border border-gold/20 rounded-xl text-gold">
@@ -253,7 +253,7 @@ export default function Testimonials() {
                     {/* Stat highlight */}
                     <div className="flex items-center gap-3 bg-gold/10 border border-gold/20 rounded-xl px-5 py-3 self-start">
                       <span className="text-gold text-xl sm:text-2xl font-bold">{partner.stat}</span>
-                      <span className="text-white/70 text-sm">{partner.statLabel}</span>
+                      <span className="text-white text-sm">{partner.statLabel}</span>
                     </div>
 
                     {/* Author */}
@@ -276,7 +276,7 @@ export default function Testimonials() {
               <div className="flex lg:hidden items-center justify-between px-4 py-3">
                 <div className="flex items-center gap-2">
                   <span className="text-gold font-bold text-sm">{partner.abbr}</span>
-                  <span className="text-white/70 text-xs">{partner.name.split(" ")[0]} · {partner.state}</span>
+                  <span className="text-white text-xs">{partner.name.split(" ")[0]} · {partner.state}</span>
                 </div>
                 <div className="flex gap-1.5">
                   {PARTNERS.map((_, i) => (

@@ -51,7 +51,7 @@ export default function BeforeAfter() {
             <div className="bg-navy p-6 sm:p-8 lg:p-10 h-full">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-3 h-3 bg-white/20" />
-                <p className="text-white/40 text-xs uppercase tracking-[0.2em] font-bold">The Old Way</p>
+                <p className="text-white text-xs uppercase tracking-[0.2em] font-bold">The Old Way</p>
               </div>
 
               <div className="space-y-6">
@@ -63,15 +63,15 @@ export default function BeforeAfter() {
                     transition={{ delay: 0.1 + i * 0.08 }}>
                     <span className="text-white/20 font-mono text-xs mt-1 w-12 shrink-0 text-right">{item.value}</span>
                     <div className="w-px h-full bg-white/10 shrink-0 self-stretch" />
-                    <p className="text-white/60 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-white text-sm leading-relaxed">{item.text}</p>
                   </motion.div>
                 ))}
               </div>
 
               <div className="mt-10 pt-6 border-t border-white/5">
-                <p className="text-white/30 text-xs uppercase tracking-wider mb-2">Total damage</p>
+                <p className="text-white text-xs uppercase tracking-wider mb-2">Total damage</p>
                 <p className="text-white font-bold text-3xl sm:text-4xl ">$10k–$20k</p>
-                <p className="text-white/40 text-sm mt-1">burned before you even know if it works</p>
+                <p className="text-white text-sm mt-1">burned before you even know if it works</p>
               </div>
             </div>
           </AnimateIn>
@@ -93,7 +93,7 @@ export default function BeforeAfter() {
                     transition={{ delay: 0.1 + i * 0.08 }}>
                     <span className="text-gold font-mono text-xs mt-1 w-12 shrink-0 text-right">{item.value}</span>
                     <div className="w-px h-full bg-gold/20 shrink-0 self-stretch" />
-                    <p className="text-white/70 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-white text-sm leading-relaxed">{item.text}</p>
                   </motion.div>
                 ))}
               </div>
@@ -101,7 +101,7 @@ export default function BeforeAfter() {
               <div className="mt-10 pt-6 border-t border-gold/10">
                 <p className="text-gold/60 text-xs uppercase tracking-wider mb-2">Month one result</p>
                 <p className="text-gold font-bold text-3xl sm:text-4xl ">3+ jobs closed</p>
-                <p className="text-white/40 text-sm mt-1">5-10x return on ad spend, from day one</p>
+                <p className="text-white text-sm mt-1">5-10x return on ad spend, from day one</p>
               </div>
             </div>
           </AnimateIn>

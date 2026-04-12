@@ -44,7 +44,7 @@ export default function Scalability() {
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.15}>
-            <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+            <p className="mt-4 text-white text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
               Adjust the inputs to match your business. The math does the talking.
             </p>
           </AnimateIn>
@@ -60,7 +60,7 @@ export default function Scalability() {
               {/* Leads per month */}
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="text-white/70 text-sm">Leads per month</label>
+                  <label className="text-white text-sm">Leads per month</label>
                   <span className="text-gold font-bold text-sm">{leads}</span>
                 </div>
                 <input type="range" min={5} max={100} step={5} value={leads}
@@ -68,13 +68,13 @@ export default function Scalability() {
                   className={sliderClass}
                   style={{ background: `linear-gradient(to right, #eab308 ${((leads - 5) / 95) * 100}%, rgba(255,255,255,0.1) ${((leads - 5) / 95) * 100}%)` }}
                 />
-                <div className="flex justify-between text-white/70 text-xs mt-1"><span>5</span><span>100</span></div>
+                <div className="flex justify-between text-white text-xs mt-1"><span>5</span><span>100</span></div>
               </div>
 
               {/* Cost per lead */}
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="text-white/70 text-sm">Cost per lead</label>
+                  <label className="text-white text-sm">Cost per lead</label>
                   <span className="text-gold font-bold text-sm">${costPerLead}</span>
                 </div>
                 <input type="range" min={25} max={80} step={5} value={costPerLead}
@@ -82,13 +82,13 @@ export default function Scalability() {
                   className={sliderClass}
                   style={{ background: `linear-gradient(to right, #eab308 ${((costPerLead - 25) / 55) * 100}%, rgba(255,255,255,0.1) ${((costPerLead - 25) / 55) * 100}%)` }}
                 />
-                <div className="flex justify-between text-white/70 text-xs mt-1"><span>$25</span><span>$80</span></div>
+                <div className="flex justify-between text-white text-xs mt-1"><span>$25</span><span>$80</span></div>
               </div>
 
               {/* Close rate */}
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="text-white/70 text-sm">Close rate</label>
+                  <label className="text-white text-sm">Close rate</label>
                   <span className="text-gold font-bold text-sm">{closeRate}%</span>
                 </div>
                 <input type="range" min={10} max={45} step={5} value={closeRate}
@@ -96,13 +96,13 @@ export default function Scalability() {
                   className={sliderClass}
                   style={{ background: `linear-gradient(to right, #eab308 ${((closeRate - 10) / 35) * 100}%, rgba(255,255,255,0.1) ${((closeRate - 10) / 35) * 100}%)` }}
                 />
-                <div className="flex justify-between text-white/70 text-xs mt-1"><span>10%</span><span>45%</span></div>
+                <div className="flex justify-between text-white text-xs mt-1"><span>10%</span><span>45%</span></div>
               </div>
 
               {/* Avg job value */}
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="text-white/70 text-sm">Avg. job value</label>
+                  <label className="text-white text-sm">Avg. job value</label>
                   <span className="text-gold font-bold text-sm">{formatCurrency(avgJobValue)}</span>
                 </div>
                 <input type="range" min={2000} max={50000} step={1000} value={avgJobValue}
@@ -110,7 +110,7 @@ export default function Scalability() {
                   className={sliderClass}
                   style={{ background: `linear-gradient(to right, #eab308 ${((avgJobValue - 2000) / 48000) * 100}%, rgba(255,255,255,0.1) ${((avgJobValue - 2000) / 48000) * 100}%)` }}
                 />
-                <div className="flex justify-between text-white/70 text-xs mt-1"><span>$2k</span><span>$50k</span></div>
+                <div className="flex justify-between text-white text-xs mt-1"><span>$2k</span><span>$50k</span></div>
               </div>
             </div>
 
@@ -123,7 +123,7 @@ export default function Scalability() {
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
                   className="bg-navy-light rounded-2xl border border-white/10 p-6"
                 >
-                  <p className="text-white/80 text-xs mb-1">Monthly Ad Spend</p>
+                  <p className="text-white text-xs mb-1">Monthly Ad Spend</p>
                   <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">{formatCurrency(calc.adSpend)}</p>
                 </motion.div>
 
@@ -132,9 +132,9 @@ export default function Scalability() {
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
                   className="bg-navy-light rounded-2xl border border-white/10 p-6"
                 >
-                  <p className="text-white/80 text-xs mb-1">Jobs Closed</p>
+                  <p className="text-white text-xs mb-1">Jobs Closed</p>
                   <p className="text-green-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{calc.jobsClosed}</p>
-                  <p className="text-white/80 text-xs mt-1">per month</p>
+                  <p className="text-white text-xs mt-1">per month</p>
                 </motion.div>
               </div>
 
@@ -146,7 +146,7 @@ export default function Scalability() {
               >
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="text-white/80 text-xs mb-1">Estimated Monthly Revenue</p>
+                    <p className="text-white text-xs mb-1">Estimated Monthly Revenue</p>
                     <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">{formatCurrency(calc.revenue)}</p>
                   </div>
                   <div className="hidden sm:flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-xl px-4 py-2 shrink-0">
@@ -161,8 +161,8 @@ export default function Scalability() {
                 <div className="mt-6 space-y-2">
                   <div>
                     <div className="flex justify-between text-xs mb-1">
-                      <span className="text-white/70">Ad spend</span>
-                      <span className="text-white/80 font-medium">{formatCurrency(calc.adSpend)}</span>
+                      <span className="text-white">Ad spend</span>
+                      <span className="text-white font-medium">{formatCurrency(calc.adSpend)}</span>
                     </div>
                     <div className="h-3 bg-white/5 rounded-2xl overflow-hidden">
                       <motion.div
@@ -174,7 +174,7 @@ export default function Scalability() {
                   </div>
                   <div>
                     <div className="flex justify-between text-xs mb-1">
-                      <span className="text-white/70">Revenue</span>
+                      <span className="text-white">Revenue</span>
                       <span className="text-green-400 font-medium">{formatCurrency(calc.revenue)}</span>
                     </div>
                     <div className="h-3 bg-white/5 rounded-2xl overflow-hidden">
@@ -204,7 +204,7 @@ export default function Scalability() {
                   initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
                   className="bg-navy-light rounded-2xl border border-white/10 p-6 text-center"
                 >
-                  <p className="text-white/80 text-xs mb-1">Net Profit</p>
+                  <p className="text-white text-xs mb-1">Net Profit</p>
                   <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">{formatCurrency(calc.profit)}</p>
                 </motion.div>
               </div>
@@ -227,7 +227,7 @@ export default function Scalability() {
               >
                 <div className="flex justify-center">{f.icon}</div>
                 <h3 className="text-white font-bold text-sm mt-3">{f.title}</h3>
-                <p className="text-white/80 text-xs mt-1">{f.desc}</p>
+                <p className="text-white text-xs mt-1">{f.desc}</p>
               </motion.div>
             </StaggerItem>
           ))}

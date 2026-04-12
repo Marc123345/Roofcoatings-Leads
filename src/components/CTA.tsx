@@ -47,7 +47,7 @@ export default function CTA() {
 
         {/* Sub */}
         <AnimateIn delay={0.2}>
-          <p className="mt-6 text-white/60 text-base sm:text-lg leading-relaxed text-center max-w-xl mx-auto">
+          <p className="mt-6 text-white text-base sm:text-lg leading-relaxed text-center max-w-xl mx-auto">
             Pre-qualified leads delivered from day one. $2,000/month. Cancel anytime.
           </p>
         </AnimateIn>
@@ -71,7 +71,7 @@ export default function CTA() {
         <AnimateIn delay={0.4}>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {["No contracts", "Cancel anytime", "Results from day 1", "Dedicated support"].map((item) => (
-              <div key={item} className="flex items-center gap-1.5 text-white/40 text-xs">
+              <div key={item} className="flex items-center gap-1.5 text-white text-xs">
                 <Check className="w-3 h-3 text-gold" />
                 <span>{item}</span>
               </div>
@@ -92,7 +92,7 @@ export default function CTA() {
                 <p className="text-white font-black text-3xl sm:text-4xl lg:text-5xl ">
                   <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </p>
-                <p className="text-white/30 text-xs uppercase tracking-widest mt-2">{stat.label}</p>
+                <p className="text-white text-xs uppercase tracking-widest mt-2">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -102,7 +102,7 @@ export default function CTA() {
         <AnimateIn delay={0.6}>
           <div className="mt-12 text-center">
             <div className="flex justify-center text-gold text-2xl tracking-[0.4em] mb-3">★★★★★</div>
-            <p className="text-white/30 text-sm font-medium tracking-wider">roofcoatleads.com</p>
+            <p className="text-white text-sm font-medium tracking-wider">roofcoatleads.com</p>
           </div>
         </AnimateIn>
       </div>

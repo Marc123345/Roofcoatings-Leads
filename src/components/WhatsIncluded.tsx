@@ -156,7 +156,7 @@ export default function WhatsIncluded() {
                         </h3>
                         {isActive && (
                           <motion.p
-                            className="text-white/60 text-xs mt-1 line-clamp-1"
+                            className="text-white text-xs mt-1 line-clamp-1"
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                           >
@@ -191,17 +191,17 @@ export default function WhatsIncluded() {
                       {feature.icon}
                     </div>
                     <div>
-                      <p className="text-white/70 text-xs uppercase tracking-wider">Included</p>
+                      <p className="text-white text-xs uppercase tracking-wider">Included</p>
                       <h3 className="text-white font-bold text-xl sm:text-2xl">{feature.title}</h3>
                     </div>
                   </div>
 
-                  <p className="text-white/70 text-base leading-relaxed mb-8">
+                  <p className="text-white text-base leading-relaxed mb-8">
                     {feature.description}
                   </p>
 
                   <div className="flex-1">
-                    <p className="text-white/40 text-xs uppercase tracking-wider mb-4">What this includes</p>
+                    <p className="text-white text-xs uppercase tracking-wider mb-4">What this includes</p>
                     <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-3">
                       {feature.details.map((detail, i) => (
                         <motion.div
@@ -214,7 +214,7 @@ export default function WhatsIncluded() {
                           <div className="w-5 h-5 rounded-2xl bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                             <Check className="w-3 h-3 text-gold" />
                           </div>
-                          <span className="text-white/80 text-sm">{detail}</span>
+                          <span className="text-white text-sm">{detail}</span>
                         </motion.div>
                       ))}
                     </div>
@@ -222,7 +222,7 @@ export default function WhatsIncluded() {
 
                   <div className="mt-8 flex items-center gap-3 bg-white/[0.04] rounded-2xl p-4 border border-white/[0.06]">
                     <div className="w-2 h-2 rounded-2xl bg-green-400 animate-pulse" />
-                    <span className="text-white/60 text-sm">Included in your $2,000/mo plan — no extra cost</span>
+                    <span className="text-white text-sm">Included in your $2,000/mo plan — no extra cost</span>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -250,16 +250,16 @@ export default function WhatsIncluded() {
                 <div className="inline-flex items-center gap-1.5 bg-gold/20 rounded-full px-3 py-1 mx-auto mb-6">
                   <span className="text-gold text-[11px] font-bold uppercase tracking-wider">Most Popular</span>
                 </div>
-                <p className="text-white/60 text-sm mb-2">Core Lead System</p>
+                <p className="text-white text-sm mb-2">Core Lead System</p>
                 <div className="flex items-baseline justify-center gap-1 mb-6">
                   <span className="text-white text-3xl sm:text-5xl font-bold">$2k</span>
-                  <span className="text-white/40 text-sm">/mo</span>
+                  <span className="text-white text-sm">/mo</span>
                 </div>
                 <div className="space-y-3 text-left flex-1">
                   {["Custom Facebook Ad campaigns", "Lead pre-qualification funnel", "Pre-qualified, high-intent leads", "Real-time notifications", "Follow-up script support", "Dedicated campaign manager", "Monthly performance reporting"].map((item) => (
                     <div key={item} className="flex items-center gap-2.5">
                       <Check className="w-4 h-4 text-gold shrink-0" />
-                      <span className="text-white/70 text-sm">{item}</span>
+                      <span className="text-white text-sm">{item}</span>
                     </div>
                   ))}
                 </div>

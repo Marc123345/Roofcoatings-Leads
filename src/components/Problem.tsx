@@ -141,7 +141,7 @@ export default function Problem() {
               </h2>
             </AnimateIn>
             <AnimateIn delay={0.15}>
-              <p className="mt-6 text-white/60 text-base sm:text-lg max-w-lg leading-relaxed">
+              <p className="mt-6 text-white text-base sm:text-lg max-w-lg leading-relaxed">
                 Most roof coating contractors don&apos;t realize they&apos;re losing{" "}
                 <span className="text-red-400 font-semibold">$3,000+ every month</span>{" "}
                 simply because their agency wasn&apos;t built for this niche. The leak is invisible on a spreadsheet — but it&apos;s killing your growth.
@@ -160,7 +160,7 @@ export default function Problem() {
                   style={{ y: counterY }}
                 >
                   <p className="text-red-400 font-extrabold text-2xl sm:text-3xl tracking-tight">$12,800</p>
-                  <p className="text-white/40 text-[10px] uppercase tracking-widest mt-0.5">avg. lost in 4 months</p>
+                  <p className="text-white text-[10px] uppercase tracking-widest mt-0.5">avg. lost in 4 months</p>
                 </motion.div>
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function Problem() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/50 text-sm leading-relaxed">
+                <p className="text-white text-sm leading-relaxed">
                   {leak.description}
                 </p>
 
@@ -211,7 +211,7 @@ export default function Problem() {
         {/* ── Bottom CTA line ── */}
         <AnimateIn delay={0.4}>
           <div className="mt-12 sm:mt-16 text-center">
-            <p className="text-white/30 text-sm mb-4">
+            <p className="text-white text-sm mb-4">
               Every day you wait is another day of leads — and revenue — dripping away.
             </p>
             <motion.a

@@ -96,7 +96,7 @@ export default function ResultsContent() {
               </span>
             </motion.h1>
 
-            <motion.p className="mt-6 text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
+            <motion.p className="mt-6 text-white text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
               Real numbers from real partners. No made-up metrics. Just results.
             </motion.p>
@@ -114,7 +114,7 @@ export default function ResultsContent() {
                   <p className="text-gold text-2xl font-bold">
                     <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   </p>
-                  <p className="text-white/80 text-xs mt-1">{stat.label}</p>
+                  <p className="text-white text-xs mt-1">{stat.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -267,14 +267,14 @@ export default function ResultsContent() {
                 Next Win-Log?
               </span>
             </h2>
-            <p className="mt-4 text-white/80 text-lg">Join 100+ contractors already on the system.</p>
+            <p className="mt-4 text-white text-lg">Join 100+ contractors already on the system.</p>
             <motion.a href="/get-started"
               className="mt-8 inline-flex items-center justify-center bg-gradient-to-r from-gold to-yellow-400 text-navy px-6 py-4 sm:px-10 sm:py-5 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-gold/20"
               whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.95 }}>
               Book a Free Call &rarr;
             </motion.a>
-            <p className="mt-3 text-white/80 text-sm">No contracts. Results from day 1.</p>
+            <p className="mt-3 text-white text-sm">No contracts. Results from day 1.</p>
           </AnimateIn>
         </div>
       </section>

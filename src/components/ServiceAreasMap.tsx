@@ -54,7 +54,7 @@ function MetricItem({ label, value, icon: Icon }: { label: string; value: string
     <div className="group border-l-2 border-white/5 pl-4 py-1 transition-all duration-300 hover:border-gold">
       <div className="flex items-center gap-2 mb-1">
         <Icon className="w-3.5 h-3.5 text-gold" />
-        <span className="text-[10px] uppercase tracking-[0.25em] text-white/50 font-bold">{label}</span>
+        <span className="text-[10px] uppercase tracking-[0.25em] text-white font-bold">{label}</span>
       </div>
       <div className="text-xl text-white font-bold">{value}</div>
     </div>
@@ -75,7 +75,7 @@ const ExpandingPanel = memo(function ExpandingPanel() {
         <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
           Expanding <span className="text-gold">Nationwide</span>
         </h3>
-        <p className="text-white/60 text-sm">New markets launching monthly — get early access.</p>
+        <p className="text-white text-sm">New markets launching monthly — get early access.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 overflow-y-auto pr-2">
@@ -88,7 +88,7 @@ const ExpandingPanel = memo(function ExpandingPanel() {
             className="flex items-center gap-3 p-3 border border-white/10 rounded-xl hover:border-gold/30 hover:bg-gold/5 transition-colors group"
           >
             <span className="text-gold font-bold text-sm w-8">{state.abbr}</span>
-            <span className="text-white/80 font-medium text-sm group-hover:text-white transition-colors">{state.name}</span>
+            <span className="text-white font-medium text-sm group-hover:text-white transition-colors">{state.name}</span>
             <span className="ml-auto text-[9px] uppercase tracking-wider px-2 py-1 bg-green-500/10 text-green-400 rounded-lg font-bold">Coming Soon</span>
           </motion.div>
         ))}
@@ -124,7 +124,7 @@ const DetailPanel = memo(function DetailPanel({ active }: { active: StateData | 
                 <span className={`px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-lg border ${
                   active.maturity === "High Demand"
                     ? "border-gold/40 text-gold bg-gold/10"
-                    : "border-white/10 text-white/60 bg-white/5"
+                    : "border-white/10 text-white bg-white/5"
                 }`}>
                   {active.maturity}
                 </span>
@@ -149,7 +149,7 @@ const DetailPanel = memo(function DetailPanel({ active }: { active: StateData | 
             {/* Stat highlight */}
             <div className="flex items-center gap-4 bg-gold/10 border border-gold/20 rounded-xl px-5 py-4">
               <span className="text-gold text-3xl font-bold">{active.stat}</span>
-              <span className="text-white/70 text-sm">{active.statLabel}</span>
+              <span className="text-white text-sm">{active.statLabel}</span>
             </div>
 
             {/* Footer Action */}
@@ -160,7 +160,7 @@ const DetailPanel = memo(function DetailPanel({ active }: { active: StateData | 
               >
                 Get {active.name} Leads <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <span className="font-mono text-[10px] text-white/30">
+              <span className="font-mono text-[10px] text-white">
                 ID: {active.abbr}-MKT
               </span>
             </div>
@@ -172,8 +172,8 @@ const DetailPanel = memo(function DetailPanel({ active }: { active: StateData | 
             className="h-full flex flex-col items-center justify-center text-center opacity-40"
           >
             <Globe strokeWidth={1} size={64} className="text-white/20 mb-4" />
-            <p className="text-xs uppercase tracking-[0.3em] font-bold text-white/40 mb-2">Select a state</p>
-            <p className="text-xs text-white/30 lg:hidden">Tap a state to see market details</p>
+            <p className="text-xs uppercase tracking-[0.3em] font-bold text-white mb-2">Select a state</p>
+            <p className="text-xs text-white lg:hidden">Tap a state to see market details</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -251,11 +251,11 @@ export default function ServiceAreasMap() {
             <div className="mt-4 flex items-center justify-center gap-6">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-gold" />
-                <span className="text-[10px] uppercase tracking-widest text-white/50 font-bold">Active</span>
+                <span className="text-[10px] uppercase tracking-widest text-white font-bold">Active</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-blue" />
-                <span className="text-[10px] uppercase tracking-widest text-white/50 font-bold">Available</span>
+                <span className="text-[10px] uppercase tracking-widest text-white font-bold">Available</span>
               </div>
             </div>
           </div>
@@ -267,7 +267,7 @@ export default function ServiceAreasMap() {
             {!isExpanding && (
               <div ref={searchRef} className="relative mb-8">
                 <div className="bg-white/[0.03] border border-white/10 rounded-xl p-4 hover:border-gold/30 transition-colors">
-                  <label className="block text-[10px] uppercase tracking-[0.25em] font-bold text-white/40 mb-3">
+                  <label className="block text-[10px] uppercase tracking-[0.25em] font-bold text-white mb-3">
                     Search Markets
                   </label>
                   <div className="relative">
@@ -281,11 +281,11 @@ export default function ServiceAreasMap() {
                         setShowResults(e.target.value.length >= 2);
                       }}
                       onFocus={() => searchTerm.length >= 2 && setShowResults(true)}
-                      className="w-full bg-transparent border-b border-white/10 pl-7 pr-7 py-2 text-white font-medium placeholder:text-white/30 focus:outline-none focus:border-gold transition-colors text-sm"
+                      className="w-full bg-transparent border-b border-white/10 pl-7 pr-7 py-2 text-white font-medium placeholder:text-white focus:outline-none focus:border-gold transition-colors text-sm"
                     />
                     {searchTerm && (
                       <button onClick={() => { setSearchTerm(""); setShowResults(false); }} className="absolute right-0 top-1/2 -translate-y-1/2 p-1 hover:bg-white/5 rounded transition-colors">
-                        <X className="w-4 h-4 text-white/40 hover:text-white" />
+                        <X className="w-4 h-4 text-white hover:text-white" />
                       </button>
                     )}
                   </div>
@@ -307,7 +307,7 @@ export default function ServiceAreasMap() {
                             <span className="text-gold font-bold text-lg">{s.abbr}</span>
                             <div className="flex-1">
                               <div className="text-white font-medium group-hover:text-gold transition-colors">{s.name}</div>
-                              <div className="text-xs text-white/40">{s.hubs}</div>
+                              <div className="text-xs text-white">{s.hubs}</div>
                             </div>
                           </button>
                         ))}

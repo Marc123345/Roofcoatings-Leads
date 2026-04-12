@@ -22,7 +22,7 @@ export default function ContactForm() {
               Let&apos;s Talk About{" "}
               <span className="text-gradient-gold">Your Growth</span>
             </h2>
-            <p className="mt-4 text-white/60 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               Fill out the form below and we&apos;ll get back to you within 24 hours with a custom lead strategy for your business.
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function ContactForm() {
                     <Mail className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <p className="text-white/40 text-xs uppercase tracking-widest mb-0.5">Email</p>
+                    <p className="text-white text-xs uppercase tracking-widest mb-0.5">Email</p>
                     <p className="text-white font-medium text-sm">marc@roofcoatleads.com</p>
                   </div>
                 </a>
@@ -47,7 +47,7 @@ export default function ContactForm() {
                     <Phone className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <p className="text-white/40 text-xs uppercase tracking-widest mb-0.5">Phone</p>
+                    <p className="text-white text-xs uppercase tracking-widest mb-0.5">Phone</p>
                     <p className="text-white font-medium text-sm">Book a call instead →</p>
                   </div>
                 </a>
@@ -56,7 +56,7 @@ export default function ContactForm() {
                     <MapPin className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <p className="text-white/40 text-xs uppercase tracking-widest mb-0.5">Coverage</p>
+                    <p className="text-white text-xs uppercase tracking-widest mb-0.5">Coverage</p>
                     <p className="text-white font-medium text-sm">All 50 US States</p>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default function ContactForm() {
                       <div className="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-gold text-[10px] font-bold">{i + 1}</span>
                       </div>
-                      <span className="text-white/60 text-sm">{step}</span>
+                      <span className="text-white text-sm">{step}</span>
                     </div>
                   ))}
                 </div>
@@ -94,7 +94,7 @@ export default function ContactForm() {
                     className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
                       tab === "book"
                         ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
-                        : "bg-navy-light text-white/50 hover:text-white"
+                        : "bg-navy-light text-white hover:text-white"
                     }`}
                   >
                     <Calendar className="w-4 h-4" />
@@ -105,7 +105,7 @@ export default function ContactForm() {
                     className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
                       tab === "contact"
                         ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
-                        : "bg-navy-light text-white/50 hover:text-white"
+                        : "bg-navy-light text-white hover:text-white"
                     }`}
                   >
                     <Mail className="w-4 h-4" />

@@ -67,7 +67,7 @@ export default function ManufacturersPage() {
               </motion.h1>
 
               <motion.p
-                className="mt-6 text-white/60 text-base sm:text-lg max-w-xl leading-relaxed"
+                className="mt-6 text-white text-base sm:text-lg max-w-xl leading-relaxed"
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -103,7 +103,7 @@ export default function ManufacturersPage() {
               </motion.div>
 
               <motion.p
-                className="mt-4 text-white/30 text-xs uppercase tracking-widest"
+                className="mt-4 text-white text-xs uppercase tracking-widest"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.9 }}
@@ -132,7 +132,7 @@ export default function ManufacturersPage() {
                 When Your Contractors Slow Down,{" "}
                 <span className="text-gold">Your Orders Drop.</span>
               </h2>
-              <p className="mt-6 text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="mt-6 text-white text-lg leading-relaxed max-w-2xl mx-auto">
                 Your product is great. But your installers and certified applicators struggle
                 to find consistent work — especially newer ones without an established
                 reputation. When they slow down, they stop buying material.
@@ -168,7 +168,7 @@ export default function ManufacturersPage() {
                 >
                   <item.icon className="w-8 h-8 text-gold mb-4" />
                   <h3 className="text-white text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -193,7 +193,7 @@ export default function ManufacturersPage() {
                 We Become Your{" "}
                 <span className="text-gold">Contractor Support Arm.</span>
               </h2>
-              <p className="mt-6 text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="mt-6 text-white text-lg leading-relaxed max-w-2xl mx-auto">
                 We generate exclusive, pre-qualified roof coating leads at scale and funnel
                 them directly to your certified applicators. More jobs, more material orders,
                 more revenue for everyone.
@@ -235,7 +235,7 @@ export default function ManufacturersPage() {
                   </span>
                   <item.icon className="w-8 h-8 text-gold mb-4" />
                   <h3 className="text-white text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -260,7 +260,7 @@ export default function ManufacturersPage() {
                 Your Contractors Get{" "}
                 <span className="text-gold">More Jobs.</span>
               </h2>
-              <p className="mt-6 text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="mt-6 text-white text-lg leading-relaxed max-w-2xl mx-auto">
                 That&apos;s the whole point. More jobs for your applicators means more product
                 moving off your shelves. Here&apos;s what changes when you partner with us.
               </p>
@@ -297,7 +297,7 @@ export default function ManufacturersPage() {
                     {item.tag}
                   </span>
                   <h3 className="text-white text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -341,7 +341,7 @@ export default function ManufacturersPage() {
                   custom={i}
                 >
                   <div className="text-gold text-4xl sm:text-5xl font-extrabold mb-2">{stat.value}</div>
-                  <div className="text-white/40 text-xs font-bold uppercase tracking-widest">{stat.label}</div>
+                  <div className="text-white text-xs font-bold uppercase tracking-widest">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -354,7 +354,7 @@ export default function ManufacturersPage() {
               variants={fadeUp}
               custom={0}
             >
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/40 text-sm">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white text-sm">
                 {[
                   "Proven Facebook & Google ad system",
                   "AI chatbot qualifies & books automatically",
@@ -385,7 +385,7 @@ export default function ManufacturersPage() {
                 Let&apos;s Keep Your Contractors{" "}
                 <span className="text-gold">Booked.</span>
               </h2>
-              <p className="text-white/50 text-lg max-w-2xl mx-auto">
+              <p className="text-white text-lg max-w-2xl mx-auto">
                 Fill out the form below and we&apos;ll reach out within 24 hours to discuss
                 how we can become your contractor support arm.
               </p>
@@ -417,7 +417,7 @@ export default function ManufacturersPage() {
               </div>
             </motion.div>
 
-            <p className="mt-6 text-center text-white/30 text-xs uppercase tracking-widest">
+            <p className="mt-6 text-center text-white text-xs uppercase tracking-widest">
               No contracts · No risk · Results from month 1
             </p>
           </div>

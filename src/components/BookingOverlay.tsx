@@ -66,7 +66,7 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
                 className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
                   tab === "book"
                     ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
-                    : "bg-navy-light text-white/50 hover:text-white"
+                    : "bg-navy-light text-white hover:text-white"
                 }`}
               >
                 <Calendar className="w-4 h-4" />
@@ -77,7 +77,7 @@ export default function BookingOverlay({ open, onClose, defaultTab = "book" }: B
                 className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-bold text-sm uppercase tracking-wider transition-colors ${
                   tab === "contact"
                     ? "bg-gradient-to-r from-gold to-yellow-400 text-navy"
-                    : "bg-navy-light text-white/50 hover:text-white"
+                    : "bg-navy-light text-white hover:text-white"
                 }`}
               >
                 <Mail className="w-4 h-4" />
