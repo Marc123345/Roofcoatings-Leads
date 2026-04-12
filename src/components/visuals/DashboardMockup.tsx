@@ -18,7 +18,7 @@ export default function DashboardMockup() {
           <div className="grid grid-cols-3 gap-2">
             {[
               { label: "Leads Today", value: "12", color: "text-blue-light" },
-              { label: "Close Rate", value: "32%", color: "text-green-400" },
+              { label: "Close Rate", value: "32%", color: "text-gold" },
               { label: "Avg. CPA", value: "$42", color: "text-gold" },
             ].map((stat, i) => (
               <motion.div
@@ -39,7 +39,7 @@ export default function DashboardMockup() {
           <div className="bg-zinc-900 rounded-sm p-4">
             <div className="flex items-center justify-between mb-3">
               <span className="text-white text-xs">Lead Volume (30 days)</span>
-              <span className="text-green-400 text-xs font-medium">+27%</span>
+              <span className="text-gold text-xs font-medium">+27%</span>
             </div>
             <svg viewBox="0 0 300 80" className="w-full">
               <defs>
@@ -94,7 +94,7 @@ export default function DashboardMockup() {
                   <span className={`text-[11px] px-2 py-0.5 rounded-sm ${
                     lead.status === "New" ? "bg-blue/20 text-blue-light" :
                     lead.status === "Contacted" ? "bg-gold/20 text-gold" :
-                    "bg-green-500/20 text-green-400"
+                    "bg-gold/20 text-gold"
                   }`}>{lead.status}</span>
                 </div>
               </motion.div>

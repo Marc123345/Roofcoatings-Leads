@@ -170,10 +170,10 @@ export default function ResultsContent() {
                 {/* Before / After comparison */}
                 <div className="grid lg:grid-cols-2 gap-6 mb-6">
                   {/* Before */}
-                  <motion.div className="bg-red-50 rounded-sm border border-red-200/50 overflow-hidden"
+                  <motion.div className="bg-zinc-50 rounded-sm border border-zinc-200 overflow-hidden"
                     initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
-                    <div className="bg-red-100 px-6 py-3 border-b border-red-200/50">
-                      <p className="text-red-600 font-bold text-sm uppercase tracking-wider">Before — {log.before.source}</p>
+                    <div className="bg-zinc-100 px-6 py-3 border-b border-zinc-200">
+                      <p className="text-zinc-500 font-bold text-sm uppercase tracking-wider">Before — {log.before.source}</p>
                     </div>
                     <div className="p-6 space-y-4">
                       {[
@@ -183,17 +183,17 @@ export default function ResultsContent() {
                       ].map((row) => (
                         <div key={row.label} className="flex justify-between items-center py-1 border-b border-red-100 last:border-0">
                           <span className="text-navy/60 text-sm">{row.label}</span>
-                          <span className="text-red-600 font-bold">{row.value}</span>
+                          <span className="text-zinc-500 font-bold">{row.value}</span>
                         </div>
                       ))}
                     </div>
                   </motion.div>
 
                   {/* After */}
-                  <motion.div className="bg-green-50 rounded-sm border border-green-200/50 overflow-hidden"
+                  <motion.div className="bg-gold/5 rounded-sm border border-gold/20 overflow-hidden"
                     initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }}>
-                    <div className="bg-green-100 px-6 py-3 border-b border-green-200/50">
-                      <p className="text-green-600 font-bold text-sm uppercase tracking-wider">After — RoofCoat Leads</p>
+                    <div className="bg-gold/10 px-6 py-3 border-b border-gold/20">
+                      <p className="text-gold font-bold text-sm uppercase tracking-wider">After — RoofCoat Leads</p>
                     </div>
                     <div className="p-6 space-y-4">
                       {[
@@ -203,7 +203,7 @@ export default function ResultsContent() {
                       ].map((row) => (
                         <div key={row.label} className="flex justify-between items-center py-1 border-b border-green-100 last:border-0">
                           <span className="text-navy/60 text-sm">{row.label}</span>
-                          <span className="text-green-600 font-bold">{row.value}</span>
+                          <span className="text-gold font-bold">{row.value}</span>
                         </div>
                       ))}
                     </div>
@@ -216,8 +216,8 @@ export default function ResultsContent() {
                     <blockquote className="flex-1 text-navy/70 italic text-lg leading-relaxed border-l-4 border-gold pl-6">
                       &ldquo;{log.quote}&rdquo;
                     </blockquote>
-                    <div className="bg-green-50 border border-green-200/50 rounded-sm px-6 py-4 text-center shrink-0">
-                      <p className="text-green-600 text-xs uppercase tracking-wider mb-1">Result</p>
+                    <div className="bg-gold/5 border border-gold/20 rounded-sm px-6 py-4 text-center shrink-0">
+                      <p className="text-gold text-xs uppercase tracking-wider mb-1">Result</p>
                       <p className="text-navy font-bold">{log.jobs}</p>
                     </div>
                   </div>

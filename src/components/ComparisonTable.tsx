@@ -75,18 +75,18 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
   if (info.value === true) {
     return (
       <div className="flex flex-col items-center gap-1">
-        <div className="w-8 h-8 rounded-sm bg-green-500/10 border border-green-500/20 flex items-center justify-center">
-          <Check className="w-4 h-4 text-green-400" />
+        <div className="w-8 h-8 rounded-sm bg-gold/10 border border-gold/20 flex items-center justify-center">
+          <Check className="w-4 h-4 text-gold" />
         </div>
-        <span className="text-green-400 text-xs font-medium hidden sm:block">{info.detail}</span>
+        <span className="text-gold text-xs font-medium hidden sm:block">{info.detail}</span>
       </div>
     );
   }
   if (info.value === false) {
     return (
       <div className="flex flex-col items-center gap-1">
-        <div className="w-8 h-8 rounded-sm bg-red-500/10 border border-red-500/20 flex items-center justify-center">
-          <X className="w-4 h-4 text-red-400" />
+        <div className="w-8 h-8 rounded-sm bg-zinc-800 border border-zinc-700 flex items-center justify-center">
+          <X className="w-4 h-4 text-zinc-500" />
         </div>
         <span className="text-white text-xs hidden sm:block">{info.detail}</span>
       </div>
@@ -104,9 +104,9 @@ function StatusBadge({ info }: { info: { value: boolean | string; detail: string
   }
   // cost tiers
   const colorMap: Record<string, string> = {
-    low: "text-green-400 bg-green-500/10 border-green-500/20",
+    low: "text-gold bg-gold/10 border-gold/20",
     medium: "text-yellow-400 bg-yellow-500/10 border-yellow-500/20",
-    high: "text-red-400 bg-red-500/10 border-red-500/20",
+    high: "text-zinc-500 bg-zinc-800 border-zinc-700",
   };
   return (
     <div className="flex flex-col items-center gap-1">

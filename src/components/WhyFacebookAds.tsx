@@ -66,7 +66,7 @@ function FunnelVisual() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
       >
-        <span className="text-green-400 font-bold text-sm">Pre-qualified leads. Proven system. You just close.</span>
+        <span className="text-gold font-bold text-sm">Pre-qualified leads. Proven system. You just close.</span>
       </motion.div>
     </div>
   );
@@ -110,7 +110,7 @@ function TargetingVisual() {
 
 function CostVisual() {
   const providers = [
-    { name: "HomeAdvisor", cost: 150, color: "bg-red-500", label: "text-red-400" },
+    { name: "HomeAdvisor", cost: 150, color: "bg-red-500", label: "text-zinc-500" },
     { name: "Google Ads", cost: 120, color: "bg-orange-500", label: "text-orange-400" },
     { name: "RoofCoat Leads", cost: 45, color: "bg-gradient-to-t from-gold to-yellow-400", label: "text-gold", highlight: true },
   ];

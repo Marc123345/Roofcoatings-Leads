@@ -42,7 +42,7 @@ const niches = [
     qualification: "Roof age, active leak presence, willingness to spend on quality",
     adAngle: "Save 30% on cooling costs. Stop leaks for good. No full replacement needed.",
     color: "from-green-500 to-green-600",
-    textColor: "text-green-400",
+    textColor: "text-gold",
     stats: [
       { value: "5.4x", label: "avg. ROI" },
       { value: "$32", label: "avg. CPL" },

@@ -97,7 +97,7 @@ export default function WhatsIncluded() {
     blue: { bg: "bg-blue/10", text: "text-blue", border: "border-blue/20" },
     navy: { bg: "bg-navy/10", text: "text-navy", border: "border-navy/20" },
     gold: { bg: "bg-gold/10", text: "text-gold", border: "border-gold/20" },
-    green: { bg: "bg-green-500/10", text: "text-green-600", border: "border-green-500/20" },
+    green: { bg: "bg-gold/10", text: "text-gold", border: "border-gold/20" },
   };
 
   return (
@@ -311,7 +311,7 @@ export default function WhatsIncluded() {
             <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-navy/50">
               {["No contracts", "Cancel anytime", "Results from day 1", "Dedicated support"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-green-500" />
+                  <Check className="w-4 h-4 text-gold" />
                   <span>{item}</span>
                 </div>
               ))}

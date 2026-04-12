@@ -54,7 +54,7 @@ export default function PhoneMockup() {
               transition={{ delay: 0.9 }}
             >
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-6 h-6 bg-green-500 rounded-sm flex items-center justify-center">
+                <div className="w-6 h-6 bg-gold/50 rounded-sm flex items-center justify-center">
                   <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>

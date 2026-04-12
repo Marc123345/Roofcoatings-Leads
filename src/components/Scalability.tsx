@@ -133,7 +133,7 @@ export default function Scalability() {
                   className="bg-navy-light rounded-sm border border-zinc-800 p-6"
                 >
                   <p className="text-white text-xs mb-1">Jobs Closed</p>
-                  <p className="text-green-400 text-2xl sm:text-3xl lg:text-4xl font-bold">{calc.jobsClosed}</p>
+                  <p className="text-gold text-2xl sm:text-3xl lg:text-4xl font-bold">{calc.jobsClosed}</p>
                   <p className="text-white text-xs mt-1">per month</p>
                 </motion.div>
               </div>
@@ -142,18 +142,18 @@ export default function Scalability() {
               <motion.div
                 key={`rev-${calc.revenue}`}
                 initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}
-                className="bg-navy-light rounded-sm border border-green-500/20 p-6 lg:p-8"
+                className="bg-navy-light rounded-sm border border-gold/20 p-6 lg:p-8"
               >
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="text-white text-xs mb-1">Estimated Monthly Revenue</p>
                     <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">{formatCurrency(calc.revenue)}</p>
                   </div>
-                  <div className="hidden sm:flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-sm px-4 py-2 shrink-0">
-                    <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="hidden sm:flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-sm px-4 py-2 shrink-0">
+                    <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
-                    <span className="text-green-400 text-sm font-bold">Predictable</span>
+                    <span className="text-gold text-sm font-bold">Predictable</span>
                   </div>
                 </div>
 
@@ -175,7 +175,7 @@ export default function Scalability() {
                   <div>
                     <div className="flex justify-between text-xs mb-1">
                       <span className="text-white">Revenue</span>
-                      <span className="text-green-400 font-medium">{formatCurrency(calc.revenue)}</span>
+                      <span className="text-gold font-medium">{formatCurrency(calc.revenue)}</span>
                     </div>
                     <div className="h-3 bg-zinc-900 rounded-sm overflow-hidden">
                       <motion.div

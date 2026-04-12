@@ -189,7 +189,7 @@ export default function ServiceAreasHub() {
             <AnimateIn delay={0.3}>
               <div className="mt-16 text-center">
                 <div className="inline-flex items-center gap-3 bg-zinc-900 border border-zinc-800 rounded-sm px-6 py-3">
-                  <span className="w-2 h-2 bg-green-500 rounded-sm animate-pulse" />
+                  <span className="w-2 h-2 bg-gold/50 rounded-sm animate-pulse" />
                   <span className="text-white text-sm">
                     Expanding to new states monthly — don&apos;t see yours?{" "}
                     <a href="/get-started" className="text-gold font-bold hover:underline">Book a Free Call &rarr;</a>

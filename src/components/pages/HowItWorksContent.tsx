@@ -115,7 +115,7 @@ function BuildVisual() {
     { label: "Ad Copy", w: "90%", color: "bg-blue/30", delay: 0.1 },
     { label: "Creative Design", w: "80%", color: "bg-blue/25", delay: 0.25 },
     { label: "Audience Targeting", w: "95%", color: "bg-gold/25", delay: 0.4 },
-    { label: "Qualification Funnel", w: "85%", color: "bg-green-500/25", delay: 0.55 },
+    { label: "Qualification Funnel", w: "85%", color: "bg-gold/50/25", delay: 0.55 },
     { label: "Tracking & Analytics", w: "75%", color: "bg-blue/20", delay: 0.7 },
   ];
   return (
@@ -153,8 +153,8 @@ function QualifyVisual() {
     { label: "All inquiries", count: "100", w: "100%", bg: "bg-zinc-800", delay: 0.1 },
     { label: "Property type match", count: "72", w: "72%", bg: "bg-blue/20", delay: 0.3 },
     { label: "Urgency confirmed", count: "48", w: "48%", bg: "bg-blue/30", delay: 0.5 },
-    { label: "Budget qualified", count: "31", w: "31%", bg: "bg-green-500/25", delay: 0.7 },
-    { label: "Ready to book", count: "25", w: "25%", bg: "bg-green-500/40", delay: 0.9 },
+    { label: "Budget qualified", count: "31", w: "31%", bg: "bg-gold/50/25", delay: 0.7 },
+    { label: "Ready to book", count: "25", w: "25%", bg: "bg-gold/50/40", delay: 0.9 },
   ];
   return (
     <div className="flex flex-col items-center gap-2">
@@ -169,9 +169,9 @@ function QualifyVisual() {
           <span className="text-white font-bold text-xs">{stage.count}</span>
         </motion.div>
       ))}
-      <motion.div className="mt-2 bg-green-500/10 border border-green-500/20 rounded-sm px-4 py-3 text-center w-[25%] min-w-[180px]"
+      <motion.div className="mt-2 bg-gold/10 border border-gold/20 rounded-sm px-4 py-3 text-center w-[25%] min-w-[180px]"
         initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.2, type: "spring" }}>
-        <span className="text-green-400 text-sm font-medium">Only qualified leads reach you</span>
+        <span className="text-gold text-sm font-medium">Only qualified leads reach you</span>
       </motion.div>
     </div>
   );
@@ -346,8 +346,8 @@ export default function HowItWorksContent() {
                   <p className="text-white leading-relaxed flex-1">{step.description}</p>
 
                   <div className="mt-6 bg-zinc-900 border border-zinc-800 rounded-sm px-5 py-4 flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-sm bg-green-500/20 flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-8 h-8 rounded-sm bg-gold/20 flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                       </svg>
                     </div>

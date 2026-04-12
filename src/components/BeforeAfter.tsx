@@ -51,7 +51,7 @@ export default function BeforeAfter() {
 
         {/* Header */}
         <AnimateIn>
-          <p className="text-red-500 font-bold text-sm uppercase tracking-wider mb-3 text-center flex items-center justify-center gap-2">
+          <p className="text-navy font-bold text-sm uppercase tracking-wider mb-3 text-center flex items-center justify-center gap-2">
             <AlertTriangle className="w-4 h-4" />
             Stop Getting Burned
           </p>
@@ -74,8 +74,8 @@ export default function BeforeAfter() {
           <AnimateIn direction="left" delay={0.2}>
             <div className="bg-gray-50 border border-gray-200 rounded-sm p-6 sm:p-8 h-full relative">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-sm bg-red-100 flex items-center justify-center">
-                  <AlertTriangle className="w-5 h-5 text-red-500" />
+                <div className="w-10 h-10 rounded-sm bg-zinc-100 flex items-center justify-center">
+                  <AlertTriangle className="w-5 h-5 text-navy" />
                 </div>
                 <div>
                   <h3 className="text-navy font-bold text-sm">The Agency Trap</h3>
@@ -98,8 +98,8 @@ export default function BeforeAfter() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 + i * 0.08 }}
                   >
-                    <div className="w-6 h-6 rounded-sm bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
-                      <X className="w-3.5 h-3.5 text-red-500" />
+                    <div className="w-6 h-6 rounded-sm bg-zinc-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <X className="w-3.5 h-3.5 text-navy" />
                     </div>
                     <div>
                       <p className="text-navy font-bold text-sm">{item.label}</p>
@@ -110,8 +110,8 @@ export default function BeforeAfter() {
               </div>
 
               {/* Cost of Inaction callout */}
-              <div className="mt-6 bg-red-50 border border-red-200 rounded-sm p-4">
-                <p className="text-red-600 text-xs font-bold uppercase tracking-wider mb-1">Total Damage</p>
+              <div className="mt-6 bg-zinc-50 border border-zinc-200 rounded-sm p-4">
+                <p className="text-navy text-xs font-bold uppercase tracking-wider mb-1">Total Damage</p>
                 <p className="text-navy font-bold text-2xl">$10k–$20k</p>
                 <p className="text-navy/60 text-xs mt-1">Average amount burned on traditional agencies before results</p>
               </div>
@@ -205,13 +205,13 @@ export default function BeforeAfter() {
                       <td className="py-4 px-4 text-navy font-bold text-sm">{row.feature}</td>
                       <td className="py-4 px-4 text-center">
                         <div className="flex items-center justify-center gap-2">
-                          <X className="w-4 h-4 text-red-400 shrink-0" />
+                          <X className="w-4 h-4 text-zinc-500 shrink-0" />
                           <span className="text-navy/50 text-sm">{row.old}</span>
                         </div>
                       </td>
                       <td className="py-4 px-4 text-center">
                         <div className="flex items-center justify-center gap-2">
-                          <Check className="w-4 h-4 text-green-500 shrink-0" />
+                          <Check className="w-4 h-4 text-gold shrink-0" />
                           <span className="text-navy font-medium text-sm">{row.new}</span>
                         </div>
                       </td>

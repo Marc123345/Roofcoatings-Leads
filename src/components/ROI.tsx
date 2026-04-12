@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 import AnimateIn from "./AnimateIn";
 
 const oldWay = [
-  { label: "Cost per lead:", value: "$80 - $150", color: "text-red-400" },
-  { label: "Leads shared with:", value: "5+ contractors", color: "text-red-400" },
-  { label: "Close rate:", value: "5 - 10%", color: "text-red-400" },
-  { label: "Cost per closed job:", value: "$1,500+", color: "text-red-400" },
-  { label: "Monthly ad waste:", value: "High", color: "text-red-400" },
+  { label: "Cost per lead:", value: "$80 - $150", color: "text-zinc-500" },
+  { label: "Leads shared with:", value: "5+ contractors", color: "text-zinc-500" },
+  { label: "Close rate:", value: "5 - 10%", color: "text-zinc-500" },
+  { label: "Cost per closed job:", value: "$1,500+", color: "text-zinc-500" },
+  { label: "Monthly ad waste:", value: "High", color: "text-zinc-500" },
 ];
 
 const newWay = [
-  { label: "Cost per lead:", value: "$30 - $60", color: "text-green-400" },
-  { label: "Leads shared with:", value: "Nobody (exclusive)", color: "text-green-400" },
-  { label: "Close rate:", value: "20 - 35%", color: "text-green-400" },
-  { label: "Cost per closed job:", value: "$150 - $300", color: "text-green-400" },
-  { label: "Monthly ad waste:", value: "Near zero", color: "text-green-400" },
+  { label: "Cost per lead:", value: "$30 - $60", color: "text-gold" },
+  { label: "Leads shared with:", value: "Nobody (exclusive)", color: "text-gold" },
+  { label: "Close rate:", value: "20 - 35%", color: "text-gold" },
+  { label: "Cost per closed job:", value: "$150 - $300", color: "text-gold" },
+  { label: "Monthly ad waste:", value: "Near zero", color: "text-gold" },
 ];
 
 export default function ROI() {
