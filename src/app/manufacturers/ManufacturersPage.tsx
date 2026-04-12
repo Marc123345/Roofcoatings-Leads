@@ -249,7 +249,7 @@ export default function ManufacturersPage() {
                   icon: Package,
                   title: "You Sell More Product",
                   desc: "Busy contractors order more coating, silicone, and materials. Your revenue grows because your network is thriving.",
-                  image: "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&q=80",
+                  image: "https://ik.imagekit.io/qcvroy8xpd/Sylicone.jpeg",
                   bullets: ["Higher order volume", "Contractor loyalty", "Predictable revenue"],
                 },
               ].map((item, i) => (
