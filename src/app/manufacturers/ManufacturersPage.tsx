@@ -40,77 +40,102 @@ export default function ManufacturersPage() {
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 lg:pt-48 pb-20 sm:pb-28 lg:pb-36">
-            <div className="max-w-3xl">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+              {/* LEFT — Copy */}
+              <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-gold mb-6 block">
+                    // Manufacturer Partnership Program
+                  </span>
+                </motion.div>
+
+                <motion.h1
+                  className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.05] tracking-tighter uppercase"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.3 }}
+                >
+                  <span className="text-white">Your Applicators</span>
+                  <br />
+                  <span className="text-white">Stay Busy. You</span>
+                  <br />
+                  <span className="text-gold">Sell More Product.</span>
+                </motion.h1>
+
+                <motion.p
+                  className="mt-6 text-zinc-400 text-base sm:text-lg max-w-md leading-relaxed"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                  We generate 100+ exclusive roof coating leads per month for your certified
+                  contractors. When your applicators are booked, they order more material.
+                  Everybody wins.
+                </motion.p>
+
+                <motion.div
+                  className="mt-8 flex flex-col sm:flex-row gap-3"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                >
+                  <motion.a
+                    href="#contact"
+                    className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-7 py-4 rounded-sm font-bold text-sm uppercase tracking-wider group"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    Partner With Us
+                  </motion.a>
+                  <motion.a
+                    href="#how-it-works"
+                    className="inline-flex items-center justify-center gap-2 border border-zinc-700 text-white px-7 py-4 rounded-sm font-bold text-sm uppercase tracking-wider hover:border-zinc-500 transition-colors"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    See How It Works
+                  </motion.a>
+                </motion.div>
+
+                <motion.p
+                  className="mt-4 text-zinc-500 text-xs font-mono tracking-[0.15em] uppercase"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.9 }}
+                >
+                  No risk · Revenue-driven · Results from month 1
+                </motion.p>
+              </div>
+
+              {/* RIGHT — Contact Form */}
               <motion.div
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-sm px-4 py-1.5 mb-8"
+                transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <span className="text-gold text-xs font-bold uppercase tracking-widest">
-                  Manufacturer Partnership Program
-                </span>
+                <div className="bg-zinc-950 border border-zinc-800 rounded-sm overflow-hidden">
+                  <div className="bg-gold px-6 py-4 flex items-center gap-3">
+                    <Phone className="w-4 h-4 text-navy" />
+                    <span className="text-navy font-bold text-sm uppercase tracking-wider">Partnership Inquiry</span>
+                  </div>
+                  <div className="p-2">
+                    <iframe
+                      id="JotFormIFrame-261014402774045"
+                      title="Manufacturer Partnership Inquiry"
+                      src="https://form.jotform.com/261014402774045"
+                      style={{ width: "100%", minHeight: "clamp(400px, 70vh, 550px)", border: "none" }}
+                      allow="geolocation; microphone; camera; fullscreen; payment"
+                    />
+                  </div>
+                </div>
               </motion.div>
 
-              <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight"
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-              >
-                <span className="text-white font-normal">Your Applicators</span>
-                <br />
-                <span className="text-white font-extrabold">Stay Busy. You</span>
-                <br />
-                <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent font-extrabold">
-                  Sell More Product.
-                </span>
-              </motion.h1>
-
-              <motion.p
-                className="mt-6 text-white text-base sm:text-lg max-w-xl leading-relaxed"
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                We generate 100+ exclusive roof coating leads per month for your certified
-                contractors. When your applicators are booked, they order more material.
-                Everybody wins.
-              </motion.p>
-
-              <motion.div
-                className="mt-10 flex flex-col sm:flex-row gap-4"
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-              >
-                <motion.a
-                  href="#contact"
-                  className="inline-flex items-center justify-center gap-2 bg-gold text-navy px-7 py-4 rounded-sm font-bold text-sm uppercase tracking-wider  group"
-                  whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                  Partner With Us
-                </motion.a>
-                <motion.a
-                  href="#how-it-works"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-navy px-7 py-4 rounded-sm font-bold text-sm uppercase tracking-wider border border-white/80 hover:bg-white/90 transition-colors"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  See How It Works
-                </motion.a>
-              </motion.div>
-
-              <motion.p
-                className="mt-4 text-white text-xs uppercase tracking-widest"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.9 }}
-              >
-                No risk · Revenue-driven · Results from month 1
-              </motion.p>
             </div>
           </div>
         </section>
@@ -404,58 +429,6 @@ export default function ManufacturersPage() {
           </div>
         </section>
 
-        {/* ═══ CONTACT FORM ═══ */}
-        <section id="contact" className="py-24 sm:py-32 bg-navy-light px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              custom={0}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Let&apos;s Keep Your Contractors{" "}
-                <span className="text-gold">Booked.</span>
-              </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto">
-                Fill out the form below and we&apos;ll reach out within 24 hours to discuss
-                how we can become your contractor support arm.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              custom={1}
-            >
-              <div className="bg-navy rounded-sm border border-zinc-800 overflow-hidden">
-                <div className="bg-gold px-6 py-4">
-                  <div className="flex items-center gap-3">
-                    <Package className="w-5 h-5 text-navy" />
-                    <span className="text-navy font-bold">Manufacturer Partnership Inquiry</span>
-                  </div>
-                </div>
-                <div className="p-2">
-                  <iframe
-                    id="JotFormIFrame-261014402774045"
-                    title="Manufacturer Partnership Inquiry"
-                    src="https://form.jotform.com/261014402774045"
-                    style={{ width: "100%", minHeight: "clamp(400px, 80vh, 600px)", border: "none", borderRadius: "16px" }}
-                    allow="geolocation; microphone; camera; fullscreen; payment"
-                  />
-                </div>
-              </div>
-            </motion.div>
-
-            <p className="mt-6 text-center text-white text-xs uppercase tracking-widest">
-              No contracts · No risk · Results from month 1
-            </p>
-          </div>
-        </section>
       </main>
       <Footer />
     </>
