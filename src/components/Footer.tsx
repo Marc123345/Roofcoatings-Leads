@@ -8,6 +8,7 @@ const footerLinks = [
       { label: "Results", href: "/results" },
       { label: "Niche Expertise", href: "/niche-expertise" },
       { label: "Manufacturers", href: "/manufacturers" },
+      { label: "Blog", href: "/blog" },
       { label: "Get Started", href: "/get-started" },
     ],
   },

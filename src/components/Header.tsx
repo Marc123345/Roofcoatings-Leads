@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Niche Expertise", href: "/niche-expertise" },
   { label: "Manufacturers", href: "/manufacturers" },
   { label: "Service Areas", href: "/service-areas" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Header() {
