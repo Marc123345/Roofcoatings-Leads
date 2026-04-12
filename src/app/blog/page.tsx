@@ -59,12 +59,12 @@ export default function BlogPage() {
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-gold font-mono text-[10px] tracking-[0.2em] uppercase">{post.date}</span>
                       <span className="text-zinc-600">·</span>
-                      <span className="text-navy/40 font-mono text-[10px] tracking-[0.2em] uppercase">{post.readTime}</span>
+                      <span className="text-zinc-500 font-mono text-[10px] tracking-[0.2em] uppercase">{post.readTime}</span>
                     </div>
                     <h2 className="text-navy font-bold text-lg leading-tight group-hover:text-gold transition-colors">
                       {post.title}
                     </h2>
-                    <p className="text-navy/60 text-sm mt-3 leading-relaxed line-clamp-2">
+                    <p className="text-zinc-600 text-sm mt-3 leading-relaxed line-clamp-2">
                       {post.excerpt}
                     </p>
                   </div>

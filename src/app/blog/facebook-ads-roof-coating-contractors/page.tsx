@@ -71,7 +71,7 @@ export default function BlogPost() {
             <Link href="/blog" className="text-gold font-mono text-[10px] tracking-[0.2em] uppercase hover:underline">
               Blog
             </Link>
-            <span className="text-navy/30">/</span>
+            <span className="text-zinc-400">/</span>
             <span className="text-zinc-500 font-mono text-[10px] tracking-[0.2em] uppercase">Facebook Ads</span>
           </div>
 
@@ -83,74 +83,74 @@ export default function BlogPost() {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy uppercase tracking-tighter leading-tight mb-6">
               Facebook Ads for Roof Coating Contractors: How to Generate More Qualified Leads in 2026
             </h1>
-            <p className="text-navy/60 text-lg leading-relaxed">
+            <p className="text-zinc-600 text-lg leading-relaxed">
               Facebook Ads help roof coating contractors generate local leads by combining precise targeting, strong offers, eye-catching creatives, and frictionless lead forms.
             </p>
           </div>
 
           {/* Content */}
           <div className="prose prose prose-lg max-w-none space-y-8">
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Facebook Ads can be one of the most effective lead generation channels for roof coating contractors because they let you target people in your service area, present a clear offer, and capture leads without waiting for prospects to search on Google. Current roofing marketing guidance consistently highlights local targeting, Lead Ads, high-quality visuals, and strong calls to action as the foundation of better campaign performance.
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               The real advantage is speed and control. Instead of relying only on organic traffic or referrals, you can put your offer in front of the right audience today and drive inquiries from people who are actively dealing with roof wear, leaks, maintenance concerns, or aging flat roofing systems.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               Why Facebook Ads Work
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Facebook Ads work for roof coating contractors because the platform gives you detailed audience and location targeting, flexible ad formats, and built-in lead capture tools. Contractors can target homeowners and local audiences by geography, demographics, and related behaviors, which helps reduce wasted spend.
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               They also interrupt attention instead of waiting for search intent. That makes them useful for creating demand among people who may not be searching &ldquo;roof coating contractor&rdquo; yet but are still good prospects because they own property in your area and have roofing-related pain points.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               The Best Campaign Objective
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               For most roof coating contractors, the best campaign objective is <strong className="text-white">lead generation</strong>. Lead Ads let prospects submit their contact information through a pre-filled form directly inside Facebook, reducing friction and making conversions easier.
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               If you already have a strong, conversion-focused landing page, traffic or conversion campaigns can also work. Even then, your page must match the ad message, clearly explain the offer, and make the next step obvious.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               Who to Target
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               The biggest mistake in Facebook Ads is targeting too broadly. Focus tightly on your service area and, when possible, segment campaigns by city, ZIP code, or radius so your ads stay relevant to the people most likely to book.
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Audience quality matters more than audience size. Local geography, likely homeowner profiles, and excluding people outside your real service radius typically means better lead quality.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               Offers That Get Leads
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Most roof coating ads fail because the offer is too vague. Better results come from specific incentives: a free inspection, a free estimate, a limited-time special, or a roof assessment tied to a practical problem.
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Instead of saying &ldquo;We provide roof coating services,&rdquo; a better ad angle is <strong className="text-white">&ldquo;Book a free roof coating inspection&rdquo;</strong> or <strong className="text-white">&ldquo;Get a no-obligation quote for your aging flat roof.&rdquo;</strong>
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               Ad Creative That Works
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Your creative has one job first: stop the scroll. High-quality visuals, authentic project photos, videos, before-and-after images, and creatives that feel natural in the feed outperform generic stock imagery.
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               For roof coating contractors, strong creative includes completed projects, visible roof problems, in-progress application shots, or short walkthrough videos. Before-and-after carousels and simple project-based visuals are the most effective formats.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               Ad Copy Framework
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               The best Facebook ad copy for roof coating contractors is simple and direct. A strong structure:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-sm p-6 space-y-3">
@@ -175,24 +175,24 @@ export default function BlogPost() {
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               Why Lead Ads Matter
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Facebook Lead Ads are especially useful because they remove extra steps from the conversion process. When someone clicks, the form opens inside Facebook and can be pre-filled with their details, which is a major advantage for increasing lead submissions.
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Speed matters after the lead comes in. Automation and CRM integration help contractors respond faster and improve the odds that a lead turns into an appointment.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               Common Mistakes
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               The biggest reasons campaigns underperform: poor local targeting, bland creatives, unclear CTAs, and weak follow-up. Another common mistake is chasing cheap leads instead of qualified leads. The real goal is booked jobs and revenue, not just a high form submission count.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">
               What to Test
             </h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Facebook Ads improve through testing, not guessing. Good tests for a roof coating contractor:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-sm p-6 space-y-3">
@@ -222,7 +222,7 @@ export default function BlogPost() {
               ].map((faq, i) => (
                 <div key={i} className="border-b border-gray-200 pb-6">
                   <h3 className="text-navy font-bold text-base mb-2">{faq.q}</h3>
-                  <p className="text-navy/60 text-sm leading-relaxed">{faq.a}</p>
+                  <p className="text-zinc-600 text-sm leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -232,7 +232,7 @@ export default function BlogPost() {
               <h2 className="text-2xl sm:text-3xl font-black text-navy uppercase tracking-tighter mb-4">
                 Want Us to Run Your Facebook Ads?
               </h2>
-              <p className="text-navy/60 text-base mb-8 max-w-lg mx-auto">
+              <p className="text-zinc-600 text-base mb-8 max-w-lg mx-auto">
                 We build and manage Facebook Ad campaigns exclusively for roof coating contractors. 100+ partners. $2,000/month. No contracts.
               </p>
               <a
@@ -241,7 +241,7 @@ export default function BlogPost() {
               >
                 Book a Free Strategy Call →
               </a>
-              <p className="text-navy/30 text-xs mt-4 font-mono tracking-wider uppercase">
+              <p className="text-zinc-400 text-xs mt-4 font-mono tracking-wider uppercase">
                 No contracts · Cancel anytime · Results from day 1
               </p>
             </div>

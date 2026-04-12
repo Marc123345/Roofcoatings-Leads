@@ -48,8 +48,8 @@ export default function BlogPost() {
         <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="flex items-center gap-2 mb-8">
             <Link href="/blog" className="text-gold font-mono text-[10px] tracking-[0.2em] uppercase hover:underline">Blog</Link>
-            <span className="text-navy/30">/</span>
-            <span className="text-navy/40 font-mono text-[10px] tracking-[0.2em] uppercase">Case Study</span>
+            <span className="text-zinc-400">/</span>
+            <span className="text-zinc-500 font-mono text-[10px] tracking-[0.2em] uppercase">Case Study</span>
           </div>
 
           <div className="mb-12">
@@ -57,22 +57,22 @@ export default function BlogPost() {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy uppercase tracking-tighter leading-tight mb-6">
               How a Roof Coating Contractor Generated Qualified Leads With Facebook Ads
             </h1>
-            <p className="text-navy/60 text-lg leading-relaxed">
+            <p className="text-zinc-600 text-lg leading-relaxed">
               A case study on how we helped a roof coating contractor go from inconsistent referrals to a predictable pipeline of pre-qualified commercial roofing leads using Facebook Ads.
             </p>
           </div>
 
           <div className="prose prose-lg max-w-none space-y-8">
 
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               A commercial roof coating contractor came to us with a problem every contractor knows: inconsistent lead flow. Some months were packed. Others were dead. Referrals kept the business alive but couldn&apos;t scale it. The contractor had tried a general marketing agency before — spent $4,000 a month for three months and got a handful of leads that wanted full replacements, not coatings.
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               We built a Facebook Ads campaign from scratch using the same system we run for 100+ roof coating contractors across the US. Here&apos;s exactly what we did, why it worked, and how you can apply the same framework to your business.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">The Challenge</h2>
-            <p className="text-navy/70 leading-relaxed">The contractor&apos;s situation before we started:</p>
+            <p className="text-zinc-700 leading-relaxed">The contractor&apos;s situation before we started:</p>
             <div className="bg-gray-50 border border-gray-200 rounded-sm p-6 space-y-3">
               {[
                 "Lead flow was inconsistent — booked one month, empty the next",
@@ -83,13 +83,13 @@ export default function BlogPost() {
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-gold font-mono text-sm font-bold">{String(i + 1).padStart(2, "0")}</span>
-                  <p className="text-navy/70 text-sm">{item}</p>
+                  <p className="text-zinc-700 text-sm">{item}</p>
                 </div>
               ))}
             </div>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">The Goal</h2>
-            <p className="text-navy/70 leading-relaxed">We set four clear objectives:</p>
+            <p className="text-zinc-700 leading-relaxed">We set four clear objectives:</p>
             <div className="bg-gray-50 border border-gray-200 rounded-sm p-6 space-y-3">
               {[
                 "Generate more qualified local leads — not volume, quality",
@@ -99,21 +99,21 @@ export default function BlogPost() {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="text-gold font-mono text-sm">→</span>
-                  <p className="text-navy/70 text-sm">{item}</p>
+                  <p className="text-zinc-700 text-sm">{item}</p>
                 </div>
               ))}
             </div>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">The Strategy</h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               We focused exclusively on Facebook Ads — no Google, no HomeAdvisor, no shared leads. The entire campaign was built around five principles:
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               <strong className="text-navy">Narrow targeting</strong> to the contractor&apos;s actual service radius. <strong className="text-navy">A specific offer</strong> — free roof coating inspection — instead of generic service promotion. <strong className="text-navy">Real project visuals</strong> from the contractor&apos;s own job sites. <strong className="text-navy">Lead Ads</strong> with pre-filled forms to reduce friction. And <strong className="text-navy">fast follow-up</strong> through our AI chatbot that books appointments automatically.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">The Campaign Setup</h2>
-            <p className="text-navy/70 leading-relaxed">Here&apos;s what the campaign looked like behind the scenes:</p>
+            <p className="text-zinc-700 leading-relaxed">Here&apos;s what the campaign looked like behind the scenes:</p>
             <div className="bg-gray-50 border border-gray-200 rounded-sm p-6 space-y-4">
               {[
                 { label: "Objective", value: "Lead Generation (Facebook Lead Ads)" },
@@ -125,33 +125,33 @@ export default function BlogPost() {
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4 border-b border-gray-200 pb-3 last:border-0 last:pb-0">
                   <span className="text-gold font-mono text-[10px] tracking-[0.2em] uppercase w-24 shrink-0 pt-0.5">{item.label}</span>
-                  <p className="text-navy/70 text-sm">{item.value}</p>
+                  <p className="text-zinc-700 text-sm">{item.value}</p>
                 </div>
               ))}
             </div>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">The Offer That Got Attention</h2>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               The hook was simple: <strong className="text-navy">&ldquo;Free Roof Coating Inspection for Local Property Owners.&rdquo;</strong> This worked because it was specific, low-risk, and tied to a real problem. We didn&apos;t say &ldquo;We do roof coatings.&rdquo; We said &ldquo;Find out whether your roof can be restored instead of replaced — for free.&rdquo;
             </p>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Limited availability messaging (&ldquo;Only 5 inspection slots left this week&rdquo;) added urgency without feeling pushy.
             </p>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">What Changed</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="bg-gray-50 border border-gray-200 rounded-sm p-6">
-                <p className="text-navy/40 font-mono text-[10px] tracking-[0.2em] uppercase mb-2">Before</p>
+                <p className="text-zinc-500 font-mono text-[10px] tracking-[0.2em] uppercase mb-2">Before</p>
                 <p className="text-navy font-bold text-2xl mb-1">$142</p>
-                <p className="text-navy/60 text-sm">cost per lead (HomeAdvisor)</p>
+                <p className="text-zinc-600 text-sm">cost per lead (HomeAdvisor)</p>
               </div>
               <div className="bg-gold/5 border border-gold/20 rounded-sm p-6">
                 <p className="text-gold font-mono text-[10px] tracking-[0.2em] uppercase mb-2">After</p>
                 <p className="text-navy font-bold text-2xl mb-1">$38</p>
-                <p className="text-navy/60 text-sm">cost per lead (Facebook Ads)</p>
+                <p className="text-zinc-600 text-sm">cost per lead (Facebook Ads)</p>
               </div>
             </div>
-            <p className="text-navy/70 leading-relaxed">
+            <p className="text-zinc-700 leading-relaxed">
               Better local targeting reduced wasted spend. Stronger creative improved engagement. Lead forms increased response volume. And our AI-powered follow-up — responding in under 60 seconds — improved appointment booking rates dramatically.
             </p>
 
@@ -166,13 +166,13 @@ export default function BlogPost() {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="text-gold font-mono text-sm">✓</span>
-                  <p className="text-navy/70 text-sm">{item}</p>
+                  <p className="text-zinc-700 text-sm">{item}</p>
                 </div>
               ))}
             </div>
 
             <h2 className="text-2xl font-black text-navy uppercase tracking-tighter mt-12 border-t border-gray-200 pt-8">What Other Contractors Can Learn</h2>
-            <p className="text-navy/70 leading-relaxed">The framework is repeatable:</p>
+            <p className="text-zinc-700 leading-relaxed">The framework is repeatable:</p>
             <div className="bg-gray-50 border border-gray-200 rounded-sm p-6 space-y-3">
               {[
                 "Do not target everyone — narrow to your real service area",
@@ -183,7 +183,7 @@ export default function BlogPost() {
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-gold font-mono text-sm font-bold">{String(i + 1).padStart(2, "0")}</span>
-                  <p className="text-navy/70 text-sm">{item}</p>
+                  <p className="text-zinc-700 text-sm">{item}</p>
                 </div>
               ))}
             </div>
@@ -192,7 +192,7 @@ export default function BlogPost() {
             <div className="bg-gray-50 border border-gray-200 rounded-sm p-6">
               <p className="text-gold font-mono text-[10px] tracking-[0.2em] uppercase mb-3">Sample Ad</p>
               <p className="text-navy font-bold text-lg mb-2">Free Roof Coating Inspection for Local Property Owners</p>
-              <p className="text-navy/70 text-sm leading-relaxed mb-4">
+              <p className="text-zinc-700 text-sm leading-relaxed mb-4">
                 Is your roof showing signs of wear, leaks, or age? Book a free inspection and find out whether roof coating can help extend its life — for a fraction of replacement cost. Limited spots available this week.
               </p>
               <p className="text-gold font-bold text-sm uppercase tracking-wider">→ Get My Free Inspection</p>
@@ -207,7 +207,7 @@ export default function BlogPost() {
               ].map((faq, i) => (
                 <div key={i} className="border-b border-gray-200 pb-6">
                   <h3 className="text-navy font-bold text-base mb-2">{faq.q}</h3>
-                  <p className="text-navy/60 text-sm leading-relaxed">{faq.a}</p>
+                  <p className="text-zinc-600 text-sm leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>
