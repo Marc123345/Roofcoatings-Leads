@@ -31,8 +31,8 @@ export default function Header() {
         transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-navy border-b border-zinc-800 shadow-[0_1px_3px_rgba(0,0,0,0.3)]"
-            : "bg-navy"
+            ? "bg-white border-b border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)]"
+            : "bg-white"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,10 +43,11 @@ export default function Header() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Logo size={42} />
-              <span className="text-white font-bold text-lg">
-                RoofCoat <span className="text-gold">Leads</span>
-              </span>
+              <img
+                src="https://ik.imagekit.io/qcvroy8xpd/GHL%20LOGOS%20-%202026-01-28T012809.523.png"
+                alt="RoofCoat Leads"
+                className="h-10 sm:h-12 w-auto"
+              />
             </motion.a>
 
             <nav className="hidden lg:flex items-center gap-4 sm:gap-6 lg:gap-8">
@@ -54,7 +55,7 @@ export default function Header() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  className="text-white hover:text-gold transition-colors text-sm relative group"
+                  className="text-navy hover:text-gold transition-colors text-sm relative group"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * i + 0.3 }}
@@ -78,7 +79,7 @@ export default function Header() {
             </nav>
 
             <motion.button
-              className="lg:hidden text-white w-11 h-11 flex items-center justify-center"
+              className="lg:hidden text-navy w-11 h-11 flex items-center justify-center"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
               whileTap={{ scale: 0.9 }}
@@ -107,7 +108,7 @@ export default function Header() {
                     <motion.a
                       key={link.href}
                       href={link.href}
-                      className="text-white hover:text-gold transition-colors text-sm py-2 px-2"
+                      className="text-navy hover:text-gold transition-colors text-sm py-2 px-2"
                       onClick={() => setMobileOpen(false)}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
