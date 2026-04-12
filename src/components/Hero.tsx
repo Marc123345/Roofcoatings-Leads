@@ -13,8 +13,8 @@ export default function Hero() {
         {/* ── Right-side image (absolute, covers right ~55% on desktop) ── */}
         <div className="absolute inset-y-0 right-0 w-full lg:w-[55%]">
           <Image
-            src="https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1920&q=80"
-            alt="Commercial roof aerial view"
+            src="https://ik.imagekit.io/qcvroy8xpd/photo-1674485169641-bcb2bf6f1df9%20(1).jpeg"
+            alt="Professional roof coating application"
             fill
             className="object-cover"
             style={{ mixBlendMode: "luminosity" }}

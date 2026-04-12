@@ -58,6 +58,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://roofcoatleads.com",
   },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 const jsonLd = {

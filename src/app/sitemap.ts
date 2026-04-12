@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://roofcoatleads.com/niche-expertise", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: "https://roofcoatleads.com/get-started", lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: "https://roofcoatleads.com/service-areas", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: "https://roofcoatleads.com/manufacturers", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const serviceAreaPages: MetadataRoute.Sitemap = serviceAreas.map((area) => ({
