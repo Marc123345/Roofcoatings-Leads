@@ -84,13 +84,13 @@ export default function ManufacturersPage() {
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <motion.a
-                  href="/get-started"
+                  href="#contact"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-7 py-4 rounded-md font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-gold/20 group"
                   whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
                   whileTap={{ scale: 0.97 }}
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                  Schedule a Partnership Call
+                  Partner With Us
                 </motion.a>
                 <motion.a
                   href="#how-it-works"
@@ -370,37 +370,56 @@ export default function ManufacturersPage() {
           </div>
         </section>
 
-        {/* ═══ CTA ═══ */}
-        <section className="py-24 sm:py-32 bg-navy-light px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* ═══ CONTACT FORM ═══ */}
+        <section id="contact" className="py-24 sm:py-32 bg-navy-light px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
               custom={0}
+              className="text-center mb-12"
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
                 Let&apos;s Keep Your Contractors{" "}
                 <span className="text-gold">Booked.</span>
               </h2>
-              <p className="text-white/50 text-lg max-w-2xl mx-auto mb-10">
-                Schedule a 30-minute call to discuss how we can become your contractor
-                support arm. No pitch deck fluff — just the numbers and how it works.
-              </p>
-              <motion.a
-                href="/get-started"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-yellow-400 text-navy px-10 py-5 rounded-md font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-gold/20 group"
-                whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(234,179,8,0.35)" }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                Schedule Partnership Call
-              </motion.a>
-              <p className="mt-4 text-white/30 text-xs uppercase tracking-widest">
-                No contracts · No risk · Results from month 1
+              <p className="text-white/50 text-lg max-w-2xl mx-auto">
+                Fill out the form below and we&apos;ll reach out within 24 hours to discuss
+                how we can become your contractor support arm.
               </p>
             </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={1}
+            >
+              <div className="bg-navy rounded-2xl border border-white/10 overflow-hidden">
+                <div className="bg-gradient-to-r from-gold to-yellow-400 px-6 py-4">
+                  <div className="flex items-center gap-3">
+                    <Package className="w-5 h-5 text-navy" />
+                    <span className="text-navy font-bold">Manufacturer Partnership Inquiry</span>
+                  </div>
+                </div>
+                <div className="p-2">
+                  <iframe
+                    id="JotFormIFrame-261014402774045"
+                    title="Manufacturer Partnership Inquiry"
+                    src="https://form.jotform.com/261014402774045"
+                    style={{ width: "100%", minHeight: "clamp(400px, 80vh, 600px)", border: "none", borderRadius: "16px" }}
+                    allow="geolocation; microphone; camera; fullscreen; payment"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            <p className="mt-6 text-center text-white/30 text-xs uppercase tracking-widest">
+              No contracts · No risk · Results from month 1
+            </p>
           </div>
         </section>
       </main>
