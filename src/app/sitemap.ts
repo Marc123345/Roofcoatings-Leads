@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://roofcoatleads.com/get-started", lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: "https://roofcoatleads.com/service-areas", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: "https://roofcoatleads.com/manufacturers", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: "https://roofcoatleads.com/privacy", lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    { url: "https://roofcoatleads.com/terms", lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const serviceAreaPages: MetadataRoute.Sitemap = serviceAreas.map((area) => ({

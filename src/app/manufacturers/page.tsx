@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "roofing manufacturer marketing",
   ],
   alternates: {
-    canonical: "https://www.roofcoatleads.com/manufacturers",
+    canonical: "https://roofcoatleads.com/manufacturers",
   },
 };
 

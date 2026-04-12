@@ -104,9 +104,14 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/80 text-xs">
-            &copy; {new Date().getFullYear()} RoofCoat Leads. All rights reserved.
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="text-white/80 text-xs">
+              &copy; {new Date().getFullYear()} RoofCoat Leads. All rights reserved.
+            </p>
+            <span className="text-white/20">|</span>
+            <a href="/privacy" className="text-white/40 hover:text-gold text-xs transition-colors">Privacy</a>
+            <a href="/terms" className="text-white/40 hover:text-gold text-xs transition-colors">Terms</a>
+          </div>
           <div className="flex items-center gap-4">
             <a href="/sitemap.xml" className="text-white/40 hover:text-gold text-xs transition-colors">Sitemap</a>
             <span className="text-white/20">|</span>
