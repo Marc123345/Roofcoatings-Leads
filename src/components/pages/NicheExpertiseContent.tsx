@@ -212,8 +212,7 @@ export default function NicheExpertiseContent() {
                 <div className="relative rounded-sm overflow-hidden mb-8">
                   <div className="relative h-[280px] lg:h-[360px]">
                     <Image src={niche.image} alt={niche.title} fill className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-navy/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 lg:p-10">
                       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
