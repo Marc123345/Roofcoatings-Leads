@@ -257,7 +257,7 @@ export default function HowItWorksContent() {
               <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent animate-gradient">
                 First Lead
               </span>
-              <br />in Under 48 Hours
+              <br />Often Within 48 Hours
             </motion.h1>
 
             <motion.p

@@ -47,7 +47,7 @@ export default function CTA() {
         {/* Sub */}
         <AnimateIn delay={0.2}>
           <p className="mt-6 text-white text-base sm:text-lg leading-relaxed text-center max-w-xl mx-auto">
-            Pre-qualified leads delivered from day one. $2,000/month. Cancel anytime.
+            Pre-qualified leads, screened before they reach you. $2,000/month. Cancel anytime.
           </p>
         </AnimateIn>
 
@@ -69,7 +69,7 @@ export default function CTA() {
         {/* Trust pills */}
         <AnimateIn delay={0.4}>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {["No contracts", "Cancel anytime", "Results from day 1", "Dedicated support"].map((item) => (
+            {["No contracts", "Cancel anytime", "Built to ramp up fast", "Dedicated support"].map((item) => (
               <div key={item} className="flex items-center gap-1.5 text-white text-xs">
                 <Check className="w-3 h-3 text-gold" />
                 <span>{item}</span>

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const items = [
   "100+ Contractors on the System",
   "$2,000/mo — Cancel Anytime",
-  "First Lead in Under 48 Hours",
-  "5-10x Return on Ad Spend",
+  "First Lead Often Within 48 Hours",
+  "5-10x Average Return on Ad Spend",
   "Exclusive Leads — Never Shared",
   "Pre-Qualified Residential Leads",
   "No Contracts, No BS",

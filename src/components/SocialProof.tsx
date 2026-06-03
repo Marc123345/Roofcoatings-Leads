@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Star, ChevronDown } from "lucide-react";
 import AnimateIn from "./AnimateIn";
+import Disclaimer from "./Disclaimer";
 
 interface Review {
   name: string;
@@ -171,6 +172,12 @@ export default function SocialProof() {
             </button>
           </div>
         )}
+
+        {/* Testimonial disclaimer */}
+        <Disclaimer className="mt-10">
+          Reviews reflect the experiences of individual contractors. Results like these are not typical
+          and are not guaranteed — your outcomes will depend on your market, budget, and how you work the leads.
+        </Disclaimer>
 
         {/* Bottom CTA */}
         <AnimateIn delay={0.2}>

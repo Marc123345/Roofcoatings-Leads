@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Target, ShieldCheck, Star, Zap, Phone, Bot, Check, ArrowRight } from "lucide-react";
 import AnimateIn, { StaggerContainer, StaggerItem } from "./AnimateIn";
+import Disclaimer from "./Disclaimer";
 
 const features = [
   {
@@ -309,13 +310,23 @@ export default function WhatsIncluded() {
           {/* Trust bar */}
           <AnimateIn delay={0.3}>
             <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-navy/50">
-              {["No contracts", "Cancel anytime", "Results from day 1", "Dedicated support"].map((item) => (
+              {["No contracts", "Cancel anytime", "Built to ramp up fast", "Dedicated support"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-gold" />
                   <span>{item}</span>
                 </div>
               ))}
             </div>
+          </AnimateIn>
+
+          {/* Pricing disclaimer */}
+          <AnimateIn delay={0.4}>
+            <Disclaimer tone="light" className="mt-8">
+              The monthly fee covers our service and campaign management; your advertising
+              spend is separate and paid directly to the ad platforms. Lead volume and quality
+              depend on your market, budget, and competition, so we can&apos;t guarantee a specific
+              number of leads, booked jobs, or revenue. Most contractors treat the first 30–60 days as a ramp-up period.
+            </Disclaimer>
           </AnimateIn>
         </div>
       </div>

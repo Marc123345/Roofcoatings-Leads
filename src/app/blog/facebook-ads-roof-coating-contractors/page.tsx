@@ -242,7 +242,7 @@ export default function BlogPost() {
                 Book a Free Strategy Call →
               </a>
               <p className="text-zinc-400 text-xs mt-4 font-mono tracking-wider uppercase">
-                No contracts · Cancel anytime · Results from day 1
+                No contracts · Cancel anytime · Built to ramp up fast
               </p>
             </div>
           </div>

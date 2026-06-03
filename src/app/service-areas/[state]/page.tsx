@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ state: st
   if (!area) return {};
   return {
     title: `${area.state} Roof Coating Leads | Exclusive Leads for ${area.abbr} Contractors — RoofCoat Leads`,
-    description: `Get exclusive, pre-qualified roof coating leads in ${area.state}. Custom Facebook Ad campaigns targeting ${area.cities.slice(0, 3).join(", ")} and more. 40% lower CPA. First lead in <48h.`,
+    description: `Get exclusive, pre-qualified roof coating leads in ${area.state}. Custom Facebook Ad campaigns targeting ${area.cities.slice(0, 3).join(", ")} and more. 40% lower CPA. First lead often within 48h.`,
     alternates: { canonical: `https://roofcoatleads.com/service-areas/${area.slug}` },
   };
 }

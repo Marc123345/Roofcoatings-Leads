@@ -1,4 +1,5 @@
 import Logo from "./Logo";
+import { FULL_DISCLAIMER } from "./Disclaimer";
 
 const footerLinks = [
   {
@@ -102,6 +103,15 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Legal disclaimer — small, muted, present for legal cover */}
+      <div className="border-t border-zinc-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <p className="text-white/30 text-xs leading-relaxed">
+            {FULL_DISCLAIMER}
+          </p>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -112,6 +122,7 @@ export default function Footer() {
             <span className="text-white/20">|</span>
             <a href="/privacy" className="text-white/70 hover:text-gold text-xs transition-colors">Privacy</a>
             <a href="/terms" className="text-white/70 hover:text-gold text-xs transition-colors">Terms</a>
+            <a href="/disclaimer" className="text-white/70 hover:text-gold text-xs transition-colors">Disclaimer</a>
           </div>
           <div className="flex items-center gap-4">
             <a href="/sitemap.xml" className="text-white/70 hover:text-gold text-xs transition-colors">Sitemap</a>

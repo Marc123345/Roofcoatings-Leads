@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ResultsContent from "@/components/pages/ResultsContent";
+import Disclaimer, { FULL_DISCLAIMER } from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "Contractor Win-Logs | RoofCoat Leads — Real Results from Real Partners",
@@ -16,6 +17,9 @@ export default function ResultsPage() {
       <Header />
       <main>
         <ResultsContent />
+        <div className="bg-navy px-4 sm:px-6 lg:px-8 py-10">
+          <Disclaimer>{FULL_DISCLAIMER}</Disclaimer>
+        </div>
       </main>
       <Footer />
     </>

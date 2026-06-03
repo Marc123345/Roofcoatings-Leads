@@ -34,7 +34,7 @@ const tabs = [
     id: "speed",
     label: "Fast Results",
     stat: "<48h",
-    title: "First Lead in Under 48 Hours",
+    title: "First Lead Often Within 48 Hours",
     description: "From signup to your first qualified lead in less than two days. Our streamlined onboarding gets campaigns live fast.",
     visual: "timeline",
   },

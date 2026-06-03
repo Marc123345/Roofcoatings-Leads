@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimateIn from "./AnimateIn";
+import Disclaimer, { FULL_DISCLAIMER } from "./Disclaimer";
 
 const oldWay = [
   { label: "Cost per lead:", value: "$80 - $150", color: "text-zinc-500" },
@@ -125,6 +126,10 @@ export default function ROI() {
             >
               Average partner sees 5-10x return on ad spend in the first 90 days
             </motion.div>
+          </AnimateIn>
+
+          <AnimateIn delay={0.6}>
+            <Disclaimer className="mt-8">{FULL_DISCLAIMER}</Disclaimer>
           </AnimateIn>
         </div>
       </div>

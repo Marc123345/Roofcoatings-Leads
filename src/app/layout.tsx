@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "RoofCoat Leads | Exclusive Commercial Roofing Leads via Facebook Ads",
   description:
-    "Stop buying shared leads. Get 100% exclusive, pre-qualified commercial & residential roof coating leads through our proven Facebook Ad system. 40% lower CPA. First lead in under 48 hours.",
+    "Stop buying shared leads. Get 100% exclusive, pre-qualified commercial & residential roof coating leads through our proven Facebook Ad system. 40% lower CPA. Most partners get their first lead within 48 hours.",
   keywords: [
     "roof coating leads",
     "exclusive roofing leads",

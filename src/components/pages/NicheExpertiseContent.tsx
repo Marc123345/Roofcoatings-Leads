@@ -297,7 +297,7 @@ export default function NicheExpertiseContent() {
               { icon: <ShieldCheck className="w-5 h-5 text-blue" />, title: "Niche Qualification Funnels", desc: "Our screening questions change per coating type — metal roof, flat roof, square footage, urgency." },
               { icon: <BarChart3 className="w-5 h-5 text-blue" />, title: "Proven Playbooks", desc: "100+ contractors across all coating types. We've already tested what works — you get the refined version." },
               { icon: <DollarSign className="w-5 h-5 text-blue" />, title: "Job-Value Optimized", desc: "We optimize for revenue, not just leads. High-ticket commercial campaigns get different treatment." },
-              { icon: <Zap className="w-5 h-5 text-blue" />, title: "Same Speed, Any Niche", desc: "Whether silicone or TPO, first lead in under 48 hours. The system is already built." },
+              { icon: <Zap className="w-5 h-5 text-blue" />, title: "Same Speed, Any Niche", desc: "Whether silicone or TPO, first lead often within 48 hours. The system is already built." },
             ].map((item) => (
               <StaggerItem key={item.title}>
                 <motion.div className="bg-white rounded-sm p-5 sm:p-8 border border-zinc-800/50 border border-transparent hover:border-blue/10 h-full"

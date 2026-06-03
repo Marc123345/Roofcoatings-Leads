@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Marquee from "./visuals/Marquee";
 import BookingOverlay from "./BookingOverlay";
+import Disclaimer, { FULL_DISCLAIMER } from "./Disclaimer";
 
 export default function Hero() {
   const [overlayOpen, setOverlayOpen] = useState(false);
@@ -88,7 +89,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              100+ contractors already on the system. Pre-qualified leads from day one.
+              100+ contractors already on the system. Leads come screened for property type, roof age, timeline, and budget.
               Book a free call and we&apos;ll map out your lead strategy.
             </motion.p>
 
@@ -116,12 +117,16 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9 }}
             >
-              No contracts · Cancel anytime · Results from day 1
+              No contracts · Cancel anytime · Built to ramp up fast
             </motion.p>
           </div>
         </div>
       </section>
 
+      {/* ── Expectation disclaimer ── */}
+      <div className="bg-navy px-4 sm:px-6 lg:px-8 pb-6">
+        <Disclaimer>{FULL_DISCLAIMER}</Disclaimer>
+      </div>
 
       {/* ── Logo marquee ── */}
       <Marquee />

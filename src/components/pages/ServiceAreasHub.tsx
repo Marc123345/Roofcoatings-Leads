@@ -302,7 +302,7 @@ export default function ServiceAreasHub() {
               whileTap={{ scale: 0.95 }}>
               Book a Free Call &rarr;
             </motion.a>
-            <p className="mt-3 text-gray/50 text-sm">Free audit. No contracts. Results from day 1.</p>
+            <p className="mt-3 text-gray/50 text-sm">Free audit. No contracts. Built to ramp up fast.</p>
           </AnimateIn>
         </div>
       </section>
