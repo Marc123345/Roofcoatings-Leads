@@ -5,7 +5,6 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Marquee from "./visuals/Marquee";
 import BookingOverlay from "./BookingOverlay";
-import Disclaimer, { FULL_DISCLAIMER } from "./Disclaimer";
 
 export default function Hero() {
   const [overlayOpen, setOverlayOpen] = useState(false);
@@ -122,11 +121,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-
-      {/* ── Expectation disclaimer ── */}
-      <div className="bg-navy px-4 sm:px-6 lg:px-8 pb-6">
-        <Disclaimer>{FULL_DISCLAIMER}</Disclaimer>
-      </div>
 
       {/* ── Logo marquee ── */}
       <Marquee />
