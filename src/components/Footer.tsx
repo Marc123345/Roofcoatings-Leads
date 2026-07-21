@@ -6,7 +6,6 @@ const footerLinks = [
     title: "Company",
     links: [
       { label: "How It Works", href: "/how-it-works" },
-      { label: "Results", href: "/results" },
       { label: "Niche Expertise", href: "/niche-expertise" },
       { label: "Manufacturers", href: "/manufacturers" },
       { label: "Blog", href: "/blog" },

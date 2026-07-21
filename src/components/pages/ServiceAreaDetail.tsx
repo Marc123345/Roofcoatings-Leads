@@ -53,10 +53,10 @@ export default function ServiceAreaDetail({ area }: { area: ServiceArea }) {
                 whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 Get {area.state} Leads &rarr;
               </motion.a>
-              <motion.a href="/results"
+              <motion.a href="/how-it-works"
                 className="border border-zinc-700 text-white hover:text-white hover:border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-sm font-bold text-sm sm:text-base w-full sm:w-auto text-center transition-all"
                 whileHover={{ scale: 1.03 }}>
-                See Win-Logs
+                See How It Works
               </motion.a>
             </motion.div>
 
