@@ -172,11 +172,6 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{ __html: `window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()` }}
         />
-        {/* JotForm AI Chatbot — appears on every page */}
-        <script
-          src="https://cdn.jotfor.ms/agent/embedjs/019d62a7eca770a3b1de278fb2245e812f8c/embed.js"
-          async
-        />
       </body>
     </html>
   );

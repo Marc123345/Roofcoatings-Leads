@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LogoSlider from "@/components/LogoSlider";
-import SocialProof from "@/components/SocialProof";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
 import WhyFacebookAds from "@/components/WhyFacebookAds";
@@ -21,7 +20,6 @@ export default function Home() {
       <main>
         <Hero />
         <LogoSlider />
-        <SocialProof />
         <Problem />
         <Solution />
         <WhyFacebookAds />
