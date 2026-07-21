@@ -3,7 +3,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import Marquee from "./visuals/Marquee";
 import BookingOverlay from "./BookingOverlay";
 
 export default function Hero() {
@@ -122,8 +121,6 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* ── Logo marquee ── */}
-      <Marquee />
       <BookingOverlay open={overlayOpen} onClose={() => setOverlayOpen(false)} />
     </>
   );
