@@ -227,7 +227,7 @@ export default function BlogPost() {
                 Book a Free Strategy Call →
               </a>
               <p className="text-white/30 text-xs mt-4 font-mono tracking-wider uppercase">
-                $2,000/mo · No contracts · Built to ramp up fast
+                $1,500/mo · No contracts · Built to ramp up fast
               </p>
             </div>
           </div>

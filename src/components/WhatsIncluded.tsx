@@ -223,7 +223,7 @@ export default function WhatsIncluded() {
 
                   <div className="mt-8 flex items-center gap-3 bg-zinc-900 rounded-sm p-4 border border-zinc-800">
                     <div className="w-2 h-2 rounded-sm bg-green-400 animate-pulse" />
-                    <span className="text-white text-sm">Included in your $2,000/mo plan — no extra cost</span>
+                    <span className="text-white text-sm">Included in your $1,500/mo plan — no extra cost</span>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -253,7 +253,7 @@ export default function WhatsIncluded() {
                 </div>
                 <p className="text-white text-sm mb-2">Core Lead System</p>
                 <div className="flex items-baseline justify-center gap-1 mb-6">
-                  <span className="text-white text-3xl sm:text-5xl font-bold">$2k</span>
+                  <span className="text-white text-3xl sm:text-5xl font-bold">$1.5k</span>
                   <span className="text-white text-sm">/mo</span>
                 </div>
                 <div className="space-y-3 text-left flex-1">

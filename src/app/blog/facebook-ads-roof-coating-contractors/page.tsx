@@ -233,7 +233,7 @@ export default function BlogPost() {
                 Want Us to Run Your Facebook Ads?
               </h2>
               <p className="text-zinc-600 text-base mb-8 max-w-lg mx-auto">
-                We build and manage Facebook Ad campaigns exclusively for roof coating contractors. 100+ partners. $2,000/month. No contracts.
+                We build and manage Facebook Ad campaigns exclusively for roof coating contractors. 100+ partners. $1,500/month. No contracts.
               </p>
               <a
                 href="/get-started"

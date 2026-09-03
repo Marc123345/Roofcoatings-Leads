@@ -47,7 +47,7 @@ export default function CTA() {
         {/* Sub */}
         <AnimateIn delay={0.2}>
           <p className="mt-6 text-white text-base sm:text-lg leading-relaxed text-center max-w-xl mx-auto">
-            Pre-qualified leads, screened before they reach you. $2,000/month. Cancel anytime.
+            Pre-qualified leads, screened before they reach you. $1,500/month. Cancel anytime.
           </p>
         </AnimateIn>
 

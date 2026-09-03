@@ -298,7 +298,7 @@ export default function WhyFacebookAds() {
                 {/* Mini stats under description */}
                 <div className="mt-6 flex gap-4">
                   <div className="bg-zinc-900 rounded-sm px-4 py-3 flex-1 text-center">
-                    <p className="text-gold font-bold text-lg">$2k</p>
+                    <p className="text-gold font-bold text-lg">$1.5k</p>
                     <p className="text-white text-xs">/month</p>
                   </div>
                   <div className="bg-zinc-900 rounded-sm px-4 py-3 flex-1 text-center">

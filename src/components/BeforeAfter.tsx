@@ -9,7 +9,7 @@ const comparisonRows = [
   {
     feature: "Monthly Cost",
     old: "$3k–$5k/mo + Hidden fees",
-    new: "$2,000/mo Flat & All-In",
+    new: "$1,500/mo Flat & All-In",
   },
   {
     feature: "Speed to Lead",
@@ -140,7 +140,7 @@ export default function BeforeAfter() {
 
               <div className="space-y-4">
                 {[
-                  { label: "Flat-Rate Win", desc: "$2,000/mo. No \"ad spend\" surprises or hidden management fees." },
+                  { label: "Flat-Rate Win", desc: "$1,500/mo. No \"ad spend\" surprises or hidden management fees." },
                   { label: "Instant Traction", desc: "First lead often in <48 hours. We don't \"test\" — we already know what works." },
                   { label: "Precision Targeting", desc: "Residential homeowners specifically looking for coating solutions." },
                   { label: "The Closer", desc: "An average of 3+ jobs closed in your first 30 days." },
@@ -230,7 +230,7 @@ export default function BeforeAfter() {
             <div className="relative z-10">
               <p className="text-white/60 text-sm mb-2">We built the system so you don&apos;t have to.</p>
               <h3 className="text-white font-bold text-2xl sm:text-3xl mb-2">Stop Burning Cash</h3>
-              <p className="text-white/60 text-sm mb-8">$2,000/month. Cancel anytime. Built to ramp up fast.</p>
+              <p className="text-white/60 text-sm mb-8">$1,500/month. Cancel anytime. Built to ramp up fast.</p>
               <motion.button
                 onClick={() => setOverlayOpen(true)}
                 className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 sm:px-10 sm:py-5 rounded-sm font-bold text-sm sm:text-lg  group cursor-pointer"
