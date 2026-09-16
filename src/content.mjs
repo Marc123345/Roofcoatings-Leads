@@ -170,7 +170,7 @@ export const steps = [
 
 // Why Facebook Ads? (home) — "The Unfair Advantage"
 export const advantageTabs = [
-  { stat: 'Proven', title: 'Done-For-You System', text: 'A battle-tested Facebook Ad system already proven across 100+ roof coating contractors. We handle everything — you just close the jobs.' },
+  { stat: '100+', title: 'Contractors on the System', text: "It's done for you. We write the ads, set the targeting and run the qualification funnel. You close the jobs." },
   { stat: '10x', title: 'Better Targeting', text: "Facebook's 2.9B+ users and advanced behavioral data lets us find property owners the moment they're researching roof solutions." },
   { stat: '40%', title: 'Lower Cost Per Lead', text: 'Our precision targeting and exclusive model drives cost per acquisition down by 40% compared to HomeAdvisor and shared lead platforms.' },
   { stat: '<48h', title: 'First Lead Often Within 48 Hours', text: 'From signup to your first qualified lead in less than two days. Our streamlined onboarding gets campaigns live fast.' },

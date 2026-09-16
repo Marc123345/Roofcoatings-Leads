@@ -270,7 +270,6 @@ function whyFacebook() {
             <span class="rc-feature-stat">${esc(advantageTabs[0].stat)}</span>
             <h4 class="rc-proven__title">${esc(advantageTabs[0].title)}</h4>
             <p class="rc-proven__text">${esc(advantageTabs[0].text)}</p>
-            <ul class="rc-inline-checks">${['Copy &amp; creative', 'Targeting', 'Qualification funnel'].map((c) => `<li><i class="fa-solid fa-check"></i>${c}</li>`).join('')}</ul>
           </div>
         </div>
       </div>
