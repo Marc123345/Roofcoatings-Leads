@@ -5,15 +5,16 @@ const rc = (name) => `/assets/images/rc/${name}.jpg`;
 const p = (name) => `/assets/images/pl/photos/${name}.jpg`;
 
 export const photos = {
+  // Roof coating crews (RoofCoat Leads' own images) are used wherever a slot shows the work itself.
   hero: rc('hero-bg'),
   spray: rc('spray'),
   silicone: rc('silicone'),
   acrylic: rc('acrylic'),
-  metal: rc('metal'),
-  tpo: rc('tpo'),
+  metal: rc('crew-full-service'),
+  tpo: rc('tpo-repair'),
   stepAudit: p('team-computers-night-office'),
   stepBuild: rc('step-build'),
-  stepQualify: rc('step-qualify'),
+  stepQualify: rc('tpo-repair'),
   stepDeliver: rc('spray'),
   analytics: rc('analytics'),
   commercialBuildings: rc('commercial-buildings'),
@@ -21,23 +22,23 @@ export const photos = {
   office: rc('office'),
   // What's Included hover list
   featureCampaigns: p('facebook-page-call-now-button-dark'),
-  featureQualification: p('dark-analytics-dashboard-laptop'),
-  featureLeads: p('contractor-yellow-hardhat-texting'),
+  featureQualification: rc('crew-full-service'),
+  featureLeads: rc('silicone'),
   featureNotifications: p('booked-calendar-phone-dark'),
-  featureScripts: p('contractor-orange-hardhat-phone-plans'),
+  featureScripts: rc('tpo-repair'),
   aboutPortrait: p('strategist-laptop-dark-studio'),
   aboutSmall: p('laptop-analytics-dashboard-dark'),
   channelSocial: p('hands-scrolling-feed-dark-warm'),
-  pageTitleHow: rc('analytics'),
+  pageTitleHow: rc('crew-full-service'),
   pageTitleNiche: rc('commercial-buildings'),
   pageTitleManufacturers: rc('silicone'),
   pageTitleAreas: rc('us-skyline'),
-  pageTitleStart: rc('office'),
-  pageTitleBlog: p('laptop-revenue-dashboard-dark-desk'),
+  pageTitleStart: rc('tpo-repair'),
+  pageTitleBlog: rc('crew-full-service'),
   pageTitleLegal: p('colleagues-late-night-office'),
 };
 
 // On the previous site the Georgia photo URL was dead, Arizona showed a cocktail and Ohio showed
 // Mumbai's Gateway of India, so those three use roof coating / commercial photos instead.
-const stateOverrides = { georgia: 'commercial-buildings', arizona: 'tpo', ohio: 'metal' };
+const stateOverrides = { georgia: 'commercial-buildings', arizona: 'tpo-repair', ohio: 'crew-full-service' };
 export const statePhoto = (slug) => rc(stateOverrides[slug] || slug);

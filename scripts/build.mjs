@@ -267,7 +267,7 @@ function whyFacebook() {
         <div class="feature-box-style3 style-2 fix">
           <div class="row align-items-center">
             <div class="col-md-6 d-none d-xl-block">
-              <div class="image2 pl-feature-photo"><img src="${PH.spray}" alt="Roof coating crew spraying a commercial roof"></div>
+              <div class="image2 pl-feature-photo"><img src="${PH.silicone}" alt="Roof coating crew spraying a commercial roof"></div>
             </div>
             <div class="col-xl-6">
               <div class="content content-style-2">
@@ -780,7 +780,7 @@ ${cardsSection({ sub: 'The Problem You Already Know', title: ['When Your Contrac
           (ph, i) => `
       <div class="col-lg-4 wow fadeInUp" data-wow-delay="${delay(i, 2)}">
         <div class="pl-channel">
-          <div class="pl-channel__photo"><img src="${PH[{ 'step-build': 'stepBuild', spray: 'spray', silicone: 'silicone' }[ph.photo]]}" alt="${esc(ph.title)}"><span class="rc-step-card__badge">Phase ${pad(i)}</span></div>
+          <div class="pl-channel__photo"><img src="${PH[{ 'step-build': 'metal', spray: 'spray', silicone: 'silicone' }[ph.photo]]}" alt="${esc(ph.title)}"><span class="rc-step-card__badge">Phase ${pad(i)}</span></div>
           <h3>${esc(ph.title)}</h3>
           <p>${esc(ph.text)}</p>
           <ul>${ph.bullets.map((b) => `<li><i class="fa-solid fa-circle-check"></i>${esc(b)}</li>`).join('')}</ul>
@@ -917,7 +917,7 @@ ${pageTitle(`${esc(a.state)} Roof Coating Leads`, statePhoto(a.slug), [{ label: 
     <div class="container">
       <div class="row g-4 align-items-center">
         <div class="col-lg-5">
-          <div class="testimonial-image-block4 fix"><img class="wow fadeInUp img-custom-anim-left" src="${PH.spray}" alt="Roof coating application"></div>
+          <div class="testimonial-image-block4 fix"><img class="wow fadeInUp img-custom-anim-left" src="${PH.metal}" alt="Roof coating crew restoring a commercial roof"></div>
         </div>
         <div class="col-lg-7">
           <div class="testimonial-block-four">
