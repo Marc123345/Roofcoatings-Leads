@@ -317,3 +317,6 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 /* Client videos are 3:4 phone clips */
 .pl-reel__media { aspect-ratio: 3 / 4; max-height: none; }
 .pl-reel__author .pl-avatar i { font-size: 16px; }
+
+.rc-territory-au { display: inline-flex; align-items: center; gap: 8px; margin: 12px 0 4px; padding: 6px 14px; border-radius: 30px; background: rgba(234, 179, 8, .12); color: var(--rc-gold); font-size: 14px; font-weight: 600; }
+.rc-territory-au:hover { background: var(--rc-gold); color: var(--rc-ink); }

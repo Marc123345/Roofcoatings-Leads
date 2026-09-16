@@ -9,6 +9,7 @@ import * as content from '../src/content.mjs';
 import { serviceAreas } from '../src/service-areas.mjs';
 import { allStates } from '../src/states.mjs';
 import { marketFor } from '../src/state-markets.mjs';
+import { australia, australiaMarket } from '../src/australia.mjs';
 import { photos as PH, statePhoto } from '../src/photos.mjs';
 import { page, pageTitle, btn, bookBtn, subTitle, secTitle, img, esc, disclaimer, bookingSwitcher, assetVersions } from './layout.mjs';
 
@@ -449,6 +450,7 @@ function territories() {
         <div class="pl-territory-card">
           <span class="pl-territory-card__num">${allStates.length}</span>
           <span class="pl-territory-card__label">States, DC &amp; Puerto Rico</span>
+          <a class="rc-territory-au" href="/service-areas/australia"><i class="fa-solid fa-earth-oceania"></i> Now in Australia</a>
           <p>Select your state to get started with pre-qualified leads in your territory.</p>
           <ul>${niches.map((n) => `<li>${esc(n.label)} leads</li>`).join('')}</ul>
           ${btn('View Service Areas', { href: '/service-areas' })}
@@ -894,23 +896,41 @@ ${pageTitle('Service Areas', PH.pageTitleAreas)}
     </div>
     <div class="rc-states__legend"><span class="is-featured">Featured markets</span><span>Every market has its own page</span></div>
   </div>
+</section>
+
+<section class="section-padding pt-0" id="australia">
+  <div class="container">
+    <div class="sec-title text-center">
+      ${subTitle('Now in Australia')}
+      ${secTitle('Australian States', '&amp; Territories')}
+      <div class="rc-sec-intro">Exclusive roof coating leads for contractors across Australia.</div>
+    </div>
+    <div class="rc-states">
+      ${australia.map((st) => `<a class="rc-state" href="/service-areas/australia/${st.slug}"><strong>${st.abbr}</strong><span>${esc(st.state)}</span></a>`).join('')}
+    </div>
+    <div class="text-center mt-4">${btn('Explore Australia', { href: '/service-areas/australia' })}</div>
+  </div>
 </section>`,
 });
 
 // Photos for markets without their own image rotate through the roof coating shots.
 const marketPhotos = [PH.metal, PH.silicone, PH.tpo, PH.spray, PH.commercialBuildings, PH.usSkyline];
+// Australia uses roof coating shots only (the city photos are American skylines).
+const roofPhotos = [PH.metal, PH.silicone, PH.tpo, PH.spray];
 
-allStates.forEach((st, idx) => {
-  const featured = serviceAreas.find((s) => s.slug === st.slug);
-  const a = featured || { ...st, ...marketFor(st) };
-  const photo = featured ? statePhoto(a.slug) : marketPhotos[idx % marketPhotos.length];
+// One page per market. US states live at /service-areas/<slug>, Australian states and
+// territories at /service-areas/australia/<slug>.
+function marketPage(st, idx, { base = '/service-areas', crumbs = [{ label: 'Service Areas', href: '/service-areas' }], market = marketFor, photos = marketPhotos } = {}) {
+  const featured = base === '/service-areas' && serviceAreas.find((s) => s.slug === st.slug);
+  const a = featured || { ...st, ...market(st) };
+  const photo = featured ? statePhoto(a.slug) : photos[idx % photos.length];
   pages.push({
-    file: `service-areas/${a.slug}.html`,
-    path: `/service-areas/${a.slug}`,
+    file: `${base.slice(1)}/${a.slug}.html`,
+    path: `${base}/${a.slug}`,
     title: `${a.state} Roof Coating Leads — Exclusive Leads for ${a.abbr} Contractors`,
     description: `Get exclusive, pre-qualified roof coating leads in ${a.state}. Custom Facebook Ad campaigns targeting ${a.cities.slice(0, 3).join(', ')} and more.${featured ? ' 40% lower CPA.' : ''} First lead often within 48h.`,
     body: `
-${pageTitle(`${esc(a.state)} Roof Coating Leads`, photo, [{ label: 'Service Areas', href: '/service-areas' }])}
+${pageTitle(`${esc(a.state)} Roof Coating Leads`, photo, crumbs)}
 <section class="section-padding">
   <div class="container">
     <div class="row g-5 align-items-center">
@@ -992,7 +1012,56 @@ ${featured ? `<section class="tetsimonial-section-4">
   </div>
 </section>`,
   });
+}
+
+allStates.forEach((st, idx) => marketPage(st, idx));
+
+// Australia hub + states/territories
+pages.push({
+  file: 'service-areas/australia.html',
+  path: '/service-areas/australia',
+  title: 'Australia — Exclusive Roof Coating Leads',
+  description: 'Exclusive, pre-qualified roof coating leads for contractors across Australia: New South Wales, Victoria, Queensland, Western Australia, South Australia, Tasmania, the ACT and the Northern Territory.',
+  body: `
+${pageTitle('Australia', PH.metal, [{ label: 'Service Areas', href: '/service-areas' }])}
+<section class="section-padding">
+  <div class="container">
+    <div class="sec-title text-center">
+      ${subTitle('Now in Australia')}
+      ${secTitle('Roof Coating Leads', 'Across Australia')}
+      <div class="rc-sec-intro">The same done-for-you Facebook Ad system, built for Australian roof coating contractors. Every state and territory has its own campaign and its own page.</div>
+    </div>
+    <div class="row g-4">
+      ${australia
+        .map(
+          (st, i) => `
+      <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="${delay(i % 4)}">
+        <a class="rc-area-card" href="/service-areas/australia/${st.slug}">
+          <div class="rc-area-card__photo"><img src="${roofPhotos[i % roofPhotos.length]}" alt="${esc(st.state)}"><span>${st.abbr}</span></div>
+          <div class="rc-area-card__body">
+            <h3>${esc(st.state)}</h3>
+            <p class="rc-area-card__cities">${esc(st.cities.slice(0, 3).join(' · '))}</p>
+            <span class="rc-area-card__link">Explore ${esc(st.abbr)} ${arrowSvg}</span>
+          </div>
+        </a>
+      </div>`
+        )
+        .join('')}
+    </div>
+    <p class="rc-center-note wow fadeInUp">Want to know if your area is open? <button type="button" data-booking>Book a Free Call &rarr;</button></p>
+  </div>
+</section>
+${clientVideos({ sub: 'Proof', title: ['Hear It From', 'The Contractors'] })}`,
 });
+
+australia.forEach((st, idx) =>
+  marketPage(st, idx, {
+    base: '/service-areas/australia',
+    crumbs: [{ label: 'Service Areas', href: '/service-areas' }, { label: 'Australia', href: '/service-areas/australia' }],
+    market: australiaMarket,
+    photos: roofPhotos,
+  })
+);
 
 pages.push({
   file: 'get-started.html',

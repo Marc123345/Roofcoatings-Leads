@@ -227,7 +227,7 @@ function footer() {
                   </ul>
                 </div>
                 ${col('Company', [['How It Works', '/how-it-works'], ['Niche Expertise', '/niche-expertise'], ['Manufacturers', '/manufacturers'], ['Blog', '/blog'], ['Get Started', '/get-started']])}
-                ${col('Service Areas', [['Texas', '/service-areas/texas'], ['Florida', '/service-areas/florida'], ['California', '/service-areas/california'], ['Arizona', '/service-areas/arizona'], ['Ohio', '/service-areas/ohio'], ['Georgia', '/service-areas/georgia']])}
+                ${col('Service Areas', [['Texas', '/service-areas/texas'], ['Florida', '/service-areas/florida'], ['California', '/service-areas/california'], ['Arizona', '/service-areas/arizona'], ['Ohio', '/service-areas/ohio'], ['Georgia', '/service-areas/georgia'], ['Australia', '/service-areas/australia']])}
                 ${col('Coating Types', [['Commercial Silicone', '/niche-expertise#silicone'], ['Acrylic Coatings', '/niche-expertise#acrylic'], ['Metal Roof Restoration', '/niche-expertise#metal'], ['TPO / Flat Roof', '/niche-expertise#tpo']])}
               </div>
 
