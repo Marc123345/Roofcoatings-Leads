@@ -1,4 +1,4 @@
-// All 50 states (slug, name, abbreviation, main cities), carried over from the previous site.
+// All 50 states plus Washington DC and Puerto Rico (slug, name, abbreviation, main cities).
 export const allStates = [
   { slug: "alabama", state: "Alabama", abbr: "AL", cities: ["Birmingham", "Montgomery", "Huntsville", "Mobile", "Tuscaloosa"] },
   { slug: "alaska", state: "Alaska", abbr: "AK", cities: ["Anchorage", "Fairbanks", "Juneau", "Sitka", "Ketchikan"] },
@@ -8,6 +8,7 @@ export const allStates = [
   { slug: "colorado", state: "Colorado", abbr: "CO", cities: ["Denver", "Colorado Springs", "Aurora", "Fort Collins", "Lakewood"] },
   { slug: "connecticut", state: "Connecticut", abbr: "CT", cities: ["Bridgeport", "New Haven", "Hartford", "Stamford", "Waterbury"] },
   { slug: "delaware", state: "Delaware", abbr: "DE", cities: ["Wilmington", "Dover", "Newark", "Middletown", "Bear"] },
+  { slug: "district-of-columbia", state: "Washington DC", abbr: "DC", cities: ["Capitol Hill", "Georgetown", "Navy Yard", "Columbia Heights", "Anacostia"] },
   { slug: "florida", state: "Florida", abbr: "FL", cities: ["Miami", "Tampa", "Orlando", "Jacksonville", "Fort Lauderdale", "St. Petersburg", "Cape Coral", "Tallahassee", "Port St. Lucie", "Pembroke Pines"] },
   { slug: "georgia", state: "Georgia", abbr: "GA", cities: ["Atlanta", "Augusta", "Columbus", "Savannah", "Athens", "Sandy Springs", "Roswell", "Macon", "Johns Creek", "Albany"] },
   { slug: "hawaii", state: "Hawaii", abbr: "HI", cities: ["Honolulu", "Pearl City", "Hilo", "Kailua", "Waipahu"] },
@@ -38,6 +39,7 @@ export const allStates = [
   { slug: "oklahoma", state: "Oklahoma", abbr: "OK", cities: ["Oklahoma City", "Tulsa", "Norman", "Broken Arrow", "Edmond"] },
   { slug: "oregon", state: "Oregon", abbr: "OR", cities: ["Portland", "Salem", "Eugene", "Gresham", "Hillsboro"] },
   { slug: "pennsylvania", state: "Pennsylvania", abbr: "PA", cities: ["Philadelphia", "Pittsburgh", "Allentown", "Reading", "Erie"] },
+  { slug: "puerto-rico", state: "Puerto Rico", abbr: "PR", cities: ["San Juan", "Bayamón", "Carolina", "Ponce", "Caguas"] },
   { slug: "rhode-island", state: "Rhode Island", abbr: "RI", cities: ["Providence", "Warwick", "Cranston", "Pawtucket", "East Providence"] },
   { slug: "south-carolina", state: "South Carolina", abbr: "SC", cities: ["Charleston", "Columbia", "North Charleston", "Greenville", "Rock Hill"] },
   { slug: "south-dakota", state: "South Dakota", abbr: "SD", cities: ["Sioux Falls", "Rapid City", "Aberdeen", "Brookings", "Watertown"] },

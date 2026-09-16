@@ -8,6 +8,7 @@ import { createHash } from 'node:crypto';
 import * as content from '../src/content.mjs';
 import { serviceAreas } from '../src/service-areas.mjs';
 import { allStates } from '../src/states.mjs';
+import { marketFor } from '../src/state-markets.mjs';
 import { photos as PH, statePhoto } from '../src/photos.mjs';
 import { page, pageTitle, btn, bookBtn, subTitle, secTitle, img, esc, disclaimer, bookingSwitcher, assetVersions } from './layout.mjs';
 
@@ -446,8 +447,8 @@ function territories() {
     <div class="row">
       <div class="col-xl-3 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
         <div class="pl-territory-card">
-          <span class="pl-territory-card__num">50</span>
-          <span class="pl-territory-card__label">States Covered</span>
+          <span class="pl-territory-card__num">${allStates.length}</span>
+          <span class="pl-territory-card__label">States, DC &amp; Puerto Rico</span>
           <p>Select your state to get started with pre-qualified leads in your territory.</p>
           <ul>${niches.map((n) => `<li>${esc(n.label)} leads</li>`).join('')}</ul>
           ${btn('View Service Areas', { href: '/service-areas' })}
@@ -872,7 +873,7 @@ ${pageTitle('Service Areas', PH.pageTitleAreas)}
         )
         .join('')}
     </div>
-    <p class="rc-center-note wow fadeInUp">Expanding to new states monthly — don't see yours? <button type="button" data-booking>Book a Free Call &rarr;</button></p>
+    <p class="rc-center-note wow fadeInUp">Every state, DC and Puerto Rico has its own page below. Want to know if your area is open? <button type="button" data-booking>Book a Free Call &rarr;</button></p>
   </div>
 </section>
 
@@ -880,30 +881,36 @@ ${pageTitle('Service Areas', PH.pageTitleAreas)}
   <div class="container">
     <div class="sec-title text-center">
       ${subTitle('Nationwide')}
-      ${secTitle('We Cover All', '50 States')}
-      <div class="rc-sec-intro">Select your state to get started with pre-qualified leads in your territory.</div>
+      ${secTitle('All 50 States,', 'DC &amp; Puerto Rico')}
+      <div class="rc-sec-intro">Every market has its own page. Pick yours to see the local roof coating market.</div>
     </div>
     <div class="rc-states">
       ${allStates
         .map((st) => {
           const featured = serviceAreas.some((a) => a.slug === st.slug);
-          return `<a class="rc-state${featured ? ' is-featured' : ''}" href="${featured ? `/service-areas/${st.slug}` : '/get-started'}"><strong>${st.abbr}</strong><span>${esc(st.state)}</span></a>`;
+          return `<a class="rc-state${featured ? ' is-featured' : ''}" href="/service-areas/${st.slug}"><strong>${st.abbr}</strong><span>${esc(st.state)}</span></a>`;
         })
         .join('')}
     </div>
-    <div class="rc-states__legend"><span class="is-featured">Featured markets (full detail pages)</span><span>Available — book audit for custom blueprint</span></div>
+    <div class="rc-states__legend"><span class="is-featured">Featured markets</span><span>Every market has its own page</span></div>
   </div>
 </section>`,
 });
 
-for (const a of serviceAreas) {
+// Photos for markets without their own image rotate through the roof coating shots.
+const marketPhotos = [PH.metal, PH.silicone, PH.tpo, PH.spray, PH.commercialBuildings, PH.usSkyline];
+
+allStates.forEach((st, idx) => {
+  const featured = serviceAreas.find((s) => s.slug === st.slug);
+  const a = featured || { ...st, ...marketFor(st) };
+  const photo = featured ? statePhoto(a.slug) : marketPhotos[idx % marketPhotos.length];
   pages.push({
     file: `service-areas/${a.slug}.html`,
     path: `/service-areas/${a.slug}`,
     title: `${a.state} Roof Coating Leads — Exclusive Leads for ${a.abbr} Contractors`,
-    description: `Get exclusive, pre-qualified roof coating leads in ${a.state}. Custom Facebook Ad campaigns targeting ${a.cities.slice(0, 3).join(', ')} and more. 40% lower CPA. First lead often within 48h.`,
+    description: `Get exclusive, pre-qualified roof coating leads in ${a.state}. Custom Facebook Ad campaigns targeting ${a.cities.slice(0, 3).join(', ')} and more.${featured ? ' 40% lower CPA.' : ''} First lead often within 48h.`,
     body: `
-${pageTitle(`${esc(a.state)} Roof Coating Leads`, statePhoto(a.slug), [{ label: 'Service Areas', href: '/service-areas' }])}
+${pageTitle(`${esc(a.state)} Roof Coating Leads`, photo, [{ label: 'Service Areas', href: '/service-areas' }])}
 <section class="section-padding">
   <div class="container">
     <div class="row g-5 align-items-center">
@@ -915,8 +922,8 @@ ${pageTitle(`${esc(a.state)} Roof Coating Leads`, statePhoto(a.slug), [{ label: 
       </div>
       <div class="col-lg-5">
         <div class="rc-area-stats">
-          <div><strong>${esc(a.caseStudy.stat)}</strong><span>${esc(a.caseStudy.statLabel)}</span></div>
-          <div><strong>${a.cities.length}+</strong><span>cities covered</span></div>
+          ${featured ? `<div><strong>${esc(a.caseStudy.stat)}</strong><span>${esc(a.caseStudy.statLabel)}</span></div>` : '<div><strong>100%</strong><span>exclusive leads</span></div>'}
+          <div><strong>${a.cities.length}+</strong><span>${a.slug === 'district-of-columbia' ? 'neighborhoods' : 'cities'} covered</span></div>
           <div><strong>&lt;48h</strong><span>to first lead</span></div>
         </div>
       </div>
@@ -944,7 +951,7 @@ ${pageTitle(`${esc(a.state)} Roof Coating Leads`, statePhoto(a.slug), [{ label: 
   </div>
 </section>
 
-<section class="tetsimonial-section-4">
+${featured ? `<section class="tetsimonial-section-4">
   <div class="testimonial-light d-none d-xxl-block"><img src="${img('icons/testimonial-light-4-1.png')}" alt=""></div>
   <div class="testimonial-inner-4 section-padding bg-cover" style="background-image: url('${img('background/testimonial-bg-4-1.jpg')}');">
     <div class="container">
@@ -969,13 +976,13 @@ ${pageTitle(`${esc(a.state)} Roof Coating Leads`, statePhoto(a.slug), [{ label: 
       </div>
     </div>
   </div>
-</section>
+</section>` : clientVideos({ sub: 'Proof', title: ['Hear It From', 'The Contractors'] })}
 
 <section class="section-padding">
   <div class="container">
     <div class="sec-title text-center">
       ${subTitle('Coverage')}
-      ${secTitle(`Cities We Serve in`, esc(a.state))}
+      ${secTitle(a.slug === 'district-of-columbia' ? 'Neighborhoods We Serve in' : 'Cities We Serve in', esc(a.state))}
       <div class="rc-sec-intro">+ all surrounding areas within your service radius</div>
     </div>
     <div class="rc-states rc-states--cities">
@@ -985,7 +992,7 @@ ${pageTitle(`${esc(a.state)} Roof Coating Leads`, statePhoto(a.slug), [{ label: 
   </div>
 </section>`,
   });
-}
+});
 
 pages.push({
   file: 'get-started.html',
