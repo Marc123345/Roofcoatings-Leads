@@ -297,7 +297,7 @@ export const manufacturers = {
     { icon: 'fa-building', title: 'Competitors Poach Talent', text: "When applicators can't stay busy with your product, they switch to competitors who offer better contractor support programs." },
   ],
   phases: [
-    { title: 'We Generate the Leads', text: 'Our proven Facebook & Google ad system produces exclusive, pre-qualified roof coating leads every month. AI chatbot qualifies and books appointments automatically.', bullets: ['Leads every month', 'AI-powered booking', 'Exclusive territories'], photo: 'step-build' },
+    { title: 'We Generate the Leads', text: 'Our proven Facebook & Google ad system produces exclusive, pre-qualified roof coating leads every month. AI chatbot qualifies and books appointments automatically.', bullets: ['Leads every month', 'AI-powered booking', 'Exclusive leads, never shared'], photo: 'step-build' },
     { title: 'Your Contractors Get Booked', text: 'Leads are routed directly to your certified applicators based on service area. Warm, ready-to-buy homeowners — no cold calling.', bullets: ['Direct lead routing', 'Pre-qualified prospects', 'No shared leads'], photo: 'spray' },
     { title: 'You Sell More Product', text: 'Busy contractors order more coating, silicone, and materials. Your revenue grows because your network is thriving.', bullets: ['Higher order volume', 'Contractor loyalty', 'Predictable revenue'], photo: 'silicone' },
   ],

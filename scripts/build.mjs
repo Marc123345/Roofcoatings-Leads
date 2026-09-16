@@ -875,7 +875,7 @@ ${pageTitle('Service Areas', PH.pageTitleAreas)}
         )
         .join('')}
     </div>
-    <p class="rc-center-note wow fadeInUp">Every state, DC and Puerto Rico has its own page below. Want to know if your area is open? <button type="button" data-booking>Book a Free Call &rarr;</button></p>
+    <p class="rc-center-note wow fadeInUp">Every state, DC and Puerto Rico has its own page below. Want to see what a campaign in your area looks like? <button type="button" data-booking>Book a Free Call &rarr;</button></p>
   </div>
 </section>
 
@@ -1048,7 +1048,7 @@ ${pageTitle('Australia', PH.metal, [{ label: 'Service Areas', href: '/service-ar
         )
         .join('')}
     </div>
-    <p class="rc-center-note wow fadeInUp">Want to know if your area is open? <button type="button" data-booking>Book a Free Call &rarr;</button></p>
+    <p class="rc-center-note wow fadeInUp">Want to see what a campaign in your area looks like? <button type="button" data-booking>Book a Free Call &rarr;</button></p>
   </div>
 </section>
 ${clientVideos({ sub: 'Proof', title: ['Hear It From', 'The Contractors'] })}`,
