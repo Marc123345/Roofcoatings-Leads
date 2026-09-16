@@ -47,6 +47,24 @@
     });
   }
 
+  // ---------- Client videos: poster until played, then a real <video> ----------
+  document.querySelectorAll('[data-video]').forEach(function (box) {
+    box.querySelector('.pl-reel__play').addEventListener('click', function () {
+      document.querySelectorAll('[data-video] video').forEach(function (v) { v.pause(); });
+      var video = box.querySelector('video');
+      if (!video) {
+        video = document.createElement('video');
+        video.src = box.getAttribute('data-video');
+        video.controls = true;
+        video.playsInline = true;
+        video.poster = box.querySelector('img').src;
+        box.appendChild(video);
+      }
+      box.classList.add('is-playing');
+      video.play();
+    });
+  });
+
   // ---------- Footer back-to-top ----------
   document.addEventListener('click', function (e) {
     if (!e.target.closest('[data-back-top]')) return;

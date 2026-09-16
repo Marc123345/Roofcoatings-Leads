@@ -313,3 +313,7 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 .plh::after { z-index: 1; }
 @media (max-width: 991.98px) { .plh::before { display: none; } }
 .plh__campaign { left: 74%; top: 24%; }
+
+/* Client videos are 3:4 phone clips */
+.pl-reel__media { aspect-ratio: 3 / 4; max-height: none; }
+.pl-reel__author .pl-avatar i { font-size: 16px; }

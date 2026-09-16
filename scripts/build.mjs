@@ -14,7 +14,7 @@ import { page, pageTitle, btn, bookBtn, subTitle, secTitle, img, esc, disclaimer
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
 const {
-  site, stats, trustChecks, leaks, features, plans, steps, advantageTabs, comparison, platformAdvantages,
+  site, stats, videoTestimonials, trustChecks, leaks, features, plans, steps, advantageTabs, comparison, platformAdvantages,
   included, scalability, niches, nicheReasons, manufacturers, faqs, getStarted, posts, legal, FULL_DISCLAIMER, PRICING_NOTE,
 } = content;
 
@@ -31,6 +31,44 @@ function statsRow(items = stats, extraClass = '') {
 <div class="pl-stats ${extraClass}">
   ${items.map((s, i) => `<div class="pl-stat wow fadeInUp" data-wow-delay="${delay(i)}"><span class="pl-stat__value">${esc(s.value)}</span><span class="pl-stat__label">${esc(s.label)}</span></div>`).join('')}
 </div>`;
+}
+
+// Client videos: poster image until played, then a real <video> (see pl.js).
+function clientVideos({ sub = 'Video Testimonials', title = ['Real Contractors.', 'Real Jobs.'], cls = '' } = {}) {
+  return `
+<section class="pl-reels section-padding ${cls}" id="testimonials">
+  <div class="container">
+    <div class="sec-title text-center">
+      ${subTitle(sub)}
+      ${secTitle(title[0] + ' <br>', title[1])}
+      <div class="pl-reels__intro rc-sec-intro">Hear it from roof coating contractors running jobs from our leads.</div>
+    </div>
+    <div class="row g-4">
+      ${videoTestimonials
+        .map(
+          (v, i) => `
+      <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="${delay(i)}">
+        <div class="pl-reel">
+          <div class="pl-reel__media" data-video="${v.src}">
+            <img src="${v.poster}" width="540" height="720" alt="Video testimonial: ${esc(v.author)}" loading="lazy">
+            <button type="button" class="pl-reel__play" aria-label="Play video ${i + 1}: ${esc(v.author)}"><i class="fa-solid fa-play"></i></button>
+            <span class="pl-reel__label">Client Story ${pad(i)}</span>
+          </div>
+          <div class="pl-reel__body">
+            <p>&ldquo;${esc(v.quote)}&rdquo;</p>
+            <div class="pl-reel__author">
+              <span class="pl-avatar"><i class="fa-solid fa-helmet-safety"></i></span>
+              <div><strong>${esc(v.author)}</strong><span>${esc(v.company)}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>`
+        )
+        .join('')}
+    </div>
+    <div class="pl-reels__swipe">Swipe for more stories <i class="fa-solid fa-arrow-right"></i></div>
+  </div>
+</section>`;
 }
 
 // "The Hidden Leak" in the template's about-section-2 slot.
@@ -225,7 +263,7 @@ function workProcess() {
           <div class="client-image pl-initials">
             ${niches.map((n, i) => `<span class="icon-${i + 1}"><i class="fa-solid ${n.icon}"></i></span>`).join('')}
           </div>
-          <h5 class="info-title">100+ contractors already on the system. Leads come screened for property type, roof age, timeline, and budget.</h5>
+          <h5 class="info-title">Leads come screened for property type, roof age, timeline, and budget before they reach you.</h5>
         </div>
         <div class="clieng-btn">
           <div class="floower-shape"><img src="${img('resource/shape-2-1.png')}" alt=""></div>
@@ -556,7 +594,7 @@ pages.push({
           </svg>
           <span class="plh__badge-core"><i class="fa-solid fa-arrow-up-right"></i></span>
         </div>
-        <p>100+ contractors already on the system. Leads come screened for property type, roof age, timeline, and budget. Book a free call and we'll map out your lead strategy.</p>
+        <p>Exclusive leads, screened for property type, roof age, timeline, and budget. Book a free call and we'll map out your lead strategy.</p>
       </div>
       <button type="button" class="plh-btn" data-booking>
         <span class="plh-btn__arrow plh-btn__arrow--left"><i class="fa-solid fa-arrow-right"></i></span>
@@ -574,6 +612,7 @@ pages.push({
   <img class="plh__mobile-art" src="${PH.hero}" width="1916" height="821" alt="">
 </section>
 
+${clientVideos()}
 ${problem()}
 ${adCreatives()}
 ${servicesHover()}
@@ -736,7 +775,7 @@ pages.push({
   path: '/manufacturers',
   title: 'Manufacturer Partnerships',
   description:
-    'Partner with RoofCoat Leads to keep your certified contractors booked. More jobs for your applicators means more material orders for you. 100+ leads/month at scale.',
+    'Partner with RoofCoat Leads to keep your certified contractors booked. More jobs for your applicators means more material orders for you.',
   body: `
 ${pageTitle('Manufacturer Partnerships', PH.pageTitleManufacturers)}
 <section class="contact-details pt-120 pb-80" id="contact">
@@ -745,7 +784,7 @@ ${pageTitle('Manufacturer Partnerships', PH.pageTitleManufacturers)}
       <div class="col-xl-6 col-lg-6">
         ${subTitle('Manufacturer Partnership Program')}
         <h2 class="rc-big-title">Your Applicators Stay Busy. <span>You Sell More Product.</span></h2>
-        <p class="rc-lead">We generate 100+ exclusive roof coating leads per month for your certified contractors. When your applicators are booked, they order more material. Everybody wins.</p>
+        <p class="rc-lead">We generate exclusive roof coating leads every month for your certified contractors. When your applicators are booked, they order more material. Everybody wins.</p>
         ${checkList(['Proven Facebook & Google ad system', 'AI chatbot qualifies & books automatically', 'Exclusive leads — never shared'])}
         <div class="pl-hero-buttons">${btn('See How It Works', { href: '#partnership' })}</div>
         <p class="rc-hero-note">No risk &middot; Revenue-driven &middot; Results from month 1</p>
@@ -1004,6 +1043,7 @@ ${pageTitle('Free Strategy Audit', PH.pageTitleStart)}
     </div>
   </div>
 </section>
+${clientVideos({ sub: 'Proof', title: ['Hear It From', 'The Contractors'] })}
 ${cardsSection({ sub: 'Why It Works', title: ['Why Contractors Trust', 'the Audit'], intro: 'The audit is free, takes 30 minutes, and you keep the blueprint whether you work with us or not.', items: getStarted.trust, opts: { cols: 'col-xl-3 col-lg-6 col-md-6' } })}
 ${faqSection(getStarted.faqs, { sub: 'Questions', title: ['Questions About', 'the Audit'] })}`,
 });

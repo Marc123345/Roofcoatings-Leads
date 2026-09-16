@@ -38,10 +38,18 @@ export const PRICING_NOTE =
 
 // "The Results Speak for Themselves" (home page Results section)
 export const stats = [
-  { value: '100+', label: 'Contractors' },
+  { value: '100%', label: 'Exclusive Leads' },
   { value: '40%', label: 'Lower Cost Per Acquisition' },
   { value: '<48h', label: 'Setup to First Lead' },
   { value: '15%', label: 'Conversion Rate Increase' },
+];
+
+// Client videos. Quotes are transcribed from the videos; none of them gives a person's name.
+export const videoTestimonials = [
+  { src: '/assets/videos/client-1.mp4', poster: '/assets/videos/client-1.jpg', quote: "Quality of leads have been fantastic. We've been about four months now and couldn't be happier with the leads you've been getting us.", author: 'Roof Coating Contractor', company: 'South Florida' },
+  { src: '/assets/videos/client-2.mp4', poster: '/assets/videos/client-2.jpg', quote: 'I do three to five leads a day checking roofs. Sometimes I close all five.', author: 'CNS Exterior Coatings', company: 'Roof coating contractor' },
+  { src: '/assets/videos/client-3.mp4', poster: '/assets/videos/client-3.jpg', quote: "We're going to clean her up, patch it up, give it a couple coats of silicone. Thanks again guys, great work.", author: 'Roof Coating Contractor', company: 'South Florida' },
+  { src: '/assets/videos/client-4.mp4', poster: '/assets/videos/client-4.jpg', quote: 'Thank you so much guys for the hard work. Look forward to doing a lot more business with you in the future.', author: 'Roof Coating Contractor', company: 'South Florida' },
 ];
 
 export const trustChecks = ['No contracts', 'Cancel anytime', 'Built to ramp up fast', 'Dedicated support'];
@@ -170,7 +178,7 @@ export const steps = [
 
 // Why Facebook Ads? (home) — "The Unfair Advantage"
 export const advantageTabs = [
-  { stat: '100+', title: 'Contractors on the System', text: "It's done for you. We write the ads, set the targeting and run the qualification funnel. You close the jobs." },
+  { stat: '<48h', title: 'Done-For-You, Live Fast', text: "We write the ads, set the targeting and run the qualification funnel. Campaigns go live fast, and the first lead often arrives within 48 hours. You close the jobs." },
   { stat: '10x', title: 'Better Targeting', text: "Facebook's 2.9B+ users and advanced behavioral data lets us find property owners the moment they're researching roof solutions." },
   { stat: '40%', title: 'Lower Cost Per Lead', text: 'Our precision targeting and exclusive model drives cost per acquisition down by 40% compared to HomeAdvisor and shared lead platforms.' },
   { stat: '<48h', title: 'First Lead Often Within 48 Hours', text: 'From signup to your first qualified lead in less than two days. Our streamlined onboarding gets campaigns live fast.' },
@@ -277,7 +285,7 @@ export const nicheReasons = [
   { title: 'Niche-Specific Targeting', text: 'Each coating type has its own audience profile, behavioral signals, and ad creative.' },
   { title: 'Custom Ad Copy Per Niche', text: 'Silicone buyers care about longevity. Acrylic buyers care about savings. We write to each.' },
   { title: 'Niche Qualification Funnels', text: 'Our screening questions change per coating type — metal roof, flat roof, square footage, urgency.' },
-  { title: 'Proven Playbooks', text: "100+ contractors across all coating types. We've already tested what works — you get the refined version." },
+  { title: 'Proven Playbooks', text: "Campaigns run across every coating type. We've already tested what works — you get the refined version." },
   { title: 'Job-Value Optimized', text: 'We optimize for revenue, not just leads. High-ticket commercial campaigns get different treatment.' },
   { title: 'Same Speed, Any Niche', text: 'Whether silicone or TPO, first lead often within 48 hours. The system is already built.' },
 ];
@@ -289,7 +297,7 @@ export const manufacturers = {
     { icon: 'fa-building', title: 'Competitors Poach Talent', text: "When applicators can't stay busy with your product, they switch to competitors who offer better contractor support programs." },
   ],
   phases: [
-    { title: 'We Generate the Leads', text: 'Our proven Facebook & Google ad system produces 100+ exclusive, pre-qualified roof coating leads per month. AI chatbot qualifies and books appointments automatically.', bullets: ['100+ leads/month', 'AI-powered booking', 'Exclusive territories'], photo: 'step-build' },
+    { title: 'We Generate the Leads', text: 'Our proven Facebook & Google ad system produces exclusive, pre-qualified roof coating leads every month. AI chatbot qualifies and books appointments automatically.', bullets: ['Leads every month', 'AI-powered booking', 'Exclusive territories'], photo: 'step-build' },
     { title: 'Your Contractors Get Booked', text: 'Leads are routed directly to your certified applicators based on service area. Warm, ready-to-buy homeowners — no cold calling.', bullets: ['Direct lead routing', 'Pre-qualified prospects', 'No shared leads'], photo: 'spray' },
     { title: 'You Sell More Product', text: 'Busy contractors order more coating, silicone, and materials. Your revenue grows because your network is thriving.', bullets: ['Higher order volume', 'Contractor loyalty', 'Predictable revenue'], photo: 'silicone' },
   ],
@@ -299,7 +307,7 @@ export const manufacturers = {
     { tag: 'Retention', title: 'Contractor Loyalty', text: "When your brand is the reason they're booked solid, they don't switch to a competitor. You become the partner they can't afford to leave." },
   ],
   numbers: [
-    { value: '100+', label: 'Leads / Month' },
+    { value: '100%', label: 'Exclusive Leads' },
     { value: '40%', label: 'Lower CPA' },
     { value: '48hrs', label: 'First Lead' },
     { value: '24/7', label: 'AI Booking' },
@@ -355,7 +363,7 @@ export const posts = [
     date: 'April 12, 2026',
     isoDate: '2026-04-12',
     readTime: '8 min read',
-    cta: { title: 'Want Us to Run Your Facebook Ads?', text: 'We build and manage Facebook Ad campaigns exclusively for roof coating contractors. 100+ partners. $1,500/month. No contracts.' },
+    cta: { title: 'Want Us to Run Your Facebook Ads?', text: 'We build and manage Facebook Ad campaigns exclusively for roof coating contractors. $1,500/month. No contracts.' },
   },
   {
     slug: 'roof-coating-facebook-ads-case-study',
@@ -366,7 +374,7 @@ export const posts = [
     date: 'April 12, 2026',
     isoDate: '2026-04-12',
     readTime: '10 min read',
-    cta: { title: 'Want the Same Results?', text: "We build and manage Facebook Ad campaigns exclusively for roof coating contractors. This is the same system we used in this case study — and it's running for 100+ contractors right now." },
+    cta: { title: 'Want the Same Results?', text: "We build and manage Facebook Ad campaigns exclusively for roof coating contractors. This is the same system we used in this case study, and it's running for contractors right now." },
   },
 ];
 
