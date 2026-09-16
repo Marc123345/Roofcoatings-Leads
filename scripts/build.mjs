@@ -264,18 +264,13 @@ function whyFacebook() {
         </div>
       </div>
       <div class="col-xl-8 col-lg-7 wow fadeInUp" data-wow-delay=".8s">
-        <div class="feature-box-style3 style-2 fix">
-          <div class="row align-items-center">
-            <div class="col-md-6 d-none d-xl-block">
-              <div class="image2 pl-feature-photo"><img src="${PH.silicone}" alt="Roof coating crew spraying a commercial roof"></div>
-            </div>
-            <div class="col-xl-6">
-              <div class="content content-style-2">
-                <span class="rc-feature-stat">${esc(advantageTabs[0].stat)}</span>
-                <h4 class="title font-weight-500">${esc(advantageTabs[0].title)}</h4>
-                <div class="text">${esc(advantageTabs[0].text)}</div>
-              </div>
-            </div>
+        <div class="feature-box-style3 style-2 fix rc-proven">
+          <div class="rc-proven__photo"><img src="${PH.silicone}" alt="Roof coating crew spraying a commercial roof"></div>
+          <div class="rc-proven__content">
+            <span class="rc-feature-stat">${esc(advantageTabs[0].stat)}</span>
+            <h4 class="rc-proven__title">${esc(advantageTabs[0].title)}</h4>
+            <p class="rc-proven__text">${esc(advantageTabs[0].text)}</p>
+            <ul class="rc-inline-checks">${['Copy &amp; creative', 'Targeting', 'Qualification funnel'].map((c) => `<li><i class="fa-solid fa-check"></i>${c}</li>`).join('')}</ul>
           </div>
         </div>
       </div>
