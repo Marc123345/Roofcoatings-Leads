@@ -133,7 +133,7 @@ function header(active) {
               </ul>
             </nav>
             <div class="outer-box">
-              <button type="button" class="contact-btn pl-header-cta" data-booking>Book a Free Call</button>
+              <a class="contact-btn pl-header-cta rc-header-call" href="tel:${site.phone}"><i class="fa-solid fa-phone"></i> Call ${site.phoneOwner} <b>${site.phoneDisplay}</b></a>
               <div class="mobile-nav-toggler" aria-label="Open menu"><span></span><span></span><span></span></div>
             </div>
           </div>
@@ -150,6 +150,13 @@ function header(active) {
           <ul class="navigation clearfix"></ul>
           <div class="pl-drawer-cta">${bookBtn('Book a Free Call')}</div>
           <ul class="contact-list-one">
+            <li>
+              <div class="contact-info-box">
+                <i class="icon lnr-icon-phone-handset"></i>
+                <span class="title">Call ${site.phoneOwner}</span>
+                <a href="tel:${site.phone}">${site.phoneDisplay}</a>
+              </div>
+            </li>
             <li>
               <div class="contact-info-box">
                 <i class="icon lnr-icon-envelope"></i>
@@ -178,7 +185,7 @@ function header(active) {
                   <ul class="navigation clearfix"></ul>
                 </div>
               </nav>
-              <button type="button" class="pl-sticky-cta" data-booking>Book a Free Call</button>
+              <a class="pl-sticky-cta rc-header-call" href="tel:${site.phone}"><i class="fa-solid fa-phone"></i> Call ${site.phoneOwner} <b>${site.phoneDisplay}</b></a>
               <div class="mobile-nav-toggler pl-sticky-toggler" aria-label="Open menu"><span></span><span></span><span></span></div>
             </div>
           </div>
@@ -221,6 +228,7 @@ function footer() {
                   ${logo('pl-footer__logo')}
                   <p>Pre-qualified lead generation for commercial and residential roof coating contractors through proven Facebook Ad campaigns.</p>
                   <ul class="pl-footer__trust">
+                    <li><i class="fa-solid fa-phone"></i> Call ${site.phoneOwner}: <a href="tel:${site.phone}">${site.phoneDisplay}</a></li>
                     <li><i class="fa-solid fa-envelope"></i> <a href="mailto:${site.email}">${site.email}</a></li>
                     <li><i class="fa-solid fa-calendar-check"></i> <a href="/get-started">Book a Free Strategy Audit</a></li>
                     <li><i class="fa-solid fa-file-signature"></i> No contracts. Cancel anytime.</li>
@@ -278,6 +286,7 @@ function bookingModal() {
           <span class="pl-modal__kicker">Free Strategy Audit</span>
           <h3 id="pl-booking-title">Book a Free Call</h3>
           <p>30 minutes. No charge. No contracts.</p>
+          <a class="rc-call-btn rc-call-btn--sm" href="tel:${site.phone}"><i class="fa-solid fa-phone"></i> Or call ${site.phoneOwner} now — ${site.phoneDisplay}</a>
         </div>
         <button type="button" class="pl-modal__close" data-close aria-label="Close"><i class="fa fa-times"></i></button>
       </div>
@@ -344,7 +353,10 @@ ${footer()}
 ${bookingModal()}
 ${consultationPopup()}
 ${consentBanner()}
-  <button type="button" class="pl-mobile-cta" data-booking><i class="fa-solid fa-calendar-check"></i> Book a Free Call</button>
+  <div class="pl-mobile-cta rc-mobile-bar">
+    <a class="rc-mobile-bar__call" href="tel:${site.phone}"><i class="fa-solid fa-phone"></i> Call ${site.phoneOwner}</a>
+    <button type="button" class="rc-mobile-bar__book" data-booking><i class="fa-solid fa-calendar-check"></i> Book a Free Call</button>
+  </div>
   <script src="${v('/assets/js/jquery.js')}"></script>
   <script src="${v('/assets/js/popper.min.js')}"></script>
   <script src="${v('/assets/js/bootstrap.min.js')}"></script>

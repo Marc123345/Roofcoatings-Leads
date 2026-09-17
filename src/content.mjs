@@ -8,6 +8,10 @@ export const site = {
   description:
     'Stop buying shared leads. Get 100% exclusive, pre-qualified commercial & residential roof coating leads through our proven Facebook Ad system. 40% lower CPA. Most partners get their first lead within 48 hours.',
   email: 'marcfriedmancm@roofcoatleads.com',
+  // Marc's direct line — every "call" link on the site points here.
+  phone: '+16172793357',
+  phoneDisplay: '(617) 279-3357',
+  phoneOwner: 'Marc',
   bookingUrl: 'https://api.leadconnectorhq.com/widget/bookings/roofcoatingleads',
   jotformId: '260953770990064',
   manufacturerJotformId: '261014402774045',
