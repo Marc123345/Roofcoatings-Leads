@@ -5,6 +5,7 @@ import { cpSync, mkdirSync, rmSync, writeFileSync, readFileSync, readdirSync } f
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { execSync } from 'node:child_process';
 import * as content from '../src/content.mjs';
 import { serviceAreas } from '../src/service-areas.mjs';
 import { allStates } from '../src/states.mjs';
@@ -1276,7 +1277,18 @@ for (const p of pages) {
   writeFileSync(join(DIST, p.file), page(p));
 }
 console.log(`wrote ${pages.length} pages`);
-const urls = pages.filter((p) => p.path !== '/404').map((p) => `  <url><loc>${site.url}${p.path === '/' ? '' : p.path}</loc></url>`);
+// lastmod is the date the content sources last changed in git, not the build
+// date — rebuilding without editing anything should not tell search engines
+// that all 73 pages changed.
+let lastmod;
+try {
+  lastmod = execSync('git log -1 --format=%cI -- src scripts', { cwd: ROOT }).toString().trim().slice(0, 10);
+} catch {
+  lastmod = new Date().toISOString().slice(0, 10);
+}
+const urls = pages
+  .filter((p) => p.path !== '/404')
+  .map((p) => `  <url><loc>${site.url}${p.path === '/' ? '' : p.path}</loc><lastmod>${lastmod}</lastmod></url>`);
 writeFileSync(join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
 writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`);
 console.log('wrote sitemap.xml, robots.txt');

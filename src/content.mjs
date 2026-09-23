@@ -3,7 +3,10 @@
 
 export const site = {
   name: 'RoofCoat Leads',
-  url: 'https://roofcoatleads.com',
+  // The apex redirects to www (307), so www is the live hostname. This was
+  // still the apex, which meant every canonical tag, og:url and sitemap entry
+  // pointed at a URL that redirects.
+  url: 'https://www.roofcoatleads.com',
   tagline: 'Exclusive Roof Coating Leads via Facebook Ads',
   description:
     'Stop buying shared leads. Get 100% exclusive, pre-qualified commercial & residential roof coating leads through our proven Facebook Ad system. 40% lower CPA. Most partners get their first lead within 48 hours.',
