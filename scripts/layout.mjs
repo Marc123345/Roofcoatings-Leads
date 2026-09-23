@@ -54,8 +54,8 @@ export function disclaimer(text = FULL_DISCLAIMER, cls = '') {
 export const logo = (cls = '') =>
   `<a href="/" class="rc-logo ${cls}" aria-label="${site.name} home"><img src="${img('rc/logo-icon.svg')}" width="44" height="44" alt=""><span>RoofCoat <b>Leads</b></span></a>`;
 
-function head({ title, description, path, ogImage, schema = [], type = 'website' }) {
-  const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | Exclusive Commercial Roofing Leads via Facebook Ads`;
+function head({ title, description, path, ogImage, schema = [], type = 'website', keywords }) {
+  const fullTitle = title ? `${title} | ${site.name}` : `Lead Gen Agency for Roofers | ${site.name}`;
   const org = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -83,6 +83,7 @@ function head({ title, description, path, ogImage, schema = [], type = 'website'
 <meta charset="utf-8">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
+<meta name="keywords" content="${esc(keywords || site.keywords)}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#09090b">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -272,7 +273,13 @@ export function bookingSwitcher(idPrefix, { lazyCalendar = false } = {}) {
     ${calendar}
   </div>
   <div class="pl-switch__panel pl-jotform__card" id="${idPrefix}-panel-form" role="tabpanel" aria-labelledby="${idPrefix}-tab-form" data-jotform="${site.jotformId}" hidden></div>
+  ${privacyNote()}
 </div>`;
+}
+
+// Plain-language privacy notice. Sits under every form on the site.
+export function privacyNote() {
+  return `<p class="rc-privacy-note">${esc(site.privacyNotice)}</p>`;
 }
 
 // Lives outside #smooth-wrapper so position:fixed isn't trapped by a transformed ancestor.
@@ -321,10 +328,10 @@ function consultationPopup() {
   </div>`;
 }
 
-export function page({ path, title, description, ogImage = '/assets/images/rc/og-image.jpg', schema, type, body }) {
+export function page({ path, title, description, ogImage = '/assets/images/rc/og-image.jpg', schema, type, keywords, body }) {
   const inner = path !== '/';
   return withAsyncImages(
-    head({ title, description, path, ogImage, schema, type }) +
+    head({ title, description, path, ogImage, schema, type, keywords }) +
     `<body class="${inner ? 'pl-inner' : 'pl-home'}">
   <div class="page-wrapper">
     <div class="preloader is-loading">

@@ -359,3 +359,13 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 .rc-mobile-bar__call:hover { color: #fff; }
 .rc-mobile-bar__call i { color: var(--rc-gold); }
 .rc-mobile-bar__book { background: var(--theme-color1); color: #09090b; }
+
+/* Plain-language privacy notice under every form. */
+.rc-privacy-note {
+  margin: 18px 0 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+}
+.pl-jotform__card + .rc-privacy-note,
+.rc-form-card + .rc-privacy-note { margin-top: 16px; }

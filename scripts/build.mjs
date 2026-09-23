@@ -11,7 +11,7 @@ import { allStates } from '../src/states.mjs';
 import { marketFor } from '../src/state-markets.mjs';
 import { australia, australiaMarket } from '../src/australia.mjs';
 import { photos as PH, statePhoto } from '../src/photos.mjs';
-import { page, pageTitle, btn, bookBtn, subTitle, secTitle, img, esc, disclaimer, bookingSwitcher, assetVersions } from './layout.mjs';
+import { page, pageTitle, btn, bookBtn, subTitle, secTitle, img, esc, disclaimer, bookingSwitcher, privacyNote, assetVersions } from './layout.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -815,6 +815,7 @@ ${pageTitle('Manufacturer Partnerships', PH.pageTitleManufacturers)}
         <div class="pl-jotform__card rc-form-card" data-jotform="${site.manufacturerJotformId}" data-jotform-auto data-jotform-title="Manufacturer Partnership Inquiry">
           <div class="rc-form-card__head"><i class="fa-solid fa-handshake"></i> Partnership Inquiry</div>
         </div>
+        ${privacyNote()}
       </div>
     </div>
   </div>

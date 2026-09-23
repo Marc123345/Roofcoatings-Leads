@@ -18,6 +18,14 @@ export const site = {
   gaId: 'G-F34YP77Z0F',
   plausibleSrc: 'https://plausible.io/js/pa-df7lV-XI8Y4HIePV-rOBs.js',
   price: '$1,500',
+  // Short plain-language privacy notice shown under every form. Wording is
+  // Marc's, adapted from the contractor version: RoofCoat Leads sells lead
+  // generation, so it is about the enquiry and the service, not "the work".
+  privacyNotice:
+    'We collect the name, phone number, email address and business details you enter here, plus anything you choose to tell us about your company. We use it for one purpose: to contact you about your enquiry and the lead generation service you asked about. We do not sell or share your personal information, and we do not use it for targeted advertising. We keep enquiry records for up to 24 months. If you are a California resident you may request access to, correction of, or deletion of your information by calling or emailing us.',
+  // Default <meta name="keywords">. Pages can override via `keywords`.
+  keywords:
+    'lead gen agency for roofers, roofing lead generation, roofing leads, roof coating leads, exclusive roofing leads, roofing contractor marketing, facebook ads for roofers',
 };
 
 export const nav = [
