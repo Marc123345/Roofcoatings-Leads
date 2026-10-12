@@ -6,7 +6,7 @@ const p = (name) => `/assets/images/pl/photos/${name}.jpg`;
 
 export const photos = {
   // Roof coating crews (RoofCoat Leads' own images) are used wherever a slot shows the work itself.
-  hero: rc('hero-coating'), // crew spraying a coated roof (no people from the team)
+  hero: rc('hero-coating'), // crew coating a white commercial roof (Marc's ImageKit 37a62780…png, Oct 2026)
   spray: rc('spray'),
   silicone: rc('silicone'),
   acrylic: rc('acrylic'),
