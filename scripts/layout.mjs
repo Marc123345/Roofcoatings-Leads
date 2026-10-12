@@ -87,13 +87,13 @@ function head({ title, description, path, ogImage, schema = [], type = 'website'
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#09090b">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="${site.url}${path === '/' ? '' : path}">
+<link rel="canonical" href="${site.url}${path}">
 <meta property="og:type" content="${type}">
 <meta property="og:site_name" content="${site.name}">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="${esc(fullTitle)}">
 <meta property="og:description" content="${esc(description)}">
-<meta property="og:url" content="${site.url}${path === '/' ? '' : path}">
+<meta property="og:url" content="${site.url}${path}">
 <meta property="og:image" content="${site.url}${ogImage}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
