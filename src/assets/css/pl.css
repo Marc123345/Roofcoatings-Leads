@@ -86,7 +86,7 @@ button.btn-style-one { border: 0; cursor: pointer; }
 @keyframes plh-rise { from { opacity: 0; transform: translate3d(0, 40px, 0); } to { opacity: 1; transform: none; } }
 /* The hero is the artwork's own shape (1916x821) so the whole image shows, uncropped.
    Copy sits in the empty dark space on the left; nothing is laid over the person. */
-.plh { position: relative; overflow: hidden; display: flex; align-items: center; aspect-ratio: 1916 / 821; min-height: 600px; padding-top: 96px; background: #0b0b0b url(../images/rc/hero-bg.jpg) center right / cover no-repeat; }
+.plh { position: relative; overflow: hidden; display: flex; align-items: center; aspect-ratio: 1916 / 821; min-height: 600px; padding-top: 96px; background: #0b0b0b url(../images/rc/hero-coating.jpg) center right / cover no-repeat; }
 .plh::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px; background: linear-gradient(0deg, #09090b 0%, rgba(13,13,13,0) 100%); pointer-events: none; }
 /* Copy is placed relative to the artwork (which scales with the viewport), not a centred container. */
 .plh__container.container { position: relative; z-index: 2; width: 100%; max-width: none; padding-left: 6.2vw; padding-right: 0; }
