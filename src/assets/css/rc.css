@@ -311,8 +311,12 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 /* Hero photo is bright daylight: a dark wash on the left keeps the white headline readable */
 .plh::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(9, 9, 11, .94) 0%, rgba(9, 9, 11, .86) 30%, rgba(9, 9, 11, .45) 48%, rgba(9, 9, 11, 0) 62%), linear-gradient(180deg, rgba(9, 9, 11, .55) 0%, rgba(9, 9, 11, 0) 22%); }
 .plh::after { z-index: 1; }
+/* aspect-ratio + min-height:600px made the hero 1400px wide on narrower screens, cutting off
+   the right side of the photo. Pin the width so min-height grows the height instead. */
+.plh { width: 100%; }
 @media (max-width: 991.98px) { .plh::before { display: none; } }
-.plh__campaign { left: 50%; top: 62%; } /* open roof, clear of the crew in the hero photo */
+.plh__campaign { left: 47%; top: 27%; } /* in the sky, clear of the people in the hero photo */
+@media (min-width: 992px) { .plh__marketing { right: 28%; bottom: 4%; } } /* open roof below the crew, off the contractor */
 
 /* Client videos are 3:4 phone clips */
 .pl-reel__media { aspect-ratio: 3 / 4; max-height: none; }
