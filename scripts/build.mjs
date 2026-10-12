@@ -172,10 +172,14 @@ function servicesHover() {
 
 // Example Facebook creatives, drawn in HTML. Ad angles come straight from the niche playbooks.
 function adCreatives() {
+  // Square video ads from our roof coating campaigns (Marc, 12 Oct 2026). Each sits on its
+  // poster until played, so the page doesn't download ~12MB of MP4 up front.
+  const IK = 'https://ik.imagekit.io/qcvroy8xpd/';
+  const vid = (f) => ({ video: `${IK}${f}?tr=w-720`, poster: `${IK}${f}/ik-thumbnail.jpg?tr=so-1,w-720` });
   const ads = [
-    { photo: PH.silicone, text: niches[0].adAngle + '.', headline: 'Commercial Silicone Roof Coating', cta: 'Get Quote' },
-    { photo: PH.spray, text: niches[1].adAngle, headline: 'Free Roof Coating Inspection', cta: 'Book Now' },
-    { photo: PH.tpo, text: niches[3].adAngle, headline: 'Flat Roof Leak Repair', cta: 'Learn More' },
+    { ...vid('Roof%20coating%20example%201.mp4'), text: niches[0].adAngle + '.', headline: 'Is Your Roof Ready for Next Season?', cta: 'Get Quote', label: 'Is your roof ready for the next season' },
+    { ...vid('Roof%20coating%20example%202.mp4'), text: niches[2].adAngle, headline: 'Free Roof Coating Inspection', cta: 'Book Now', label: 'If this was your building' },
+    { ...vid('Roof%20coating%20example%203.mp4'), text: niches[1].adAngle, headline: 'Coat It Before You Replace It', cta: 'Learn More', label: 'Before you replace it' },
   ];
   return `
 <section class="pl-ads section-padding">
@@ -193,7 +197,7 @@ function adCreatives() {
         </div>
       </div>
     </div>
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center pl-ads__row">
       ${ads
         .map(
           (a, i) => `
@@ -205,7 +209,11 @@ function adCreatives() {
             <i class="fa-solid fa-ellipsis pl-fbad__more"></i>
           </div>
           <p class="pl-fbad__text">${esc(a.text)}</p>
-          <div class="pl-fbad__media"><img src="${a.photo}" alt="${esc(a.headline)}"></div>
+          <div class="pl-fbad__media pl-fbad__media--video" data-adplay>
+            <video src="${a.video}" poster="${a.poster}" preload="none" playsinline controls width="720" height="720"></video>
+            <img src="${a.poster}" width="720" height="720" alt="Video ad: ${esc(a.label)}" loading="lazy">
+            <button type="button" class="pl-fbad__play" aria-label="Play video ad: ${esc(a.label)}"><i class="fa-solid fa-play"></i></button>
+          </div>
           <div class="pl-fbad__link">
             <div><span>YOURCOATINGCO.COM</span><strong>${esc(a.headline)}</strong></div>
             <span class="pl-fbad__cta">${a.cta}</span>
@@ -220,7 +228,8 @@ function adCreatives() {
       <div class="col-md-6 wow fadeInUp"><div class="rc-audience"><i class="fa-solid fa-building"></i><div><h4>Commercial Property Owners</h4><p>Target facility managers and building owners with aging roofs.</p></div></div></div>
       <div class="col-md-6 wow fadeInUp" data-wow-delay=".2s"><div class="rc-audience"><i class="fa-solid fa-house-chimney"></i><div><h4>Homeowners with Leaks</h4><p>Connect with residential flat roof owners experiencing issues.</p></div></div></div>
     </div>
-    <p class="pl-ads__note wow fadeInUp">Example creatives. Every campaign is written and designed for your company, your coating type and your territory.</p>
+    <div class="pl-ads__swipe" aria-hidden="true">Swipe for more ads <i class="fa-solid fa-arrow-right"></i></div>
+    <p class="pl-ads__note wow fadeInUp">Creatives from our roof coating campaigns. Every campaign is written and designed for your company, your coating type and your territory.</p>
   </div>
 </section>`;
 }
