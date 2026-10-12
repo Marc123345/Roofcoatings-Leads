@@ -369,3 +369,10 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 }
 .pl-jotform__card + .rc-privacy-note,
 .rc-form-card + .rc-privacy-note { margin-top: 16px; }
+
+/* Paragraph text: white instead of the template's #7A7A7A grey (Marc, Oct 2026).
+   The variable also feeds three decorative lines/borders, which stay grey. */
+:root { --text-color: #fff; }
+.sec-title .sub-title, .project-block .inner-block .content-block ul li { color: #fff; }
+.faq-block-one.active .title-box .content .count { border-right-color: #7A7A7A; }
+.brand-section-3 .brand-text .line::before, .brand-section-3 .brand-text .line2::before { background-color: #7A7A7A; }
