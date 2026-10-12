@@ -172,8 +172,8 @@ function servicesHover() {
 
 // Example Facebook creatives, drawn in HTML. Ad angles come straight from the niche playbooks.
 function adCreatives() {
-  // Square video ads from our roof coating campaigns (Marc, 12 Oct 2026). Each sits on its
-  // poster until played, so the page doesn't download ~12MB of MP4 up front.
+  // Square video ads from our roof coating campaigns (Marc, 12 Oct 2026). Only the poster
+  // is shown: the play button opens the booking calendar instead of playing the video.
   const IK = 'https://ik.imagekit.io/qcvroy8xpd/';
   const vid = (f) => ({ video: `${IK}${f}?tr=w-720`, poster: `${IK}${f}/ik-thumbnail.jpg?tr=so-1,w-720` });
   const ads = [
@@ -209,10 +209,9 @@ function adCreatives() {
             <i class="fa-solid fa-ellipsis pl-fbad__more"></i>
           </div>
           <p class="pl-fbad__text">${esc(a.text)}</p>
-          <div class="pl-fbad__media pl-fbad__media--video" data-adplay>
-            <video src="${a.video}" poster="${a.poster}" preload="none" playsinline controls width="720" height="720"></video>
+          <div class="pl-fbad__media pl-fbad__media--video">
             <img src="${a.poster}" width="720" height="720" alt="Video ad: ${esc(a.label)}" loading="lazy">
-            <button type="button" class="pl-fbad__play" aria-label="Play video ad: ${esc(a.label)}"><i class="fa-solid fa-play"></i></button>
+            <button type="button" class="pl-fbad__play" data-booking aria-label="Book a free call to see ads like this: ${esc(a.label)}"><i class="fa-solid fa-play"></i></button>
           </div>
           <div class="pl-fbad__link">
             <div><span>YOURCOATINGCO.COM</span><strong>${esc(a.headline)}</strong></div>

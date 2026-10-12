@@ -309,13 +309,4 @@
     }).observe(ads);
   })();
 
-  // Video ads in the ads section: poster until played, one video playing at a time.
-  document.querySelectorAll('[data-adplay]').forEach(function (box) {
-    var video = box.querySelector('video');
-    box.querySelector('.pl-fbad__play').addEventListener('click', function () {
-      document.querySelectorAll('video').forEach(function (v) { v.pause(); });
-      box.classList.add('is-playing');
-      video.play();
-    });
-  });
 })();
