@@ -386,3 +386,13 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 /* Ad play-button rings: paused unless the ads section is on screen (class set in pl.js). */
 .pl-fbad__play::after { animation-play-state: paused; }
 .pl-ads.is-inview .pl-fbad__play::after { animation-play-state: running; }
+
+/* Services hover panel on phones: the photo is only ~220px tall but the text + list
+   is taller, so the absolutely-positioned text spilled up over the 01-05 list.
+   Under 768px the text flows below the photo instead of on top of it. */
+@media (max-width: 767.98px) {
+  .service-hover-image .image-box { margin-top: 28px; border-radius: 28px; overflow: hidden; background: #09090b; border: 1px solid rgba(255, 255, 255, .08); }
+  .service-hover-image .image-box .image { aspect-ratio: 16 / 10; mask: none; -webkit-mask: none; }
+  .service-hover-image .image-box .image .hover-img { border-radius: 0; }
+  .service-hover-image .image-box .content-box { position: relative; inset: auto; margin-top: -36px; padding: 0 22px 24px; }
+}
