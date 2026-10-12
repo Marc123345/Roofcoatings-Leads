@@ -2,6 +2,54 @@
 (function () {
   'use strict';
 
+  // ---------- Scroll reveals (replaces WOW.js) ----------
+  // Same .wow markup and animate.css classes, but one IntersectionObserver callback per
+  // element instead of WOW's 50ms polling timer. Like the old config (mobile: false), phones
+  // and reduced-motion users get no reveal. A reveal shows its whole row, so carousel items
+  // parked off to the side never stay hidden.
+  (function () {
+    var boxes = document.querySelectorAll('.wow');
+    if (!boxes.length) return;
+    var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (mobile || reduce || !('IntersectionObserver' in window)) return;
+    var show = function (el) {
+      io.unobserve(el);
+      if (el.dataset.wowDelay) el.style.animationDelay = el.dataset.wowDelay;
+      if (el.dataset.wowDuration) el.style.animationDuration = el.dataset.wowDuration;
+      el.style.visibility = 'visible';
+      el.style.animationName = '';
+      el.classList.add('animated');
+    };
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var top = en.boundingClientRect.top;
+        Array.prototype.forEach.call(en.target.parentElement.children, function (el) {
+          if (!el.classList.contains('wow') || el.classList.contains('animated')) return;
+          if (el !== en.target && Math.abs(el.getBoundingClientRect().top - top) > 60) return;
+          show(el);
+        });
+      });
+    }, { rootMargin: '0px 0px -40px 0px' });
+    boxes.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) return; // on screen at load: no late flash
+      el.style.visibility = 'hidden';
+      el.style.animationName = 'none';
+      io.observe(el);
+    });
+  })();
+
+  // ---------- Hero loops: pause while the hero is off screen ----------
+  (function () {
+    var hero = document.querySelector('.plh');
+    if (!hero || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      hero.classList.toggle('plh--offscreen', !entries[0].isIntersecting);
+    }).observe(hero);
+  })();
+
   // The booking calendar is a plain iframe, as on the previous site. GoHighLevel's form_embed.js
   // hides this widget type until a handshake that never arrives, so it is not loaded.
   function loadBookingScript() {}
@@ -250,6 +298,15 @@
     }, 30000);
     box.addEventListener('click', function (e) { if (e.target.closest('[data-popup-close]')) close(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
+  })();
+
+  // The pulsing rings on the ad play buttons only animate while the ads section is on screen.
+  (function () {
+    var ads = document.querySelector('.pl-ads');
+    if (!ads || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      ads.classList.toggle('is-inview', entries[0].isIntersecting);
+    }).observe(ads);
   })();
 
   // Video ads in the ads section: poster until played, one video playing at a time.

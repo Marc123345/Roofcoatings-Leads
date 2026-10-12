@@ -370,12 +370,10 @@ ${consentBanner()}
   <script src="${v('/assets/js/gsap.js')}"></script>
   <script src="${v('/assets/js/gsap-scroll-trigger.js')}"></script>
   <script src="${v('/assets/js/gsap-split-text.js')}"></script>
-  <script src="${v('/assets/js/parallaxie.js')}"></script>
-  <script src="${v('/assets/js/jquery.magnific-popup.min.js')}"></script>
-  <script src="${v('/assets/js/wow.js')}"></script>
-  <script src="${v('/assets/js/appear.js')}"></script>
-  <script src="${v('/assets/js/nice-select.min.js')}"></script>
-  <script src="${v('/assets/js/swiper.min.js')}"></script>
+  ${/* Perf: parallaxie, magnific-popup and nice-select were never used, WOW.js is replaced by an
+       IntersectionObserver in pl.js, and Swiper/appear only load on pages that use them. */ ''}
+  ${/count-box|count-bar|class="dial|progress-line/.test(body) ? `<script src="${v('/assets/js/appear.js')}"></script>` : ''}
+  ${/class="[^"]*swiper/.test(body) ? `<script src="${v('/assets/js/swiper.min.js')}"></script>` : ''}
   <script src="${v('/assets/js/script.js')}"></script>
   <script src="${v('/assets/js/pl.js')}" data-gsap-src="${v('/assets/js/script-gsap.js')}"></script>
   <script async src="${site.plausibleSrc}"></script>

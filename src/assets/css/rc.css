@@ -376,3 +376,13 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 .sec-title .sub-title, .project-block .inner-block .content-block ul li { color: #fff; }
 .faq-block-one.active .title-box .content .count { border-right-color: #7A7A7A; }
 .brand-section-3 .brand-text .line::before, .brand-section-3 .brand-text .line2::before { background-color: #7A7A7A; }
+
+/* Perf: looping hero pieces on their own compositor layers, paused once the hero scrolls away
+   (class set in pl.js); scroll-scrubbed decorative shapes and the cursor dots likewise. */
+.plh__badge-ring, .plh__campaign, .plh__marketing { will-change: transform; }
+.plh--offscreen .plh__badge-ring, .plh--offscreen .plh__campaign, .plh--offscreen .plh__marketing { animation-play-state: paused; }
+.tm-gsap-animate-circle, .cursor-outer, .cursor-inner { will-change: transform; }
+
+/* Ad play-button rings: paused unless the ads section is on screen (class set in pl.js). */
+.pl-fbad__play::after { animation-play-state: paused; }
+.pl-ads.is-inview .pl-fbad__play::after { animation-play-state: running; }

@@ -125,7 +125,7 @@ var THEMEMASCOT = {};
 
 	if ($(window).width() > 991) {
 		if ($(window).width() > 768) {
-			$('.parallaxie').parallaxie({
+			if ($.fn.parallaxie) $('.parallaxie').parallaxie({
 				speed: 0.55,
 				offset: 0,
 			});
@@ -715,13 +715,19 @@ var THEMEMASCOT = {};
                     const e = document.querySelector(".cursor-inner"),
                         t = document.querySelector(".cursor-outer");
                     let n, i = 0, o = !1;
+                    // Perf: write the cursor position once per animation frame, not per mousemove.
+                    var queued = false;
                     window.onmousemove = function(s) {
-                        if (!o) {
-                            t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)";
-                        }
-                        e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)";
                         n = s.clientY;
                         i = s.clientX;
+                        if (queued) return;
+                        queued = true;
+                        requestAnimationFrame(function () {
+                            queued = false;
+                            var pos = "translate(" + i + "px, " + n + "px)";
+                            if (!o) t.style.transform = pos;
+                            e.style.transform = pos;
+                        });
                     };
                     $("body").on("mouseenter", "button, a, .cursor-pointer", function() {
                         e.classList.add("cursor-hover");
@@ -975,25 +981,27 @@ awardBlocks.forEach((block) => {
 
 
 	$(document).ready(function () {
-		$("select").niceSelect();
+		if ($.fn.niceSelect) $("select").niceSelect();
 	});
 
 	//>> Video Popup Start <<//
-	$(".img-popup").magnificPopup({
+	if ($.fn.magnificPopup) $(".img-popup").magnificPopup({
 		type: "image",
 		gallery: {
 			enabled: true,
 		},
 	});
 
-	$('.video-popup').magnificPopup({
+	if ($.fn.magnificPopup) $('.video-popup').magnificPopup({
 		type: 'iframe',
 		callbacks: {
 		}
 	});
 
 	// Elements Animation
-	if ($('.wow').length) {
+	// Perf: WOW.js polled every 50ms (setInterval) for the whole visit; .wow reveals now run
+	// from an IntersectionObserver in pl.js.
+	if (window.WOW && $('.wow').length) {
 		var wow = new WOW(
 			{
 				boxClass: 'wow',      // animated element css class (default is wow)
