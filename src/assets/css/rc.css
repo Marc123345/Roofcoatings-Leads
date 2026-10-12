@@ -324,7 +324,7 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 /* Done-For-You card copy: white text and a stronger divider for readability */
 .rc-proven__text { color: #fff; border-top: 1px solid rgba(255, 255, 255, .2); }
 
-/* ---------- Call Marc: direct line in the header, footer and on the page ---------- */
+/* ---------- Call Us: direct line in the header, footer and on the page ---------- */
 .rc-header-call { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; }
 .rc-header-call b { font-weight: 700; }
 .rc-header-call i { font-size: .9em; }
@@ -342,6 +342,9 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
 .rc-call-band { padding: 40px 0; }
 .rc-call-band__inner { display: flex; align-items: center; gap: 28px; padding: 28px 34px; border-radius: 24px; background: var(--rc-card); border: 1px solid var(--rc-line); }
 .rc-call-band__photo { flex: 0 0 132px; width: 132px; height: 132px; border-radius: 20px; object-fit: cover; object-position: 50% 18%; border: 1px solid var(--rc-line); }
+/* Icon tile where the founder photo used to be (no personal photos on the site, Oct 2026). */
+.rc-call-icon { display: grid; place-items: center; background: color-mix(in srgb, var(--rc-gold) 14%, var(--rc-card)); color: var(--rc-gold); font-size: 44px; }
+.rc-host__photo.rc-call-icon { font-size: 34px; }
 .rc-call-band__copy { flex: 1; min-width: 0; }
 .rc-call-band__kicker { display: block; margin-bottom: 6px; color: var(--rc-gold); font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 .rc-call-band__copy h2 { margin: 0 0 8px; color: #fff; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.1; }
@@ -352,7 +355,7 @@ a.rc-state:hover { border-color: var(--rc-gold); color: #fff; }
   .rc-call-band__photo { flex-basis: 108px; width: 108px; height: 108px; }
   .rc-host--photo { flex-direction: column; text-align: center; align-items: center; }
 }
-/* Phone bar: call Marc on the left, booking on the right */
+/* Phone bar: call us on the left, booking on the right */
 .rc-mobile-bar { padding: 0; gap: 0 !important; }
 .rc-mobile-bar__call, .rc-mobile-bar__book { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 100%; border: 0; font-size: 16px; font-weight: 600; cursor: pointer; }
 .rc-mobile-bar__call { background: #09090b; color: #fff; }

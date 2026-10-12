@@ -576,17 +576,17 @@ function cardsSection({ sub, title, intro = '', items, opts = {}, id = '' }) {
 </section>`;
 }
 
-// Direct line to Marc, for contractors who would rather talk than book a slot.
-function callMarcBand() {
+// Direct line, for contractors who would rather talk than book a slot.
+function callUsBand() {
   return `
 <section class="rc-call-band">
   <div class="container">
     <div class="rc-call-band__inner">
-      <img class="rc-call-band__photo" src="${img('rc/marc.jpg')}" width="132" height="132" alt="Marc Friedman, Head of Sales at RoofCoat Leads" loading="lazy">
+      <span class="rc-call-band__photo rc-call-icon" aria-hidden="true"><i class="fa-solid fa-phone-volume"></i></span>
       <div class="rc-call-band__copy">
         <span class="rc-call-band__kicker">Rather just talk?</span>
-        <h2>Call Marc</h2>
-        <p>Marc Friedman, Head of Sales. He runs these campaigns every day and will tell you straight whether your market is a fit.</p>
+        <h2>Call Us</h2>
+        <p>Talk to the team that runs these campaigns every day. We'll tell you straight whether your market is a fit.</p>
       </div>
       <a class="rc-call-btn rc-call-btn--lg" href="tel:${site.phone}"><i class="fa-solid fa-phone"></i> ${site.phoneDisplay}</a>
     </div>
@@ -650,7 +650,7 @@ ${workProcess()}
 ${whyFacebook()}
 ${roiCalculator()}
 ${pricing()}
-${callMarcBand()}
+${callUsBand()}
 ${faqSection()}
 ${territories()}`,
 });
@@ -1130,12 +1130,12 @@ ${pageTitle('Free Strategy Audit', PH.pageTitleStart)}
               .join('')}
           </ul>
           <div class="rc-host rc-host--photo">
-            <img class="rc-host__photo" src="${img('rc/marc.jpg')}" width="96" height="96" alt="Marc Friedman, Head of Sales at RoofCoat Leads" loading="lazy">
+            <span class="rc-host__photo rc-call-icon" aria-hidden="true"><i class="fa-solid fa-headset"></i></span>
             <div>
-              <strong>Marc Friedman</strong>
-              <span>Head of Sales, RoofCoat Leads</span>
-              <p>You'll be talking directly with me — not a sales rep, not an account manager. I built this system and I know your niche inside out.</p>
-              <a class="rc-call-btn" href="tel:${site.phone}"><i class="fa-solid fa-phone"></i> Call Marc — ${site.phoneDisplay}</a>
+              <strong>Talk to Our Team</strong>
+              <span>RoofCoat Leads · Free 30-minute call</span>
+              <p>You'll talk directly with the people who build and run these campaigns, not a call center. We know your niche inside out.</p>
+              <a class="rc-call-btn" href="tel:${site.phone}"><i class="fa-solid fa-phone"></i> Call Us — ${site.phoneDisplay}</a>
             </div>
           </div>
           <div class="pl-badges">

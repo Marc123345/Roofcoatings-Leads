@@ -14,7 +14,7 @@ export const site = {
   // Marc's direct line — every "call" link on the site points here.
   phone: '+16172793357',
   phoneDisplay: '(617) 279-3357',
-  phoneOwner: 'Marc',
+  phoneOwner: 'Us',
   bookingUrl: 'https://api.leadconnectorhq.com/widget/bookings/roofcoatingleads',
   jotformId: '260953770990064',
   manufacturerJotformId: '261014402774045',
