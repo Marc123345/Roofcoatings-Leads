@@ -55,6 +55,7 @@ export const logo = (cls = '') =>
   `<a href="/" class="rc-logo ${cls}" aria-label="${site.name} home"><img src="${img('rc/logo-icon.svg')}" width="44" height="44" alt=""><span>RoofCoat <b>Leads</b></span></a>`;
 
 function head({ title, description, path, ogImage, schema = [], type = 'website', keywords }) {
+  description = fitDescription(description);
   const fullTitle = title ? `${title} | ${site.name}` : `Lead Gen Agency for Roofers | ${site.name}`;
   const org = {
     '@context': 'https://schema.org',
@@ -386,5 +387,51 @@ ${consentBanner()}
 
 // Decode images off the main thread so they don't hitch scrolling.
 function withAsyncImages(html) {
-  return html.replace(/<img(?![^>]*decoding=)/g, '<img decoding="async"');
+  return withAltText(html.replace(/<img(?![^>]*decoding=)/g, '<img decoding="async"'));
+}
+
+// Decorative images were written with alt="" (correct for screen readers),
+// but Bing Webmaster Tools reports every empty alt as "missing". Give them a
+// short description and aria-hidden, so crawlers see an alt and assistive
+// tech still skips them exactly as before.
+const DECORATIVE_ALT = {
+  'logo-icon.svg': 'RoofCoat Leads logo',
+  'right-arrow-1-2.png': 'Arrow',
+  'arrow.png': 'Arrow',
+  'arrow2.png': 'Arrow',
+  'star.png': 'Star',
+  'check-2-1.png': 'Check mark',
+  'hero-coating.jpg': 'Crew spraying roof coating on a commercial roof',
+  'silicone.jpg': 'Silicone roof coating being applied',
+  'crew-full-service.jpg': 'Roof coating crew on a commercial roof',
+  'tpo-repair.jpg': 'TPO flat roof repair',
+  'facebook-page-call-now-button-dark.jpg': 'Facebook business page with a Call Now button',
+  'booked-calendar-phone-dark.jpg': 'Phone showing a booked appointment calendar',
+};
+function withAltText(html) {
+  return html.replace(/<img\b[^>]*>/g, (tag) => {
+    const alt = tag.match(/\balt="([^"]*)"/);
+    if (alt && alt[1].trim()) return tag;
+    const file = (tag.match(/\bsrc="([^"?#]*)/) || [])[1]?.split('/').pop() || '';
+    const text = DECORATIVE_ALT[file] || (/icon/.test(file) ? 'Icon' : 'Decorative shape');
+    const hidden = /aria-hidden=/.test(tag) ? '' : ' aria-hidden="true"';
+    return alt
+      ? tag.replace(/\balt=""/, `alt="${text}"${hidden}`)
+      : tag.replace(/^<img\b/, `<img alt="${text}"${hidden}`);
+  });
+}
+
+// Bing and Google show roughly 160 characters. Drop whole trailing sentences
+// until the description fits, rather than cutting mid-word.
+export function fitDescription(d, max = 160) {
+  if (!d || d.length <= max) return d;
+  const sentences = d.match(/[^.!?]+[.!?]+(\s|$)/g) || [d];
+  let out = '';
+  for (const s of sentences) {
+    if ((out + s).trim().length > max) break;
+    out += s;
+  }
+  out = out.trim();
+  if (out) return out;
+  return d.slice(0, max - 1).replace(/\s+\S*$/, '') + '…';
 }

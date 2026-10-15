@@ -9,7 +9,7 @@ export const site = {
   url: 'https://www.roofcoatleads.com',
   tagline: 'Pre-Qualified Roof Coating Leads via Facebook Ads',
   description:
-    'Stop buying shared leads. Get pre-qualified commercial & residential roof coating leads from your own Facebook Ad campaign, sent only to you. 40% lower CPA. Most partners get their first lead within 48 hours.',
+    'Pre-qualified commercial & residential roof coating leads from your own Facebook Ad campaign, sent only to you. $1,500/month, no contracts.',
   email: 'marcfriedmancm@roofcoatleads.com',
   // Marc's direct line — every "call" link on the site points here.
   phone: '+16172793357',
@@ -376,7 +376,7 @@ export const posts = [
   {
     slug: 'facebook-ads-roof-coating-contractors',
     title: 'Facebook Ads for Roof Coating Contractors: How to Generate More Qualified Leads in 2026',
-    excerpt: 'Facebook Ads help roof coating contractors generate local leads by combining precise targeting, strong offers, eye-catching creatives, and frictionless lead forms.',
+    excerpt: 'How roof coating contractors use Facebook Ads to generate local leads: precise targeting, strong offers, eye-catching creative and simple lead forms.',
     photo: 'spray',
     category: 'Facebook Ads',
     date: 'April 12, 2026',
@@ -387,7 +387,7 @@ export const posts = [
   {
     slug: 'roof-coating-facebook-ads-case-study',
     title: 'How a Roof Coating Contractor Generated Qualified Leads With Facebook Ads',
-    excerpt: 'A case study on how we helped a roof coating contractor go from inconsistent referrals to a predictable pipeline of pre-qualified commercial roofing leads using Facebook Ads.',
+    excerpt: 'How a roof coating contractor went from inconsistent referrals to a steady pipeline of pre-qualified commercial leads with Facebook Ads.',
     photo: 'silicone',
     category: 'Case Study',
     date: 'April 12, 2026',
