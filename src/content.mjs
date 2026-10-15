@@ -7,9 +7,9 @@ export const site = {
   // still the apex, which meant every canonical tag, og:url and sitemap entry
   // pointed at a URL that redirects.
   url: 'https://www.roofcoatleads.com',
-  tagline: 'Exclusive Roof Coating Leads via Facebook Ads',
+  tagline: 'Pre-Qualified Roof Coating Leads via Facebook Ads',
   description:
-    'Stop buying shared leads. Get 100% exclusive, pre-qualified commercial & residential roof coating leads through our proven Facebook Ad system. 40% lower CPA. Most partners get their first lead within 48 hours.',
+    'Stop buying shared leads. Get pre-qualified commercial & residential roof coating leads from your own Facebook Ad campaign, sent only to you. 40% lower CPA. Most partners get their first lead within 48 hours.',
   email: 'marcfriedmancm@roofcoatleads.com',
   // Marc's direct line — every "call" link on the site points here.
   phone: '+16172793357',
@@ -28,7 +28,7 @@ export const site = {
     'We collect the name, phone number, email address and business details you enter here, plus anything you choose to tell us about your company. We use it for one purpose: to contact you about your enquiry and the lead generation service you asked about. We do not sell or share your personal information, and we do not use it for targeted advertising. We keep enquiry records for up to 24 months. If you are a California resident you may request access to, correction of, or deletion of your information by calling or emailing us.',
   // Default <meta name="keywords">. Pages can override via `keywords`.
   keywords:
-    'lead gen agency for roofers, roofing lead generation, roofing leads, roof coating leads, exclusive roofing leads, roofing contractor marketing, facebook ads for roofers',
+    'lead gen agency for roofers, roofing lead generation, roofing leads, roof coating leads, roofing contractor marketing, facebook ads for roofers',
 };
 
 export const nav = [
@@ -53,7 +53,7 @@ export const PRICING_NOTE =
 
 // "The Results Speak for Themselves" (home page Results section)
 export const stats = [
-  { value: '100%', label: 'Exclusive Leads' },
+  { value: '1', label: 'Contractor Per Lead' },
   { value: '40%', label: 'Lower Cost Per Acquisition' },
   { value: '<48h', label: 'Setup to First Lead' },
   { value: '15%', label: 'Conversion Rate Increase' },
@@ -182,9 +182,9 @@ export const steps = [
     number: '04',
     tag: 'Deliver',
     time: 'Day 1–2',
-    title: 'Exclusive Real-Time Delivery',
+    title: 'Real-Time Delivery',
     short: 'Pre-qualified and delivered in real time.',
-    summary: 'Leads sent directly to you in real time via SMS + email. 100% exclusive — never shared with competing contractors.',
+    summary: 'Leads sent directly to you in real time via SMS + email. Each lead goes only to you and is never resold.',
     text: 'When a lead passes qualification, it goes directly to you in real time. You get an instant notification with their name, contact details, property type, and qualification answers. Speed-to-lead is everything.',
     detail: 'The faster you call, the higher your close rate.',
     list: ['Instant SMS notification', 'Email with full lead details', 'Property type + qualification answers'],
@@ -195,7 +195,7 @@ export const steps = [
 export const advantageTabs = [
   { stat: '<48h', title: 'Done-For-You, Live Fast', text: "We write the ads, set the targeting and run the qualification funnel. Campaigns go live fast, and the first lead often arrives within 48 hours. You close the jobs." },
   { stat: '10x', title: 'Better Targeting', text: "Facebook's 2.9B+ users and advanced behavioral data lets us find property owners the moment they're researching roof solutions." },
-  { stat: '40%', title: 'Lower Cost Per Lead', text: 'Our precision targeting and exclusive model drives cost per acquisition down by 40% compared to HomeAdvisor and shared lead platforms.' },
+  { stat: '40%', title: 'Lower Cost Per Lead', text: 'Our precision targeting and one-contractor-per-lead model drive cost per acquisition down by 40% compared to HomeAdvisor and shared lead platforms.' },
   { stat: '<48h', title: 'First Lead Often Within 48 Hours', text: 'From signup to your first qualified lead in less than two days. Our streamlined onboarding gets campaigns live fast.' },
 ];
 
@@ -312,7 +312,7 @@ export const manufacturers = {
     { icon: 'fa-building', title: 'Competitors Poach Talent', text: "When applicators can't stay busy with your product, they switch to competitors who offer better contractor support programs." },
   ],
   phases: [
-    { title: 'We Generate the Leads', text: 'Our proven Facebook & Google ad system produces exclusive, pre-qualified roof coating leads every month. AI chatbot qualifies and books appointments automatically.', bullets: ['Leads every month', 'AI-powered booking', 'Exclusive leads, never shared'], photo: 'step-build' },
+    { title: 'We Generate the Leads', text: 'Our proven Facebook & Google ad system produces pre-qualified roof coating leads every month. AI chatbot qualifies and books appointments automatically.', bullets: ['Leads every month', 'AI-powered booking', 'Each lead sent only to you'], photo: 'step-build' },
     { title: 'Your Contractors Get Booked', text: 'Leads are routed directly to your certified applicators based on service area. Warm, ready-to-buy homeowners — no cold calling.', bullets: ['Direct lead routing', 'Pre-qualified prospects', 'No shared leads'], photo: 'spray' },
     { title: 'You Sell More Product', text: 'Busy contractors order more coating, silicone, and materials. Your revenue grows because your network is thriving.', bullets: ['Higher order volume', 'Contractor loyalty', 'Predictable revenue'], photo: 'silicone' },
   ],
@@ -322,7 +322,7 @@ export const manufacturers = {
     { tag: 'Retention', title: 'Contractor Loyalty', text: "When your brand is the reason they're booked solid, they don't switch to a competitor. You become the partner they can't afford to leave." },
   ],
   numbers: [
-    { value: '100%', label: 'Exclusive Leads' },
+    { value: '1', label: 'Contractor Per Lead' },
     { value: '40%', label: 'Lower CPA' },
     { value: '48hrs', label: 'First Lead' },
     { value: '24/7', label: 'AI Booking' },
@@ -330,6 +330,10 @@ export const manufacturers = {
 };
 
 export const faqs = [
+  {
+    q: 'Do I get an exclusive territory?',
+    a: "No. Every lead from your campaign goes only to you and is never resold, but we don't lock service areas, so another contractor in your area can run their own campaign with us. The price is the same either way: $1,500 a month, month to month, with your ad spend paid separately to the ad platforms.",
+  },
   {
     q: 'How much do pre-qualified roof coating leads cost?',
     a: "Our leads typically cost $30–$60 each, compared to $80–$150 for shared leads on platforms like HomeAdvisor. Because you're the only contractor receiving each lead, your close rate climbs to 20–35%, making your actual cost per closed job $150–$300.",

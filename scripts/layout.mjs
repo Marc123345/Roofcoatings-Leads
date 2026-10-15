@@ -63,14 +63,14 @@ function head({ title, description, path, ogImage, schema = [], type = 'website'
         '@type': 'Organization',
         name: site.name,
         url: site.url,
-        description: 'Exclusive, pre-qualified lead generation for commercial and residential roof coating contractors through Facebook Ads.',
+        description: 'Pre-qualified lead generation for commercial and residential roof coating contractors through Facebook Ads.',
         serviceType: 'Lead Generation',
       },
       {
         '@type': 'Service',
-        name: 'Exclusive Roof Coating Lead Generation',
+        name: 'Roof Coating Lead Generation',
         provider: { '@type': 'Organization', name: site.name },
-        description: 'Targeted Facebook Ad campaigns that deliver exclusive, pre-qualified leads for commercial and residential roof coating projects.',
+        description: 'Targeted Facebook Ad campaigns that deliver pre-qualified leads for commercial and residential roof coating projects.',
         areaServed: 'United States',
         serviceType: 'Digital Marketing & Lead Generation',
       },
@@ -321,7 +321,7 @@ function consultationPopup() {
       <button type="button" class="pl-modal__close rc-popup__close" data-popup-close aria-label="Close"><i class="fa fa-times"></i></button>
       <span class="pl-modal__kicker">Free Strategy Call</span>
       <h3 id="rc-popup-title">Want More <span>Roof Coating Jobs?</span></h3>
-      <p>Book a free 30-minute strategy call. We'll map out your market, your ideal lead profile, and exactly how many exclusive leads we can deliver each month.</p>
+      <p>Book a free 30-minute strategy call. We'll map out your market, your ideal lead profile, and how many leads your budget can realistically produce each month.</p>
       ${btn('Book My Free Call', { href: '/get-started', attrs: 'data-popup-close' })}
       <small>No contracts &middot; Cancel anytime</small>
     </div>

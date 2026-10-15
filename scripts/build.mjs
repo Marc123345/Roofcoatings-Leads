@@ -605,7 +605,7 @@ pages.push({
   description: site.description,
   schema: [
     faqSchema([
-      { q: 'What are exclusive roof coating leads?', a: 'Exclusive roof coating leads are prospects sent only to your business — no sharing with competitors. Unlike shared leads from HomeAdvisor or shared lead platforms, you are the only contractor who receives the lead, resulting in higher close rates and lower cost per acquisition.' },
+      { q: 'What are exclusive roof coating leads?', a: 'Exclusive roof coating leads are prospects sent only to your business and never resold. At RoofCoat Leads, every lead from your campaign goes only to you, but territories are not locked, so other contractors in your area can run their own campaigns with us. Unlike shared leads from HomeAdvisor or shared lead platforms, you are the only contractor who receives the lead, resulting in higher close rates and lower cost per acquisition.' },
       { q: 'How does RoofCoat Leads generate leads?', a: 'We run precision-targeted Facebook Ad campaigns that reach commercial property owners and homeowners actively dealing with roof issues. Our proprietary funnel pre-qualifies every lead before delivering them to you in real time.' },
       ...faqs,
     ]),
@@ -614,7 +614,7 @@ pages.push({
 <section class="plh" aria-label="RoofCoat Leads">
   <div class="container plh__container">
     <div class="plh__content">
-      <span class="rc-hero-kicker">Exclusive Leads — One Click at a Time</span>
+      <span class="rc-hero-kicker">Your Leads Only — One Click at a Time</span>
       <h1 class="plh__title">A proven lead system <span>built for</span> roof coating</h1>
       <div class="plh__icon-bx">
         <div class="plh__badge" aria-hidden="true">
@@ -624,7 +624,7 @@ pages.push({
           </svg>
           <span class="plh__badge-core"><i class="fa-solid fa-arrow-up-right"></i></span>
         </div>
-        <p>Exclusive leads, screened for property type, roof age, timeline, and budget. Book a free call and we'll map out your lead strategy.</p>
+        <p>Leads sent only to you, screened for property type, roof age, timeline, and budget. Book a free call and we'll map out your lead strategy.</p>
       </div>
       <button type="button" class="plh-btn" data-booking>
         <span class="plh-btn__arrow plh-btn__arrow--left"><i class="fa-solid fa-arrow-right"></i></span>
@@ -658,9 +658,9 @@ ${territories()}`,
 pages.push({
   file: 'how-it-works.html',
   path: '/how-it-works',
-  title: 'How It Works — Exclusive Roof Coating Lead Generation',
+  title: 'How It Works — Roof Coating Lead Generation',
   description:
-    'See exactly how RoofCoat Leads delivers exclusive, pre-qualified roof coating leads through Facebook Ads. Free strategy audit, custom campaign, lead pre-qualification, real-time delivery.',
+    'See exactly how RoofCoat Leads delivers pre-qualified roof coating leads through Facebook Ads. Free strategy audit, custom campaign, lead pre-qualification, real-time delivery.',
   body: `
 ${pageTitle('How It Works', PH.pageTitleHow)}
 <section class="about-section section-padding">
@@ -751,7 +751,7 @@ pages.push({
   path: '/niche-expertise',
   title: 'Niche Expertise — Silicone, Acrylic, Metal & TPO Leads',
   description:
-    'We speak your niche. Exclusive lead campaigns for silicone roof coatings, acrylic coatings, metal roof restoration, and TPO/flat roof repair. Custom targeting for each coating type.',
+    'We speak your niche. Lead campaigns for silicone roof coatings, acrylic coatings, metal roof restoration, and TPO/flat roof repair. Custom targeting for each coating type.',
   body: `
 ${pageTitle('Niche Expertise', PH.pageTitleNiche)}
 <section class="section-padding rc-niche-intro">
@@ -815,8 +815,8 @@ ${pageTitle('Manufacturer Partnerships', PH.pageTitleManufacturers)}
       <div class="col-xl-6 col-lg-6">
         ${subTitle('Manufacturer Partnership Program')}
         <h2 class="rc-big-title">Your Applicators Stay Busy. <span>You Sell More Product.</span></h2>
-        <p class="rc-lead">We generate exclusive roof coating leads every month for your certified contractors. When your applicators are booked, they order more material. Everybody wins.</p>
-        ${checkList(['Proven Facebook & Google ad system', 'AI chatbot qualifies & books automatically', 'Exclusive leads — never shared'])}
+        <p class="rc-lead">We generate roof coating leads every month for your certified contractors. When your applicators are booked, they order more material. Everybody wins.</p>
+        ${checkList(['Proven Facebook & Google ad system', 'AI chatbot qualifies & books automatically', 'Each lead sent only to you, never resold'])}
         <div class="pl-hero-buttons">${btn('See How It Works', { href: '#partnership' })}</div>
         <p class="rc-hero-note">No risk &middot; Revenue-driven &middot; Results from month 1</p>
       </div>
@@ -874,9 +874,9 @@ ${cardsSection({ sub: 'The Result', title: ['Your Contractors Get', 'More Jobs.'
 pages.push({
   file: 'service-areas.html',
   path: '/service-areas',
-  title: 'Service Areas — Exclusive Roof Coating Leads Nationwide',
+  title: 'Service Areas — Roof Coating Leads Nationwide',
   description:
-    'We generate exclusive roof coating leads in Texas, Florida, California, Arizona, Ohio, Georgia, and expanding. Custom Facebook Ad campaigns tailored to your local market.',
+    'We generate pre-qualified roof coating leads in Texas, Florida, California, Arizona, Ohio, Georgia, and expanding. Custom Facebook Ad campaigns tailored to your local market.',
   body: `
 ${pageTitle('Service Areas', PH.pageTitleAreas)}
 <section class="section-padding">
@@ -932,7 +932,7 @@ ${pageTitle('Service Areas', PH.pageTitleAreas)}
     <div class="sec-title text-center">
       ${subTitle('Now in Australia')}
       ${secTitle('Australian States', '&amp; Territories')}
-      <div class="rc-sec-intro">Exclusive roof coating leads for contractors across Australia.</div>
+      <div class="rc-sec-intro">Pre-qualified roof coating leads for contractors across Australia.</div>
     </div>
     <div class="rc-states">
       ${australia.map((st) => `<a class="rc-state" href="/service-areas/australia/${st.slug}"><strong>${st.abbr}</strong><span>${esc(st.state)}</span></a>`).join('')}
@@ -956,8 +956,8 @@ function marketPage(st, idx, { base = '/service-areas', crumbs = [{ label: 'Serv
   pages.push({
     file: `${base.slice(1)}/${a.slug}.html`,
     path: `${base}/${a.slug}`,
-    title: `${a.state} Roof Coating Leads — Exclusive Leads for ${a.abbr} Contractors`,
-    description: `Get exclusive, pre-qualified roof coating leads in ${a.state}. Custom Facebook Ad campaigns targeting ${a.cities.slice(0, 3).join(', ')} and more.${featured ? ' 40% lower CPA.' : ''} First lead often within 48h.`,
+    title: `${a.state} Roof Coating Leads for ${a.abbr} Contractors`,
+    description: `Get pre-qualified roof coating leads in ${a.state}, sent only to you. Custom Facebook Ad campaigns targeting ${a.cities.slice(0, 3).join(', ')} and more.${featured ? ' 40% lower CPA.' : ''} First lead often within 48h.`,
     body: `
 ${pageTitle(`${esc(a.state)} Roof Coating Leads`, photo, crumbs)}
 <section class="section-padding">
@@ -971,7 +971,7 @@ ${pageTitle(`${esc(a.state)} Roof Coating Leads`, photo, crumbs)}
       </div>
       <div class="col-lg-5">
         <div class="rc-area-stats">
-          ${featured ? `<div><strong>${esc(a.caseStudy.stat)}</strong><span>${esc(a.caseStudy.statLabel)}</span></div>` : '<div><strong>100%</strong><span>exclusive leads</span></div>'}
+          ${featured ? `<div><strong>${esc(a.caseStudy.stat)}</strong><span>${esc(a.caseStudy.statLabel)}</span></div>` : '<div><strong>1</strong><span>contractor per lead</span></div>'}
           <div><strong>${a.cities.length}+</strong><span>${a.slug === 'district-of-columbia' ? 'neighborhoods' : 'cities'} covered</span></div>
           <div><strong>&lt;48h</strong><span>to first lead</span></div>
         </div>
@@ -1049,8 +1049,8 @@ allStates.forEach((st, idx) => marketPage(st, idx));
 pages.push({
   file: 'service-areas/australia.html',
   path: '/service-areas/australia',
-  title: 'Australia — Exclusive Roof Coating Leads',
-  description: 'Exclusive, pre-qualified roof coating leads for contractors across Australia: New South Wales, Victoria, Queensland, Western Australia, South Australia, Tasmania, the ACT and the Northern Territory.',
+  title: 'Australia — Roof Coating Leads',
+  description: 'Pre-qualified roof coating leads for contractors across Australia: New South Wales, Victoria, Queensland, Western Australia, South Australia, Tasmania, the ACT and the Northern Territory.',
   body: `
 ${pageTitle('Australia', PH.metal, [{ label: 'Service Areas', href: '/service-areas' }])}
 <section class="section-padding">
@@ -1097,7 +1097,7 @@ pages.push({
   path: '/get-started',
   title: 'Get Started — Free Roof Coating Lead Strategy Audit',
   description:
-    "Book your free strategy audit. In 30 minutes we'll map out your market, your ideal lead profile, and how many exclusive leads we can deliver each month. No charge. No contract.",
+    "Book your free strategy audit. In 30 minutes we'll map out your market, your ideal lead profile, and how many leads your budget can realistically produce. No charge. No contract.",
   schema: [faqSchema(getStarted.faqs)],
   body: `
 ${pageTitle('Free Strategy Audit', PH.pageTitleStart)}
@@ -1108,7 +1108,7 @@ ${pageTitle('Free Strategy Audit', PH.pageTitleStart)}
         <div class="section-title mb-30">
           ${subTitle('Free Lead Strategy Audit')}
           <h2 class="title">Book Your Free Strategy Audit</h2>
-          <div class="text mt-3">Pick a time that works for you. In 30 minutes we'll map out your market, your ideal lead profile, and how many exclusive leads we can deliver each month. No charge for the audit. No contracts. If we're not the right fit, we'll tell you.</div>
+          <div class="text mt-3">Pick a time that works for you. In 30 minutes we'll map out your market, your ideal lead profile, and how many leads your budget can realistically produce each month. No charge for the audit. No contracts. If we're not the right fit, we'll tell you.</div>
         </div>
         ${bookingSwitcher('page', { lazyCalendar: true })}
       </div>
